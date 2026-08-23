@@ -9,9 +9,10 @@ or other third-party material.
 Third-party checkpoints are not included. Users obtain them from their original
 hosts and must follow their licenses:
 
-- Qwen3-4B and Qwen3-8B: Apache-2.0
+- Qwen3-4B, Qwen3-8B, and the optional Qwen3-14B extension: Apache-2.0
   (`https://huggingface.co/Qwen/Qwen3-4B`,
-  `https://huggingface.co/Qwen/Qwen3-8B`);
+  `https://huggingface.co/Qwen/Qwen3-8B`,
+  `https://huggingface.co/Qwen/Qwen3-14B`);
 - Microsoft Phi-4-mini-reasoning: MIT
   (`https://huggingface.co/microsoft/Phi-4-mini-reasoning`);
 - DeepSeek-R1-Distill-Llama-8B: DeepSeek's terms plus the applicable Llama 3.1

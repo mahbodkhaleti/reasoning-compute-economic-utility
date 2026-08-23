@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-08-23T09:30:44Z",
+  "source": "https://huggingface.co/api/models/Qwen/Qwen3-14B",
+  "hf_id": "Qwen/Qwen3-14B",
+  "model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "tokenizer_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "license": "apache-2.0",
+  "dtype": "bfloat16",
+  "policy": "The runner records the requested hash before model loading, verifies both resolved hashes before the first evaluated cell, and stores them in every output row."
+}

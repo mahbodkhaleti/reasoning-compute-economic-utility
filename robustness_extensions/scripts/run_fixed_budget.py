@@ -2,11 +2,14 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
+import hashlib
 import importlib.metadata
 import json
 import math
 import os
 import platform
+import subprocess
 from pathlib import Path
 
 import pandas as pd
@@ -28,6 +31,33 @@ from common import (
     stable_int,
     verbal_confidence_prompt,
 )
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def git_revision(path: Path) -> str | None:
+    try:
+        return subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=path,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return None
+
+
+def write_json_atomic(path: Path, payload: dict) -> None:
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(path)
 
 
 def main() -> None:
@@ -73,6 +103,38 @@ def main() -> None:
     )
     spec = find_model(config, args.model)
     output_path = paths["raw"] / f"fixed_{args.model}_{args.chat_mode}_{args.decoding}.jsonl"
+    manifest_path = paths["raw"] / f"fixed_{args.model}_{args.chat_mode}_{args.decoding}_run_manifest.json"
+    now = dt.datetime.now(dt.timezone.utc).isoformat()
+    if manifest_path.exists():
+        run_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        run_manifest.setdefault("resume_events_utc", []).append(now)
+    else:
+        config_path = Path(args.config).resolve()
+        run_manifest = {
+            "status": "initialized_before_model_load",
+            "first_started_at_utc": now,
+            "model_slug": args.model,
+            "hf_id": spec["hf_id"],
+            "requested_model_revision": spec.get("revision"),
+            "requested_tokenizer_revision": spec.get("tokenizer_revision", spec.get("revision")),
+            "config_path": str(config_path),
+            "config_sha256": sha256(config_path),
+            "runner_sha256": sha256(Path(__file__).resolve()),
+            "repository_git_revision": git_revision(Path(__file__).resolve().parents[2]),
+            "chat_mode": args.chat_mode,
+            "decoding": args.decoding,
+            "budgets": budgets,
+            "repeat_seeds": repeat_seeds,
+            "option_order_seed": args.option_order_seed,
+            "query_verbal_confidence": args.query_verbal_confidence,
+            "constrained_option_readout": args.constrained_option_readout,
+            "python": platform.python_version(),
+            "torch": torch.__version__,
+            "cuda_build": torch.version.cuda,
+            "transformers": importlib.metadata.version("transformers"),
+            "accelerate": importlib.metadata.version("accelerate"),
+        }
+    write_json_atomic(manifest_path, run_manifest)
     completed = {
         (x["scenario_id"], int(x["budget"]), int(x["repeat_seed"]))
         for x in read_jsonl(output_path)
@@ -86,7 +148,37 @@ def main() -> None:
             }
         )
     }
+    required = {
+        (str(scenario["scenario_id"]).zfill(12), int(budget), int(repeat_seed))
+        for scenario in scenarios
+        for budget in budgets
+        for repeat_seed in repeat_seeds
+    }
+    if required <= completed:
+        run_manifest["status"] = "already_complete_no_model_loaded"
+        run_manifest["last_checked_at_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
+        run_manifest["completed_cells"] = len(required)
+        write_json_atomic(manifest_path, run_manifest)
+        print(f"{output_path.name} already contains all {len(required)} required cells; skipping model load")
+        return
     harness = ModelHarness(spec, config)
+    run_manifest.update(
+        {
+            "status": "model_loaded_before_inference",
+            "model_loaded_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+            "resolved_model_revision": harness.model_revision,
+            "resolved_tokenizer_revision": harness.tokenizer_revision,
+            "gpu_devices": [
+                {
+                    "index": index,
+                    "name": torch.cuda.get_device_name(index),
+                    "total_memory_bytes": torch.cuda.get_device_properties(index).total_memory,
+                }
+                for index in range(torch.cuda.device_count())
+            ],
+        }
+    )
+    write_json_atomic(manifest_path, run_manifest)
     print(f"Loaded {spec['hf_id']} on {torch.cuda.get_device_name(0)}")
 
     for scenario in scenarios:
@@ -160,6 +252,10 @@ def main() -> None:
                 row = {
                     "model": args.model,
                     "hf_id": spec["hf_id"],
+                    "requested_model_revision": spec.get("revision"),
+                    "requested_tokenizer_revision": spec.get("tokenizer_revision", spec.get("revision")),
+                    "resolved_model_revision": harness.model_revision,
+                    "resolved_tokenizer_revision": harness.tokenizer_revision,
                     "chat_mode": args.chat_mode,
                     "decoding": args.decoding,
                     "scenario_id": scenario["scenario_id"],
@@ -209,6 +305,8 @@ def main() -> None:
         "python": platform.python_version(),
         "model_revision": harness.model_revision,
         "tokenizer_revision": harness.tokenizer_revision,
+        "revision_recorded_before_inference": True,
+        "run_manifest": manifest_path.name,
         "model_class": type(harness.model).__name__,
         "tokenizer_class": type(harness.tokenizer).__name__,
         "dtype": str(next(harness.model.parameters()).dtype),
@@ -218,6 +316,10 @@ def main() -> None:
     (paths["raw"] / f"fixed_{args.model}_{args.chat_mode}_{args.decoding}_metadata.json").write_text(
         json.dumps(metadata, indent=2), encoding="utf-8"
     )
+    run_manifest["status"] = "complete"
+    run_manifest["completed_at_utc"] = dt.datetime.now(dt.timezone.utc).isoformat()
+    run_manifest["completed_cells"] = len(required)
+    write_json_atomic(manifest_path, run_manifest)
 
 
 if __name__ == "__main__":

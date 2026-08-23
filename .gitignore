@@ -24,3 +24,8 @@ paper/main.pdf
 paper/output/
 paper/tmp/
 robustness_extensions/scripts/*.zip
+qwen3_14b_addition/results/
+qwen3_14b_addition/smoke_results/
+qwen3_14b_addition/scripts/*.zip
+qwen3_14b_addition/*.log
+qwen3_14b_addition/*.pid

@@ -72,6 +72,15 @@ repository revision unless a separate `tokenizer_revision` is configured.
 The direct prompted games are retained for reproducibility but are not used in
 the paper's reported strategic claims.
 
+## Optional Qwen3-14B extension
+
+`qwen3_14b_addition/` is a self-contained, checkpoint-resumable A100 package
+for adding `Qwen/Qwen3-14B` under the same prompts, budgets, seeds, readouts,
+uncertainty analyses, and strategic-game enumeration. It pins and verifies the
+model/tokenizer revision before inference. The manuscript has not been changed
+to include this checkpoint because no Qwen3-14B results exist yet; integration
+instructions are included for use after validation passes.
+
 ## Seeds
 
 - master data/scenario seed: 20260819;
