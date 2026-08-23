@@ -1,0 +1,21 @@
+\begin{table}[H]
+\centering
+\caption{Compute-menu/frontier sensitivity. The three-budget rows use the primary five-seed stochastic frontier; the six-budget rows use the order-averaged deterministic frontier and therefore change both menu and decoding regime. Six-budget intervals are 95\% scenario-bootstrap intervals.}
+\label{tab:menurobustness}
+\small
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabular}{llrrr}
+\toprule
+Model & Menu/frontier & Excess share (95\% CI) & $C_{\mathrm{NE}}$ & $C_{\mathrm{OPT}}$ \\
+\midrule
+DeepSeek-8B & Stoch. 3 & 82.2 [78.3, 85.2] & 1329.6 & 277.3 \\
+             & Determ. 6 & 76.8 [74.1, 80.1] & 1205.1 & 25.6 \\
+Phi-mini    & Stoch. 3 & 56.2 [18.3, 74.9] & 975.5 & 256.0 \\
+             & Determ. 6 & 72.3 [58.6, 93.5] & 1056.9 & 0.0 \\
+Qwen3-4B    & Stoch. 3 & 83.4 [77.9, 90.1] & 1331.1 & 277.3 \\
+             & Determ. 6 & 79.5 [73.6, 84.3] & 1189.5 & 12.8 \\
+Qwen3-8B    & Stoch. 3 & 73.8 [63.0, 79.1] & 1201.1 & 256.0 \\
+             & Determ. 6 & 74.4 [68.3, 92.6] & 1143.0 & 12.8 \\
+\bottomrule
+\end{tabular}
+\end{table}

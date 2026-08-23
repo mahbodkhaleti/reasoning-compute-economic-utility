@@ -1,0 +1,29 @@
+{
+  "model": {
+    "slug": "qwen3_8b",
+    "hf_id": "Qwen/Qwen3-8B",
+    "enable_thinking": true
+  },
+  "chat_mode": "reasoning",
+  "budgets": [
+    128,
+    384,
+    768
+  ],
+  "repeat_seeds": [
+    1,
+    7,
+    21,
+    42,
+    99
+  ],
+  "decoding": "stochastic",
+  "option_order_seed": 314159,
+  "query_verbal_confidence": true,
+  "constrained_option_readout": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.13.0+cu130",
+  "python": "3.10.12",
+  "gpu_hour_usd": null,
+  "electricity_usd_per_kwh": null
+}

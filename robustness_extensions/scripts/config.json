@@ -1,0 +1,52 @@
+{
+  "seed": 20260819,
+  "hf_cache": null,
+  "models": [
+    {"slug": "phi4_mini_reasoning", "hf_id": "microsoft/Phi-4-mini-reasoning", "revision": "0e3b1e2d02ee478a3743abe3f629e9c0cb722e0a", "enable_thinking": true},
+    {"slug": "qwen3_4b", "hf_id": "Qwen/Qwen3-4B", "revision": "1cfa9a7208912126459214e8b04321603b3df60c", "enable_thinking": true},
+    {"slug": "deepseek_r1_llama_8b", "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B", "revision": "6a6f4aa4197940add57724a7707d069478df56b1", "enable_thinking": true},
+    {"slug": "qwen3_8b", "hf_id": "Qwen/Qwen3-8B", "revision": "b968826d9c46dd6066d109eabc6255188de91218", "enable_thinking": true}
+  ],
+  "data": {
+    "categories": ["Palm Pilot M515 PDA", "Xbox game console", "Cartier wristwatch"],
+    "train_fraction": 0.70,
+    "values_per_category": 18,
+    "candidate_sets_per_value": 2,
+    "option_sizes": [5, 7],
+    "bid_step": 5,
+    "min_auctions": 40
+  },
+  "evaluation": {
+    "budgets": [0, 64, 128, 256, 512, 768],
+    "repeat_seeds": [11, 23, 37],
+    "unconstrained_max_tokens": 1024,
+    "answer_tokens": 20,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "bootstrap_samples": 2000
+  },
+  "seed_robustness": {
+    "budgets": [128, 384, 768],
+    "seeds": [1, 7, 21, 42, 99],
+    "temperature": 0.6,
+    "top_p": 0.95
+  },
+  "uncertainty": {
+    "bootstrap_samples": 1000,
+    "bootstrap_seed": 20260819,
+    "relative_welfare_epsilon": 0.01
+  },
+  "direct_game": {
+    "rounds": 120,
+    "experiment_seeds": [101, 202, 303],
+    "choice_tokens": 48,
+    "history_length": 5,
+    "fixed_low_budget": 0,
+    "fixed_high_budget": 768
+  },
+  "cost": {
+    "gpu_hour_usd": null,
+    "electricity_usd_per_kwh": null,
+    "power_poll_seconds": 0.1
+  }
+}

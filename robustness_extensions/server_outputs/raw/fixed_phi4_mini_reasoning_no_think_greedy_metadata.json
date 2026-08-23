@@ -1,0 +1,25 @@
+{
+  "model": {
+    "slug": "phi4_mini_reasoning",
+    "hf_id": "microsoft/Phi-4-mini-reasoning",
+    "enable_thinking": true
+  },
+  "chat_mode": "no_think",
+  "budgets": [
+    0
+  ],
+  "repeat_seeds": [
+    11,
+    23,
+    37
+  ],
+  "decoding": "greedy",
+  "option_order_seed": null,
+  "query_verbal_confidence": false,
+  "constrained_option_readout": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.13.0+cu130",
+  "python": "3.10.12",
+  "gpu_hour_usd": null,
+  "electricity_usd_per_kwh": null
+}

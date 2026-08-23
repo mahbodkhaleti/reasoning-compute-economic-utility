@@ -1,0 +1,12 @@
+# Observed on 5glab at 2026-08-23 00:33 server local time.
+# This is an archival record, not a complete pip lock file.
+python==3.10.12
+transformers==5.15.0
+accelerate==1.14.0
+torch==2.13.0+cu130
+torch_cuda_build==13.0
+cudnn==9.2.0
+nvidia_driver==580.173.02
+nvidia_smi_cuda_compatibility==13.0
+gpu==NVIDIA GeForce RTX 4090
+gpu_memory_mib==24564

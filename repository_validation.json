@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "models": [
+    "deepseek_r1_llama_8b",
+    "phi4_mini_reasoning",
+    "qwen3_4b",
+    "qwen3_8b"
+  ],
+  "scenario_count": 216,
+  "python_scripts_compiled": 18,
+  "historical_manifest_files_checked": 58,
+  "historical_manifest_mismatches_after_rerun": [
+    "data/metadata.json"
+  ],
+  "new_llm_inference_executed_by_validation": false
+}

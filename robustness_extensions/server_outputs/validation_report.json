@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [
+    "No measured dollar compute cost for phi4_mini_reasoning",
+    "No measured dollar compute cost for qwen3_4b",
+    "No measured dollar compute cost for deepseek_r1_llama_8b",
+    "No measured dollar compute cost for qwen3_8b",
+    "Price-dependent direct games were intentionally skipped"
+  ],
+  "scenario_count": 216,
+  "test_best_sorted_position_counts": {
+    "k=5,position=0": 34,
+    "k=5,position=1": 12,
+    "k=5,position=2": 14,
+    "k=5,position=3": 21,
+    "k=5,position=4": 27,
+    "k=7,position=0": 19,
+    "k=7,position=1": 11,
+    "k=7,position=2": 11,
+    "k=7,position=3": 13,
+    "k=7,position=4": 18,
+    "k=7,position=5": 18,
+    "k=7,position=6": 18
+  }
+}

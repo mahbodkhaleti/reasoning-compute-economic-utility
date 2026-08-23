@@ -1,0 +1,382 @@
+\documentclass{article}
+
+\usepackage[dblblindworkshop]{neurips_2026}
+\workshoptitle{Economics for Machine Learning}
+% The bundled 2026 style's anonymous notice branch otherwise ignores the
+% workshop track name and prints the regular main-conference submission footer.
+\makeatletter
+\renewcommand{\@noticestring}{\@trackname}
+\makeatother
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\sisetup{detect-all,table-number-alignment=center}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black}
+
+\title{Reasoning Compute as a Strategic Input:\\An Auction-Grounded Four-Model Calibration}
+
+\author{Anonymous Author(s)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We measure leakage-free reasoning-compute--economic-utility frontiers for four checkpoints on 216 auction-grounded decision scenarios from three eBay product categories. Candidate bids are independent of the optimum, order is randomized, displayed win probabilities use a construction split, and utility is scored on held-out auctions. Raising deterministic reasoning from 0 to 768 tokens increases mean utility ratio by 0.111--0.175; paired 95\% intervals exclude zero for every checkpoint despite local non-monotonicity. Free-form and auction-CDF sensitivities preserve the endpoint direction. We propagate five-seed stochastic frontiers through a reduced-form two-agent compute-choice game. Dividing payoffs by the private prize shows that allocations depend on three dimensionless primitives: relative compute cost $\kappa=\lambda/V$, relative social quality value $\rho=\beta/V$, and contest sensitivity $\gamma$. Exhaustive phase maps contain overcomputation, alignment, and undercomputation regions; increasing $\rho$ raises planner compute, whereas increasing $\gamma$ strengthens private incentives for compute. Thus measured returns to reasoning can generate systematic compute misallocation, but its direction is conditional on unobserved economic primitives. These are calibrated comparative statics, not observed strategic choice or real-world overcomputation. The novelty is held-out economic calibration and uncertainty propagation, not strategic test-time-compute competition itself.
+\end{abstract}
+
+\section{Introduction}
+
+Test-time reasoning turns inference compute into a decision input. A deployed agent can spend additional tokens after receiving a problem, potentially improving its action without changing model parameters \citep{snell2024scaling,wu2024inference,alomrani2025budget}. In a centralized system this is a familiar allocation problem: buy another unit of compute when its expected decision benefit exceeds its marginal cost. In a market populated by autonomous or delegated AI agents, however, compute also has a strategic return. Better reasoning can improve an agent's position relative to competitors in auctions, procurement, bargaining, pricing, or resource allocation.
+
+The distinction between absolute and relative returns matters for welfare. Two agents may buy compute because quality raises prize-capture probability, while a planner values winner quality net of both agents' costs. Depending on relative compute cost, social quality value, and the sensitivity of competitive success to quality, decentralized compute may exceed, equal, or fall below planner compute. The relevant conceptual outcome is therefore misallocation, $C_{\mathrm{NE}}\neq C_{\mathrm{OPT}}$, rather than an unconditional arms-race prediction.
+
+We study this mechanism in two linked components. First, an LLM completes an auction-grounded economic decision task calibrated to an empirical closing-price distribution: it observes a private value, candidate bids, and historical win probabilities, so expected utility is exactly computable. This is a reduced-form calculation, not a strategic-auction environment. Second, the resulting model-specific quality function enters a two-agent contest in which we compare symmetric Nash compute with a planner allocation.
+
+This design separates measurement from strategic extrapolation. The LLMs do not autonomously choose their token budgets in our experiment. Rather, exogenously assigned budgets identify a discrete compute--quality map, which is the empirical primitive of a reduced-form game. Accordingly, the strategic results are conditional calibrated comparative statics over stated parameter ranges, not evidence of observed strategic overcomputation or causal estimates of real-world AI-market behavior. The paper's main novelty lies upstream: leakage-free measurement with held-out economic scoring, randomized order, multiple products and candidate-set widths, repeated stochastic generations, and uncertainty propagation through the downstream game.
+
+\paragraph{Contributions.}
+We make four bounded contributions. First, we construct a leakage-free held-out evaluation in which reasoning budget is controlled and cardinal auction utility is the principal outcome. Second, we recover four discrete compute--quality frontiers under a common constrained readout and audit their endpoint direction with valid free-form responses and an auction-level CDF bootstrap. Third, we separate scenario-composition and stochastic-generation uncertainty and propagate the latter through the game. Fourth, we map the calibrated game into overcompute, aligned, and undercompute regions in normalized $(\kappa,\rho,\gamma)$ space, while retaining the original parameter and compute-menu sensitivities. The design does not identify autonomous compute choice, real market primitives, the contest-success mapping, or deployed-market welfare.
+
+\section{Related work}
+
+Research on language-model reasoning has progressed from eliciting intermediate reasoning traces to treating inference computation as an allocation problem \citep{wei2022chain,snell2024scaling,wu2024inference}. This literature shows that performance depends not only on model scale but also on how test-time resources are assigned, while recent surveys stress that token budgets, repeated sampling, verifier-guided search, and adaptive stopping are distinct inference regimes requiring protocol-specific accounting \citep{alomrani2025budget,hariri2026scaling}. A related uncertainty literature uses answer probabilities, self-reported confidence, and sequential or conformal rules to trade off compute, error, and coverage \citep{jurayj2025finalanswer,shi2025reasoninguncertainty,xie2026statistical}. Our setting connects these strands by measuring a token--utility frontier, separating scenario and generation uncertainty, and propagating both through an economic model; calibrated confidence is then evaluated for stopping and abstention.
+
+Economic evaluations of LLMs range from tests of rational choice and microeconomic reasoning to agents operating in unknown or strategically interactive environments \citep{raman2024steer,raman2025steerme,fish2025econevals}. Auction and bargaining studies extend this agenda by evaluating planning, execution, behavior relative to economic benchmarks, and allocative efficiency \citep{chen2024aucarena,zhu2024synthetic,deng2024bargaining}. Our experiment differs by manipulating reasoning expenditure and using cardinal expected utility and regret, rather than exact action matching alone, as the inputs to a downstream compute-choice game. Known sensitivity of multiple-choice evaluation to option order and readout protocol \citep{pezeshkpour2024order} motivates our independent candidate generation, repeated order randomization, positional baselines, and common constrained readout.
+
+The strategic layer connects this evaluation literature to models of costly competition. Classic rent-seeking theory studies effort that improves an agent's probability of capturing a prize even when duplicated effort is socially wasteful \citep{tullock1980efficient}; \citet{artola2026games} develop this logic explicitly for test-time-compute competition among LLM service providers. We do not claim strategic test-time compute or overinvestment as a new mechanism. Our distinct contribution is an auction-grounded empirical calibration: observed, model-specific reasoning-compute--utility frontiers, measured under leakage controls and held-out scoring, determine the inputs to the contest and carry their sampling and generation uncertainty into its equilibrium and planner benchmarks.
+
+\section{Economic framework}
+
+\subsection{Auction decision problem}
+
+Let a bidder with private value $v$ choose a bid $b\leq v$ in a first-price auction. We approximate the price required to win by a random historical closing price $P$. The empirical winning probability and expected utility are
+\begin{equation}
+ \widehat p(b)=\widehat F_P(b)=\frac{1}{N}\sum_{n=1}^{N}\mathbf{1}\{P_n\leq b\},
+ \qquad U(b\mid v)=\widehat p(b)(v-b).
+ \label{eq:auctionutility}
+\end{equation}
+This reduced-form calculation treats an observed closing price as the price a bidder must beat and imposes risk neutrality. It is not a structural estimate of rivals' values or a simulated equilibrium of the original eBay auctions. For scenario $s$, candidate set $B_s$, and private value $v_s$, the benchmark action is $b_s^*=\arg\max_{b\in B_s}U_s(b\mid v_s)$. Model $m$ at reasoning budget $c$ chooses $\widehat b_{msc}$. We report scenario-level exact optimality, regret, and utility ratio:
+\begin{equation}
+ A_{msc}=\mathbf{1}\{\widehat b_{msc}=b_s^*\},\quad
+ R_{msc}=U_s(b_s^*\mid v_s)-U_s(\widehat b_{msc}\mid v_s),\quad
+ Q_{msc}=\frac{U_s(\widehat b_{msc}\mid v_s)}{U_s(b_s^*\mid v_s)}.
+ \label{eq:metrics}
+\end{equation}
+The denominator is positive in every constructed scenario. We aggregate with equal scenario weights,
+\begin{equation}
+ q_m(c)=\frac{1}{S}\sum_{s=1}^{S}Q_{msc},\qquad
+ \overline R_m(c)=\frac{1}{S}\sum_{s=1}^{S}R_{msc},\qquad
+ \overline A_m(c)=\frac{1}{S}\sum_{s=1}^{S}A_{msc}.
+ \label{eq:frontier}
+\end{equation}
+The primary outcome is $q_m(c)$: exact accuracy treats a near-optimal bid as fully wrong, whereas the utility ratio records its economic cost. Equal weighting describes performance on the declared scenario panel; it is not an estimate under a population distribution of bidder valuations. Where a scenario--budget cell has repeated generations or option orders, we average those replications within the scenario before averaging across scenarios. Reasoning tokens are therefore treated as a manipulable decision resource, and the vector $\{q_m(c):c\in\mathcal C\}$ is the measured, discrete compute--quality frontier. We neither smooth this frontier nor impose monotonicity.
+
+\subsection{Strategic reasoning-compute game}
+
+Two agents simultaneously select $c_i,c_j\in\mathcal C$. Their measured decision qualities determine contest success through
+\begin{equation}
+ P_i(c_i,c_j;\gamma)=\frac{q(c_i)^\gamma}{q(c_i)^\gamma+q(c_j)^\gamma},\qquad
+ \pi_i(c_i,c_j)=V P_i(c_i,c_j;\gamma)-\lambda c_i.
+ \label{eq:contest}
+\end{equation}
+Here $V>0$ is the private prize, $\lambda$ is per-token cost, and $\gamma$ controls how strongly quality differences translate into winning. Dividing by $V$ yields
+\begin{equation}
+ \widetilde\pi_i=P_i(c_i,c_j;\gamma)-\underbrace{\frac{\lambda}{V}}_{\kappa}c_i,
+ \qquad \boxed{\kappa=\lambda/V},
+ \label{eq:normalizedprivate}
+\end{equation}
+so private choice depends on cost relative to the prize, not on their separate scales. The contest mapping is assumed rather than estimated.
+
+A symmetric pure equilibrium $c_{\mathrm{NE}}$ is a mutual best response over the discrete menu. This captures decentralized budget choice conditional on the calibrated frontier; it does not imply that the evaluated language models understand or solve the game.
+
+The planner treats the prize as a transfer and values winner quality net of total compute:
+\begin{equation}
+ W_{\beta}(c_1,c_2)=\beta Q_\gamma(c_1,c_2)-\lambda(c_1+c_2),
+ \quad Q_\gamma=P_1q(c_1)+P_2q(c_2).
+\label{eq:welfare}
+\end{equation}
+After the same division,
+\begin{equation}
+ \widetilde W=\underbrace{\frac{\beta}{V}}_{\rho}Q_\gamma(c_1,c_2)
+ -\kappa(c_1+c_2),\qquad \boxed{\rho=\beta/V}.
+ \label{eq:normalizedwelfare}
+\end{equation}
+Thus every equilibrium and planner allocation is determined by $(\kappa,\rho,\gamma)$; $V$, $\lambda$, and $\beta$ are not independently meaningful scales in this game. Let $c_{\mathrm{NE}}$ be the lowest-budget symmetric mutual best response under exact ties, and let $(c_1^*,c_2^*)$ maximize Eq.~\eqref{eq:normalizedwelfare}. Define $C_{\mathrm{NE}}=2c_{\mathrm{NE}}$ and $C_{\mathrm{OPT}}=c_1^*+c_2^*$. We classify each parameter point as overcompute, aligned, or undercompute according as $C_{\mathrm{NE}}$ is greater than, equal to, or less than $C_{\mathrm{OPT}}$.
+
+We retain $\mathrm{PoRC}=C_{\mathrm{NE}}/C_{\mathrm{OPT}}$ as a menu-dependent token diagnostic, not a welfare-loss measure. Normalized absolute welfare loss is $\Delta\widetilde W=\widetilde W_{\mathrm{OPT}}-\widetilde W_{\mathrm{NE}}=\Delta W/V$. The legacy relative-loss statistic and its fixed near-zero omission rule are retained only in the appendix; that cutoff is not scale invariant and does not define the phase regions.
+
+The discrete thresholds make the comparative statics explicit. Against fixed $c_j$, a unilateral increase $c_a\to c_b$ is privately profitable when
+\begin{equation}
+ \kappa<\frac{P_i(c_b,c_j;\gamma)-P_i(c_a,c_j;\gamma)}{c_b-c_a}.
+ \label{eq:privatethreshold}
+\end{equation}
+For two planner allocations differing by $(\Delta Q_\gamma,\Delta C)$, the higher-compute allocation is preferred when
+\begin{equation}
+ \frac{\kappa}{\rho}=\frac{\lambda}{\beta}<\frac{\Delta Q_\gamma}{\Delta C}.
+ \label{eq:plannerthreshold}
+\end{equation}
+These numerical boundaries are properties of the stored frontier and reduced-form contest, not structural market estimates.
+
+\section{Empirical methodology and experimental setup}
+
+\subsection{Dataset and tasks}
+
+We use the Online Auctions Dataset distributed with \citet{jank2010modeling}, containing 10,681 bid records from 628 eBay auctions \citep{onlineauctionsdataset}. The evaluation covers Palm Pilot M515 PDA, Xbox game console, and Cartier wristwatch auctions. Within each category, auctions with internally inconsistent opening bids are removed and the remaining auctions are deterministically assigned, using seed 20260819, to a 70\% construction split and a 30\% held-out scoring split. The construction split determines the displayed empirical win probabilities and task support; the held-out split is used only to score decisions. Historical closing prices are a reduced-form proxy for the price to beat, not observations of the highest rival valuation or a structural first-price-auction equilibrium.
+
+For each category, 18 private values are selected from a five-dollar grid spanning the central-to-upper range of the construction-price distribution. At every value, we generate two independently seeded candidate sets for each option-set width $K\in\{5,7\}$, yielding $3\times18\times2\times2=216$ scenarios. Candidate bids are sampled from feasible five-dollar grid points using either a randomly located contiguous window or an unstructured sample. Candidate generation never conditions on the train- or test-optimal bid. Consequently, neither the identity nor the sorted position of the utility-maximizing option is fixed by construction.
+
+The prompt provides the private value, candidate bids, and construction-sample win probabilities, but not expected utilities. The intended calculation is $(v-b)\widehat p_{\mathrm{construction}}(b)$. Primary regret, exact optimality, and utility ratio are instead evaluated with $\widehat p_{\mathrm{heldout}}(b)$, so performance rewards a decision that transfers to held-out auctions rather than one tailored to the displayed sample alone. Greedy evaluation repeats each scenario under option-order seeds $\{11,23,37\}$. The order is stored in every record and the candidate labels, rather than their displayed positions, determine scoring.
+
+The unit of observation is a scenario--checkpoint--budget--replication cell. Holding the underlying scenario fixed across budgets creates a repeated-measures design, while repeated option orders and stochastic generations identify presentation and decoding variation separately. Calculator, uniform-random, median-position, highest-win-probability, and held-out-oracle policies provide explicit reference frontiers. The median policy is therefore a diagnostic for residual positional preference, not a rule that is correct by construction.
+
+\subsection{Models and reasoning protocol}
+
+We evaluate Phi-mini, Qwen3-4B, DeepSeek-8B, and Qwen3-8B \citep{abouelenin2025phi,yang2025qwen3,guo2025deepseek}; full repository IDs and environment details appear in Appendix~\ref{app:reproducibility}.
+
+Every checkpoint uses the same constrained option-letter next-token readout, and a parallel free-form answer is retained for an agreement audit. The greedy reasoning frontier uses $\mathcal C_G=\{0,64,128,256,512,768\}$ under deterministic decoding and is repeated under option-order seeds $\{11,23,37\}$. A separate no-thinking condition uses budget zero. An unconstrained reasoning control may generate up to 1,024 tokens but is not treated as a fixed-budget action in the game.
+
+Generation uncertainty is measured separately on $\mathcal C_S=\{128,384,768\}$ using stochastic seeds $\{1,7,21,42,99\}$, temperature 0.6, and top-$p$ 0.95. Option order is fixed at seed 314159 in this study so that between-seed variation reflects decoding rather than presentation. The runner records realized reasoning and answer tokens, elapsed time, NVML energy, average power, peak memory, answer log probability, constrained-answer probability, verbal confidence, and both constrained and free-form choices. GPU-rental and electricity costs are reported only when actual prices are supplied.
+
+\subsection{Game computation}
+\label{sec:gamecomputation}
+
+For each model, we insert the stochastic frontier $q_m(c)$ on $\mathcal C_S$ directly into Eqs.~\eqref{eq:normalizedprivate}--\eqref{eq:normalizedwelfare}, without smoothing or interpolation. At each point we enumerate all ordered budget pairs, use the lowest-budget private best response under exact payoff ties, select the lowest symmetric fixed point if several remain, and separately maximize planner welfare. We use this frontier because five generations permit uncertainty propagation; no-thinking and unconstrained generations are not primary game actions. Appendix~\ref{app:zeroaugmented} separately augments $\mathcal C_S$ with the observed deterministic $c=0$ action as a deliberately protocol-mismatched sensitivity, not a fully stochastic four-budget frontier.
+
+The phase analysis maps $\kappa\in[10^{-7},1.2\times10^{-3}]$ and $\rho\in[10^{-3},40]$ on 181 log-spaced points per axis for $\gamma\in\{0.5,1,2,4\}$. These bounds close the normalized values implied by the old parameter sweeps; neither the rectangle nor weights over it describe a market. The result is region location, not pixel share. We separately compute every exact payoff-indifference value in Eqs.~\eqref{eq:privatethreshold}--\eqref{eq:plannerthreshold} and verify allocations on either side.
+
+Appendix~\ref{app:strategicrobustness} retains the old $V\in\{25,50,\ldots,1000\}$ by 60-point $\lambda\in[0.0001,0.03]$ summaries, eight $\beta$ values, and the same $\gamma$ sweep; each cell maps to $(\kappa,\rho)=(\lambda/V,\beta/V)$. It also retains the deterministic $\mathcal C_G$ game as a combined menu/frontier sensitivity, not a pure menu contrast because decoding changes. Appendix~\ref{app:computationalprotocol} gives tie rules.
+
+\subsection{Uncertainty quantification}
+\label{sec:uncertainty}
+
+For bootstrap draw $b$, we sample scenario indices $I_1^{(b)},\ldots,I_S^{(b)}$ with replacement and apply the same index vector at every budget:
+\begin{equation}
+ q_m^{(b)}(c)=\frac{1}{S}\sum_{r=1}^{S}Q_{m,I_r^{(b)},c}.
+ \label{eq:bootstrapfrontier}
+\end{equation}
+For the greedy frontier, the three option-order replications are averaged within each scenario--budget cell before scenarios are resampled. The paired resampling preserves cross-budget covariance because a selected scenario contributes its complete budget vector. We use 2,000 draws for endpoint differences and log-budget slopes. These intervals capture scenario-composition uncertainty after averaging over the declared order randomization.
+
+For the stochastic frontier, a hierarchical bootstrap samples scenarios with replacement and then one generation seed for each selected scenario jointly across $\mathcal C_S$. The resulting frontier and game are recomputed in 1,000 draws. The zero-compute sensitivity uses the same sampled scenarios across all four hybrid actions, combines each selected scenario's order-averaged deterministic $q(0)$ with one jointly sampled stored stochastic seed at all positive budgets, and recomputes the exact game in 1,000 draws. Separately, 2,000 auction-level draws resample held-out auctions within product category and re-score the fixed stored choices against each empirical CDF. This last interval captures held-out CDF estimation only: it does not vary the construction CDF shown in prompts, split assignment, candidate sets, model choices, scenarios, or decoding. Varying any prompt-side CDF would require new model inference. Appendix~\ref{app:prospectiveuq} gives the full protocol; the final panel passed the coverage, duplicate-key, constrained-output-validity, and finite-value audit.
+
+\subsection{Free-form readout sensitivity}
+\label{sec:freeformmethod}
+
+The constrained option letter remains the primary readout because it supplies a valid action for every model under one scoring rule. For sensitivity, we define a stored free-form response as valid only when its parsed bid exactly matches one of the displayed candidates, then recompute held-out utility from that candidate rather than reusing the constrained score. We report validity over all six deterministic budgets and constrained--free-form agreement conditional on validity. For the main endpoint check, we retain scenario--order cells with valid free-form bids at both 0 and 768 tokens, average paired differences over available orders within each scenario, and bootstrap scenarios 2,000 times. Per-budget available-case frontiers are descriptive because their composition changes with validity. We do not impute invalid responses, treat missingness as random, or propagate the incomplete free-form panel through the game.
+
+\section{Results}
+\FloatBarrier
+
+\subsection{Leakage-free deterministic scaling}
+
+Figure~\ref{fig:quality} and Table~\ref{tab:crossmodel} summarize the order-averaged greedy frontier over all 216 scenarios. Moving from 0 to 768 reasoning tokens raises held-out mean utility ratio by 0.175 for DeepSeek-8B, 0.111 for Phi-mini, 0.164 for Qwen3-4B, and 0.144 for Qwen3-8B. The paired scenario-bootstrap intervals are strictly positive for all four checkpoints (Table~\ref{tab:crossmodel}; two-sided bootstrap $p<0.001$ at the resolution of 2,000 draws). The corresponding 768-token utility ratios are 0.950, 0.829, 0.916, and 0.907, and exact-optimality rates are 64.7\%, 38.3\%, 57.4\%, and 55.2\%. All constrained outputs are valid.
+
+The response is nevertheless not monotone at every adjacent budget. DeepSeek-8B falls between 0 and 64 tokens, Qwen3-4B falls at 128, and several intermediate increments are small. Most of the gain occurs at 512--768 tokens. A log-budget regression gives positive scenario-bootstrap slopes for all checkpoints: 0.0154 [0.0123, 0.0185] for DeepSeek-8B, 0.0117 [0.0081, 0.0151] for Phi-mini, 0.0185 [0.0144, 0.0228] for Qwen3-4B, and 0.0142 [0.0114, 0.0169] for Qwen3-8B. These regressions summarize association across the assigned budgets; they do not impose a structural scaling law.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.93\linewidth]{figures/leakage_free_compute_quality.png}
+\caption{Held-out compute--utility frontiers, averaging 216 scenarios and three option orders per scenario. Lines connect evaluated greedy budgets and do not impose monotonicity; the dashed line is the held-out oracle.}
+\label{fig:quality}
+\end{figure}
+
+\input{tables/cross_model_summary}
+
+\subsection{Baselines and task breadth}
+
+The leakage diagnostic now reverses the central concern in the previous task construction. The optimal option occupies every possible position in both the five- and seven-option tasks, and the median-position policy achieves only 0.725 mean utility ratio and 18.7\% accuracy. At 768 tokens every checkpoint beats the median policy, uniform random choice (0.711), and the highest-win-probability rule (0.731). The construction-split calculator is still stronger than every fixed-budget model at 0.981, showing that the remaining gap is computational rather than a lack of information in the prompt. Unconstrained generations score 0.972 for DeepSeek-8B, 0.846 for Phi-mini, 0.960 for Qwen3-4B, and 0.951 for Qwen3-8B; these controls are not budget-matched and therefore bound attainable performance rather than estimate a token effect.
+
+\subsection{Free-form readout sensitivity}
+
+Free-form validity is 29.1--74.3\% across checkpoints and constrained--free-form agreement conditional on validity is 32.7--71.3\% (Appendix Tables~\ref{tab:freeformsensitivity}--\ref{tab:freeformbybudget}). Among scenario--order cells valid at both endpoints, paired increases are 0.161--0.230 and all four bootstrap intervals exclude zero. Budget-dependent validity and only 47 paired Phi-mini scenarios make this an endpoint sensitivity, not a balanced replication or missingness-robust frontier.
+
+\subsection{Generation uncertainty}
+
+Five stochastic generations per scenario preserve the qualitative high-budget advantage. From 128 to 768 tokens, mean utility ratio increases from 0.758 to 0.947 for DeepSeek-8B, 0.746 to 0.813 for Phi-mini, 0.730 to 0.914 for Qwen3-4B, and 0.775 to 0.893 for Qwen3-8B. The middle budget can still be flat or worse---Phi-mini changes from 0.746 at 128 to 0.744 at 384---so repeated sampling does not make the frontier mechanically monotone. Hierarchical intervals for the complete stochastic frontier appear in Appendix Table~\ref{tab:stochasticfrontier}.
+
+The separate held-out auction-CDF bootstrap also preserves the deterministic endpoint direction: re-scored increases are 0.171 [0.152, 0.187], 0.111 [0.092, 0.130], 0.160 [0.146, 0.173], and 0.140 [0.128, 0.150] in the same model order (Appendix Table~\ref{tab:auctioncdf}). These intervals condition on the original prompts and choices and must not be conflated with the scenario or generation bootstraps.
+
+\subsection{Strategic reasoning compute competition}
+\label{sec:strategicresults}
+
+Figure~\ref{fig:normalizedphase} is the primary strategic result. Every model has overcompute, aligned, and undercompute regions at $\gamma=1$. The common geometry follows directly from the normalized thresholds. At low $\kappa$, private compute is high; as $\kappa$ rises, per-agent equilibrium compute falls from 768 to 128 tokens at $3.34\times10^{-5}$ for Phi-mini, $5.49\times10^{-5}$ for Qwen3-8B, and $8.65\times10^{-5}$ for DeepSeek-8B. Qwen3-4B instead moves $768\to384\to128$ at $8.39\times10^{-5}$ and $9.28\times10^{-5}$. These vertical transitions do not depend on $\rho$.
+
+Planner compute depends on $r=\kappa/\rho=\lambda/\beta$. As $r$ rises, its total allocation moves $1536\to896\to256$ tokens; across models the first threshold ranges from $4.99\times10^{-5}$ to $1.31\times10^{-4}$ and the second from $5.44\times10^{-5}$ to $1.64\times10^{-4}$. The resulting diagonal boundaries create an overcompute wedge where private incentives still support high compute but social quality value is low, and an undercompute region where high $\rho$ supports planner compute after private demand has fallen. Gray regions have equal total compute, although the underlying allocation can differ. These boundaries come from the measured point frontiers and exact enumeration, not from phase-grid frequencies.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth]{figures/normalized_phase_gamma1.pdf}
+\caption{Compute-allocation phase diagram on the stochastic three-budget frontier at $\gamma=1$. Colors classify total equilibrium relative to planner compute. Faint points show the previously declared $\beta=1$ raw grid after mapping to $(\kappa,\rho)$; they are not a market sample. Axes are logarithmic, and displayed pixels approximate exact discrete thresholds reported in Appendix Table~\ref{tab:normalizedthresholds}.}
+\label{fig:normalizedphase}
+\end{figure}
+
+Increasing $\gamma$ expands private incentives for compute. Across the four frontiers, private transition thresholds move from $(1.67$--$4.64)\times10^{-5}$ at $\gamma=0.5$ to $(1.33$--$3.67)\times10^{-4}$ at $\gamma=4$, expanding the overcompute region (Appendix Figure~\ref{fig:normalizedphasegamma}). Increasing $\rho$ instead lowers $\kappa/\rho$, raises planner compute, and moves a point upward from overcomputation through alignment toward undercomputation. Strong sensitivity is therefore an economic comparative static of the calibrated game, not only a failed robustness check.
+
+Allowing a true zero-reasoning action through the stored deterministic $c=0$ measurements changes several exact thresholds and makes zero optimal at sufficiently high relative cost, but preserves overcompute, aligned, and undercompute regions for every checkpoint and every tested $\gamma$; all three regions also appear in every one of 1,000 hybrid bootstrap draws (Appendix~\ref{app:zeroaugmented}). Because $q(0)$ and the positive-budget observations use different presentation and decoding protocols, this is supporting sensitivity evidence rather than a replacement for the primary stochastic game.
+
+The old raw-grid summaries remain secondary descriptions. At $\beta=\gamma=1$, excess-compute shares are 56.2--83.4\% across checkpoints; increasing $\beta$ to 1000 makes all those old cells non-excess, while increasing $\gamma$ from 0.5 to 4 raises the old-grid shares (Appendix Tables~\ref{tab:strategicsensitivity}--\ref{tab:menurobustness}). These percentages and their bootstrap intervals characterize only the specified grid, not real-world arms-race prevalence. PoRC remains a menu-dependent diagnostic, and the legacy welfare-loss scale is not identified. On the deterministic six-budget frontier, the old-grid excess shares remain 72.3--79.5\% (Appendix Table~\ref{tab:menurobustness}), but that comparison changes decoding regime as well as menu.
+\FloatBarrier
+
+\section{Discussion}
+
+The paper's principal result is empirical and upstream of the game: across independently constructed candidate sets, randomized option orders, two option-set widths, three products, held-out scoring, paired scenario resampling, and stochastic generations, every checkpoint benefits materially from a large reasoning budget. The valid-response free-form sensitivity preserves that endpoint direction, although its budget-dependent missingness prevents protocol-invariant effect estimation. The non-monotone intermediate points and the calculator's advantage further qualify the result. More tokens improve these models' auction calculations, but they neither guarantee improvement at every increment nor replace an exact algorithm for a structured task.
+
+The framework then separates measured returns to reasoning from imposed competitive returns. The first comes from the held-out task; the second enters through Eq.~\eqref{eq:contest}. Normalization makes the assumption dependence economically legible: $\kappa$ governs private willingness to buy compute, $\kappa/\rho$ governs planner willingness, and $\gamma$ governs how strongly quality moves competitive success. The phase result is systematic misallocation, $C_{\mathrm{NE}}\neq C_{\mathrm{OPT}}$, with direction determined by these primitives. It is a conditional calibrated comparative static, not evidence that the evaluated models autonomously compete or that deployed AI markets overcompute.
+
+The earlier $\beta$ and $\gamma$ sweeps are consistent slices through this phase structure. Raising $\beta$ at fixed $(V,\lambda)$ raises $\rho$ without changing $\kappa$, shifting planner demand upward and turning some excess-compute cells into alignment and then undercomputation. Raising $\gamma$ shifts private indifference thresholds toward higher relative cost and expands overcomputation. The original cell shares are retained for reproducibility, but their sensitivity is expected because no empirical distribution over $(\kappa,\rho,\gamma)$ is identified. PoRC is reported only as a menu-dependent diagnostic.
+
+This distinction clarifies what evidence would support a market interpretation. Monetary runtime and prize calibration would locate $\kappa$; an empirical value for decision quality would locate $\rho$; and observed competitive outcomes would identify the contest-success mapping and $\gamma$. Direct interaction would separately test whether agents choose budgets in response to rivals. Without those components, compute taxes, caps, or market-design interventions are hypotheses rather than policy recommendations. The current contribution is a transparent bridge from decision-level inference scaling to those hypotheses.
+
+\section{Limitations}
+
+First, candidate construction is independent of the optimal bid and option order is randomized, so the median position no longer reveals the correct action. Nevertheless, the task remains constructed: closing prices are a reduced-form historical proxy, private values are generated from a declared grid, and the model chooses from a finite candidate set rather than participating in an auction with endogenous rival bids. The construction/held-out split measures transfer across auctions from the same product category, not temporal or cross-market generalization.
+
+Second, strategic compute choice is modeled after estimating $q(c)$; the LLMs neither choose budgets nor play against each other. Direct-game outputs are deliberately not used. The contest-success function is assumed, not learned from head-to-head outcomes. The normalized phase diagram removes redundant nominal scales but does not identify $\kappa$, $\rho$, $\gamma$, or a distribution over them. Its bounds organize comparative statics rather than define a market population. The game also assumes symmetric agents, a fixed prize, and linear cost. The six-budget sensitivity changes decoding regime as well as menu and cannot isolate grid granularity. The zero-compute-augmented sensitivity partially addresses the primary menu's missing-zero concern, but imports order-averaged deterministic $q(0)$ into a fixed-order stochastic positive-budget frontier and therefore is not a protocol-matched stochastic four-budget experiment. Results may change with asymmetric agents, mixed equilibria, nonlinear costs, or different success functions.
+
+Third, four checkpoints, 216 scenarios, and three products remain limited. Scenario, generation, and held-out-auction bootstraps do not capture market shift, new prompt-side CDFs, split assignments, model misspecification, or contest-mapping uncertainty. New construction splits require inference, and free-form missingness prevents a complete alternative game. Fourth, tokens imperfectly proxy compute, and no monetary calibration locates a deployed system's phase. Some exact historical software/model revisions were not recorded; full details and prospective metadata fixes appear in Appendix~\ref{app:reproducibility}. Welfare also omits environmental and latency externalities, redistribution, heterogeneous valuations, and intrinsic prize value.
+
+\section{Conclusion}
+
+Across four checkpoints, raising deterministic reasoning from 0 to 768 tokens improves held-out economic utility by 0.111--0.175 on a leakage-free auction-grounded decision task. The endpoint direction survives product and bid-set variation, randomized order, scenario and auction-CDF resampling, five-seed stochastic evaluation, and a valid-response free-form sensitivity, while remaining locally non-monotone and readout dependent. This measurement of reasoning-compute--economic-utility frontiers and propagation of generation uncertainty is the main contribution. Mapping those frontiers into normalized $(\kappa,\rho,\gamma)$ space shows regions of overcomputation, alignment, and undercomputation: measured returns to reasoning can generate strategic compute misallocation, but its direction depends on relative cost, social quality value, and contest sensitivity. The old excess-compute shares and PoRC values describe one declared grid and menu, not market prevalence or waste. These are conditional calibrated comparative statics, not observed strategic behavior or a claim that strategic test-time-compute competition is new. Monetary calibration, direct strategic choice, and an empirically identified contest technology remain for future work.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\section{Complete frontier and baseline results}
+\label{app:fullresults}
+Performance varies materially by product and option-set difficulty. At 768 tokens the category-specific utility ratio ranges from 0.906 to 0.987 for DeepSeek-8B, 0.811 to 0.844 for Phi-mini, 0.860 to 0.967 for Qwen3-4B, and 0.854 to 0.967 for Qwen3-8B. Cartier scenarios are generally hardest, especially with seven options, while Palm Pilot scenarios are easiest. Product, price scale, and auction support move together, so these are not causal product effects.
+\input{tables/full_five_bid}
+\input{tables/freeform_sensitivity}
+\input{tables/freeform_by_budget}
+
+\FloatBarrier
+\section{Strategic-game and compute-menu robustness}
+\label{app:strategicrobustness}
+
+Table~\ref{tab:normalizedthresholds} reports the exact $\gamma=1$ boundaries behind Figure~\ref{fig:normalizedphase}; the complete threshold CSV includes every tested $\gamma$. Figure~\ref{fig:normalizedphasegamma} shows that increasing $\gamma$ shifts the vertical private thresholds rightward and expands the overcompute region. No phase-area percentage is reported because it would depend on arbitrary pixel weights.
+
+\input{tables/normalized_thresholds}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\linewidth]{figures/normalized_phase_all_gamma.pdf}
+\caption{Normalized phase maps for every checkpoint and tested contest sensitivity. Axes and colors match Figure~\ref{fig:normalizedphase}. Each panel is an exhaustive discrete-game classification evaluated on a logarithmic rendering grid; transition values are computed separately from exact payoff indifferences.}
+\label{fig:normalizedphasegamma}
+\end{figure}
+
+\subsection{Zero-compute-augmented game sensitivity}
+\label{app:zeroaugmented}
+
+The primary game intentionally retains the clean five-seed stochastic menu $\mathcal C_S=\{128,384,768\}$. To test whether excluding a true zero action drives its phase structure, we construct the hybrid sensitivity menu $\mathcal C_H=\{0,128,384,768\}$. For each model and scenario, $Q^H_{m,s,0}$ is the mean of the stored deterministic reasoning-mode $c=0$ measurements over option-order seeds $\{11,23,37\}$. At positive budgets we retain, without smoothing, the stored stochastic measurements from seeds $\{1,7,21,42,99\}$ at fixed option-order seed 314159. The point hybrid frontiers $(q(0),q(128),q(384),q(768))$ are $(0.7753,0.7578,0.7767,0.9467)$ for DeepSeek-8B, $(0.7183,0.7462,0.7438,0.8129)$ for Phi-mini, $(0.7519,0.7303,0.8032,0.9139)$ for Qwen3-4B, and $(0.7628,0.7754,0.7953,0.8925)$ for Qwen3-8B. Local non-monotonicity is retained rather than corrected.
+
+This construction does not estimate stochastic $q(0)$. The zero action comes from a deterministic, order-replicated protocol, whereas positive actions come from stochastic decoding under one fixed presentation order. The exercise therefore isolates the practical consequence of making an empirically observed zero action available only approximately; it is a sensitivity analysis, not a clean four-budget stochastic frontier.
+
+We enumerate $\mathcal C_H\times\mathcal C_H$ exactly under the same normalized payoff, contest rule, and tie-breaking conventions for every $\gamma\in\{0.5,1,2,4\}$. Table~\ref{tab:zeroaugmented} gives the $\gamma=1$ transitions and Figure~\ref{fig:zeroaugmented} compares its phase map directly with the primary game. The zero action materially changes the boundaries: at $\gamma=1$, Nash compute eventually moves to zero at $\kappa=6.48\times10^{-5}$ (DeepSeek-8B), $7.44\times10^{-5}$ after an unchanged $768\to128$ transition (Phi-mini), $6.33\times10^{-5}$ (Qwen3-4B), and $5.10\times10^{-5}$ (Qwen3-8B). Planner total compute also eventually reaches zero once $r=\kappa/\rho$ exceeds $1.23$, $1.11$, $1.16$, and $0.911$ times $10^{-4}$, respectively. Despite these shifts, all four point frontiers retain overcompute, aligned, and undercompute open regions at every tested $\gamma$.
+
+\input{tables/zero_compute_augmented}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\linewidth]{figures/hybrid_zero_compute_phase_comparison_gamma1.pdf}
+\caption{Direct comparison of the primary stochastic game and zero-compute-augmented sensitivity at $\gamma=1$. Axes and colors match Figure~\ref{fig:normalizedphase}. Pixel area is a rendering device, not an identified phase probability; conclusions use exact transition boundaries.}
+\label{fig:zeroaugmented}
+\end{figure}
+
+The hybrid bootstrap resamples scenarios jointly across all four actions. A selected scenario contributes its deterministic order-averaged zero value; one of its five stored stochastic seeds is then sampled and used jointly at 128, 384, and 768 tokens. The entire exact game is recomputed in each of 1,000 draws. All three phase types occur as open regions for all four models and all four $\gamma$ values in every draw. A small subset of resampled frontiers also produces a narrow interval with no symmetric pure equilibrium under the paper's selection rule (0--5.2\% of draws across model--$\gamma$ combinations); these intervals are flagged rather than forced into the three phase labels. Transition identities can change across draws---especially for Phi-mini---so the machine-readable output reports each boundary's presence frequency and its interval conditional on appearing, rather than forcing unlike transitions into a single confidence interval. This propagation preserves scenario dependence as far as the stored protocols permit but cannot remove their mismatch.
+
+For reproducibility, Tables~\ref{tab:strategicsensitivity}--\ref{tab:menurobustness} retain the previously declared raw-grid summaries and Figure~\ref{fig:strategicsensitivity} plots the corresponding one-parameter slices. These are secondary parameter sweeps, not statistical distributions over markets. At fixed $(V,\lambda)$, $\beta$ enters only through $\rho$, so equilibrium compute is invariant while planner compute rises. At high $\rho$, positive welfare loss can coexist with zero excess-compute share because equilibrium compute is below the planner allocation. The fixed $0.01$ exclusion used in the legacy relative-loss table is not invariant to division by $V$ and is not used anywhere in the normalized phase analysis.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth]{figures/strategic_parameter_sensitivity.pdf}
+\caption{Point-estimate strategic sensitivity on the primary stochastic frontier. The left panel varies planner quality scale with $\gamma=1$; the right varies contest sensitivity with $\beta=1$. Lines summarize the declared grid, not sampled markets.}
+\label{fig:strategicsensitivity}
+\end{figure}
+
+\input{tables/strategic_sensitivity}
+\input{tables/game_results}
+\input{tables/welfare_uncertainty}
+\input{tables/menu_robustness}
+
+\FloatBarrier
+\section{Held-out auction-CDF uncertainty}
+\label{app:auctioncdf}
+
+Within each product, an auction bootstrap samples the held-out closing prices with replacement, recomputes the empirical probability of clearing every stored candidate bid, and re-scores the fixed constrained choices and the best candidate. The three option-order choices are averaged within scenario--budget cells before aggregation. This procedure is orthogonal to the scenario bootstrap: it holds the 216 tasks fixed and varies the finite held-out CDF. It is also orthogonal to the generation bootstrap and does not show how a model would respond to probabilities from a new construction split.
+
+\input{tables/auction_cdf_uncertainty}
+
+\section{Computational and runner protocols}
+\label{app:computationalprotocol}
+
+\subsection{Equilibrium enumeration and tie handling}
+For every ordered pair $(c_i,c_j)$ in $\mathcal C_S$, we calculate contest success and both private payoffs. For each opposing action, the implementation selects the lowest-budget best response under exact payoff ties; if more than one symmetric fixed point remains, it reports the lowest. Planner welfare is evaluated for every ordered allocation and the first lexicographic maximizer is reported under an exact tie. Agent-swapped planner optima have the same total compute. At a transition where planner optima with different totals tie, the boundary itself is an indifference locus; the threshold table reports allocations in the adjacent open regions. All point and bootstrap results use these same deterministic rules. No direct-play outcome enters the paper.
+
+\subsection{Grid estimands}
+The primary strategic output is the classification map in normalized $(\kappa,\rho,\gamma)$ space and its exact discrete transition boundaries. For each point we retain total Nash and planner compute and normalized welfare loss $\Delta\widetilde W$. The old unweighted excess-compute share, conditional PoRC, and unscaled welfare summaries are retained as finite-grid diagnostics: changing raw-grid bounds, spacing, or weights changes every aggregate. They are not estimates under an empirical market distribution.
+
+\subsection{Scenario-bootstrap scope}
+In the greedy paired bootstrap, a sampled scenario contributes its order-averaged complete budget vector, preserving within-scenario covariance. Each draw recomputes endpoint changes and log-budget slopes without a normal approximation or monotonicity restriction. The resulting intervals target finite-scenario composition conditional on the prompts and order-replication design. The hierarchical stochastic bootstrap additionally samples generation seeds and propagates each sampled frontier through every game cell. Neither procedure covers market primitives, model misspecification, contest-function misspecification, or distribution shift.
+
+\subsection{Generation and confidence protocol}
+\label{app:prospectiveuq}
+The runner evaluates all four checkpoints on independently generated five- and seven-option candidate sets from Palm Pilot, Xbox, and Cartier auctions. Auctions are divided deterministically 70/30 into construction and held-out scoring samples. Candidate sets are generated without conditioning on the optimal bid, option order is randomized across three greedy replications, and a common constrained option-letter readout is used for every checkpoint. The deterministic frontier uses $\mathcal C_G=\{0,64,128,256,512,768\}$; an unconstrained generation with a 1,024-token cap is a diagnostic control, not a game action.
+
+Generation uncertainty is evaluated separately on $\mathcal C_S=\{128,384,768\}$ with seeds $\{1,7,21,42,99\}$, temperature $0.6$, and nucleus threshold $0.95$. Option order is held fixed at seed 314159 so variation across seeds reflects decoding rather than presentation order. Scenario-clustered intervals summarize utility ratio, regret, exact optimality, and bid dispersion. In each of 1,000 hierarchical-bootstrap draws, scenarios are sampled with replacement and one generation seed is sampled for each selected scenario, using that seed jointly at all three budgets. The resulting frontier is propagated through the same 2,400-cell economic grid and reported as a distinct three-budget stochastic game, separate from the six-budget greedy game.
+
+The runner records the geometric mean probability assigned to the constrained answer and a separate verbal-confidence report. A deterministic, scenario-disjoint 40/60 calibration/evaluation split is used for Brier score, negative log likelihood, ten-bin expected calibration error, AUROC, and risk--coverage analysis, followed by calibrated stopping or abstention policies. These analyses identify generation and reported-confidence uncertainty under the stated protocol only; they do not identify model misspecification, market shift, or contest-mapping uncertainty.
+
+\subsection{Budget enforcement, readout, and exact prompt}
+\label{app:reproducibility}
+
+The same enforcement code is used for Phi, Qwen, and DeepSeek. The Hugging Face chat template is called with \texttt{enable\_thinking=True} in reasoning mode when the tokenizer accepts that argument. For a positive assigned budget $c$, generation sets both \texttt{min\_new\_tokens} and \texttt{max\_new\_tokens} to $c$ and suppresses EOS token IDs. Thus exactly $c$ token IDs are recorded as reasoning, even if the trace ends mid-sentence or would otherwise stop earlier; the cap is a token boundary, not a semantic end-of-thought boundary. Greedy traces use \texttt{do\_sample=False}; stochastic traces use temperature 0.6 and top-$p$ 0.95. The prompt template is:
+
+\begin{quote}\footnotesize\ttfamily
+You are a bidder in a first-price auction.\\
+Your private value is \$\{value\}.\\
+Available bids are shown in randomized order:\\
+Option A: bid \$\{bid\}; estimated win probability \{probability\}\\
+One line is supplied per displayed option.\\
+For any bid b, expected profit under the supplied estimate is\\
+(private value - b) * estimated win probability.\\
+Choose one listed bid. Do not infer the answer from option position.\\
+End exactly with: FINAL BID: <number>
+\end{quote}
+
+After the reasoning trace, the runner appends \texttt{Now give the required answer. FINAL BID:} and greedily allows at most 20 answer tokens; this answer can stop at EOS and is retained as the free-form readout. The primary action is then obtained in a separate deterministic forward pass over the original prompt, saved reasoning trace, and the suffix \texttt{Use the reasoning above and select the best displayed option. Return one option letter only. FINAL OPTION:}. The runner takes the argmax only among the single-token labels A through E or G, as applicable, and maps that label to the displayed bid. Final-answer and constrained-readout tokens are not counted in $c$.
+
+At $c=0$, the reasoning generation call is skipped and the empty trace is passed directly to the two answer stages. Operationally, ``0 reasoning tokens'' therefore means no generated scratchpad, not an attempt to truncate a native trace after generation. The separate no-thinking control also requests \texttt{enable\_thinking=False} when supported; if a tokenizer rejects the flag, the runner falls back to its default chat template, but still generates no scratchpad at budget zero. The unconstrained control is different: it permits up to 1,024 generated tokens and is not an action in either reported game.
+
+\input{tables/model_setup}
+
+All completed runs used an NVIDIA RTX 4090, Python 3.10.12, PyTorch 2.13.0+cu130, bfloat16 weights, \texttt{device\_map=auto}, cache-enabled generation, and the repository IDs in Table~\ref{tab:models}. The saved metadata did not record exact Hugging Face commit hashes, tokenizer revisions, or the exact Transformers/Accelerate versions; the archived requirements specify Transformers $\geq4.51$, Accelerate $\geq1.2$, and Torch $\geq2.5$. We therefore cannot retroactively claim exact revisions. The revised runner now records model and tokenizer commit hashes, Transformers and Accelerate versions, CUDA version, classes, and dtype in every future metadata file. Reproducing the existing numbers exactly may require the original server cache; a fresh default-revision download is a replication, not a bitwise reproduction.
+
+\subsection{Confidence and adaptive-sampling diagnostic}
+
+Answer-token probability contains ranking information but is not calibrated as a correctness probability. At 768 tokens its held-out AUROC ranges from 0.699 to 0.760 and ten-bin ECE from 0.242 to 0.391. Verbal-confidence AUROC ranges from 0.391 to 0.500. A confidence-weighted convergence policy uses 3.18--3.67 samples on average and approximately matches five-sample utility for DeepSeek-8B, Phi-mini, and Qwen3-4B, but trails it for Qwen3-8B (0.923 versus 0.929). This non-central diagnostic supports model-specific calibration rather than a universal confidence threshold.
+
+\subsection{Readout, integrity, and completion audit}
+The constrained option letter defines the primary action because it is available under the same scoring rule for every checkpoint. The original free-form response is retained and independently parsed; disagreement is never overwritten. Across the six deterministic budgets, free-form validity is 66.8\% for DeepSeek-8B, 29.1\% for Phi-mini, 74.3\% for Qwen3-4B, and 51.0\% for Qwen3-8B. Agreement conditional on validity is 46.6\%, 32.7\%, 54.5\%, and 71.3\%, respectively. Section~\ref{sec:freeformmethod} defines the paired endpoint sensitivity. Appendix Table~\ref{tab:freeformbybudget} exposes the strong budget dependence of validity; no invalid response is imputed or scored.
+
+Each checkpoint contains the complete balanced design: 648 no-thinking rows, 4,536 greedy-reasoning rows, and 3,240 stochastic-reasoning rows, with no duplicate keys. The audit verifies all 216 scenarios, three product categories, both candidate-set widths, three greedy order seeds, and five generation seeds at every stochastic budget. The exported validation report passes with no errors; its only substantive warnings are the intentionally absent direct-game files and unavailable dollar-cost calibration.
+
+\section{Broader impacts}
+The measurement framework may help developers allocate inference resources using decision utility rather than exact-answer accuracy and may expose settings in which duplicated compute deserves further empirical study. Conversely, treating the conditional game grid as evidence about deployed markets could motivate unjustified compute restrictions or policy claims. Larger reasoning budgets also increase energy and latency even when their economic benefit is small. We mitigate these risks by reporting analytic baselines, normalization and menu sensitivities, explicit missing calibrations, and by avoiding recommendations about taxes, caps, or deployment policy.
+
+\input{checklist}
+
+\end{document}
