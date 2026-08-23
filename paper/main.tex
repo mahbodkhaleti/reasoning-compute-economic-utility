@@ -343,6 +343,11 @@ The runner records the geometric mean probability assigned to the constrained an
 \subsection{Budget enforcement, readout, and exact prompt}
 \label{app:reproducibility}
 
+\paragraph{Code and reproducibility.}
+Code, prompt templates, saved outputs, analysis scripts, and reproduction
+instructions are available in the anonymous repository at
+\url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}.
+
 The same enforcement code is used for Phi, Qwen, and DeepSeek. The Hugging Face chat template is called with \texttt{enable\_thinking=True} in reasoning mode when the tokenizer accepts that argument. For a positive assigned budget $c$, generation sets both \texttt{min\_new\_tokens} and \texttt{max\_new\_tokens} to $c$ and suppresses EOS token IDs. Thus exactly $c$ token IDs are recorded as reasoning, even if the trace ends mid-sentence or would otherwise stop earlier; the cap is a token boundary, not a semantic end-of-thought boundary. Greedy traces use \texttt{do\_sample=False}; stochastic traces use temperature 0.6 and top-$p$ 0.95. The prompt template is:
 
 \begin{quote}\footnotesize\ttfamily
