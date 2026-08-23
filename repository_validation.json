@@ -7,10 +7,17 @@
     "qwen3_8b"
   ],
   "scenario_count": 216,
+  "scenario_count_source": "saved raw inference records",
+  "processed_auction_data_tracked": false,
+  "processed_auction_data_reconstruction": "data/download_online_auctions.sh then reproduce_offline.sh",
   "python_scripts_compiled": 18,
-  "historical_manifest_files_checked": 58,
-  "historical_manifest_mismatches_after_rerun": [
-    "data/metadata.json"
+  "historical_manifest_files_checked": 54,
+  "historical_manifest_mismatches_after_rerun": [],
+  "historical_manifest_data_files_intentionally_not_redistributed": [
+    "data/auction_splits.csv",
+    "data/dataset_summary.csv",
+    "data/metadata.json",
+    "data/scenarios.csv"
   ],
   "new_llm_inference_executed_by_validation": false
 }

@@ -30,8 +30,8 @@ that are not present in that older manifest. Running an analysis can also
 replace derived CSV/PDF outputs; raw JSONL inference outputs remain the source
 of record.
 
-For double-blind release, two absolute user-specific paths in
-`server_outputs/data/metadata.json` were replaced by portable relative/null
-values. Consequently that metadata file intentionally differs from its hash in
-the historical server-package manifest. Its scenario counts, seeds, model IDs,
-and experimental configuration were not changed.
+Source and processed auction-derived data files are not redistributed because
+the source mirror reports an unknown license. `data/README.md` supplies the
+source checksum and historical hashes of the deterministic reconstruction.
+Consequently the historical server-package manifest lists data files that are
+intentionally absent from the public repository.

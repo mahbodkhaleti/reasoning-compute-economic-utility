@@ -11,7 +11,8 @@ rerun all downstream analyses without new LLM inference.
 
 - `robustness_extensions/scripts/`: all runner and analysis source code;
 - `robustness_extensions/server_outputs/raw/`: saved model generations;
-- `robustness_extensions/server_outputs/data/`: processed scenario inputs;
+- `robustness_extensions/server_outputs/data/`: instructions for locally
+  reconstructed scenario inputs;
 - `robustness_extensions/server_outputs/tables/`: machine-readable results;
 - `robustness_extensions/server_outputs/figures/`: generated figures;
 - `paper/`: anonymous NeurIPS EconML workshop LaTeX source;
@@ -20,19 +21,24 @@ rerun all downstream analyses without new LLM inference.
 - `data/`: source-data acquisition, checksum, and licensing caveat;
 - `environment/`: recovered server environment.
 
-No model weights or raw auction CSV are committed.
+No model weights, raw auction CSV, or processed auction-derived CSVs are
+committed. The latter are reconstructed deterministically from the
+checksum-verified source download.
 
 ## Reproduce analyses without model inference
 
 Create an analysis environment using the requirements in
-`robustness_extensions/scripts/requirements.txt`, then run:
+`robustness_extensions/scripts/requirements.txt`, acquire the source dataset,
+and then run:
 
 ```bash
+python -m pip install kaggle
+bash data/download_online_auctions.sh
 export REPRO_PYTHON_BIN=/path/to/environment/bin/python
 bash reproduce_offline.sh
 ```
 
-This reads the checked-in JSONL and processed scenario files and regenerates
+This reconstructs the processed scenario files, reads the checked-in JSONL, and regenerates
 all core, free-form, stochastic-bootstrap, normalized-game, beta/gamma,
 menu/frontier, auction-CDF, and zero-compute sensitivity outputs. It never loads
 a Hugging Face model. See `docs/RESULTS_PROVENANCE.md` for the table mapping.
@@ -58,7 +64,8 @@ bash robustness_extensions/scripts/run_4090_full.sh
 ```
 
 The JSONL runner checkpoints every completed scenario/budget/seed cell and can
-resume safely. The four model commits are pinned in `scripts/config.json` and
+resume safely. The four model commits are pinned in
+`robustness_extensions/scripts/config.json` and
 documented in `docs/REPRODUCIBILITY.md`. Tokenizers use the same pinned
 repository revision unless a separate `tokenizer_revision` is configured.
 
@@ -81,13 +88,13 @@ with SHA-256 and stored in the output records.
 ## Important archival limitations
 
 The model commits in the config were the only snapshots found in the server
-cache during inspection. Historical JSON metadata did not independently log
-them, so exact historical identification assumes the cache was unchanged. The
+cache during inspection and are recorded in `docs/HF_CACHE_AUDIT.json`.
+Historical JSON metadata did not independently log them, so exact historical
+identification assumes the cache was unchanged. The
 exact historical versions of every transitive Python dependency and the value
 of `PYTHONHASHSEED` were not saved. The repository states these gaps instead of
 inventing them.
 
-The dataset mirror reports an unknown license. Consult `LICENSES.md` before
-publishing this local repository. The authors must select an outbound license
-for their new code and confirm whether processed auction-derived files may be
-redistributed.
+The original project software is released under MIT. The dataset mirror reports
+an unknown license, so source and derived auction CSVs are reconstructed locally
+rather than redistributed; see `LICENSES.md` and `data/README.md`.

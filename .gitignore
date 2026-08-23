@@ -5,6 +5,8 @@ __pycache__/
 .analysis_venv/
 data/source/
 online-auctions-dataset/
+robustness_extensions/server_outputs/data/*.csv
+robustness_extensions/server_outputs/data/metadata.json
 *.safetensors
 *.bin
 *.pt

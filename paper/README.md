@@ -58,6 +58,8 @@ hybrid hierarchical bootstrap. It does not perform model inference and does not
 overwrite the primary stochastic outputs.
 
 The historical run metadata contain the model repository identifiers and most
-generation settings, but not the exact Hugging Face commit hashes or exact
-Transformers/Accelerate versions. The runner now records those fields
-prospectively; the paper does not retroactively invent them for completed runs.
+generation settings, but did not contemporaneously log exact Hugging Face
+commits or exact Transformers/Accelerate versions. Appendix~D reports the sole
+snapshots recovered in a post-hoc cache audit and the versions recovered from
+the preserved environment, with an explicit cache-immutability caveat. The
+runner now pins and records those fields prospectively.

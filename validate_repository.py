@@ -5,6 +5,7 @@ import hashlib
 import csv
 import json
 import py_compile
+import subprocess
 from pathlib import Path
 
 
@@ -63,11 +64,6 @@ def main() -> None:
     for path in sorted(SCRIPTS.glob("*.py")):
         py_compile.compile(str(path), doraise=True)
 
-    with (OUTPUTS / "data" / "scenarios.csv").open(newline="", encoding="utf-8") as handle:
-        scenarios = list(csv.DictReader(handle))
-    require(len(scenarios) == 216, f"Expected 216 scenarios, found {len(scenarios)}")
-    require(len({row["scenario_id"] for row in scenarios}) == 216, "Scenario IDs are not unique")
-
     raw = OUTPUTS / "raw"
     for model in EXPECTED_MODELS:
         for condition in (
@@ -78,6 +74,23 @@ def main() -> None:
             require((raw / f"fixed_{model}_{condition}.jsonl").is_file(), f"Missing raw output: {model} {condition}")
             require((raw / f"fixed_{model}_{condition}_metadata.json").is_file(), f"Missing metadata: {model} {condition}")
 
+    scenario_path = OUTPUTS / "data" / "scenarios.csv"
+    if scenario_path.is_file():
+        with scenario_path.open(newline="", encoding="utf-8") as handle:
+            scenarios = list(csv.DictReader(handle))
+        scenario_ids = {row["scenario_id"] for row in scenarios}
+        scenario_count_source = "locally reconstructed scenarios.csv"
+    else:
+        scenario_ids: set[str] = set()
+        for model in EXPECTED_MODELS:
+            path = raw / f"fixed_{model}_reasoning_greedy.jsonl"
+            with path.open(encoding="utf-8") as handle:
+                for line in handle:
+                    if line.strip():
+                        scenario_ids.add(str(json.loads(line)["scenario_id"]).zfill(12))
+        scenario_count_source = "saved raw inference records"
+    require(len(scenario_ids) == 216, f"Expected 216 scenarios, found {len(scenario_ids)}")
+
     required_paper = {
         ROOT / "paper" / "main.tex",
         ROOT / "paper" / "references.bib",
@@ -85,14 +98,31 @@ def main() -> None:
         ROOT / "paper" / "neurips_2026.sty",
     }
     require(all(path.is_file() for path in required_paper), "Paper source is incomplete")
-    require(not (ROOT / "online-auctions-dataset" / "auction.csv").exists(), "Raw auction.csv must not be committed")
+    tracked = set(
+        subprocess.run(
+            ["git", "ls-files"], cwd=ROOT, check=True, capture_output=True, text=True
+        ).stdout.splitlines()
+    )
+    prohibited_data = {
+        "online-auctions-dataset/auction.csv",
+        "robustness_extensions/server_outputs/data/auction_splits.csv",
+        "robustness_extensions/server_outputs/data/dataset_summary.csv",
+        "robustness_extensions/server_outputs/data/metadata.json",
+        "robustness_extensions/server_outputs/data/scenarios.csv",
+    }
+    require(not (tracked & prohibited_data), f"Restricted data are tracked: {sorted(tracked & prohibited_data)}")
 
     historical_manifest = json.loads((OUTPUTS / "SHA256_MANIFEST.json").read_text())
     checked = 0
     mismatches: list[str] = []
+    intentionally_absent: list[str] = []
     for relative, expected in historical_manifest["outputs"].items():
         path = OUTPUTS / relative
-        if path.name == "SHA256_MANIFEST.json" or not path.is_file():
+        if path.name == "SHA256_MANIFEST.json":
+            continue
+        if not path.is_file():
+            if relative.startswith("data/"):
+                intentionally_absent.append(relative)
             continue
         checked += 1
         if sha256(path) != expected:
@@ -102,10 +132,14 @@ def main() -> None:
     report = {
         "status": "ok",
         "models": sorted(EXPECTED_MODELS),
-        "scenario_count": len(scenarios),
+        "scenario_count": len(scenario_ids),
+        "scenario_count_source": scenario_count_source,
+        "processed_auction_data_tracked": False,
+        "processed_auction_data_reconstruction": "data/download_online_auctions.sh then reproduce_offline.sh",
         "python_scripts_compiled": len(list(SCRIPTS.glob("*.py"))),
         "historical_manifest_files_checked": checked,
         "historical_manifest_mismatches_after_rerun": mismatches,
+        "historical_manifest_data_files_intentionally_not_redistributed": sorted(intentionally_absent),
         "new_llm_inference_executed_by_validation": False,
     }
     report_path = ROOT / "repository_validation.json"

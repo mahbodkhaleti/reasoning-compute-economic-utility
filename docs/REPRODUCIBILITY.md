@@ -95,6 +95,11 @@ revisions unless that assumption can be verified from server backups or logs.
 The current runner records `model_revision` and `tokenizer_revision`
 prospectively so future runs do not require this inference.
 
+The machine-readable audit is archived in `docs/HF_CACHE_AUDIT.json`, and the
+reproduction config pins these recovered snapshots explicitly. This improves
+replicability but does not convert post-hoc cache evidence into a revision field
+logged contemporaneously with the completed inference.
+
 The cache inspection can be repeated with:
 
 ```bash

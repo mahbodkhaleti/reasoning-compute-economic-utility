@@ -62,8 +62,10 @@ secondary declared-design diagnostics.
 2. Alternative construction/held-out split seeds would change prompt-side CDFs
    and therefore require new candidate construction and model inference. The
    available auction bootstrap only re-scores fixed stored choices.
-3. The completed runs did not retain exact Hugging Face commit hashes or exact
-   Transformers/Accelerate versions. These are disclosed as missing; the runner
+3. The completed runs did not contemporaneously log exact Hugging Face commits
+   or exact Transformers/Accelerate versions. The paper now reports the sole
+   snapshots recovered by a post-hoc cache audit and the preserved environment
+   versions, explicitly conditional on cache immutability; the runner pins and
    records them prospectively.
 4. The normalized phase diagram removes redundant nominal scales but does not
    identify $\kappa$, $\rho$, $\gamma$, or a market distribution over them. The
@@ -72,9 +74,11 @@ secondary declared-design diagnostics.
 5. Direct-game pilot outputs are not used as evidence in the manuscript.
 6. Product coverage is limited to the three studied categories; the design does
    not establish external validity for other auction mechanisms or deployments.
-7. The full dependency/license audit, total project-wide compute accounting, and
-   public archival release remain incomplete and are answered conservatively in
-   the NeurIPS checklist.
+7. Code is anonymously archived under MIT and model licenses are documented.
+   The source dataset mirror still reports an unknown license, so raw and
+   processed auction CSVs are not redistributed and the asset-license checklist
+   answer remains conservative. Total project-wide compute accounting also
+   remains incomplete.
 
 ## Submission posture
 

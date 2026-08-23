@@ -1,0 +1,41 @@
+{
+  "audit_date": "2026-08-23",
+  "audit_method": "Enumerate immediate subdirectories of each configured Hugging Face snapshots directory",
+  "historical_run_metadata_contains_revision": false,
+  "interpretation": "Post-hoc cache evidence, conditional on the cache not having been replaced or supplemented between inference and inspection",
+  "models": [
+    {
+      "slug": "phi4_mini_reasoning",
+      "hf_id": "microsoft/Phi-4-mini-reasoning",
+      "cached_snapshot_count": 1,
+      "sole_cached_snapshot": "0e3b1e2d02ee478a3743abe3f629e9c0cb722e0a",
+      "separate_tokenizer_revision_requested": false
+    },
+    {
+      "slug": "qwen3_4b",
+      "hf_id": "Qwen/Qwen3-4B",
+      "cached_snapshot_count": 1,
+      "sole_cached_snapshot": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "separate_tokenizer_revision_requested": false
+    },
+    {
+      "slug": "deepseek_r1_llama_8b",
+      "hf_id": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+      "cached_snapshot_count": 1,
+      "sole_cached_snapshot": "6a6f4aa4197940add57724a7707d069478df56b1",
+      "separate_tokenizer_revision_requested": false
+    },
+    {
+      "slug": "qwen3_8b",
+      "hf_id": "Qwen/Qwen3-8B",
+      "cached_snapshot_count": 1,
+      "sole_cached_snapshot": "b968826d9c46dd6066d109eabc6255188de91218",
+      "separate_tokenizer_revision_requested": false
+    }
+  ],
+  "limitations": [
+    "The completed-run JSON metadata did not independently log these revisions.",
+    "A unique snapshot at inspection is not cryptographic proof of historical cache immutability.",
+    "A fully definitive resolution would require contemporaneous logs/backups or complete pinned inference reruns."
+  ]
+}

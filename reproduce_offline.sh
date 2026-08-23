@@ -6,12 +6,28 @@ SCRIPTS="${ROOT}/robustness_extensions/scripts"
 OUTPUTS="${ROOT}/robustness_extensions/server_outputs"
 CONFIG="${SCRIPTS}/config.json"
 PYTHON_BIN="${REPRO_PYTHON_BIN:-python3}"
+AUCTION_CSV="${ROOT}/online-auctions-dataset/auction.csv"
+DOWNLOADED_CSV="${ROOT}/data/source/auction.csv"
 
 # analyze_fixed.py historically derives some CI seeds from Python hash(). This
 # fixes process hash randomization for prospective reruns. It cannot recover an
 # unrecorded historical PYTHONHASHSEED.
 export PYTHONHASHSEED="${PYTHONHASHSEED:-0}"
 export MPLBACKEND="${MPLBACKEND:-Agg}"
+
+if [[ ! -f "${OUTPUTS}/data/scenarios.csv" || ! -f "${OUTPUTS}/data/auction_splits.csv" ]]; then
+  if [[ -f "${AUCTION_CSV}" ]]; then
+    SOURCE_CSV="${AUCTION_CSV}"
+  elif [[ -f "${DOWNLOADED_CSV}" ]]; then
+    SOURCE_CSV="${DOWNLOADED_CSV}"
+  else
+    echo "Processed auction data are not redistributed because the source license is unknown." >&2
+    echo "Run: bash data/download_online_auctions.sh" >&2
+    exit 1
+  fi
+  "${PYTHON_BIN}" "${SCRIPTS}/prepare_scenarios.py" \
+    --config "${CONFIG}" --auction-csv "${SOURCE_CSV}" --output-dir "${OUTPUTS}"
+fi
 
 "${PYTHON_BIN}" "${SCRIPTS}/analyze_fixed.py" \
   --config "${CONFIG}" --output-dir "${OUTPUTS}"

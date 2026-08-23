@@ -47,7 +47,7 @@
     \item {\bf Experimental result reproducibility}
     \item[] Question: Does the paper fully disclose all the information needed to reproduce the main experimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper (regardless of whether the code and data are provided or not)?
     \item[] Answer: \answerNo{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The prompts, code path, seeds, decoding, hardware, saved outputs, and reproduction commands are documented in Appendix~D and released at \url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}, but exact Hugging Face commit hashes and exact Transformers/Accelerate versions were not independently logged in the completed-run metadata.
+    \item[] Justification: The prompts, code path, seeds, decoding, hardware, saved outputs, recovered cache snapshots, and reproduction commands are documented in Appendix~D and released at \url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}. The answer remains No because the model revisions were recovered post hoc as the sole cached snapshots rather than logged independently in the completed-run metadata.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not include experiments.
@@ -66,8 +66,8 @@
 
 \item {\bf Open access to data and code}
     \item[] Question: Does the paper provide open access to the data and code, with sufficient instructions to faithfully reproduce the main experimental results, as described in supplemental material?
-    \item[] Answer: \answerNo{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: Code, prompts, saved outputs, and reproduction instructions are available at \url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}. The answer remains No because an outbound code license has not yet been selected and the source dataset's mirror reports an unknown redistribution license; the raw auction CSV is therefore not redistributed.
+    \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
+    \item[] Justification: MIT-licensed code, prompts, saved model outputs, and end-to-end instructions are available at \url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}. The raw dataset is obtained from its public cited host and verified by checksum; because that mirror reports an unknown redistribution license, raw and processed auction CSVs are reconstructed locally rather than republished.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that paper does not include experiments requiring code.
@@ -162,7 +162,7 @@
 \item {\bf Licenses for existing assets}
     \item[] Question: Are the creators or original owners of assets (e.g., code, data, models), used in the paper, properly credited and are the license and terms of use explicitly mentioned and properly respected?
     \item[] Answer: \answerNo{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The dataset and model sources are credited, but the submission does not yet provide a complete revision-specific license audit for every model and data mirror.
+    \item[] Justification: Appendix~D and the repository document the model licenses and recovered revisions. The answer remains No because the Online Auctions mirror labels its license ``Unknown'' and no affirmative redistribution grant was located; raw and processed auction CSVs are therefore excluded.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not use existing assets.
@@ -177,8 +177,8 @@
 
 \item {\bf New assets}
     \item[] Question: Are new assets introduced in the paper well documented and is the documentation provided alongside the assets?
-    \item[] Answer: \answerNo{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The new scripts and derived outputs are documented, but a public archival release, explicit asset license, and structured asset documentation are not yet complete.
+    \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
+    \item[] Justification: The anonymous archive documents construction, prompts, seeds, limitations, result provenance, environment recovery, validation, and reproduction commands. Original project software is released under MIT; third-party assets and generated outputs retain their separate terms.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not release new assets.
