@@ -9,7 +9,7 @@ or other third-party material.
 Third-party checkpoints are not included. Users obtain them from their original
 hosts and must follow their licenses:
 
-- Qwen3-4B, Qwen3-8B, and the optional Qwen3-14B extension: Apache-2.0
+- Qwen3-4B, Qwen3-8B, and Qwen3-14B: Apache-2.0
   (`https://huggingface.co/Qwen/Qwen3-4B`,
   `https://huggingface.co/Qwen/Qwen3-8B`,
   `https://huggingface.co/Qwen/Qwen3-14B`);
@@ -17,14 +17,18 @@ hosts and must follow their licenses:
   (`https://huggingface.co/microsoft/Phi-4-mini-reasoning`);
 - DeepSeek-R1-Distill-Llama-8B: DeepSeek's terms plus the applicable Llama 3.1
   Community License and acceptable-use policy for the base model.
+- IBM Granite-3.2-8B-Instruct: Apache-2.0
+  (`https://huggingface.co/ibm-granite/granite-3.2-8b-instruct`).
 
 The NeurIPS style in `paper/neurips_2026.sty` is the official submission style
 distributed for paper preparation.
 
-The Online Auctions Kaggle mirror reports an unknown license. The raw dataset
-and processed auction-derived CSVs are excluded. Users obtain the source from
-its cited host and reconstruct those files locally with the provided script;
-see `data/README.md`.
+The Online Auctions Kaggle mirror reports an unknown license. The raw dataset is
+excluded. The archive includes the exact transformed split and scenario
+artifacts required to audit the prompts and held-out scoring; they are supplied
+only for scholarly verification, retain the source provenance and license
+uncertainty, and are not relicensed under MIT. Users can instead reconstruct
+them from the cited source with the provided script; see `data/README.md`.
 
 Saved JSONL files contain model-generated responses and transformed scenario
 attributes for result verification; they do not contain source auction rows or

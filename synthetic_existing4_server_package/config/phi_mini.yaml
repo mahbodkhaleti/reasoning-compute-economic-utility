@@ -1,0 +1,4 @@
+slug: phi4_mini_reasoning
+hf_id: microsoft/Phi-4-mini-reasoning
+revision: 0e3b1e2d02ee478a3743abe3f629e9c0cb722e0a
+precision: bfloat16

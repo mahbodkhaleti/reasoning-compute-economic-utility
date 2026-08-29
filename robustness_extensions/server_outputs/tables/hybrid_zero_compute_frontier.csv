@@ -15,3 +15,7 @@ qwen3_8b,Qwen3-8B,0,0.7627822957954359,deterministic_reasoning_greedy_order_aver
 qwen3_8b,Qwen3-8B,128,0.775352176900331,stochastic_reasoning_five_seed_fixed_order,216,5
 qwen3_8b,Qwen3-8B,384,0.7953160398321516,stochastic_reasoning_five_seed_fixed_order,216,5
 qwen3_8b,Qwen3-8B,768,0.8925387466602691,stochastic_reasoning_five_seed_fixed_order,216,5
+qwen3_14b,Qwen3-14B,0,0.7493647196357931,deterministic_reasoning_greedy_order_average,216,3
+qwen3_14b,Qwen3-14B,128,0.762714317632279,stochastic_reasoning_five_seed_fixed_order,216,5
+qwen3_14b,Qwen3-14B,384,0.7933457224467586,stochastic_reasoning_five_seed_fixed_order,216,5
+qwen3_14b,Qwen3-14B,768,0.9124622066103194,stochastic_reasoning_five_seed_fixed_order,216,5

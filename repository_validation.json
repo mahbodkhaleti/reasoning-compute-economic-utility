@@ -1,23 +1,27 @@
 {
-  "status": "ok",
+  "status": "passed",
   "models": [
     "deepseek_r1_llama_8b",
+    "granite_3_2_8b_instruct",
     "phi4_mini_reasoning",
+    "qwen3_14b",
     "qwen3_4b",
     "qwen3_8b"
   ],
-  "scenario_count": 216,
-  "scenario_count_source": "saved raw inference records",
-  "processed_auction_data_tracked": false,
-  "processed_auction_data_reconstruction": "data/download_online_auctions.sh then reproduce_offline.sh",
-  "python_scripts_compiled": 18,
-  "historical_manifest_files_checked": 54,
-  "historical_manifest_mismatches_after_rerun": [],
-  "historical_manifest_data_files_intentionally_not_redistributed": [
-    "data/auction_splits.csv",
-    "data/dataset_summary.csv",
-    "data/metadata.json",
-    "data/scenarios.csv"
-  ],
-  "new_llm_inference_executed_by_validation": false
+  "historical_scenarios": 216,
+  "historical_records_per_model": {
+    "no_think_greedy": 648,
+    "reasoning_greedy": 4536,
+    "reasoning_stochastic": 3240
+  },
+  "synthetic_records_per_model": 4536,
+  "synthetic_records_total": 27216,
+  "preserved_output_verification": "passed",
+  "python_files_parsed": 75,
+  "manifest_files_checked": 373,
+  "manifest_errors": [],
+  "raw_auction_source_tracked": false,
+  "transformed_scenario_artifacts_tracked": true,
+  "transformed_artifact_license_caveat": "See LICENSES.md and data/README.md; no new license is asserted.",
+  "new_llm_inference_executed": false
 }

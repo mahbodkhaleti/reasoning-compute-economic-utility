@@ -1,9 +1,10 @@
 \begin{table}[H]
 \centering
-\caption{Exact $\gamma=1$ transition comparison. Nash entries are per-agent compute as $\kappa$ increases; hybrid planner entries are total compute as $r=\kappa/\rho$ increases. ``Preserved'' means that overcompute, aligned, and undercompute open regions all remain; it is not a statement about phase-map area.}
+\caption{Exact $\gamma=1$ transition comparison. Nash entries are per-agent compute as $\kappa$ increases; hybrid planner entries are total compute as $r=\kappa/\rho$ increases. ``Preserved'' records the presence of overcompute, aligned, and undercompute open regions.}
 \label{tab:zeroaugmented}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
 \begin{tabular}{@{}lp{0.20\linewidth}p{0.22\linewidth}p{0.31\linewidth}c@{}}
 \toprule
 Model & Primary Nash & Zero-augmented Nash & Zero-augmented planner & Three regions? \\
@@ -12,6 +13,8 @@ DeepSeek-8B & $768\to128$: $8.65\!\times\!10^{-5}$ & $768\to0$: $6.48\!\times\!1
 Phi-mini & $768\to128$: $3.34\!\times\!10^{-5}$ & $768\to128$: $3.34\!\times\!10^{-5}$; $128\to0$: $7.44\!\times\!10^{-5}$ & $1536\to896$: $4.99\!\times\!10^{-5}$; $896\to256$: $5.44\!\times\!10^{-5}$; $256\to128$: $1.07\!\times\!10^{-4}$; $128\to0$: $1.11\!\times\!10^{-4}$ & Preserved \\
 Qwen3-4B & $768\to384$: $8.39\!\times\!10^{-5}$; $384\to128$: $9.28\!\times\!10^{-5}$ & $768\to0$: $6.33\!\times\!10^{-5}$ & $1536\to768$: $9.52\!\times\!10^{-5}$; $768\to0$: $1.16\!\times\!10^{-4}$ & Preserved \\
 Qwen3-8B & $768\to128$: $5.49\!\times\!10^{-5}$ & $768\to0$: $5.10\!\times\!10^{-5}$ & $1536\to768$: $7.79\!\times\!10^{-5}$; $768\to0$: $9.11\!\times\!10^{-5}$ & Preserved \\
+Qwen3-14B & $768\to128$: $6.98\!\times\!10^{-5}$ & $768\to0$: $6.39\!\times\!10^{-5}$ & $1536\to768$: $9.58\!\times\!10^{-5}$; $768\to0$: $1.17\!\times\!10^{-4}$ & Preserved \\
+Granite-8B & $768\to384$: $6.25\!\times\!10^{-5}$; $384\to128$: $7.34\!\times\!10^{-5}$ & $768\to0$: $5.83\!\times\!10^{-5}$ & $1536\to768$: $8.69\!\times\!10^{-5}$; $768\to0$: $1.04\!\times\!10^{-4}$ & Preserved \\
 \bottomrule
 \end{tabular}%
 \end{table}

@@ -1,0 +1,45 @@
+{
+  "model": {
+    "slug": "granite_3_2_8b_instruct",
+    "hf_id": "ibm-granite/granite-3.2-8b-instruct",
+    "revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+    "tokenizer_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+    "chat_template_argument": "thinking",
+    "template_argument_required": true,
+    "reasoning_protocol": "granite_template_thinking_prompt_external_exact_token_budget",
+    "reasoning_protocol_matched": false,
+    "device_map": "auto"
+  },
+  "chat_mode": "reasoning",
+  "budgets": [
+    128,
+    384,
+    768
+  ],
+  "repeat_seeds": [
+    1,
+    7,
+    21,
+    42,
+    99
+  ],
+  "decoding": "stochastic",
+  "option_order_seed": 314159,
+  "query_verbal_confidence": true,
+  "constrained_option_readout": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.13.0+cu130",
+  "cuda": "13.0",
+  "transformers": "5.15.0",
+  "accelerate": "1.14.0",
+  "python": "3.10.12",
+  "model_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "tokenizer_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "revision_recorded_before_inference": true,
+  "run_manifest": "fixed_granite_3_2_8b_instruct_reasoning_stochastic_run_manifest.json",
+  "model_class": "GraniteForCausalLM",
+  "tokenizer_class": "TokenizersBackend",
+  "dtype": "torch.bfloat16",
+  "gpu_hour_usd": null,
+  "electricity_usd_per_kwh": null
+}

@@ -1,0 +1,63 @@
+{
+  "accelerate_version": "1.12.0",
+  "benchmark_sha256": "f252c795796370bcbe6e291df8737011a87d7f68f0e3a367de475c53fecff4fb",
+  "benchmark_version": "synthetic-ipv-fpsb-v1.0.0",
+  "budgets": [
+    0,
+    64,
+    128,
+    256,
+    384,
+    512,
+    768
+  ],
+  "chat_template_argument": "enable_thinking",
+  "completed_at_utc": "2026-08-26T08:19:50.393310+00:00",
+  "completed_cells": 4536,
+  "config_sha256": "4f3eaf5ec0906cb72c5a1640fb6868c8cbb907f4b4519e71b94cb144b456874e",
+  "corrupt_rows": 0,
+  "created_at_utc": "2026-08-25T14:22:14.497193+00:00",
+  "cuda_build_version": "12.8",
+  "device_map": "auto",
+  "dtype": "torch.bfloat16",
+  "expected_cells": 4536,
+  "gpu_count_billed": 1,
+  "gpu_devices": [
+    {
+      "index": 0,
+      "name": "NVIDIA L40S",
+      "total_memory_bytes": 47665709056
+    }
+  ],
+  "gpu_driver": "580.159.04",
+  "gpu_hour_usd": null,
+  "hardware_name": null,
+  "last_completed_cell": [
+    "syn-ipv-0216",
+    768,
+    37
+  ],
+  "missing_cells": [],
+  "model_slug": "qwen3_14b",
+  "option_order_seeds": [
+    11,
+    23,
+    37
+  ],
+  "python_version": "3.12.3",
+  "reasoning_protocol": "qwen3_native_thinking_external_exact_token_budget",
+  "reasoning_protocol_matched": true,
+  "repository_git_revision": null,
+  "requested_model_id": "Qwen/Qwen3-14B",
+  "requested_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "requested_tokenizer_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "resolved_device_map": null,
+  "resolved_model_id": "Qwen/Qwen3-14B",
+  "resolved_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "resolved_tokenizer_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "runner_sha256": "b8671801c7a6916ec49fe14fea4e4ba0851eb0d90961b89b636cb9034a206dec",
+  "scenario_limit": null,
+  "status": "complete",
+  "torch_version": "2.9.1+cu128",
+  "transformers_version": "5.1.0"
+}

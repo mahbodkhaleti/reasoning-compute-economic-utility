@@ -1,0 +1,628 @@
+auctionid,item,openbid,final_price,n_bids,n_bidders,auction_type,split
+2920317714,Palm Pilot M515 PDA,0.01,260.0,32,19,7 day auction,train
+2920320059,Palm Pilot M515 PDA,0.01,256.86,24,12,3 day auction,train
+2920322392,Palm Pilot M515 PDA,0.01,260.0,32,16,5 day auction,train
+2920504693,Palm Pilot M515 PDA,0.01,238.02,25,17,7 day auction,test
+3013787547,Palm Pilot M515 PDA,1.0,231.5,18,9,7 day auction,train
+3013839128,Palm Pilot M515 PDA,9.99,251.11,22,13,7 day auction,test
+3013874420,Palm Pilot M515 PDA,215.0,247.5,9,4,7 day auction,train
+3013884772,Palm Pilot M515 PDA,155.0,237.5,18,8,7 day auction,test
+3013912877,Palm Pilot M515 PDA,50.0,232.5,23,11,7 day auction,train
+3013951754,Palm Pilot M515 PDA,140.0,242.5,18,11,5 day auction,train
+3014012075,Palm Pilot M515 PDA,225.0,250.0,4,2,5 day auction,test
+3014012355,Palm Pilot M515 PDA,39.0,240.0,35,14,7 day auction,train
+3014012365,Palm Pilot M515 PDA,39.0,237.5,17,13,7 day auction,train
+3014085073,Palm Pilot M515 PDA,200.0,259.02,14,7,5 day auction,test
+3014314236,Palm Pilot M515 PDA,259.0,280.0,5,3,5 day auction,test
+3014467615,Palm Pilot M515 PDA,1.0,280.0,20,7,7 day auction,train
+3014480955,Palm Pilot M515 PDA,179.99,260.0,12,7,7 day auction,train
+3014527296,Palm Pilot M515 PDA,15.0,253.0,21,15,7 day auction,train
+3014572100,Palm Pilot M515 PDA,10.0,240.0,21,12,7 day auction,train
+3014616784,Palm Pilot M515 PDA,9.99,234.01,23,9,7 day auction,train
+3014671042,Palm Pilot M515 PDA,2.0,252.51,9,7,7 day auction,test
+3014772364,Palm Pilot M515 PDA,255.0,270.0,3,2,5 day auction,train
+3014792711,Palm Pilot M515 PDA,100.0,233.02,7,6,7 day auction,train
+3014797177,Palm Pilot M515 PDA,1.0,222.5,22,9,3 day auction,train
+3014834745,Palm Pilot M515 PDA,1.0,213.5,21,13,3 day auction,train
+3014834982,Palm Pilot M515 PDA,1.0,217.5,20,11,5 day auction,test
+3014835507,Palm Pilot M515 PDA,1.0,207.5,27,13,7 day auction,test
+3014836964,Palm Pilot M515 PDA,1.0,208.01,16,10,7 day auction,train
+3014844738,Palm Pilot M515 PDA,1.0,213.5,21,16,3 day auction,train
+3014844871,Palm Pilot M515 PDA,1.0,210.0,18,7,5 day auction,train
+3014878060,Palm Pilot M515 PDA,125.0,255.0,12,6,7 day auction,test
+3015010479,Palm Pilot M515 PDA,199.99,199.99,1,1,7 day auction,test
+3015011363,Palm Pilot M515 PDA,1.0,270.0,27,15,3 day auction,train
+3015053455,Palm Pilot M515 PDA,1.0,260.0,26,14,3 day auction,test
+3015053536,Palm Pilot M515 PDA,1.0,207.6,16,10,5 day auction,test
+3015053617,Palm Pilot M515 PDA,1.0,210.01,19,9,7 day auction,train
+3015060138,Palm Pilot M515 PDA,200.0,212.5,4,2,5 day auction,train
+3015103095,Palm Pilot M515 PDA,190.0,202.5,3,3,7 day auction,train
+3015148398,Palm Pilot M515 PDA,5.0,255.25,25,13,7 day auction,train
+3015318631,Palm Pilot M515 PDA,200.0,255.0,9,5,3 day auction,test
+3015328849,Palm Pilot M515 PDA,9.0,212.5,33,14,7 day auction,train
+3015344188,Palm Pilot M515 PDA,230.0,235.0,2,2,5 day auction,train
+3015358053,Palm Pilot M515 PDA,255.0,260.0,2,2,5 day auction,train
+3015396986,Palm Pilot M515 PDA,1.0,227.5,18,10,7 day auction,test
+3015467305,Palm Pilot M515 PDA,1.0,227.5,30,12,7 day auction,train
+3015469474,Palm Pilot M515 PDA,100.0,235.0,25,12,5 day auction,train
+3015513105,Palm Pilot M515 PDA,215.0,229.04,4,3,5 day auction,train
+3015513123,Palm Pilot M515 PDA,215.0,215.0,1,1,7 day auction,train
+3015513138,Palm Pilot M515 PDA,215.0,226.0,3,3,3 day auction,test
+3015520083,Palm Pilot M515 PDA,1.0,213.05,19,9,3 day auction,train
+3015520299,Palm Pilot M515 PDA,1.0,232.5,21,9,5 day auction,test
+3015520551,Palm Pilot M515 PDA,1.0,232.5,15,8,7 day auction,test
+3015546956,Palm Pilot M515 PDA,150.0,255.0,17,4,7 day auction,train
+3015549707,Palm Pilot M515 PDA,10.0,255.0,8,3,7 day auction,test
+3015592850,Palm Pilot M515 PDA,179.99,231.02,8,5,5 day auction,test
+3015594808,Palm Pilot M515 PDA,245.0,245.0,1,1,7 day auction,test
+3015632013,Palm Pilot M515 PDA,20.0,215.03,28,14,7 day auction,train
+3015682701,Palm Pilot M515 PDA,1.0,222.5,37,16,7 day auction,test
+3015694920,Palm Pilot M515 PDA,200.0,270.0,6,2,3 day auction,train
+3015710025,Palm Pilot M515 PDA,215.0,242.5,7,3,3 day auction,train
+3015710036,Palm Pilot M515 PDA,215.0,262.0,7,2,7 day auction,test
+3015710047,Palm Pilot M515 PDA,215.0,255.01,6,2,5 day auction,train
+3015826410,Palm Pilot M515 PDA,150.0,232.5,12,6,7 day auction,test
+3015860830,Palm Pilot M515 PDA,259.0,274.0,4,3,3 day auction,train
+3015898779,Palm Pilot M515 PDA,215.0,255.0,4,2,7 day auction,train
+3015909210,Palm Pilot M515 PDA,1.0,232.5,10,6,3 day auction,test
+3015909534,Palm Pilot M515 PDA,1.0,207.5,8,8,5 day auction,train
+3015909790,Palm Pilot M515 PDA,1.0,207.5,10,9,7 day auction,test
+3015915692,Palm Pilot M515 PDA,9.99,220.0,21,8,7 day auction,train
+3015942588,Palm Pilot M515 PDA,25.0,212.5,18,7,5 day auction,test
+3015958025,Palm Pilot M515 PDA,0.01,226.03,20,8,3 day auction,train
+3016035790,Palm Pilot M515 PDA,9.99,197.5,11,9,7 day auction,test
+3016189459,Palm Pilot M515 PDA,1.0,210.21,12,10,7 day auction,train
+3016329182,Palm Pilot M515 PDA,215.0,251.0,10,4,5 day auction,test
+3016330514,Palm Pilot M515 PDA,249.99,249.99,1,1,5 day auction,train
+3016342535,Palm Pilot M515 PDA,0.01,247.8,43,20,3 day auction,train
+3016384270,Palm Pilot M515 PDA,9.99,248.5,19,10,3 day auction,train
+3016384507,Palm Pilot M515 PDA,9.99,270.0,26,14,3 day auction,test
+3016385067,Palm Pilot M515 PDA,9.99,260.04,15,8,3 day auction,train
+3016427640,Palm Pilot M515 PDA,99.99,245.0,19,9,5 day auction,train
+3016429446,Palm Pilot M515 PDA,100.0,193.0,10,5,5 day auction,train
+3016458866,Palm Pilot M515 PDA,1.0,212.5,11,8,3 day auction,train
+3016459024,Palm Pilot M515 PDA,1.0,200.0,16,10,5 day auction,train
+3016587753,Palm Pilot M515 PDA,0.01,255.0,1,1,7 day auction,train
+3016610859,Palm Pilot M515 PDA,1.0,222.5,15,8,7 day auction,train
+3016623337,Palm Pilot M515 PDA,50.0,232.5,13,8,3 day auction,test
+3016651485,Palm Pilot M515 PDA,1.0,212.5,20,11,3 day auction,train
+3016710166,Palm Pilot M515 PDA,0.01,232.5,24,16,3 day auction,train
+3016770041,Palm Pilot M515 PDA,0.01,227.5,32,14,7 day auction,test
+3016771147,Palm Pilot M515 PDA,0.01,255.0,16,13,7 day auction,train
+3016832602,Palm Pilot M515 PDA,100.0,192.0,8,5,7 day auction,train
+3016891898,Palm Pilot M515 PDA,10.0,240.0,15,10,5 day auction,test
+3016892738,Palm Pilot M515 PDA,10.0,237.5,19,11,5 day auction,train
+3016893433,Palm Pilot M515 PDA,10.0,225.0,13,9,5 day auction,train
+3017449549,Palm Pilot M515 PDA,0.01,235.5,26,10,7 day auction,train
+3017456210,Palm Pilot M515 PDA,225.0,232.5,3,3,7 day auction,train
+3017457773,Palm Pilot M515 PDA,10.0,206.0,17,10,7 day auction,train
+3017533541,Palm Pilot M515 PDA,0.01,238.0,14,10,7 day auction,train
+3017602583,Palm Pilot M515 PDA,100.0,183.5,16,8,5 day auction,train
+3017626592,Palm Pilot M515 PDA,100.0,227.5,8,6,7 day auction,train
+3017676972,Palm Pilot M515 PDA,149.99,255.0,18,11,7 day auction,train
+3017736272,Palm Pilot M515 PDA,175.0,238.0,5,3,7 day auction,test
+3017841326,Palm Pilot M515 PDA,150.0,238.0,15,8,7 day auction,train
+3017907666,Palm Pilot M515 PDA,0.01,238.5,31,13,7 day auction,train
+3017911925,Palm Pilot M515 PDA,220.0,290.0,8,2,3 day auction,train
+3017923068,Palm Pilot M515 PDA,199.0,220.01,9,5,3 day auction,test
+3017950485,Palm Pilot M515 PDA,9.99,225.0,20,9,3 day auction,test
+3018011210,Palm Pilot M515 PDA,0.01,243.5,28,15,7 day auction,train
+3018061782,Palm Pilot M515 PDA,265.0,265.0,1,1,7 day auction,train
+3018065500,Palm Pilot M515 PDA,50.0,232.5,16,11,7 day auction,train
+3018091954,Palm Pilot M515 PDA,0.01,232.5,17,12,7 day auction,train
+3018131250,Palm Pilot M515 PDA,9.99,225.0,24,15,5 day auction,train
+3018228635,Palm Pilot M515 PDA,0.01,242.5,24,11,7 day auction,train
+3018288277,Palm Pilot M515 PDA,0.01,241.5,32,16,7 day auction,test
+3018375809,Palm Pilot M515 PDA,9.99,217.52,16,7,7 day auction,train
+3018453060,Palm Pilot M515 PDA,200.99,266.0,19,8,3 day auction,train
+3018457930,Palm Pilot M515 PDA,0.01,227.5,29,14,7 day auction,train
+3018581708,Palm Pilot M515 PDA,0.01,234.5,27,14,7 day auction,test
+3018594562,Palm Pilot M515 PDA,0.01,244.0,42,23,3 day auction,train
+3018604649,Palm Pilot M515 PDA,50.0,237.5,21,8,7 day auction,train
+3018623685,Palm Pilot M515 PDA,0.01,222.5,24,14,7 day auction,train
+3018632224,Palm Pilot M515 PDA,0.11,214.5,16,7,7 day auction,train
+3018729635,Palm Pilot M515 PDA,0.01,247.5,30,15,7 day auction,train
+3018732453,Palm Pilot M515 PDA,150.0,212.5,11,8,5 day auction,test
+3018738379,Palm Pilot M515 PDA,0.01,250.0,36,19,5 day auction,train
+3018740612,Palm Pilot M515 PDA,255.0,255.0,1,1,3 day auction,train
+3018788243,Palm Pilot M515 PDA,0.01,245.0,45,15,7 day auction,train
+3018792064,Palm Pilot M515 PDA,219.99,225.0,2,2,7 day auction,train
+3018868918,Palm Pilot M515 PDA,99.0,224.72,11,8,3 day auction,train
+3018904443,Palm Pilot M515 PDA,0.01,222.5,24,14,7 day auction,train
+3018964794,Palm Pilot M515 PDA,99.99,212.0,20,8,5 day auction,test
+3018989545,Palm Pilot M515 PDA,0.01,283.5,33,15,7 day auction,test
+3018994053,Palm Pilot M515 PDA,0.01,177.5,22,9,3 day auction,train
+3019008453,Palm Pilot M515 PDA,0.01,222.5,23,11,3 day auction,train
+3019070859,Palm Pilot M515 PDA,0.01,228.01,37,17,7 day auction,train
+3019086590,Palm Pilot M515 PDA,200.0,207.5,3,3,7 day auction,train
+3019100520,Palm Pilot M515 PDA,0.01,230.5,24,15,7 day auction,train
+3019119068,Palm Pilot M515 PDA,180.0,200.0,5,3,7 day auction,train
+3019146651,Palm Pilot M515 PDA,1.0,240.0,32,11,7 day auction,train
+3019148335,Palm Pilot M515 PDA,0.01,232.5,18,13,7 day auction,train
+3019173309,Palm Pilot M515 PDA,0.01,230.0,24,14,7 day auction,test
+3019224930,Palm Pilot M515 PDA,0.07,195.1,30,9,5 day auction,train
+3019245076,Palm Pilot M515 PDA,0.01,232.5,24,10,7 day auction,train
+3019259186,Palm Pilot M515 PDA,1.0,245.0,29,13,7 day auction,train
+3019326300,Palm Pilot M515 PDA,100.0,207.5,10,6,7 day auction,train
+3019326870,Palm Pilot M515 PDA,0.01,237.5,33,15,7 day auction,train
+3019342231,Palm Pilot M515 PDA,25.0,186.51,29,15,7 day auction,test
+3019342390,Palm Pilot M515 PDA,45.99,211.5,22,9,5 day auction,train
+3019354114,Palm Pilot M515 PDA,9.99,232.5,27,13,5 day auction,train
+3019428008,Palm Pilot M515 PDA,0.01,240.5,32,18,7 day auction,train
+3019459282,Palm Pilot M515 PDA,0.01,232.5,22,17,7 day auction,train
+3019508285,Palm Pilot M515 PDA,1.0,255.0,33,11,3 day auction,train
+3019515786,Palm Pilot M515 PDA,0.01,265.0,32,17,7 day auction,train
+3019516140,Palm Pilot M515 PDA,25.0,220.0,12,6,7 day auction,test
+3019530013,Palm Pilot M515 PDA,240.0,250.01,2,2,7 day auction,train
+3019540740,Palm Pilot M515 PDA,0.01,255.0,38,19,7 day auction,test
+3019559023,Palm Pilot M515 PDA,0.01,217.5,17,12,3 day auction,train
+3019610737,Palm Pilot M515 PDA,0.01,250.0,30,14,7 day auction,test
+3019696199,Palm Pilot M515 PDA,0.01,247.5,32,18,7 day auction,train
+3019716900,Palm Pilot M515 PDA,9.99,244.72,21,13,5 day auction,train
+3019783040,Palm Pilot M515 PDA,100.0,232.5,19,9,7 day auction,test
+3019821308,Palm Pilot M515 PDA,239.99,239.99,1,1,7 day auction,train
+3019821569,Palm Pilot M515 PDA,0.01,240.0,27,15,7 day auction,test
+3019873456,Palm Pilot M515 PDA,0.01,242.51,25,14,7 day auction,test
+3019881842,Palm Pilot M515 PDA,199.95,260.0,5,2,3 day auction,train
+3019972424,Palm Pilot M515 PDA,0.01,242.5,26,14,7 day auction,test
+3019975492,Palm Pilot M515 PDA,1.0,202.5,17,11,5 day auction,train
+3020017121,Palm Pilot M515 PDA,9.99,247.5,26,12,7 day auction,test
+3020026227,Palm Pilot M515 PDA,0.01,235.0,20,14,7 day auction,train
+3020060476,Palm Pilot M515 PDA,0.01,230.0,22,13,7 day auction,test
+3020109475,Palm Pilot M515 PDA,150.0,217.5,10,8,7 day auction,train
+3020125049,Palm Pilot M515 PDA,175.0,228.49,10,6,7 day auction,train
+3020143804,Palm Pilot M515 PDA,0.01,232.5,19,14,7 day auction,train
+3020157897,Palm Pilot M515 PDA,1.0,227.5,15,10,3 day auction,test
+3020159852,Palm Pilot M515 PDA,1.0,225.0,12,11,7 day auction,train
+3020160387,Palm Pilot M515 PDA,1.0,208.0,22,12,7 day auction,train
+3020237085,Palm Pilot M515 PDA,50.0,245.0,18,7,7 day auction,train
+3020237201,Palm Pilot M515 PDA,0.01,232.5,25,14,7 day auction,train
+3020242442,Palm Pilot M515 PDA,1.0,270.0,17,9,3 day auction,train
+3020257463,Palm Pilot M515 PDA,0.01,244.5,16,6,7 day auction,train
+3020269225,Palm Pilot M515 PDA,240.0,240.0,1,1,7 day auction,train
+3020274575,Palm Pilot M515 PDA,100.0,200.0,11,5,7 day auction,test
+3020329965,Palm Pilot M515 PDA,1.0,217.5,29,12,7 day auction,test
+3020334869,Palm Pilot M515 PDA,0.01,240.01,27,13,7 day auction,train
+3020382619,Palm Pilot M515 PDA,215.0,217.5,2,2,7 day auction,train
+3020431774,Palm Pilot M515 PDA,0.01,232.5,36,15,7 day auction,train
+3020435332,Palm Pilot M515 PDA,200.0,212.5,3,3,7 day auction,train
+3020454530,Palm Pilot M515 PDA,0.01,227.5,21,11,7 day auction,train
+3020526277,Palm Pilot M515 PDA,19.99,212.5,15,9,7 day auction,test
+3020532816,Palm Pilot M515 PDA,0.01,227.5,51,21,7 day auction,train
+3020562562,Palm Pilot M515 PDA,0.01,250.0,35,13,7 day auction,train
+3020573049,Palm Pilot M515 PDA,215.0,220.0,2,2,3 day auction,train
+3020632534,Palm Pilot M515 PDA,1.0,265.0,11,7,3 day auction,train
+3020684186,Palm Pilot M515 PDA,25.0,202.5,27,15,3 day auction,train
+3020701670,Palm Pilot M515 PDA,19.99,265.0,27,9,5 day auction,test
+3020805007,Palm Pilot M515 PDA,150.0,232.5,18,8,5 day auction,train
+3020818693,Palm Pilot M515 PDA,1.0,202.5,16,6,3 day auction,train
+3020823944,Palm Pilot M515 PDA,1.0,237.5,32,15,5 day auction,test
+3021003299,Palm Pilot M515 PDA,240.0,245.0,2,2,3 day auction,test
+3021836029,Palm Pilot M515 PDA,199.0,199.0,8,1,7 day auction,test
+3021855303,Palm Pilot M515 PDA,74.9,199.99,18,10,7 day auction,train
+3021870696,Palm Pilot M515 PDA,1.0,240.0,9,7,7 day auction,test
+3021884961,Palm Pilot M515 PDA,0.01,227.5,24,14,7 day auction,train
+3021965054,Palm Pilot M515 PDA,149.99,177.5,10,6,7 day auction,train
+3021984260,Palm Pilot M515 PDA,0.01,240.0,26,13,7 day auction,train
+3022000145,Palm Pilot M515 PDA,240.0,245.0,3,3,7 day auction,test
+3022018351,Palm Pilot M515 PDA,225.0,225.0,1,1,7 day auction,test
+3022303986,Palm Pilot M515 PDA,40.0,227.5,10,9,7 day auction,train
+3022352711,Palm Pilot M515 PDA,5.0,217.0,39,11,7 day auction,train
+3022476363,Palm Pilot M515 PDA,150.0,255.01,13,9,7 day auction,train
+3022527291,Palm Pilot M515 PDA,50.0,222.5,19,6,7 day auction,train
+3022613118,Palm Pilot M515 PDA,190.0,232.5,9,2,3 day auction,test
+3022668008,Palm Pilot M515 PDA,175.0,210.1,5,4,3 day auction,train
+3022716748,Palm Pilot M515 PDA,9.95,213.51,23,13,7 day auction,train
+3022774388,Palm Pilot M515 PDA,0.01,207.5,29,11,7 day auction,train
+3022783472,Palm Pilot M515 PDA,9.95,215.0,26,13,7 day auction,train
+3022785804,Palm Pilot M515 PDA,240.0,242.5,2,2,7 day auction,train
+3022814911,Palm Pilot M515 PDA,0.01,225.0,32,20,3 day auction,test
+3022847852,Palm Pilot M515 PDA,10.0,217.5,27,11,5 day auction,train
+3022878518,Palm Pilot M515 PDA,9.95,232.5,19,13,7 day auction,train
+3022969296,Palm Pilot M515 PDA,9.95,227.5,22,12,7 day auction,train
+3023004423,Palm Pilot M515 PDA,89.0,227.5,16,7,5 day auction,train
+3023120360,Palm Pilot M515 PDA,1.0,227.5,35,15,7 day auction,test
+3023163333,Palm Pilot M515 PDA,240.0,247.5,4,3,7 day auction,test
+3023174478,Palm Pilot M515 PDA,1.0,255.0,54,14,5 day auction,test
+3023175174,Palm Pilot M515 PDA,9.99,218.15,22,10,5 day auction,train
+3023183955,Palm Pilot M515 PDA,250.0,250.0,1,1,7 day auction,train
+3023187210,Palm Pilot M515 PDA,150.0,235.02,11,8,3 day auction,train
+3023249693,Palm Pilot M515 PDA,50.0,250.01,16,9,3 day auction,train
+3023251181,Palm Pilot M515 PDA,15.0,207.5,24,8,5 day auction,train
+3023263834,Palm Pilot M515 PDA,9.95,265.0,29,12,7 day auction,test
+3023275213,Palm Pilot M515 PDA,99.0,227.5,7,4,3 day auction,train
+3023355964,Palm Pilot M515 PDA,175.0,222.5,7,4,3 day auction,train
+3023387988,Palm Pilot M515 PDA,1.0,227.5,14,7,7 day auction,test
+3023389524,Palm Pilot M515 PDA,9.99,212.5,16,6,5 day auction,train
+3023456362,Palm Pilot M515 PDA,1.0,214.5,20,14,3 day auction,train
+3023474060,Palm Pilot M515 PDA,1.0,242.5,23,11,7 day auction,train
+3023568805,Palm Pilot M515 PDA,175.0,211.0,10,4,3 day auction,test
+3023574629,Palm Pilot M515 PDA,175.0,208.88,10,4,3 day auction,train
+3023583801,Palm Pilot M515 PDA,150.0,203.5,11,5,3 day auction,train
+3023639205,Palm Pilot M515 PDA,9.99,222.5,26,15,7 day auction,train
+3023639316,Palm Pilot M515 PDA,9.99,212.5,31,15,7 day auction,test
+3023647851,Palm Pilot M515 PDA,9.95,255.5,16,7,7 day auction,train
+3023652961,Palm Pilot M515 PDA,175.0,175.0,1,1,3 day auction,train
+3023653116,Palm Pilot M515 PDA,175.0,182.5,3,2,5 day auction,train
+3023653148,Palm Pilot M515 PDA,175.0,202.5,4,3,5 day auction,train
+3023653216,Palm Pilot M515 PDA,175.0,201.01,5,4,7 day auction,train
+3023653463,Palm Pilot M515 PDA,175.0,204.03,6,5,7 day auction,train
+3023680963,Palm Pilot M515 PDA,1.0,232.5,23,10,7 day auction,test
+3023700043,Palm Pilot M515 PDA,50.0,228.01,11,5,7 day auction,train
+3023746524,Palm Pilot M515 PDA,1.0,177.0,34,16,7 day auction,train
+3023748273,Palm Pilot M515 PDA,1.0,190.0,42,17,7 day auction,train
+3023754303,Palm Pilot M515 PDA,240.0,242.5,2,2,3 day auction,train
+3023864656,Palm Pilot M515 PDA,150.0,202.5,6,5,7 day auction,train
+3023876273,Palm Pilot M515 PDA,9.99,242.5,29,12,7 day auction,train
+3023885393,Palm Pilot M515 PDA,175.0,222.5,9,6,3 day auction,train
+3023885982,Palm Pilot M515 PDA,1.0,239.01,26,14,7 day auction,train
+3023898379,Palm Pilot M515 PDA,1.0,240.0,27,13,7 day auction,train
+3023920921,Palm Pilot M515 PDA,245.0,245.0,1,1,5 day auction,train
+3023962700,Palm Pilot M515 PDA,1.0,236.99,25,18,7 day auction,train
+3024052380,Palm Pilot M515 PDA,5.0,207.5,17,12,7 day auction,train
+3024061761,Palm Pilot M515 PDA,175.0,212.5,7,4,3 day auction,train
+3024062340,Palm Pilot M515 PDA,175.0,202.5,7,4,3 day auction,train
+3024095861,Palm Pilot M515 PDA,1.0,237.5,17,10,7 day auction,test
+3024119831,Palm Pilot M515 PDA,9.95,237.65,22,9,7 day auction,train
+3024121735,Palm Pilot M515 PDA,240.0,240.0,1,1,3 day auction,train
+3024122118,Palm Pilot M515 PDA,240.0,240.0,1,1,7 day auction,train
+3024124623,Palm Pilot M515 PDA,50.0,280.0,41,8,7 day auction,test
+3024165142,Palm Pilot M515 PDA,1.0,205.0,40,13,7 day auction,test
+3024179301,Palm Pilot M515 PDA,1.0,217.75,19,13,7 day auction,train
+3024264085,Palm Pilot M515 PDA,1.0,242.5,21,11,7 day auction,test
+3024267974,Palm Pilot M515 PDA,1.0,217.5,12,9,3 day auction,test
+3024274951,Palm Pilot M515 PDA,10.0,187.52,18,8,7 day auction,train
+3024287595,Palm Pilot M515 PDA,150.0,225.0,12,4,7 day auction,test
+3024290827,Palm Pilot M515 PDA,9.95,240.0,26,12,7 day auction,train
+3024307014,Palm Pilot M515 PDA,175.0,202.5,6,4,3 day auction,test
+3024307294,Palm Pilot M515 PDA,175.0,202.5,3,3,3 day auction,train
+3024361363,Palm Pilot M515 PDA,1.0,232.5,26,11,7 day auction,train
+3024406300,Palm Pilot M515 PDA,9.99,200.0,19,13,7 day auction,train
+3024416642,Palm Pilot M515 PDA,9.99,202.5,30,12,7 day auction,train
+3024428241,Palm Pilot M515 PDA,175.0,197.62,6,4,3 day auction,train
+3024428283,Palm Pilot M515 PDA,175.0,202.5,11,3,3 day auction,train
+3024471745,Palm Pilot M515 PDA,175.0,202.49,5,4,3 day auction,train
+3024487267,Palm Pilot M515 PDA,9.95,226.01,33,16,7 day auction,test
+3024504428,Palm Pilot M515 PDA,240.0,240.0,1,1,5 day auction,test
+3024527409,Palm Pilot M515 PDA,1.0,230.0,26,12,7 day auction,train
+3024568877,Palm Pilot M515 PDA,1.0,247.5,20,12,7 day auction,train
+3024579326,Palm Pilot M515 PDA,179.99,237.5,11,5,7 day auction,train
+3024579522,Palm Pilot M515 PDA,179.99,209.02,7,6,7 day auction,train
+3024582522,Palm Pilot M515 PDA,1.0,255.0,17,7,7 day auction,test
+3024659380,Palm Pilot M515 PDA,1.0,262.61,26,11,7 day auction,test
+3024662462,Palm Pilot M515 PDA,175.0,207.49,5,4,3 day auction,train
+3024676416,Palm Pilot M515 PDA,9.95,237.5,38,18,7 day auction,test
+3024680777,Palm Pilot M515 PDA,150.0,215.0,3,2,3 day auction,train
+3024707992,Palm Pilot M515 PDA,1.0,242.5,20,11,7 day auction,test
+3024799631,Palm Pilot M515 PDA,99.99,255.0,18,10,7 day auction,train
+3024823511,Palm Pilot M515 PDA,9.95,237.5,45,23,7 day auction,train
+3024854454,Palm Pilot M515 PDA,175.0,212.5,5,4,3 day auction,train
+3024889230,Palm Pilot M515 PDA,240.0,261.0,5,2,7 day auction,test
+3024889358,Palm Pilot M515 PDA,240.0,240.0,1,1,5 day auction,train
+3024895548,Palm Pilot M515 PDA,199.0,242.51,7,5,3 day auction,test
+3024918848,Palm Pilot M515 PDA,1.0,255.0,20,13,7 day auction,train
+3024953755,Palm Pilot M515 PDA,1.0,240.07,20,13,7 day auction,test
+3024980031,Palm Pilot M515 PDA,9.95,247.5,35,11,7 day auction,train
+3024980402,Palm Pilot M515 PDA,0.01,222.5,26,15,5 day auction,train
+3025035412,Palm Pilot M515 PDA,259.95,259.95,1,1,7 day auction,test
+3025036419,Palm Pilot M515 PDA,175.0,175.0,1,1,3 day auction,train
+3025106904,Palm Pilot M515 PDA,175.0,217.5,9,3,3 day auction,train
+3025133084,Palm Pilot M515 PDA,1.0,232.5,19,12,7 day auction,train
+3025160117,Palm Pilot M515 PDA,175.0,200.0,4,3,3 day auction,train
+3025212496,Palm Pilot M515 PDA,175.0,200.0,6,4,3 day auction,test
+3025232103,Palm Pilot M515 PDA,175.0,202.49,4,4,3 day auction,train
+3025263643,Palm Pilot M515 PDA,175.0,190.0,7,4,3 day auction,train
+3025266581,Palm Pilot M515 PDA,1.0,222.5,26,17,7 day auction,train
+3025307344,Palm Pilot M515 PDA,19.99,178.0,17,9,3 day auction,train
+3025307420,Palm Pilot M515 PDA,19.99,182.5,40,11,3 day auction,test
+3025370463,Palm Pilot M515 PDA,1.0,237.5,23,14,7 day auction,train
+3025373736,Palm Pilot M515 PDA,1.0,227.5,15,11,7 day auction,test
+3025433808,Palm Pilot M515 PDA,175.0,197.5,3,3,3 day auction,test
+3025453701,Palm Pilot M515 PDA,175.0,206.0,7,4,3 day auction,train
+3025473203,Palm Pilot M515 PDA,9.99,210.0,37,13,7 day auction,train
+3025486868,Palm Pilot M515 PDA,1.0,230.5,28,14,7 day auction,test
+3025507248,Palm Pilot M515 PDA,175.0,195.5,7,4,3 day auction,train
+3025598612,Palm Pilot M515 PDA,175.0,209.5,8,3,3 day auction,test
+3025598698,Palm Pilot M515 PDA,175.0,175.0,2,1,3 day auction,train
+3025604983,Palm Pilot M515 PDA,185.0,265.0,9,5,3 day auction,train
+3025639289,Palm Pilot M515 PDA,202.5,202.5,1,1,3 day auction,test
+3025655397,Palm Pilot M515 PDA,175.0,197.5,6,3,3 day auction,train
+3025656717,Palm Pilot M515 PDA,200.0,224.01,6,5,3 day auction,train
+3025665574,Palm Pilot M515 PDA,70.0,250.0,41,9,5 day auction,train
+3025671430,Palm Pilot M515 PDA,9.99,245.0,32,19,3 day auction,train
+3025677685,Palm Pilot M515 PDA,175.0,202.5,6,6,3 day auction,test
+3025778593,Palm Pilot M515 PDA,5.0,225.01,22,13,3 day auction,test
+3025778985,Palm Pilot M515 PDA,175.0,229.51,8,4,3 day auction,test
+3025836567,Palm Pilot M515 PDA,175.0,190.5,5,4,3 day auction,train
+3025866584,Palm Pilot M515 PDA,240.0,240.0,1,1,5 day auction,test
+3025885755,Palm Pilot M515 PDA,175.0,203.5,7,3,3 day auction,train
+3026102735,Palm Pilot M515 PDA,175.0,197.5,8,6,3 day auction,test
+3026299552,Palm Pilot M515 PDA,175.0,212.5,7,5,3 day auction,train
+3026374373,Palm Pilot M515 PDA,1.0,192.51,37,11,3 day auction,train
+3406945791,Palm Pilot M515 PDA,9.99,232.5,20,7,7 day auction,train
+3410601613,Palm Pilot M515 PDA,9.99,257.0,29,14,3 day auction,test
+8211480551,Xbox game console,49.99,311.6,12,9,7 day auction,train
+8211763485,Xbox game console,9.99,139.3,31,12,7 day auction,train
+8211851222,Xbox game console,50.0,161.0,28,15,7 day auction,test
+8212110388,Xbox game console,1.0,61.0,27,11,7 day auction,test
+8212116757,Xbox game console,49.99,167.5,19,8,7 day auction,train
+8212122220,Xbox game console,75.0,100.0,6,5,7 day auction,train
+8212135847,Xbox game console,24.5,126.0,26,9,7 day auction,test
+8212140993,Xbox game console,9.99,306.0,42,15,7 day auction,train
+8212143601,Xbox game console,80.0,167.5,9,4,7 day auction,train
+8212145833,Xbox game console,5.0,132.5,26,11,7 day auction,test
+8212157034,Xbox game console,80.0,152.5,18,9,7 day auction,train
+8212165593,Xbox game console,9.99,142.5,28,13,7 day auction,train
+8212170033,Xbox game console,75.0,125.0,16,7,7 day auction,test
+8212182237,Xbox game console,50.0,112.5,5,4,7 day auction,test
+8212183207,Xbox game console,0.99,100.5,26,12,7 day auction,train
+8212190120,Xbox game console,12.99,28.0,9,1,7 day auction,test
+8212198987,Xbox game console,50.0,157.5,17,8,7 day auction,test
+8212236671,Xbox game console,9.99,96.0,43,13,7 day auction,test
+8212237522,Xbox game console,40.0,102.5,10,5,7 day auction,train
+8212248443,Xbox game console,25.0,82.02,23,7,7 day auction,train
+8212264580,Xbox game console,29.99,127.51,22,8,7 day auction,test
+8212268905,Xbox game console,85.0,130.0,7,6,7 day auction,train
+8212272351,Xbox game console,75.0,125.0,9,4,7 day auction,test
+8212277835,Xbox game console,150.0,152.5,3,2,7 day auction,train
+8212339045,Xbox game console,0.99,177.5,21,15,7 day auction,train
+8212359174,Xbox game console,3.0,222.5,45,12,7 day auction,train
+8212381867,Xbox game console,0.99,81.0,24,11,7 day auction,test
+8212408545,Xbox game console,1.0,202.5,25,7,7 day auction,train
+8212441657,Xbox game console,80.0,81.99,2,2,7 day auction,train
+8212530768,Xbox game console,69.99,90.0,5,4,7 day auction,test
+8212590929,Xbox game console,70.0,152.5,8,4,5 day auction,train
+8212591610,Xbox game console,0.01,114.5,35,14,7 day auction,train
+8212602164,Xbox game console,3.0,212.5,50,12,7 day auction,train
+8212610170,Xbox game console,49.99,133.04,20,8,7 day auction,train
+8212610485,Xbox game console,1.0,33.0,10,4,7 day auction,train
+8212629520,Xbox game console,0.01,132.55,57,15,7 day auction,train
+8212631876,Xbox game console,59.99,124.49,18,11,7 day auction,test
+8212635193,Xbox game console,0.01,204.11,22,10,7 day auction,train
+8212668731,Xbox game console,0.01,167.5,36,13,7 day auction,train
+8212711136,Xbox game console,1.0,47.0,13,6,7 day auction,train
+8212752835,Xbox game console,0.99,71.0,25,8,5 day auction,train
+8212755285,Xbox game console,3.0,182.5,26,8,7 day auction,train
+8212760279,Xbox game console,2.0,33.1,19,12,7 day auction,test
+8212819110,Xbox game console,99.0,123.15,6,4,7 day auction,test
+8212830525,Xbox game console,150.0,501.77,32,7,5 day auction,train
+8212839477,Xbox game console,10.0,41.0,8,5,7 day auction,test
+8212848054,Xbox game console,10.0,132.5,27,15,7 day auction,train
+8212869625,Xbox game console,0.99,122.5,16,9,5 day auction,test
+8212870695,Xbox game console,0.99,122.5,20,13,7 day auction,train
+8212878941,Xbox game console,1.0,51.0,9,4,7 day auction,train
+8212883411,Xbox game console,50.0,117.5,18,9,7 day auction,train
+8212889138,Xbox game console,49.99,147.76,21,10,5 day auction,train
+8212896511,Xbox game console,175.0,177.5,2,2,7 day auction,test
+8212898463,Xbox game console,60.0,102.5,15,10,7 day auction,test
+8212899346,Xbox game console,60.0,167.5,17,8,7 day auction,test
+8212903200,Xbox game console,59.99,127.5,19,7,7 day auction,test
+8212903781,Xbox game console,0.99,142.5,38,11,7 day auction,train
+8212944779,Xbox game console,70.0,247.5,23,7,7 day auction,train
+8212964295,Xbox game console,49.99,86.0,11,4,7 day auction,test
+8212966887,Xbox game console,50.0,102.5,12,5,7 day auction,train
+8212969221,Xbox game console,10.0,49.0,19,9,7 day auction,train
+8212989463,Xbox game console,89.0,127.5,2,2,7 day auction,test
+8213013625,Xbox game console,20.0,132.52,36,12,7 day auction,train
+8213034705,Xbox game console,95.0,117.5,4,4,3 day auction,train
+8213037774,Xbox game console,1.0,127.5,23,11,7 day auction,train
+8213047071,Xbox game console,0.99,116.5,25,12,7 day auction,train
+8213049640,Xbox game console,1.99,105.0,24,8,7 day auction,train
+8213058220,Xbox game console,74.99,112.5,8,5,5 day auction,test
+8213060420,Xbox game console,1.0,120.0,22,9,3 day auction,test
+8213063145,Xbox game console,0.01,106.0,23,13,5 day auction,train
+8213066557,Xbox game console,5.0,142.73,30,16,7 day auction,train
+8213067838,Xbox game console,29.99,132.5,20,8,3 day auction,train
+8213073509,Xbox game console,1.0,114.5,21,11,3 day auction,train
+8213081560,Xbox game console,0.01,405.0,17,8,7 day auction,train
+8213082427,Xbox game console,9.99,100.0,26,8,7 day auction,train
+8213085879,Xbox game console,0.99,96.0,15,11,7 day auction,train
+8213118813,Xbox game console,79.99,122.5,15,7,7 day auction,train
+8213119950,Xbox game console,0.01,100.0,34,11,3 day auction,test
+8213122141,Xbox game console,62.55,145.0,22,6,5 day auction,train
+8213123943,Xbox game console,62.55,122.5,14,7,5 day auction,train
+8213137264,Xbox game console,125.0,144.0,4,3,7 day auction,test
+8213162076,Xbox game console,40.0,90.0,12,7,3 day auction,train
+8213183841,Xbox game console,50.0,96.99,13,7,3 day auction,train
+8213188385,Xbox game console,0.01,106.5,38,15,5 day auction,test
+8213266411,Xbox game console,100.16,127.5,5,2,3 day auction,train
+8213266439,Xbox game console,100.16,130.0,3,2,3 day auction,train
+8213267098,Xbox game console,100.0,151.0,6,4,5 day auction,train
+8213297233,Xbox game console,49.0,141.0,22,11,3 day auction,train
+8213305402,Xbox game console,0.01,137.5,24,14,3 day auction,train
+8213318286,Xbox game console,99.0,132.55,10,6,3 day auction,test
+8213369721,Xbox game console,39.99,85.0,15,8,5 day auction,train
+8213387444,Xbox game console,0.99,152.0,36,15,3 day auction,train
+8213387659,Xbox game console,9.99,96.0,25,10,3 day auction,train
+8213403462,Xbox game console,50.0,102.5,9,8,3 day auction,test
+8213472092,Xbox game console,60.0,63.0,3,2,3 day auction,train
+8213495915,Xbox game console,70.0,112.5,19,5,5 day auction,train
+8213504270,Xbox game console,49.0,120.0,20,8,7 day auction,train
+8213511406,Xbox game console,39.99,89.0,23,8,7 day auction,train
+8213515739,Xbox game console,85.0,202.0,12,7,7 day auction,test
+8213702304,Xbox game console,99.99,117.5,7,2,3 day auction,test
+8213733010,Xbox game console,65.0,82.0,6,4,3 day auction,test
+8213759776,Xbox game console,75.0,112.5,10,8,3 day auction,test
+8213922989,Xbox game console,0.95,93.0,19,7,3 day auction,test
+8213932495,Xbox game console,100.0,127.5,9,4,3 day auction,train
+8213935134,Xbox game console,0.1,207.5,15,9,3 day auction,test
+8213956836,Xbox game console,80.0,128.5,8,3,3 day auction,train
+8214275008,Xbox game console,0.99,385.0,38,19,7 day auction,train
+8214277489,Xbox game console,89.0,177.5,17,9,7 day auction,train
+8214279576,Xbox game console,80.0,96.0,4,3,7 day auction,train
+8214294890,Xbox game console,19.99,204.5,22,15,7 day auction,test
+8214330322,Xbox game console,0.99,117.5,44,15,7 day auction,train
+8214355679,Xbox game console,0.99,265.0,75,11,7 day auction,test
+8214364171,Xbox game console,0.01,86.0,16,7,3 day auction,train
+8214378351,Xbox game console,29.99,127.5,26,11,3 day auction,train
+8214418083,Xbox game console,75.0,140.5,12,7,3 day auction,train
+8214430396,Xbox game console,9.99,199.0,26,8,3 day auction,train
+8214435010,Xbox game console,0.99,122.5,35,16,3 day auction,test
+8214435808,Xbox game console,110.0,122.5,2,2,3 day auction,train
+8214733985,Xbox game console,9.99,112.5,7,5,7 day auction,train
+8214735736,Xbox game console,24.99,115.5,10,8,7 day auction,test
+8214745918,Xbox game console,100.0,183.56,13,5,7 day auction,train
+8214749544,Xbox game console,9.99,119.5,18,9,7 day auction,train
+8214767887,Xbox game console,75.0,105.01,9,7,7 day auction,train
+8214772603,Xbox game console,1.0,142.5,35,14,7 day auction,train
+8214772755,Xbox game console,24.99,104.09,19,10,7 day auction,train
+8214784050,Xbox game console,9.99,31.0,9,4,7 day auction,train
+8214786481,Xbox game console,29.99,120.0,16,8,7 day auction,train
+8214801298,Xbox game console,99.0,127.5,6,4,7 day auction,train
+8214801302,Xbox game console,1.0,40.0,16,11,7 day auction,train
+8214803514,Xbox game console,50.0,127.5,13,7,7 day auction,train
+8214823984,Xbox game console,40.0,150.0,20,10,7 day auction,train
+8214862356,Xbox game console,50.0,122.5,9,6,7 day auction,train
+8214864036,Xbox game console,55.0,122.5,22,9,7 day auction,test
+8214864154,Xbox game console,55.0,89.88,12,5,7 day auction,train
+8214889177,Xbox game console,0.01,90.01,21,10,7 day auction,train
+8214917158,Xbox game console,25.0,107.5,19,9,5 day auction,train
+8214999031,Xbox game console,59.99,152.5,21,8,5 day auction,train
+8215000309,Xbox game console,0.99,127.5,30,10,5 day auction,train
+8215001975,Xbox game console,0.99,127.5,19,9,5 day auction,test
+8215125069,Xbox game console,15.0,85.07,19,11,5 day auction,train
+8215129004,Xbox game console,0.99,122.5,18,8,5 day auction,test
+8215145547,Xbox game console,99.99,128.5,7,5,5 day auction,train
+8215188105,Xbox game console,99.99,132.5,13,3,5 day auction,train
+8215408023,Xbox game console,0.99,91.01,28,11,3 day auction,train
+8215558653,Xbox game console,55.0,135.29,14,9,3 day auction,train
+8215571039,Xbox game console,50.0,150.0,20,4,3 day auction,train
+8215582227,Xbox game console,60.0,152.5,16,7,3 day auction,train
+8215605488,Xbox game console,0.99,61.0,11,10,3 day auction,test
+8215610555,Xbox game console,5.0,35.09,14,9,3 day auction,train
+1638843936,Cartier wristwatch,500.0,1625.0,7,5,7 day auction,train
+1638844284,Cartier wristwatch,200.0,500.0,2,2,7 day auction,train
+1638844464,Cartier wristwatch,300.0,740.0,16,5,7 day auction,train
+1638844729,Cartier wristwatch,225.0,320.0,11,2,7 day auction,train
+1638893549,Cartier wristwatch,99.0,177.5,5,4,3 day auction,train
+1638917885,Cartier wristwatch,25.0,227.5,13,10,7 day auction,test
+1639226378,Cartier wristwatch,495.0,1725.0,12,10,7 day auction,train
+1639253454,Cartier wristwatch,250.0,255.0,2,2,7 day auction,train
+1639309309,Cartier wristwatch,1.0,374.99,27,9,7 day auction,train
+1639323228,Cartier wristwatch,1.0,185.0,8,3,7 day auction,train
+1639333116,Cartier wristwatch,155.0,501.62,24,15,7 day auction,train
+1639341131,Cartier wristwatch,4.99,256.51,25,11,7 day auction,test
+1639364679,Cartier wristwatch,1000.0,1195.0,3,3,7 day auction,train
+1639425502,Cartier wristwatch,100.0,224.5,2,2,7 day auction,train
+1639453840,Cartier wristwatch,1.0,355.0,33,8,3 day auction,train
+1639672910,Cartier wristwatch,5000.0,5400.0,4,2,7 day auction,train
+1639826019,Cartier wristwatch,899.99,2025.0,18,8,5 day auction,train
+1639929579,Cartier wristwatch,1.0,1525.0,17,11,7 day auction,train
+1639979107,Cartier wristwatch,5.0,103.5,16,7,7 day auction,train
+1640179146,Cartier wristwatch,1.0,455.0,22,9,7 day auction,train
+1640257270,Cartier wristwatch,9.99,41.45,13,9,5 day auction,train
+1640495398,Cartier wristwatch,500.0,1800.0,23,5,5 day auction,train
+1640550476,Cartier wristwatch,1.0,300.0,23,14,7 day auction,test
+1640653873,Cartier wristwatch,50.0,202.5,15,6,7 day auction,train
+1640793161,Cartier wristwatch,1.0,2395.0,14,8,7 day auction,test
+1640809330,Cartier wristwatch,1.0,560.0,20,12,5 day auction,train
+1640809333,Cartier wristwatch,1.0,1725.0,40,24,5 day auction,train
+1640936328,Cartier wristwatch,1.0,317.0,22,7,7 day auction,train
+1641062012,Cartier wristwatch,1499.99,1600.0,3,3,7 day auction,test
+1641112143,Cartier wristwatch,500.0,880.0,13,6,5 day auction,train
+1641142160,Cartier wristwatch,99.0,200.01,5,3,3 day auction,train
+1641154540,Cartier wristwatch,2350.0,2425.0,4,2,5 day auction,test
+1641242797,Cartier wristwatch,200.0,450.0,5,3,7 day auction,test
+1641457876,Cartier wristwatch,195.0,370.0,2,2,7 day auction,train
+1641587440,Cartier wristwatch,1.0,349.99,21,8,7 day auction,train
+1641628327,Cartier wristwatch,500.0,1894.78,7,4,7 day auction,train
+1641629836,Cartier wristwatch,250.0,550.0,14,4,7 day auction,train
+1641722275,Cartier wristwatch,9.99,155.0,20,5,7 day auction,test
+1641783552,Cartier wristwatch,1.0,1925.0,16,5,7 day auction,train
+1641880134,Cartier wristwatch,200.0,456.0,11,5,7 day auction,train
+1641880908,Cartier wristwatch,175.0,402.0,4,4,7 day auction,train
+1641962219,Cartier wristwatch,90.0,435.0,16,13,5 day auction,train
+1642005995,Cartier wristwatch,99.0,623.26,18,7,7 day auction,test
+1642185637,Cartier wristwatch,299.99,510.0,9,5,7 day auction,test
+1642243766,Cartier wristwatch,99.99,355.0,11,7,3 day auction,train
+1642322610,Cartier wristwatch,1699.0,1799.0,5,3,5 day auction,train
+1642414724,Cartier wristwatch,9.99,510.0,14,7,5 day auction,test
+1642421109,Cartier wristwatch,9.99,305.0,11,5,5 day auction,train
+1642424500,Cartier wristwatch,9.99,150.0,7,4,5 day auction,test
+1642514892,Cartier wristwatch,500.0,1025.0,9,5,7 day auction,train
+1642534283,Cartier wristwatch,1.0,1125.0,23,11,7 day auction,test
+1642561397,Cartier wristwatch,101.01,1825.0,16,12,7 day auction,test
+1642875447,Cartier wristwatch,650.0,831.0,12,8,7 day auction,train
+1642876200,Cartier wristwatch,700.0,841.0,11,5,7 day auction,train
+1642911743,Cartier wristwatch,399.0,430.0,3,2,7 day auction,train
+1643075711,Cartier wristwatch,200.0,1225.0,16,9,3 day auction,test
+1643136423,Cartier wristwatch,19.99,400.0,10,6,7 day auction,test
+1643187764,Cartier wristwatch,20.0,276.05,13,11,7 day auction,train
+1643201832,Cartier wristwatch,10.0,1599.0,4,3,7 day auction,train
+1643212361,Cartier wristwatch,95.0,2600.0,28,14,7 day auction,train
+1643244227,Cartier wristwatch,499.0,1025.0,16,6,7 day auction,train
+1643544538,Cartier wristwatch,99.0,405.0,26,7,3 day auction,train
+1643885624,Cartier wristwatch,100.0,326.0,23,6,3 day auction,test
+1643903116,Cartier wristwatch,9.99,40.87,8,4,3 day auction,train
+1643903372,Cartier wristwatch,9.99,26.0,9,2,3 day auction,test
+1644046945,Cartier wristwatch,900.0,3800.0,11,5,7 day auction,train
+1644049270,Cartier wristwatch,0.01,1600.0,27,9,7 day auction,test
+1644077790,Cartier wristwatch,1.0,1400.0,15,6,7 day auction,test
+1644077820,Cartier wristwatch,1.0,374.0,11,7,7 day auction,test
+1644109746,Cartier wristwatch,1.0,3103.0,28,15,7 day auction,train
+1644138548,Cartier wristwatch,500.0,2100.0,21,6,7 day auction,train
+1644197869,Cartier wristwatch,0.01,300.0,12,8,7 day auction,test
+1644252877,Cartier wristwatch,500.0,1524.99,12,5,7 day auction,train
+1644309984,Cartier wristwatch,350.0,430.0,7,5,7 day auction,train
+1644327264,Cartier wristwatch,100.0,425.0,13,4,5 day auction,test
+1644343468,Cartier wristwatch,1.0,1038.99,19,17,7 day auction,train
+1644357387,Cartier wristwatch,1.0,640.0,25,13,7 day auction,train
+1644594033,Cartier wristwatch,9.99,498.0,46,12,7 day auction,test
+1644681469,Cartier wristwatch,500.0,935.0,14,7,7 day auction,test
+1644724061,Cartier wristwatch,155.0,305.0,14,10,7 day auction,train
+1644739924,Cartier wristwatch,1.0,455.0,18,12,7 day auction,train
+1644752795,Cartier wristwatch,1.0,1800.0,26,9,7 day auction,train
+1644760539,Cartier wristwatch,1.0,327.23,17,7,7 day auction,train
+1645542737,Cartier wristwatch,1.0,386.0,8,5,5 day auction,train
+1645594382,Cartier wristwatch,25.0,500.0,10,7,7 day auction,test
+1645883276,Cartier wristwatch,149.99,610.0,12,6,3 day auction,train
+1645914432,Cartier wristwatch,199.0,511.0,12,4,3 day auction,train
+1645989170,Cartier wristwatch,100.0,280.0,11,6,7 day auction,train
+1646007296,Cartier wristwatch,50.0,113.5,4,3,7 day auction,train
+1646079608,Cartier wristwatch,100.0,438.0,6,3,5 day auction,test
+1646145109,Cartier wristwatch,200.0,355.0,9,5,7 day auction,train
+1646353713,Cartier wristwatch,1200.0,1735.0,11,2,3 day auction,train
+1646448593,Cartier wristwatch,1.0,202.5,25,12,5 day auction,train
+1646573469,Cartier wristwatch,1.0,1226.0,15,11,7 day auction,test
+1646988233,Cartier wristwatch,1.0,620.0,19,8,5 day auction,train
+1647149304,Cartier wristwatch,100.0,752.56,14,8,3 day auction,train
+1647320738,Cartier wristwatch,200.0,452.87,12,6,7 day auction,test
+1647329406,Cartier wristwatch,200.0,1000.0,19,8,7 day auction,test
+1647567213,Cartier wristwatch,1500.0,1525.0,2,2,7 day auction,train
+1647637035,Cartier wristwatch,1.0,390.0,17,12,7 day auction,train
+1647844282,Cartier wristwatch,1.0,1035.0,27,14,7 day auction,train
+1647846714,Cartier wristwatch,1.0,905.45,27,14,7 day auction,test
+1647870862,Cartier wristwatch,99.99,1250.0,24,6,3 day auction,test
+1648041601,Cartier wristwatch,1.0,335.0,5,2,7 day auction,train
+1648176677,Cartier wristwatch,1.0,306.88,7,7,7 day auction,test
+1648193761,Cartier wristwatch,75.0,179.5,9,6,7 day auction,train
+1648233039,Cartier wristwatch,150.0,176.5,4,3,3 day auction,train
+1648252368,Cartier wristwatch,1.0,680.0,23,13,7 day auction,test
+1648363974,Cartier wristwatch,99.99,407.0,14,6,7 day auction,train
+1648613621,Cartier wristwatch,150.0,405.0,9,3,7 day auction,test
+1648661746,Cartier wristwatch,349.0,540.0,12,8,7 day auction,test
+1648706567,Cartier wristwatch,150.0,202.5,5,2,5 day auction,train
+1648782304,Cartier wristwatch,199.0,405.0,4,4,3 day auction,train
+1648968984,Cartier wristwatch,50.0,960.0,12,5,5 day auction,train
+1649028956,Cartier wristwatch,10.0,731.21,42,12,5 day auction,test
+1649131866,Cartier wristwatch,99.0,304.98,20,7,3 day auction,train
+1649173313,Cartier wristwatch,249.99,349.99,5,3,7 day auction,train
+1649513497,Cartier wristwatch,1.0,1625.0,14,7,7 day auction,train
+1649567847,Cartier wristwatch,1495.0,2325.0,16,4,7 day auction,test
+1649639405,Cartier wristwatch,1.0,1880.0,23,11,7 day auction,train
+1649718196,Cartier wristwatch,1.0,1799.0,26,11,7 day auction,train
+1649726994,Cartier wristwatch,500.0,2500.0,13,6,3 day auction,train
+1649757877,Cartier wristwatch,100.0,760.0,9,4,7 day auction,train
+1649808226,Cartier wristwatch,1695.0,1720.0,2,2,7 day auction,train
+1649845539,Cartier wristwatch,599.99,609.99,2,2,7 day auction,train
+1649848613,Cartier wristwatch,100.0,1100.0,20,6,7 day auction,train
+1649858595,Cartier wristwatch,7.99,202.5,7,3,7 day auction,train
+1649944294,Cartier wristwatch,1.0,1485.0,22,10,7 day auction,train
+1650162165,Cartier wristwatch,1.0,620.0,18,7,7 day auction,train
+1650406935,Cartier wristwatch,1.0,1525.0,41,10,5 day auction,test
+1650483277,Cartier wristwatch,1.0,124.25,30,6,7 day auction,test
+1650515990,Cartier wristwatch,300.0,850.0,6,4,7 day auction,train
+1650530689,Cartier wristwatch,850.0,3050.0,6,4,7 day auction,train
+1650699048,Cartier wristwatch,10.0,154.38,19,9,7 day auction,test
+1650981438,Cartier wristwatch,359.0,380.0,3,3,7 day auction,train
+1650986455,Cartier wristwatch,9.99,405.0,5,4,7 day auction,train

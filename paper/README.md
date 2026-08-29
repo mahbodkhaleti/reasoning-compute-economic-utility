@@ -10,23 +10,19 @@ The submission uses the supplied NeurIPS 2026 double-blind workshop style. The
 main text occupies nine pages; references, appendices, and the NeurIPS checklist
 follow. The compiled manuscript is `main.pdf`.
 
-The current four-model stochastic results and robustness outputs are under
-`../robustness_extensions/server_outputs/`. The submission-specific
-offline analyses can be regenerated without model inference from the saved
-JSONL/CSV outputs:
+The original-four outputs are under
+`../robustness_extensions/server_outputs/`; Qwen3-14B, Granite-8B, and
+synthetic-IPV outputs are under `../preserved_outputs/`. Regenerate the complete
+six-model analysis without model inference from the repository root:
 
 ```bash
-python \
-  ../robustness_extensions/scripts/analyze_submission_robustness.py \
-  --output-dir ../robustness_extensions/server_outputs \
-  --samples 1000 --auction-samples 2000
+bash reproduce_all_from_preserved.sh
 ```
 
-This produces the beta and gamma sweeps, the deterministic six-budget
-menu/frontier comparison, the held-out auction-CDF bootstrap, and the strategic
-sensitivity figure used in the appendix. The six-budget comparison changes both
-the action menu and the frontier's decoding regime, so it is intentionally
-reported as a combined menu/frontier sensitivity rather than a pure menu test.
+This verifies all six historical and synthetic panels and regenerates the core,
+free-form, stochastic-bootstrap, held-out-CDF, normalized-game, zero-compute,
+runtime/cost, and synthetic-IPV analyses. See `../offline_replay/README.md` and
+`../docs/RESULTS_PROVENANCE.md` for the output mapping.
 
 The dimensionless strategic phase analysis is regenerated separately:
 
@@ -57,9 +53,8 @@ five-seed stochastic 128/384/768 panel, and reruns exact enumeration and a
 hybrid hierarchical bootstrap. It does not perform model inference and does not
 overwrite the primary stochastic outputs.
 
-The historical run metadata contain the model repository identifiers and most
-generation settings, but did not contemporaneously log exact Hugging Face
-commits or exact Transformers/Accelerate versions. Appendix~D reports the sole
-snapshots recovered in a post-hoc cache audit and the versions recovered from
-the preserved environment, with an explicit cache-immutability caveat. The
-runner now pins and records those fields prospectively.
+The original-four historical metadata contain repository identifiers and most
+generation settings but not resolved Hugging Face commits or complete package
+versions. Appendix F reports the sole snapshots recovered in a post-hoc cache
+audit and the associated assumption. Qwen3-14B and Granite-8B record requested
+and resolved revisions contemporaneously.

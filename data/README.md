@@ -18,8 +18,12 @@ cp data/source/auction.csv online-auctions-dataset/auction.csv
 
 The raw CSV is deliberately excluded from Git. The Kaggle mirror labels its
 license as unknown, so this repository does not assert redistribution rights.
-Processed auction-derived CSVs are also excluded and reconstructed locally by
-the provided deterministic preparation code.
+For exact audit and offline replay, the release preserves the transformed split,
+summary, and scenario files under
+`new_models_full_server_package/data/historical/`. They are not covered by the
+repository's MIT license and are provided without any new license claim. The
+same artifacts can be reconstructed locally by the deterministic preparation
+code below.
 
 `prepare_scenarios.py` constructs 216 scenarios deterministically using master
 seed 20260819. It creates category-specific 70/30 construction/held-out splits,
@@ -35,5 +39,5 @@ dataset_summary.csv 4efba13152356c7c8105e57f57c1ec9316dead4ef9f810673f579ecd2fb4
 scenarios.csv       12a846cb3f9362ad9be5c5830d5aef71d7300328ce2399ac87cf2ef60f9986e6
 ```
 
-These hashes verify reconstruction; they are not a grant of redistribution
-rights.
+These hashes verify either the preserved artifacts or a local reconstruction;
+they are not a grant of redistribution rights.

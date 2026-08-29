@@ -1,0 +1,4 @@
+slug: deepseek_r1_llama_8b
+hf_id: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+revision: 6a6f4aa4197940add57724a7707d069478df56b1
+precision: bfloat16

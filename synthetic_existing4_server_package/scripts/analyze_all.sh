@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+mkdir -p "$ROOT/paper_ready/synthetic"
+python "$ROOT/src/analyze_synthetic.py" --output-dir "$ROOT/results" --paper-ready "$ROOT/paper_ready/synthetic"
+python "$ROOT/src/analyze_synthetic_game.py" --output-dir "$ROOT/results"
+python "$ROOT/src/augment_synthetic_summary.py" --output-dir "$ROOT/results" --paper-ready "$ROOT/paper_ready/synthetic"
+cp "$ROOT/results/tables/synthetic_gamma1_exact_thresholds.csv" "$ROOT/paper_ready/synthetic/"
+cp "$ROOT/results/tables/synthetic_gamma1_exact_thresholds.tex" "$ROOT/paper_ready/synthetic/"
+cp "$ROOT/results/tables/synthetic_normalized_transition_boundaries.csv" "$ROOT/paper_ready/synthetic/"
+cp "$ROOT/results/figures/synthetic_phase_gamma1.pdf" "$ROOT/paper_ready/synthetic/"
+cp "$ROOT/results/figures/synthetic_phase_gamma1.png" "$ROOT/paper_ready/synthetic/"
+cp "$ROOT/results/figures/synthetic_phase_all_gamma.pdf" "$ROOT/paper_ready/synthetic/"
+cp "$ROOT/results/figures/synthetic_phase_all_gamma.png" "$ROOT/paper_ready/synthetic/"
+cp "$ROOT/paper_ready/synthetic/RESULTS_SUMMARY.md" "$ROOT/paper_ready/SYNTHETIC_EXISTING4_SUMMARY.md"

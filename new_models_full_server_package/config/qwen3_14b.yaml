@@ -1,0 +1,10 @@
+slug: qwen3_14b
+hf_id: Qwen/Qwen3-14B
+revision: 40c069824f4251a91eefaf281ebe4c544efd3e18
+tokenizer_revision: 40c069824f4251a91eefaf281ebe4c544efd3e18
+precision: bfloat16
+chat_template_argument: enable_thinking
+template_argument_required: true
+reasoning_protocol: qwen3_native_thinking_external_exact_token_budget
+reasoning_protocol_matched: true
+device_map: auto

@@ -1,0 +1,45 @@
+{
+  "model": {
+    "slug": "qwen3_14b",
+    "hf_id": "Qwen/Qwen3-14B",
+    "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "tokenizer_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "chat_template_argument": "enable_thinking",
+    "template_argument_required": true,
+    "reasoning_protocol": "qwen3_native_thinking_external_exact_token_budget",
+    "reasoning_protocol_matched": true,
+    "device_map": "auto"
+  },
+  "chat_mode": "reasoning",
+  "budgets": [
+    128,
+    384,
+    768
+  ],
+  "repeat_seeds": [
+    1,
+    7,
+    21,
+    42,
+    99
+  ],
+  "decoding": "stochastic",
+  "option_order_seed": 314159,
+  "query_verbal_confidence": true,
+  "constrained_option_readout": true,
+  "gpu": "NVIDIA L40S",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "transformers": "5.1.0",
+  "accelerate": "1.12.0",
+  "python": "3.12.3",
+  "model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "tokenizer_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "revision_recorded_before_inference": true,
+  "run_manifest": "fixed_qwen3_14b_reasoning_stochastic_run_manifest.json",
+  "model_class": "Qwen3ForCausalLM",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "dtype": "torch.bfloat16",
+  "gpu_hour_usd": null,
+  "electricity_usd_per_kwh": null
+}

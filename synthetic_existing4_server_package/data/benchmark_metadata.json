@@ -1,0 +1,15 @@
+{
+  "benchmark_version": "synthetic-ipv-fpsb-v1.0.0",
+  "factor_counts": {
+    "K5_structured": 54,
+    "K5_unstructured": 54,
+    "K7_structured": 54,
+    "K7_unstructured": 54
+  },
+  "generation_seed": 20260824,
+  "interpretation": "Inspired robustness benchmark; not an exact replication of Zhu et al.",
+  "manifest_file": "synthetic_ipv_manifest.jsonl",
+  "manifest_sha256": "f252c795796370bcbe6e291df8737011a87d7f68f0e3a367de475c53fecff4fb",
+  "probability_method": "Exact enumeration over two discrete-uniform opponent values with uniform tie-breaking.",
+  "scenario_count": 216
+}

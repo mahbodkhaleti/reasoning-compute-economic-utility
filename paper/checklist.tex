@@ -5,7 +5,7 @@
 \item {\bf Claims}
     \item[] Question: Do the main claims made in the abstract and introduction accurately reflect the paper's contributions and scope?
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The Abstract, Introduction, and Conclusion identify leakage-free economic calibration as the contribution and present the normalized strategic phase map as a conditional comparative static over unidentified primitives; see Sections~1 and~8.
+    \item[] Justification: The empirical contribution is stated in the Abstract and Section~1, together with the assumptions behind the normalized phase map. Section~8 returns to the same scope when summarizing the findings.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the abstract and introduction do not include the claims made in the paper.
@@ -17,7 +17,7 @@
 \item {\bf Limitations}
     \item[] Question: Does the paper discuss the limitations of the work performed by the authors?
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: Section~7 separates task, readout, uncertainty, menu, monetary calibration, normalized-parameter identification, and contest-mapping limitations.
+    \item[] Justification: Section~7 collects the main qualifications: task construction, readout missingness, uncertainty coverage, menu choice, monetary calibration, and identification of the normalized game.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper has no limitation while the answer \answerNo{} means that the paper has limitations, but those are not discussed in the paper. 
@@ -33,7 +33,7 @@
 \item {\bf Theory assumptions and proofs}
     \item[] Question: For each theoretical result, does the paper provide the full set of assumptions and a complete (and correct) proof?
     \item[] Answer: \answerNA{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The paper specifies and numerically solves a reduced-form game but states no theorem or formal proof claim.
+    \item[] Justification: There is a reduced-form game and a numerical solution, but no theorem or formal proof claim.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not include theoretical results. 
@@ -46,8 +46,8 @@
 
     \item {\bf Experimental result reproducibility}
     \item[] Question: Does the paper fully disclose all the information needed to reproduce the main experimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper (regardless of whether the code and data are provided or not)?
-    \item[] Answer: \answerNo{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The prompts, code path, seeds, decoding, hardware, saved outputs, recovered cache snapshots, and reproduction commands are documented in Appendix~D and released at \url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}. The answer remains No because the model revisions were recovered post hoc as the sole cached snapshots rather than logged independently in the completed-run metadata.
+    \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
+    \item[] Justification: Appendix~\ref{app:reproducibility} and the anonymous repository at \url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/} provide a machine-readable manifest, prompts, code and data hashes, seeds, decoding and readout settings, environment records, preserved outputs, and one offline command that regenerates the reported analyses. Qwen3-14B and Granite-8B revisions were logged contemporaneously; the original four were recovered retrospectively as the sole snapshots in each inspected cache and are reported with that provenance and assumption.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not include experiments.
@@ -67,7 +67,7 @@
 \item {\bf Open access to data and code}
     \item[] Question: Does the paper provide open access to the data and code, with sufficient instructions to faithfully reproduce the main experimental results, as described in supplemental material?
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: MIT-licensed code, prompts, saved model outputs, and end-to-end instructions are available at \url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}. The raw dataset is obtained from its public cited host and verified by checksum; because that mirror reports an unknown redistribution license, raw and processed auction CSVs are reconstructed locally rather than republished.
+    \item[] Justification: The anonymous archive provides MIT-licensed code, prompts, saved model outputs, and end-to-end instructions: \url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}. The auction data come from the cited public host and are checked by checksum. Since the mirror gives no clear redistribution license, the scripts rebuild the raw and processed CSVs locally.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that paper does not include experiments requiring code.
@@ -84,7 +84,7 @@
 \item {\bf Experimental setting/details}
     \item[] Question: Does the paper specify all the training and test details (e.g., data splits, hyperparameters, how they were chosen, type of optimizer) necessary to understand the results?
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: Sections~4.1--4.4 and Appendix~D specify splits, scenarios, budgets, seeds, decoding, prompts, readout, bootstrap designs, and game grids.
+    \item[] Justification: Splits and scenario construction appear in Section~4.1; Sections~4.2--4.5 give budgets, seeds, decoding, readout, and bootstrap design. Appendices~\ref{app:computationalprotocol} and~\ref{app:reproducibility} record the game-grid and exact prompt details.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not include experiments.
@@ -95,7 +95,7 @@
 \item {\bf Experiment statistical significance}
     \item[] Question: Does the paper report error bars suitably and correctly defined or other appropriate information about the statistical significance of the experiments?
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: Paired scenario, hierarchical scenario/generation, deterministic-menu, and auction-level bootstrap intervals are reported with their resampling units explicitly distinguished in Sections~4.4--5 and the appendix.
+    \item[] Justification: Sections~4.4--5 report paired-scenario and hierarchical scenario/generation intervals. The appendix adds the deterministic-menu and auction-level bootstraps and states the resampling unit for each.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not include experiments.
@@ -112,7 +112,7 @@
 \item {\bf Experiments compute resources}
     \item[] Question: For each experiment, does the paper provide sufficient information on the computer resources (type of compute workers, memory, time of execution) needed to reproduce the experiments?
     \item[] Answer: \answerNo{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The completed runs identify the RTX 4090, Python/PyTorch environment, per-record elapsed time, energy, and memory, but total preliminary and failed-run compute was not reconstructed.
+    \item[] Justification: Appendix~\ref{app:syntheticipv} now reports complete execution time and dollar cost for each synthetic IPV sweep, and Appendix~\ref{app:reproducibility} gives the associated RTX 4090 and L40S environments. Aggregate compute for the main historical-auction runs and for preliminary or failed runs cannot be reconstructed reliably, so the disclosure remains incomplete for the research project as a whole.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not include experiments.
@@ -124,7 +124,7 @@
 \item {\bf Code of ethics}
     \item[] Question: Does the research conducted in the paper conform, in every respect, with the NeurIPS Code of Ethics \url{https://neurips.cc/public/EthicsGuidelines}?
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The work uses public research assets, reports aggregate model behavior, and does not involve human subjects or private personal data.
+    \item[] Justification: The study uses public research assets and reports model behavior in aggregate. It involves neither human subjects nor private personal data.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the authors have not reviewed the NeurIPS Code of Ethics.
@@ -136,7 +136,7 @@
 \item {\bf Broader impacts}
     \item[] Question: Does the paper discuss both potential positive societal impacts and negative societal impacts of the work performed?
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: Appendix~E discusses potential efficiency benefits, environmental implications, and the risk of misusing conditional game outputs as policy evidence.
+    \item[] Justification: Appendix~\ref{app:broaderimpacts} considers the possible efficiency benefit of better reasoning alongside energy and latency costs, then discusses how the game results could be overextended in policy arguments.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that there is no societal impact of the work performed.
@@ -150,7 +150,7 @@
 \item {\bf Safeguards}
     \item[] Question: Does the paper describe safeguards that have been put in place for responsible release of data or models that have a high risk for misuse (e.g., pre-trained language models, image generators, or scraped datasets)?
     \item[] Answer: \answerNA{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The work releases neither a newly trained model nor a high-risk scraped dataset and adds no capability beyond evaluating public checkpoints.
+    \item[] Justification: N/A here: we release no trained model or high-risk scraped dataset. The released material evaluates existing public checkpoints and does not add model capabilities.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper poses no such risks.
@@ -162,7 +162,7 @@
 \item {\bf Licenses for existing assets}
     \item[] Question: Are the creators or original owners of assets (e.g., code, data, models), used in the paper, properly credited and are the license and terms of use explicitly mentioned and properly respected?
     \item[] Answer: \answerNo{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: Appendix~D and the repository document the model licenses and recovered revisions. The answer remains No because the Online Auctions mirror labels its license ``Unknown'' and no affirmative redistribution grant was located; raw and processed auction CSVs are therefore excluded.
+    \item[] Justification: Model licenses and recovered revisions are documented in Appendix~\ref{app:reproducibility} and the repository. The Online Auctions mirror, however, labels its license ``Unknown,'' and we found no affirmative redistribution grant. The raw source CSV is excluded; the archive retains transformed split and scenario artifacts for audit and offline replay, identifies their provenance and unresolved license status, and does not relicense them. We therefore retain the conservative No answer.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not use existing assets.
@@ -178,7 +178,7 @@
 \item {\bf New assets}
     \item[] Question: Are new assets introduced in the paper well documented and is the documentation provided alongside the assets?
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: The anonymous archive documents construction, prompts, seeds, limitations, result provenance, environment recovery, validation, and reproduction commands. Original project software is released under MIT; third-party assets and generated outputs retain their separate terms.
+    \item[] Justification: The anonymous archive documents construction, prompts, seeds, provenance, validation, environment recovery, limitations, and reproduction commands. Our code is MIT-licensed; third-party assets and generated outputs keep their own terms.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not release new assets.
@@ -190,7 +190,7 @@
 \item {\bf Crowdsourcing and research with human subjects}
     \item[] Question: For crowdsourcing experiments and research with human subjects, does the paper include the full text of instructions given to participants and screenshots, if applicable, as well as details about compensation (if any)? 
     \item[] Answer: \answerNA{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: No crowdsourcing or human-subject experiment was conducted.
+    \item[] Justification: No participants were recruited and no crowdsourcing was used.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not involve crowdsourcing nor research with human subjects.
@@ -201,7 +201,7 @@
 \item {\bf Institutional review board (IRB) approvals or equivalent for research with human subjects}
     \item[] Question: Does the paper describe potential risks incurred by study participants, whether such risks were disclosed to the subjects, and whether Institutional Review Board (IRB) approvals (or an equivalent approval/review based on the requirements of your country or institution) were obtained?
     \item[] Answer: \answerNA{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: No intervention or interaction with human participants was conducted, so IRB review is not applicable.
+    \item[] Justification: There were no human participants, interventions, or interactions in this study; IRB review is therefore not applicable.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not involve crowdsourcing nor research with human subjects.
@@ -214,7 +214,7 @@
     \item[] Question: Does the paper describe the usage of LLMs if it is an important, original, or non-standard component of the core methods in this research? Note that if the LLM is used only for writing, editing, or formatting purposes and does \emph{not} impact the core methodology, scientific rigor, or originality of the research, declaration is not required.
     %this research? 
     \item[] Answer: \answerYes{} % Replace by \answerYes{}, \answerNo{}, or \answerNA{}.
-    \item[] Justification: LLMs are the evaluated decision systems; Sections~4.2 and Appendix~D disclose the checkpoints, prompts, reasoning-budget enforcement, decoding, and constrained readout.
+    \item[] Justification: The LLMs are the systems being evaluated. Section~4.2 and Appendix~\ref{app:reproducibility} identify the checkpoints and document the prompts, budget enforcement, decoding, and constrained readout.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the core method development in this research does not involve LLMs as any important, original, or non-standard components.

@@ -1,0 +1,10 @@
+slug: granite_3_2_8b_instruct
+hf_id: ibm-granite/granite-3.2-8b-instruct
+revision: 610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695
+tokenizer_revision: 610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695
+precision: bfloat16
+chat_template_argument: thinking
+template_argument_required: true
+reasoning_protocol: granite_template_thinking_prompt_external_exact_token_budget
+reasoning_protocol_matched: false
+device_map: auto

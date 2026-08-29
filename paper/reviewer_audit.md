@@ -1,9 +1,9 @@
-# Current submission audit (2026-08-22)
+# Current submission audit (2026-08-29)
 
 ## What is now supported
 
 The paper measures leakage-free, held-out reasoning-compute--economic-utility
-frontiers for four checkpoints. Candidate construction is independent of the
+frontiers for six checkpoints. Candidate construction is independent of the
 optimal action, option order is randomized, closing-price scoring uses held-out
 auctions, and the primary frontier includes five stochastic generations. The
 hierarchical bootstrap propagates scenario and generation uncertainty through
@@ -19,7 +19,7 @@ secondary declared-design diagnostics.
 
 ## High-priority sensitivity findings
 
-- Algebra and 432 numerical comparisons confirm that Nash and planner
+- Algebra and 648 numerical comparisons confirm that Nash and planner
   allocations depend only on $\kappa=\lambda/V$, $\rho=\beta/V$, and $\gamma$.
   Normalized welfare loss agrees with legacy loss divided by $V$ to numerical
   precision. The old fixed near-zero cutoff for relative loss is the only
@@ -30,14 +30,14 @@ secondary declared-design diagnostics.
 
 - The baseline beta=1 strategic result is normalization-sensitive. Increasing
   the planner's quality scale raises planner compute and lowers excess-compute
-  share; at beta=1000, excess-compute share is zero for all four checkpoints.
+  share; at beta=1000, excess-compute share is zero for all six checkpoints.
   Welfare loss can remain positive because the failure mode becomes equilibrium
   undercomputation.
 - Varying gamma materially changes equilibrium compute and excess-compute share.
   The paper reports the full evaluated grid and does not call these statistical
   confidence intervals.
 - On the deterministic six-budget frontier, excess-compute share remains between
-  72.3% and 79.5% across models. This is a combined menu/frontier sensitivity,
+  72.3% and 82.5% across models. This is a combined menu/frontier sensitivity,
   not a clean menu-only comparison, because decoding also changes.
 - A zero-compute-augmented sensitivity combines the deterministic, order-averaged
   reasoning-mode `c=0` observation with the stored five-seed stochastic positive
@@ -62,11 +62,11 @@ secondary declared-design diagnostics.
 2. Alternative construction/held-out split seeds would change prompt-side CDFs
    and therefore require new candidate construction and model inference. The
    available auction bootstrap only re-scores fixed stored choices.
-3. The completed runs did not contemporaneously log exact Hugging Face commits
-   or exact Transformers/Accelerate versions. The paper now reports the sole
-   snapshots recovered by a post-hoc cache audit and the preserved environment
-   versions, explicitly conditional on cache immutability; the runner pins and
-   records them prospectively.
+3. The original-four runs did not contemporaneously log exact Hugging Face
+   commits or complete environment versions. The paper reports the sole
+   snapshots recovered by a post-hoc cache audit, explicitly conditional on
+   cache immutability. Qwen3-14B and Granite-8B record their requested and
+   resolved revisions contemporaneously.
 4. The normalized phase diagram removes redundant nominal scales but does not
    identify $\kappa$, $\rho$, $\gamma$, or a market distribution over them. The
    contest mapping and economic primitives remain assumptions rather than
@@ -75,10 +75,10 @@ secondary declared-design diagnostics.
 6. Product coverage is limited to the three studied categories; the design does
    not establish external validity for other auction mechanisms or deployments.
 7. Code is anonymously archived under MIT and model licenses are documented.
-   The source dataset mirror still reports an unknown license, so raw and
-   processed auction CSVs are not redistributed and the asset-license checklist
-   answer remains conservative. Total project-wide compute accounting also
-   remains incomplete.
+   The source dataset mirror still reports an unknown license. The raw CSV is
+   excluded; transformed scenario and split artifacts are retained for audit
+   without a new license claim, so the asset-license checklist answer remains
+   conservative. Total project-wide compute accounting also remains incomplete.
 
 ## Submission posture
 

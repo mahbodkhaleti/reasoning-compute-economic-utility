@@ -1,0 +1,63 @@
+{
+  "accelerate_version": "1.14.0",
+  "benchmark_sha256": "f252c795796370bcbe6e291df8737011a87d7f68f0e3a367de475c53fecff4fb",
+  "benchmark_version": "synthetic-ipv-fpsb-v1.0.0",
+  "budgets": [
+    0,
+    64,
+    128,
+    256,
+    384,
+    512,
+    768
+  ],
+  "chat_template_argument": "enable_thinking",
+  "completed_at_utc": "2026-08-24T17:47:04.337107+00:00",
+  "completed_cells": 4536,
+  "config_sha256": "b71904919d5cda03023ad9c647f4715bade539c87049c98741e5a3e338837012",
+  "corrupt_rows": 0,
+  "created_at_utc": "2026-08-24T12:09:07.637130+00:00",
+  "cuda_build_version": "13.0",
+  "device_map": "auto",
+  "dtype": "torch.bfloat16",
+  "expected_cells": 4536,
+  "gpu_count_billed": 1,
+  "gpu_devices": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4090",
+      "total_memory_bytes": 25250627584
+    }
+  ],
+  "gpu_driver": "580.173.02",
+  "gpu_hour_usd": null,
+  "hardware_name": null,
+  "last_completed_cell": [
+    "syn-ipv-0216",
+    768,
+    37
+  ],
+  "missing_cells": [],
+  "model_slug": "qwen3_4b",
+  "option_order_seeds": [
+    11,
+    23,
+    37
+  ],
+  "python_version": "3.10.12",
+  "reasoning_protocol": "qwen3_native_thinking_external_exact_token_budget",
+  "reasoning_protocol_matched": true,
+  "repository_git_revision": null,
+  "requested_model_id": "Qwen/Qwen3-4B",
+  "requested_model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "requested_tokenizer_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "resolved_device_map": null,
+  "resolved_model_id": "Qwen/Qwen3-4B",
+  "resolved_model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "resolved_tokenizer_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "runner_sha256": "b8671801c7a6916ec49fe14fea4e4ba0851eb0d90961b89b636cb9034a206dec",
+  "scenario_limit": null,
+  "status": "complete",
+  "torch_version": "2.13.0+cu130",
+  "transformers_version": "5.15.0"
+}

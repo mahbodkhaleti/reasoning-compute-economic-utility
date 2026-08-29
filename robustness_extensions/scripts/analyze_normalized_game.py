@@ -28,10 +28,16 @@ MODEL_LABELS = {
     "qwen3_8b": "Qwen3-8B",
 }
 GAMMAS = (0.5, 1.0, 2.0, 4.0)
-KAPPA_BOUNDS = (1e-7, 1.2e-3)
+KAPPA_BOUNDS = (5e-9, 1.2e-3)
 RHO_BOUNDS = (1e-3, 40.0)
 PHASE_NAMES = {-1: "Undercompute", 0: "Aligned", 1: "Overcompute"}
 PHASE_CMAP = ListedColormap(["#3B82B8", "#D9D9D9", "#D97706"])
+MONETARY_KAPPA = {
+    "deepseek_r1_llama_8b": 1.232e-8,
+    "phi4_mini_reasoning": 7.504e-9,
+    "qwen3_4b": 8.708e-9,
+    "qwen3_8b": 1.335e-8,
+}
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -257,6 +263,11 @@ def plot_phase_panels(
         )
         if show_legacy_grid:
             ax.scatter(legacy_kappa, legacy_rho, s=0.4, c="black", alpha=0.10, rasterized=True)
+            ax.scatter(
+                [MONETARY_KAPPA[model]], [RHO_BOUNDS[0]], marker="D", s=28,
+                facecolor="#F4D03F", edgecolor="black", linewidth=0.7,
+                clip_on=False, zorder=5,
+            )
         ax.set_xscale("log")
         ax.set_yscale("log")
         ax.grid(which="major", color="white", linewidth=0.35, alpha=0.45)

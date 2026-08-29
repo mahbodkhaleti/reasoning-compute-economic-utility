@@ -1,0 +1,10 @@
+{
+  "verified_at_utc": "2026-08-24",
+  "verification": "Each exact Hugging Face revision endpoint returned HTTP 200; runners re-resolve and assert the same commit before inference.",
+  "models": [
+    {"id":"microsoft/Phi-4-mini-reasoning","revision":"0e3b1e2d02ee478a3743abe3f629e9c0cb722e0a"},
+    {"id":"Qwen/Qwen3-4B","revision":"1cfa9a7208912126459214e8b04321603b3df60c"},
+    {"id":"deepseek-ai/DeepSeek-R1-Distill-Llama-8B","revision":"6a6f4aa4197940add57724a7707d069478df56b1"},
+    {"id":"Qwen/Qwen3-8B","revision":"b968826d9c46dd6066d109eabc6255188de91218"}
+  ]
+}

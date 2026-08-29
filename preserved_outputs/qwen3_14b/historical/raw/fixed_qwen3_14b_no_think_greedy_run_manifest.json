@@ -1,0 +1,66 @@
+{
+  "status": "complete",
+  "first_started_at_utc": "2026-08-24T20:03:40.375535+00:00",
+  "model_slug": "qwen3_14b",
+  "hf_id": "Qwen/Qwen3-14B",
+  "requested_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "requested_tokenizer_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "config_path": "/workspace/new_models_full_server_package/config/experiment.json",
+  "config_sha256": "4f3eaf5ec0906cb72c5a1640fb6868c8cbb907f4b4519e71b94cb144b456874e",
+  "runner_sha256": "f621001f2eef7bc03321610540ce2f04cb85ffbb86c5c208c637e36f87e1afa0",
+  "repository_git_revision": null,
+  "chat_mode": "no_think",
+  "decoding": "greedy",
+  "budgets": [
+    0
+  ],
+  "repeat_seeds": [
+    11,
+    23,
+    37
+  ],
+  "option_order_seed": null,
+  "query_verbal_confidence": false,
+  "constrained_option_readout": true,
+  "gpu_hour_usd": null,
+  "gpu_count_billed": 1,
+  "hardware_name": null,
+  "scenario_manifest_sha256": "12a846cb3f9362ad9be5c5830d5aef71d7300328ce2399ac87cf2ef60f9986e6",
+  "auction_split_sha256": "fb3ff11bac65c30a51afea0d0811bd24164851ed3c638040537885145d17cdef",
+  "python": "3.12.3",
+  "torch": "2.9.1+cu128",
+  "cuda_build": "12.8",
+  "transformers": "5.1.0",
+  "accelerate": "1.12.0",
+  "gpu_driver": "580.159.04",
+  "configured_device_map": "auto",
+  "reasoning_protocol": "qwen3_native_thinking_external_exact_token_budget",
+  "reasoning_protocol_matched": true,
+  "model_loaded_at_utc": "2026-08-24T20:04:33.775312+00:00",
+  "resolved_model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "resolved_tokenizer_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "model_class": "Qwen3ForCausalLM",
+  "tokenizer_class": "Qwen2Tokenizer",
+  "dtype": "torch.bfloat16",
+  "resolved_device_map": null,
+  "resolved_generation_config": {
+    "do_sample": true,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "eos_token_id": [
+      151645,
+      151643
+    ],
+    "pad_token_id": 151643
+  },
+  "gpu_devices": [
+    {
+      "index": 0,
+      "name": "NVIDIA L40S",
+      "total_memory_bytes": 47665709056
+    }
+  ],
+  "completed_at_utc": "2026-08-24T20:09:26.498380+00:00",
+  "completed_cells": 648
+}

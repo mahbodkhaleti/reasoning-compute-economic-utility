@@ -1,40 +1,55 @@
 #!/usr/bin/env python3
+"""Validate the complete six-checkpoint submission repository without inference."""
 from __future__ import annotations
 
-import hashlib
 import csv
+import hashlib
 import json
-import py_compile
 import subprocess
+import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-SCRIPTS = ROOT / "robustness_extensions" / "scripts"
-OUTPUTS = ROOT / "robustness_extensions" / "server_outputs"
-EXPECTED_MODELS = {
+ORIGINAL_MODELS = {
     "phi4_mini_reasoning",
     "qwen3_4b",
     "deepseek_r1_llama_8b",
     "qwen3_8b",
 }
-REQUIRED_SCRIPTS = {
-    "common.py",
-    "prepare_scenarios.py",
-    "run_fixed_budget.py",
-    "run_direct_game.py",
-    "analyze_fixed.py",
-    "analyze_extensions.py",
-    "analyze_confidence_uncertainty.py",
-    "analyze_freeform_sensitivity.py",
-    "bootstrap_stochastic_game.py",
-    "analyze_submission_robustness.py",
-    "analyze_normalized_game.py",
-    "analyze_zero_compute_augmented.py",
-    "validate_outputs.py",
-    "package_results.py",
-    "run_4090_full.sh",
+REPORTED_MODELS = ORIGINAL_MODELS | {
+    "qwen3_14b",
+    "granite_3_2_8b_instruct",
 }
+REQUIRED_PATHS = {
+    "README.md",
+    "LICENSE",
+    "LICENSES.md",
+    "docs/REPRODUCIBILITY.md",
+    "docs/REPRODUCIBILITY_MANIFEST.json",
+    "docs/RESULTS_PROVENANCE.md",
+    "offline_replay/README.md",
+    "offline_replay/requirements.txt",
+    "offline_replay/verify_preserved.py",
+    "reproduce_all_from_preserved.sh",
+    "new_models_full_server_package/README.md",
+    "synthetic_ipv_benchmark/synthetic_ipv_manifest.jsonl",
+    "paper/main.tex",
+    "paper/references.bib",
+    "paper/checklist.tex",
+    "paper/neurips_2026.sty",
+    "paper/figures/strategic_input_pipeline_overview.pdf",
+    "paper/figures/synthetic_ipv_six_model_frontier.pdf",
+    "paper/tables/synthetic_ipv_endpoints.tex",
+}
+SOURCE_DIRS = (
+    "robustness_extensions/scripts",
+    "offline_replay",
+    "new_models_full_server_package/src",
+    "synthetic_existing4_server_package/src",
+    "synthetic_ipv_benchmark",
+)
+MANIFEST_EXCLUSIONS = {"MANIFEST.sha256", "repository_validation.json"}
 
 
 def require(condition: bool, message: str) -> None:
@@ -50,100 +65,123 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def repository_files() -> set[str]:
+    command = subprocess.run(
+        ["git", "rev-parse", "--is-inside-work-tree"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    if command.returncode == 0 and command.stdout.strip() == "true":
+        return set(
+            subprocess.run(
+                ["git", "ls-files"],
+                cwd=ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            ).stdout.splitlines()
+        )
+    manifest = ROOT / "MANIFEST.sha256"
+    return {
+        line.split(None, 1)[1]
+        for line in manifest.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    } | MANIFEST_EXCLUSIONS
+
+
+def check_top_manifest() -> tuple[int, list[str]]:
+    entries: list[tuple[str, str]] = []
+    for line in (ROOT / "MANIFEST.sha256").read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        expected, relative = line.split(None, 1)
+        entries.append((expected, relative.strip()))
+    errors = []
+    for expected, relative in entries:
+        path = ROOT / relative
+        if not path.is_file():
+            errors.append(f"missing: {relative}")
+        elif sha256(path) != expected:
+            errors.append(f"SHA-256 mismatch: {relative}")
+    return len(entries), errors
+
+
 def main() -> None:
-    config = json.loads((SCRIPTS / "config.json").read_text())
-    specs = {model["slug"]: model for model in config["models"]}
-    require(set(specs) == EXPECTED_MODELS, "Config does not contain exactly four expected models")
-    for slug, spec in specs.items():
+    config = json.loads((ROOT / "robustness_extensions/scripts/config.json").read_text())
+    original_specs = {model["slug"]: model for model in config["models"]}
+    require(set(original_specs) == ORIGINAL_MODELS, "Original runner config must contain its four historical models")
+    for slug, spec in original_specs.items():
         revision = spec.get("revision", "")
         require(len(revision) == 40, f"Missing 40-character revision for {slug}")
         int(revision, 16)
 
-    present_scripts = {path.name for path in SCRIPTS.iterdir() if path.is_file()}
-    require(REQUIRED_SCRIPTS <= present_scripts, f"Missing scripts: {sorted(REQUIRED_SCRIPTS - present_scripts)}")
-    for path in sorted(SCRIPTS.glob("*.py")):
-        py_compile.compile(str(path), doraise=True)
+    structured = json.loads((ROOT / "docs/REPRODUCIBILITY_MANIFEST.json").read_text(encoding="utf-8"))
+    reported_specs = {model["slug"]: model for model in structured["models"]}
+    require(set(reported_specs) == REPORTED_MODELS, "Structured manifest must contain exactly six reported models")
+    for slug, spec in reported_specs.items():
+        for field in ("model_revision", "tokenizer_revision"):
+            revision = spec.get(field, "")
+            require(len(revision) == 40, f"Missing 40-character {field} for {slug}")
+            int(revision, 16)
 
-    raw = OUTPUTS / "raw"
-    for model in EXPECTED_MODELS:
-        for condition in (
-            "reasoning_greedy",
-            "no_think_greedy",
-            "reasoning_stochastic",
-        ):
-            require((raw / f"fixed_{model}_{condition}.jsonl").is_file(), f"Missing raw output: {model} {condition}")
-            require((raw / f"fixed_{model}_{condition}_metadata.json").is_file(), f"Missing metadata: {model} {condition}")
+    missing_paths = sorted(path for path in REQUIRED_PATHS if not (ROOT / path).is_file())
+    require(not missing_paths, f"Missing release paths: {missing_paths}")
 
-    scenario_path = OUTPUTS / "data" / "scenarios.csv"
-    if scenario_path.is_file():
-        with scenario_path.open(newline="", encoding="utf-8") as handle:
-            scenarios = list(csv.DictReader(handle))
-        scenario_ids = {row["scenario_id"] for row in scenarios}
-        scenario_count_source = "locally reconstructed scenarios.csv"
-    else:
-        scenario_ids: set[str] = set()
-        for model in EXPECTED_MODELS:
-            path = raw / f"fixed_{model}_reasoning_greedy.jsonl"
-            with path.open(encoding="utf-8") as handle:
-                for line in handle:
-                    if line.strip():
-                        scenario_ids.add(str(json.loads(line)["scenario_id"]).zfill(12))
-        scenario_count_source = "saved raw inference records"
+    python_files: list[Path] = []
+    for relative in SOURCE_DIRS:
+        for path in sorted((ROOT / relative).rglob("*.py")):
+            if "__pycache__" in path.parts:
+                continue
+            compile(path.read_text(encoding="utf-8"), str(path), "exec")
+            python_files.append(path)
+
+    verification = subprocess.run(
+        [sys.executable, str(ROOT / "offline_replay/verify_preserved.py"), "--repo-root", str(ROOT)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    preserved_report = json.loads(verification.stdout)
+    require(preserved_report["status"] == "passed", "Preserved-output verification failed")
+
+    scenario_path = ROOT / "new_models_full_server_package/data/historical/scenarios.csv"
+    with scenario_path.open(newline="", encoding="utf-8") as handle:
+        scenario_ids = {row["scenario_id"] for row in csv.DictReader(handle)}
     require(len(scenario_ids) == 216, f"Expected 216 scenarios, found {len(scenario_ids)}")
 
-    required_paper = {
-        ROOT / "paper" / "main.tex",
-        ROOT / "paper" / "references.bib",
-        ROOT / "paper" / "checklist.tex",
-        ROOT / "paper" / "neurips_2026.sty",
-    }
-    require(all(path.is_file() for path in required_paper), "Paper source is incomplete")
-    tracked = set(
-        subprocess.run(
-            ["git", "ls-files"], cwd=ROOT, check=True, capture_output=True, text=True
-        ).stdout.splitlines()
-    )
-    prohibited_data = {
+    tracked = repository_files()
+    prohibited = {
         "online-auctions-dataset/auction.csv",
-        "robustness_extensions/server_outputs/data/auction_splits.csv",
-        "robustness_extensions/server_outputs/data/dataset_summary.csv",
-        "robustness_extensions/server_outputs/data/metadata.json",
-        "robustness_extensions/server_outputs/data/scenarios.csv",
+        "data/source/auction.csv",
     }
-    require(not (tracked & prohibited_data), f"Restricted data are tracked: {sorted(tracked & prohibited_data)}")
+    require(not (tracked & prohibited), f"Raw source data are tracked: {sorted(tracked & prohibited)}")
+    require(REQUIRED_PATHS <= tracked, "One or more required release paths are not tracked")
 
-    historical_manifest = json.loads((OUTPUTS / "SHA256_MANIFEST.json").read_text())
-    checked = 0
-    mismatches: list[str] = []
-    intentionally_absent: list[str] = []
-    for relative, expected in historical_manifest["outputs"].items():
-        path = OUTPUTS / relative
-        if path.name == "SHA256_MANIFEST.json":
-            continue
-        if not path.is_file():
-            if relative.startswith("data/"):
-                intentionally_absent.append(relative)
-            continue
-        checked += 1
-        if sha256(path) != expected:
-            mismatches.append(relative)
-    # Derived files are intentionally regenerated by reproduce_offline.sh, so
-    # mismatches are reported rather than treated as missing code/data.
+    manifest_count, manifest_errors = check_top_manifest()
+    require(not manifest_errors, "; ".join(manifest_errors))
+
     report = {
-        "status": "ok",
-        "models": sorted(EXPECTED_MODELS),
-        "scenario_count": len(scenario_ids),
-        "scenario_count_source": scenario_count_source,
-        "processed_auction_data_tracked": False,
-        "processed_auction_data_reconstruction": "data/download_online_auctions.sh then reproduce_offline.sh",
-        "python_scripts_compiled": len(list(SCRIPTS.glob("*.py"))),
-        "historical_manifest_files_checked": checked,
-        "historical_manifest_mismatches_after_rerun": mismatches,
-        "historical_manifest_data_files_intentionally_not_redistributed": sorted(intentionally_absent),
-        "new_llm_inference_executed_by_validation": False,
+        "status": "passed",
+        "models": sorted(REPORTED_MODELS),
+        "historical_scenarios": len(scenario_ids),
+        "historical_records_per_model": {
+            "no_think_greedy": 648,
+            "reasoning_greedy": 4536,
+            "reasoning_stochastic": 3240,
+        },
+        "synthetic_records_per_model": 4536,
+        "synthetic_records_total": 27216,
+        "preserved_output_verification": preserved_report["status"],
+        "python_files_parsed": len(python_files),
+        "manifest_files_checked": manifest_count,
+        "manifest_errors": manifest_errors,
+        "raw_auction_source_tracked": False,
+        "transformed_scenario_artifacts_tracked": True,
+        "transformed_artifact_license_caveat": "See LICENSES.md and data/README.md; no new license is asserted.",
+        "new_llm_inference_executed": False,
     }
-    report_path = ROOT / "repository_validation.json"
-    report_path.write_text(json.dumps(report, indent=2) + "\n")
+    (ROOT / "repository_validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 
 

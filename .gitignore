@@ -29,3 +29,10 @@ qwen3_14b_addition/smoke_results/
 qwen3_14b_addition/scripts/*.zip
 qwen3_14b_addition/*.log
 qwen3_14b_addition/*.pid
+
+# Superseded intermediate presentation artifacts retained only in the local
+# working directory. The six-model figures and tables are the release assets.
+paper/figures/five_model_*
+paper/figures/synthetic_ipv_five_model_*
+paper/tables/synthetic_ipv_five_model_*
+synthetic_existing4_server_package.zip

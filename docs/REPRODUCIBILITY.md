@@ -1,9 +1,9 @@
 # Reproducibility record
 
 This document records the software, hardware, and Hugging Face snapshots
-available on the inference server after the experiments. It complements the
-per-run JSON metadata under `server_outputs/raw/` and the experiment settings
-in `scripts/config.json`.
+available for the experiments. The canonical structured record is
+`REPRODUCIBILITY_MANIFEST.json`; this narrative explains the retrospective
+evidence for the original four checkpoints.
 
 ## Scope and provenance
 
@@ -129,3 +129,37 @@ For a fresh reproduction, pass the recorded commit explicitly as the model and
 tokenizer `revision` rather than relying on the mutable `main` branch. No model
 weights should be copied into the anonymous repository; they should be obtained
 from their original Hugging Face repositories subject to their licenses.
+
+## Qwen3-14B, Granite-8B, and offline replay
+
+Qwen3-14B used `Qwen/Qwen3-14B` at model and tokenizer commit
+`40c069824f4251a91eefaf281ebe4c544efd3e18`. Unlike the original-four panel,
+the requested and resolved commits were written to each run manifest before
+and during inference. Those manifests also record Python 3.12.3, PyTorch
+2.9.1+cu128, Transformers 5.1.0, Accelerate 1.12.0, CUDA 12.8, driver
+580.159.04, bfloat16 loading, and one NVIDIA L40S with 47,665,709,056 bytes of
+memory.
+
+Granite-8B used `ibm-granite/granite-3.2-8b-instruct` at model and tokenizer
+commit `610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695`. Its manifests recorded the
+resolved revisions contemporaneously together with Python 3.10.12, PyTorch
+2.13.0+cu130, Transformers 5.15.0, Accelerate 1.14.0, CUDA 13.0, driver
+580.173.02, bfloat16 loading, and one NVIDIA RTX 4090. The tokenizer requires
+`thinking=True`; this protocol is recorded as not semantically identical to
+Qwen native thinking even though external token budgeting, readout, and scoring
+are shared.
+
+All six historical and synthetic panels are preserved under
+`robustness_extensions/server_outputs/raw/` and `preserved_outputs/`. To verify
+coverage and regenerate the reported analyses without model inference, run
+from the repository root:
+
+```bash
+bash reproduce_all_from_preserved.sh
+```
+
+The original `analyze_fixed.py` used Python's randomized `hash()` for
+descriptive cell-level frontier intervals. The canonical replay uses a stable
+SHA-256-derived seed for those cells. The paired endpoint, hierarchical,
+free-form, CDF, and strategic analyses already use explicit seeds; their
+estimands are unchanged.

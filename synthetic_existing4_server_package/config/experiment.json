@@ -1,0 +1,12 @@
+{
+  "seed": 20260819,
+  "hf_cache": null,
+  "models": [
+    {"slug":"phi4_mini_reasoning","hf_id":"microsoft/Phi-4-mini-reasoning","revision":"0e3b1e2d02ee478a3743abe3f629e9c0cb722e0a","tokenizer_revision":"0e3b1e2d02ee478a3743abe3f629e9c0cb722e0a","chat_template_argument":"enable_thinking","template_argument_required":false,"reasoning_protocol":"paper_existing_phi_protocol","reasoning_protocol_matched":true,"device_map":"auto"},
+    {"slug":"qwen3_4b","hf_id":"Qwen/Qwen3-4B","revision":"1cfa9a7208912126459214e8b04321603b3df60c","tokenizer_revision":"1cfa9a7208912126459214e8b04321603b3df60c","chat_template_argument":"enable_thinking","template_argument_required":true,"reasoning_protocol":"qwen3_native_thinking_external_exact_token_budget","reasoning_protocol_matched":true,"device_map":"auto"},
+    {"slug":"deepseek_r1_llama_8b","hf_id":"deepseek-ai/DeepSeek-R1-Distill-Llama-8B","revision":"6a6f4aa4197940add57724a7707d069478df56b1","tokenizer_revision":"6a6f4aa4197940add57724a7707d069478df56b1","chat_template_argument":"enable_thinking","template_argument_required":false,"reasoning_protocol":"paper_existing_deepseek_protocol","reasoning_protocol_matched":true,"device_map":"auto"},
+    {"slug":"qwen3_8b","hf_id":"Qwen/Qwen3-8B","revision":"b968826d9c46dd6066d109eabc6255188de91218","tokenizer_revision":"b968826d9c46dd6066d109eabc6255188de91218","chat_template_argument":"enable_thinking","template_argument_required":true,"reasoning_protocol":"qwen3_native_thinking_external_exact_token_budget","reasoning_protocol_matched":true,"device_map":"auto"}
+  ],
+  "evaluation":{"budgets":[0,64,128,256,384,512,768],"repeat_seeds":[11,23,37],"unconstrained_max_tokens":1024,"answer_tokens":20,"temperature":0.6,"top_p":0.95},
+  "cost":{"gpu_hour_usd":null,"gpu_count_billed":1,"hardware_name":null,"electricity_usd_per_kwh":null,"power_poll_seconds":0.1}
+}

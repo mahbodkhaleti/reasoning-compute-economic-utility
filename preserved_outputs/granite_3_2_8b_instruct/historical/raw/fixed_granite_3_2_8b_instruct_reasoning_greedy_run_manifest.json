@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "first_started_at_utc": "2026-08-25T13:00:11.646955+00:00",
+  "model_slug": "granite_3_2_8b_instruct",
+  "hf_id": "ibm-granite/granite-3.2-8b-instruct",
+  "requested_model_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "requested_tokenizer_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "config_path": "new_models_full_server_package/config/experiment.json",
+  "config_sha256": "4f3eaf5ec0906cb72c5a1640fb6868c8cbb907f4b4519e71b94cb144b456874e",
+  "runner_sha256": "f621001f2eef7bc03321610540ce2f04cb85ffbb86c5c208c637e36f87e1afa0",
+  "repository_git_revision": null,
+  "chat_mode": "reasoning",
+  "decoding": "greedy",
+  "budgets": [
+    0,
+    64,
+    128,
+    256,
+    512,
+    768,
+    -1
+  ],
+  "repeat_seeds": [
+    11,
+    23,
+    37
+  ],
+  "option_order_seed": null,
+  "query_verbal_confidence": false,
+  "constrained_option_readout": true,
+  "gpu_hour_usd": null,
+  "gpu_count_billed": 1,
+  "hardware_name": null,
+  "scenario_manifest_sha256": "12a846cb3f9362ad9be5c5830d5aef71d7300328ce2399ac87cf2ef60f9986e6",
+  "auction_split_sha256": "fb3ff11bac65c30a51afea0d0811bd24164851ed3c638040537885145d17cdef",
+  "python": "3.10.12",
+  "torch": "2.13.0+cu130",
+  "cuda_build": "13.0",
+  "transformers": "5.15.0",
+  "accelerate": "1.14.0",
+  "gpu_driver": "580.173.02",
+  "configured_device_map": "auto",
+  "reasoning_protocol": "granite_template_thinking_prompt_external_exact_token_budget",
+  "reasoning_protocol_matched": false,
+  "model_loaded_at_utc": "2026-08-25T13:00:15.321643+00:00",
+  "resolved_model_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "resolved_tokenizer_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "model_class": "GraniteForCausalLM",
+  "tokenizer_class": "TokenizersBackend",
+  "dtype": "torch.bfloat16",
+  "resolved_device_map": null,
+  "resolved_generation_config": {
+    "do_sample": null,
+    "temperature": null,
+    "top_p": null,
+    "top_k": null,
+    "eos_token_id": 0,
+    "pad_token_id": 0
+  },
+  "gpu_devices": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4090",
+      "total_memory_bytes": 25250627584
+    }
+  ],
+  "completed_at_utc": "2026-08-25T22:35:14.502453+00:00",
+  "completed_cells": 4536
+}

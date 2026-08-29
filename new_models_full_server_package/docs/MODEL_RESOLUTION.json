@@ -1,0 +1,20 @@
+{
+  "verified_at_utc": "2026-08-24",
+  "verification_method": "official Hugging Face Hub model API and pinned tokenizer/model metadata",
+  "models": [
+    {
+      "requested_id": "Qwen/Qwen3-14B",
+      "resolved_id": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "license": "apache-2.0",
+      "chat_template_argument": "enable_thinking"
+    },
+    {
+      "requested_id": "ibm-granite/granite-3.2-8b-instruct",
+      "resolved_id": "ibm-granite/granite-3.2-8b-instruct",
+      "revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+      "license": "apache-2.0",
+      "chat_template_argument": "thinking"
+    }
+  ]
+}
