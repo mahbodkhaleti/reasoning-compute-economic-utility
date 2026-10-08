@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Which inference protocol supports each result. Positive fixed budgets force generated trace length; both answer readouts are separate stages. All primary historical decisions are scored on the held-out CDF.}
+\label{tab:protocolmap}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}p{0.15\linewidth}p{0.25\linewidth}p{0.20\linewidth}X@{}}
+\toprule
+Analysis & Budgets and decoding & Replications / readout & Result and scope \\
+\midrule
+Greedy frontier & $0,64,128,256,512,768$; deterministic & Three option orders; constrained letter & Primary 0-to-768 utility, accuracy and profit comparisons; fixed-length intervention. \\
+Stochastic frontier & $128,384,768$; $T=0.6$, top-$p=0.95$ & Five generation seeds; one fixed order; constrained letter & Generation uncertainty and primary three-budget contest inputs. \\
+Free-form audit & Same stored greedy traces & Up to 20 answer tokens; exact candidate-bid parser & Agreement and paired valid-endpoint sensitivity; invalid responses remain missing. \\
+Controls & No-thinking; unconstrained up to 1,024 tokens & Three option orders; constrained letter & Reference performance; excluded from primary games. Native thinking flag depends on template support. \\
+Hybrid game & Deterministic zero plus stochastic $128,384,768$ & Zero averaged over orders; positives sampled jointly by seed & Zero-action sensitivity; combines protocols rather than extending a matched stochastic frontier. \\
+Synthetic IPV & $0,64,128,256,$\newline $384,512,768$; deterministic & Three option orders; constrained letter & Exact-payoff robustness under specified independent opponents; a separate environment. \\
+\bottomrule
+\end{tabularx}
+\end{table}

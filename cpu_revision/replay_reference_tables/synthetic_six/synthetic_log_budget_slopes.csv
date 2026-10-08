@@ -1,0 +1,7 @@
+model,model_label,log_budget_slope
+deepseek_r1_llama_8b,DeepSeek-R1-Distill-Llama-8B,0.10636833160111328
+granite_3_2_8b_instruct,Granite-3.2-8B-Instruct,0.09496830272887614
+phi4_mini_reasoning,Phi-4-mini-reasoning,0.04581817424733226
+qwen3_14b,Qwen3-14B,0.11707176980692587
+qwen3_4b,Qwen3-4B,0.12163811294743224
+qwen3_8b,Qwen3-8B,0.08818109146517299

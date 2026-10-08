@@ -1,0 +1,29 @@
+\begin{tabular}{llrlrrrl}
+\toprule
+model & model_label & gamma & boundary_type & threshold & compute_before & compute_after & inequality \\
+\midrule
+deepseek_r1_llama_8b & DeepSeek-R1-Distill-Llama-8B & 1 & private_NE_kappa & 0.00015099 & 768 & 128 & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+deepseek_r1_llama_8b & DeepSeek-R1-Distill-Llama-8B & 1 & planner_kappa_over_rho & 0.000200244 & 1536 & 896 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+deepseek_r1_llama_8b & DeepSeek-R1-Distill-Llama-8B & 1 & planner_kappa_over_rho & 0.000296188 & 896 & 256 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+granite_3_2_8b_instruct & Granite-3.2-8B-Instruct & 1 & private_NE_kappa & 9.0913e-05 & 768 & 384 & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+granite_3_2_8b_instruct & Granite-3.2-8B-Instruct & 1 & private_NE_kappa & 0.000101903 & 384 & NaN & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+granite_3_2_8b_instruct & Granite-3.2-8B-Instruct & 1 & private_NE_kappa & 0.000101903 & NaN & 128 & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+granite_3_2_8b_instruct & Granite-3.2-8B-Instruct & 1 & planner_kappa_over_rho & 0.000131058 & 1536 & 896 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+granite_3_2_8b_instruct & Granite-3.2-8B-Instruct & 1 & planner_kappa_over_rho & 0.000167328 & 896 & 256 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+phi4_mini_reasoning & Phi-4-mini-reasoning & 1 & private_NE_kappa & 7.38146e-05 & 768 & NaN & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+phi4_mini_reasoning & Phi-4-mini-reasoning & 1 & private_NE_kappa & 7.38146e-05 & NaN & 128 & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+phi4_mini_reasoning & Phi-4-mini-reasoning & 1 & planner_kappa_over_rho & 9.95404e-05 & 1536 & 896 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+phi4_mini_reasoning & Phi-4-mini-reasoning & 1 & planner_kappa_over_rho & 0.000120313 & 896 & 256 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+qwen3_14b & Qwen3-14B & 1 & private_NE_kappa & 0.000118011 & 768 & NaN & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+qwen3_14b & Qwen3-14B & 1 & private_NE_kappa & 0.000118011 & NaN & 384 & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+qwen3_14b & Qwen3-14B & 1 & private_NE_kappa & 0.000142576 & 384 & 128 & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+qwen3_14b & Qwen3-14B & 1 & planner_kappa_over_rho & 0.00018164 & 1536 & 896 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+qwen3_14b & Qwen3-14B & 1 & planner_kappa_over_rho & 0.000252155 & 896 & 256 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+qwen3_4b & Qwen3-4B & 1 & private_NE_kappa & 0.000135184 & 768 & 128 & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+qwen3_4b & Qwen3-4B & 1 & planner_kappa_over_rho & 0.000185042 & 1536 & 896 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+qwen3_4b & Qwen3-4B & 1 & planner_kappa_over_rho & 0.00026248 & 896 & 256 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+qwen3_8b & Qwen3-8B & 1 & private_NE_kappa & 0.00010488 & 768 & 128 & kappa < DeltaP/DeltaC favors the higher-payoff deviation \\
+qwen3_8b & Qwen3-8B & 1 & planner_kappa_over_rho & 0.000153088 & 1536 & 896 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+qwen3_8b & Qwen3-8B & 1 & planner_kappa_over_rho & 0.000200564 & 896 & 256 & kappa/rho < DeltaQ/DeltaC favors the higher-compute allocation \\
+\bottomrule
+\end{tabular}

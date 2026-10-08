@@ -1,5 +1,7 @@
 # Reproducibility record
 
+The latest manuscript revision is reproduced from the repository root with `bash reproduce_cpu_revision.sh`. Its CPU dependencies and release scope are documented in `../README.md`; numerical evidence is in `../cpu_revision/` and `../decision_audit/`. The historical inference environment recorded below remains the provenance for the preserved model outputs. No new inference or human responses were added in this revision.
+
 This document records the software, hardware, and Hugging Face snapshots
 available for the experiments. The canonical structured record is
 `REPRODUCIBILITY_MANIFEST.json`; this narrative explains the retrospective

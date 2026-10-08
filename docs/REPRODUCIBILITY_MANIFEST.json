@@ -8,15 +8,25 @@
     "scenario_count": 216,
     "construction_fraction": 0.7,
     "split_and_construction_seed": 20260819,
-    "categories": ["Palm Pilot M515 PDA", "Xbox game console", "Cartier wristwatch"],
+    "categories": [
+      "Palm Pilot M515 PDA",
+      "Xbox game console",
+      "Cartier wristwatch"
+    ],
     "private_values_per_category": 18,
     "candidate_sets_per_value": 2,
-    "candidate_set_sizes": [5, 7],
+    "candidate_set_sizes": [
+      5,
+      7
+    ],
     "scenario_sha256": "12a846cb3f9362ad9be5c5830d5aef71d7300328ce2399ac87cf2ef60f9986e6",
     "auction_split_sha256": "fb3ff11bac65c30a51afea0d0811bd24164851ed3c638040537885145d17cdef",
     "construction_code": "robustness_extensions/scripts/prepare_scenarios.py",
     "construction_code_sha256": "c6ed64a7b08519c665e48a2e9bc6ad3faa3e1bd919920ee972858ba371c0f774",
-    "preserved_processed_paths": ["new_models_full_server_package/data/historical/scenarios.csv", "new_models_full_server_package/data/historical/auction_splits.csv"],
+    "preserved_processed_paths": [
+      "new_models_full_server_package/data/historical/scenarios.csv",
+      "new_models_full_server_package/data/historical/auction_splits.csv"
+    ],
     "raw_source_and_license_note": "data/README.md"
   },
   "historical_protocol": {
@@ -24,17 +34,54 @@
     "prompt_and_runner_sha256_at_archived_original_run": "8b6dab44cec963028405b220531499da4d204902ae72b55a057a368d94fdc69a",
     "archived_hash_evidence": "robustness_extensions/server_outputs/SHA256_MANIFEST.json",
     "current_source_sha256": "03cb1af4d23fdcf53d13061f0aeed3d70954734f8b9134e9a782b3d791f21cf1",
-    "deterministic_reasoning_budgets": [0, 64, 128, 256, 512, 768],
-    "deterministic_option_order_seeds": [11, 23, 37],
-    "stochastic_reasoning_budgets": [128, 384, 768],
-    "stochastic_generation_seeds": [1, 7, 21, 42, 99],
+    "deterministic_reasoning_budgets": [
+      0,
+      64,
+      128,
+      256,
+      512,
+      768
+    ],
+    "deterministic_option_order_seeds": [
+      11,
+      23,
+      37
+    ],
+    "stochastic_reasoning_budgets": [
+      128,
+      384,
+      768
+    ],
+    "stochastic_generation_seeds": [
+      1,
+      7,
+      21,
+      42,
+      99
+    ],
     "stochastic_option_order_seed": 314159,
-    "stochastic_decoding": {"do_sample": true, "temperature": 0.6, "top_p": 0.95},
-    "greedy_decoding": {"do_sample": false},
+    "stochastic_decoding": {
+      "do_sample": true,
+      "temperature": 0.6,
+      "top_p": 0.95
+    },
+    "greedy_decoding": {
+      "do_sample": false
+    },
     "budget_enforcement": "For c>0, min_new_tokens=max_new_tokens=c and EOS token IDs are suppressed; final-answer and constrained-readout tokens are excluded. At c=0 the generated scratchpad is empty.",
-    "free_form_answer": {"suffix": "Now give the required answer. FINAL BID:", "greedy": true, "max_new_tokens": 20},
+    "free_form_answer": {
+      "suffix": "Now give the required answer. FINAL BID:",
+      "greedy": true,
+      "max_new_tokens": 20
+    },
     "constrained_readout": "A separate deterministic forward pass takes the argmax over valid single-token option labels and maps the label to candidate identity, not screen position.",
-    "bootstrap": {"paired_scenario_draws": 2000, "hierarchical_draws": 1000, "auction_cdf_draws": 2000, "primary_seed": 20260819, "robustness_seed": 20260822},
+    "bootstrap": {
+      "paired_scenario_draws": 2000,
+      "hierarchical_draws": 1000,
+      "auction_cdf_draws": 2000,
+      "primary_seed": 20260819,
+      "robustness_seed": 20260822
+    },
     "analysis_note": "The canonical replay replaces one process-randomized Python hash used only for descriptive full-frontier cell intervals with a SHA-256-derived seed. Main paired endpoint intervals retain their original explicit NumPy seed."
   },
   "synthetic_protocol": {
@@ -43,8 +90,20 @@
     "scenario_manifest": "synthetic_ipv_benchmark/synthetic_ipv_manifest.jsonl",
     "runner": "new_models_full_server_package/src/run_synthetic.py",
     "runner_sha256": "b8671801c7a6916ec49fe14fea4e4ba0851eb0d90961b89b636cb9034a206dec",
-    "budgets": [0, 64, 128, 256, 384, 512, 768],
-    "option_order_seeds": [11, 23, 37],
+    "budgets": [
+      0,
+      64,
+      128,
+      256,
+      384,
+      512,
+      768
+    ],
+    "option_order_seeds": [
+      11,
+      23,
+      37
+    ],
     "records_per_model": 4536
   },
   "models": [
@@ -131,9 +190,46 @@
     }
   ],
   "environments": {
-    "original_four": {"python": "3.10.12", "torch": "2.13.0+cu130", "cuda_build": "13.0", "transformers": "5.15.0", "accelerate": "1.14.0", "cudnn": "9.2.0", "gpu": "NVIDIA GeForce RTX 4090", "gpu_memory_mib": 24564, "driver": "580.173.02", "dtype": "bfloat16", "device_map": "auto", "provenance": "PyTorch/Python/GPU recorded in run metadata; remaining fields recovered from the preserved server environment inspection"},
-    "qwen3_14b": {"python": "3.12.3", "torch": "2.9.1+cu128", "cuda_build": "12.8", "transformers": "5.1.0", "accelerate": "1.12.0", "gpu": "NVIDIA L40S", "gpu_memory_bytes": 47665709056, "driver": "580.159.04", "dtype": "torch.bfloat16", "device_map": "auto", "provenance": "contemporaneous per-run metadata and manifests"},
-    "granite_3_2_8b": {"python": "3.10.12", "torch": "2.13.0+cu130", "cuda_build": "13.0", "transformers": "5.15.0", "accelerate": "1.14.0", "gpu": "NVIDIA GeForce RTX 4090", "gpu_memory_bytes": 25250627584, "driver": "580.173.02", "dtype": "torch.bfloat16", "device_map": "auto", "provenance": "contemporaneous per-run metadata and manifests"}
+    "original_four": {
+      "python": "3.10.12",
+      "torch": "2.13.0+cu130",
+      "cuda_build": "13.0",
+      "transformers": "5.15.0",
+      "accelerate": "1.14.0",
+      "cudnn": "9.2.0",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_memory_mib": 24564,
+      "driver": "580.173.02",
+      "dtype": "bfloat16",
+      "device_map": "auto",
+      "provenance": "PyTorch/Python/GPU recorded in run metadata; remaining fields recovered from the preserved server environment inspection"
+    },
+    "qwen3_14b": {
+      "python": "3.12.3",
+      "torch": "2.9.1+cu128",
+      "cuda_build": "12.8",
+      "transformers": "5.1.0",
+      "accelerate": "1.12.0",
+      "gpu": "NVIDIA L40S",
+      "gpu_memory_bytes": 47665709056,
+      "driver": "580.159.04",
+      "dtype": "torch.bfloat16",
+      "device_map": "auto",
+      "provenance": "contemporaneous per-run metadata and manifests"
+    },
+    "granite_3_2_8b": {
+      "python": "3.10.12",
+      "torch": "2.13.0+cu130",
+      "cuda_build": "13.0",
+      "transformers": "5.15.0",
+      "accelerate": "1.14.0",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_memory_bytes": 25250627584,
+      "driver": "580.173.02",
+      "dtype": "torch.bfloat16",
+      "device_map": "auto",
+      "provenance": "contemporaneous per-run metadata and manifests"
+    }
   },
   "preserved_artifact_sha256": {
     "preserved_outputs/qwen3_14b/historical/raw/fixed_qwen3_14b_no_think_greedy.jsonl": "ca1896a26f73409c8341303e077238439001cb0c0dae49f6855bd99d10ca5c2d",
@@ -157,5 +253,28 @@
     "Granite uses its checkpoint's thinking=True chat template with external exact-token budgeting; this is recorded as a cross-family protocol sensitivity rather than protocol-identical to Qwen native thinking.",
     "Granite has no paired deterministic free-form endpoint sensitivity because no budget-zero response passed the fixed parser; undefined conditional quantities remain missing rather than being imputed.",
     "Raw auction CSVs are not redistributed because the public mirror states no clear redistribution license; source retrieval and deterministic reconstruction are documented. Preserved processed split/scenario files support offline verification and analysis."
-  ]
+  ],
+  "cpu_revision": {
+    "date": "2026-10-08",
+    "canonical_command": "bash reproduce_cpu_revision.sh",
+    "inference_required": false,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20261008,
+    "current_manuscript": "paper/main.tex",
+    "submitted_manuscript": "submitted_paper/main.tex",
+    "new_results": "cpu_revision/results",
+    "known_remaining_gaps": [
+      "unestimated client selection/value",
+      "narrow supplied-probability task",
+      "matched frontier beyond 768 absent",
+      "venue and author/checklist requirements pending"
+    ],
+    "latest_stage": "saved-decision audit and human-study preparation",
+    "decision_audit": "decision_audit/results",
+    "human_study": {
+      "path": "decision_audit/human_study",
+      "status": "prepared; zero human responses",
+      "browser_preview": "unavailable; static survey checks passed"
+    }
+  }
 }

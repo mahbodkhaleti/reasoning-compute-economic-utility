@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering
+\caption{Synthetic IPV endpoint robustness over 216 paired scenarios. Intervals are 95\% paired scenario-bootstrap intervals for $q(768)-q(0)$ based on 2,000 draws.}
+\label{tab:syntheticipv}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+Model & $q(0)$ & $q(768)$ & Difference (95\% CI) \\
+\midrule
+DeepSeek-8B & 0.699 & 0.981 & 0.282 [0.247, 0.321] \\
+Phi-mini & 0.651 & 0.815 & 0.164 [0.132, 0.197] \\
+Qwen3-4B & 0.686 & 0.971 & 0.285 [0.248, 0.325] \\
+Qwen3-8B & 0.704 & 0.956 & 0.253 [0.215, 0.293] \\
+Qwen3-14B & 0.705 & 0.993 & 0.288 [0.246, 0.331] \\
+Granite-8B & 0.664 & 0.881 & 0.217 [0.176, 0.259] \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,124 +1,69 @@
-# Reasoning compute and economic utility: reproducibility package
+# CPU-completed manuscript revision and reproducibility package
 
-This repository contains the complete code path for the paper: auction-scenario
-construction, prompt templates, six-checkpoint inference, constrained and
-free-form readouts, uncertainty analyses, exact strategic-game enumeration,
-normalized phase maps, robustness analyses, validation, packaging, and the
-anonymous LaTeX manuscript. It also contains the saved model outputs needed to
-rerun all downstream analyses without new LLM inference.
+8 October 2026. Latest stage: saved-decision audit and human-study preparation. This package integrates the original preserved inference archive, the focused manuscript revision, the accuracy/utility comparison, and the completed CPU uncertainty and alternative-mapping extensions. No new inference was performed.
 
-## Repository map
+## Current result and scope
 
-- `robustness_extensions/scripts/`: all runner and analysis source code;
-- `robustness_extensions/server_outputs/raw/`: saved model generations;
-- `preserved_outputs/qwen3_14b/`: preserved Qwen3-14B historical and synthetic generations;
-- `preserved_outputs/granite_3_2_8b_instruct/`: preserved Granite historical and synthetic generations;
-- `preserved_outputs/synthetic_existing4/`: preserved synthetic generations for the original four checkpoints;
-- `docs/REPRODUCIBILITY_MANIFEST.json`: single machine-readable protocol, environment, revision, and provenance record;
-- `offline_replay/`: analysis-only replay code and generated workspace;
-- `robustness_extensions/server_outputs/data/`: instructions for locally
-  reconstructed scenario inputs;
-- `robustness_extensions/server_outputs/tables/`: machine-readable results;
-- `robustness_extensions/server_outputs/figures/`: generated figures;
-- `paper/`: anonymous NeurIPS EconML workshop LaTeX source;
-- `docs/REPRODUCIBILITY.md`: recovered environment and model snapshots;
-- `docs/RESULTS_PROVENANCE.md`: mapping from manuscript results to code and CSVs;
-- `data/`: source-data acquisition, checksum, and licensing caveat;
-- `environment/`: recovered server environment.
+All six accuracy-minus-utility private threshold differences have positive exploratory simultaneous 95% bands. The DeepSeek 128/128-versus-768/768 selection-score contrast persists in all 10,000 paired family/seed draws. Profit-based quality and client discrimination remain material modeling choices; some profit frontiers do not support a high/high equilibrium at positive cost in many draws. These are conditional model results, not independent confirmation or evidence of deployed market inefficiency.
 
-No model weights or raw auction CSV are committed. The canonical replay retains
-the checksum-verified transformed scenario and split artifacts needed to audit
-the reported scoring. Because the source mirror gives no clear redistribution
-license, these artifacts are provided only for verification and are not
-relicensed; see `LICENSES.md` and `data/README.md`.
+The arithmetic task, calculator superiority, budget ceiling, symmetric primitives and unestimated client-choice/value mappings remain limitations. Richer tasks and matched above-ceiling frontiers require new inference. Client choice and value require external evidence. Target-venue formatting, author/anonymity metadata and required supplementary/checklist details remain pending. The current anonymous workshop format is retained until a venue is selected.
 
-## Reproduce analyses without model inference
+See `decision_audit/results_report.md` for the calculator audit and `decision_audit/human_study/protocol.md` for the prepared pilot. No human responses have been collected. The local HTML survey passed static flow checks; live browser rendering was blocked by URL policy.
 
-Create an analysis environment and run the canonical six-checkpoint replay:
+## Contents
 
-```bash
-python -m pip install -r offline_replay/requirements.txt
-export REPRO_PYTHON_BIN=/path/to/environment/bin/python
-bash reproduce_all_from_preserved.sh
+- `decision_audit/`: compact input data, new analysis, human-study materials and submission readiness checks.
+- `paper/`: latest editable manuscript; main text is nine pages, with references/appendices/checklist in the full PDF. Original numbered equations and original supporting assets are preserved; new comparison tables and analysis explanation are added.
+- `submitted_paper/`: original submitted manuscript snapshot.
+- `cpu_revision/results_report.md`: numerical findings and remaining claim boundaries.
+- `cpu_revision/service_model_specification.md`: service participants, payment accounting, profit-based benefit, noisy quality-difference selection and identification limits.
+- `cpu_revision/results/`: 10,000-draw uncertainty outputs, alternative mappings, retained bootstrap thresholds, seed/input hashes and validation.
+- `cpu_revision/reference_evidence/`: previous focused-revision CPU results.
+- `cpu_revision/replay_reference_tables/`: 71 preserved CSV tables for replay comparison.
+- `cpu_revision/analyze_legacy_revision.py`: regenerates previous CPU evidence, including family-clustered endpoints and complete equilibrium regimes.
+- `offline_replay/`, `preserved_outputs/`, `robustness_extensions/`, `new_models_full_server_package/`: original scripts and preserved data/generations needed to replay the reported experiments without loading model weights.
+- `docs/REPRODUCIBILITY_MANIFEST.json`: updated original provenance manifest plus revision stage information.
+- `MANIFEST.sha256`: current static-file checksums. Historical release metadata is retained under `docs/SUBMITTED_*`.
+
+The original archive's licenses and transformed-data provenance limits remain in `LICENSES.md` and the provenance manifest. The public GitHub repository contains this revision. The anonymous mirror must be refreshed separately after publication.
+
+## Reproduce all CPU work
+
+Requires Python 3.13 and the pinned CPU analysis dependencies. With an existing compatible environment, run this single sequential command from the extracted package directory:
+
+```sh
+bash reproduce_cpu_revision.sh
+cpu_revision_exit=$?
+echo "Exit status: $cpu_revision_exit"
+test "$cpu_revision_exit" -eq 0
 ```
 
-This verifies and reads the checked-in JSONL and regenerates all core,
-free-form, stochastic-bootstrap, normalized-game, beta/gamma, menu/frontier,
-auction-CDF, runtime/cost, zero-compute, and synthetic-IPV outputs. It never
-loads a Hugging Face model. See `offline_replay/README.md` and
-`docs/RESULTS_PROVENANCE.md`.
+To prepare an environment first:
 
-Validate the complete release and its integrity manifest with:
-
-```bash
-python validate_repository.py
-shasum -a 256 -c MANIFEST.sha256
+```sh
+python3.13 -m venv .venv
+.venv/bin/python -m pip install -r offline_replay/requirements.txt
+REPRO_PYTHON_BIN="$PWD/.venv/bin/python" bash reproduce_cpu_revision.sh
+cpu_revision_exit=$?
+echo "Exit status: $cpu_revision_exit"
+test "$cpu_revision_exit" -eq 0
 ```
 
-Compile the frozen manuscript presentation layer with:
+Dependency installation may require network access; the replay and analysis themselves do not call model APIs, download weights or use a GPU. The wrapper verifies static-file checksums, executes the original full replay, regenerates previous and new CPU analysis, exports the revised tables and checks outputs. Generated `offline_replay/outputs/` and `cpu_revision/legacy_results/` are omitted from the downloadable archive and rebuilt by this command.
 
-```bash
+For an already completed full replay, `bash reproduce_cpu_revision.sh --use-existing-replay` reruns revision analyses and checks the existing 71 replay tables. This mode requires those generated tables to exist; it is not the first-run command.
+
+To compile the manuscript after analysis:
+
+```sh
 cd paper
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-## Reproduce from the source dataset and checkpoints
+A LaTeX installation is only needed for compilation, not numerical replay. Poppler is only needed for PDF rendering. Source hashes should be regenerated after intentional source edits; the wrapper deliberately stops when static inputs have changed.
 
-Acquire and verify the dataset as described in `data/README.md`, placing it at
-`online-auctions-dataset/auction.csv`. On a CUDA server, run:
+## Validation performed for this release
 
-```bash
-export ROBUSTNESS_PYTHON_BIN=/path/to/python
-export ROBUSTNESS_HF_CACHE=/path/to/huggingface/cache
-# Optional and required only for price-calibrated direct games:
-export ROBUSTNESS_GPU_HOUR_USD=0.74
-bash robustness_extensions/scripts/run_4090_full.sh
-```
+The original complete replay exited successfully. All 71 archived CSV tables are byte-identical after replay. Four previous CPU evidence tables match the rerun. Independent LP/control equilibrium checks and explicit service-payment cancellation pass. The 10,000 new paired draws are retained, including nonpositive high/high support bounds; no invalid-support draw is silently discarded from absolute-difference inference. Ratio intervals with positive-support conditioning are labelled separately and are not used for the primary uncertainty conclusion.
 
-The JSONL runner checkpoints every completed scenario/budget/seed cell and can
-resume safely. The original four model commits are pinned in
-`robustness_extensions/scripts/config.json` and
-documented in `docs/REPRODUCIBILITY.md`. Tokenizers use the same pinned
-repository revision unless a separate `tokenizer_revision` is configured.
-Qwen3-14B and Granite are pinned separately under
-`new_models_full_server_package/config/`.
-
-The direct prompted games are retained for reproducibility but are not used in
-the paper's reported strategic claims.
-
-## Qwen3-14B and Granite-8B
-
-The paper includes complete Qwen3-14B and Granite-8B historical and synthetic-IPV
-panels. Their requested and resolved model/tokenizer revisions were recorded
-contemporaneously. `qwen3_14b_addition/` and
-`new_models_full_server_package/` retain server runners; the canonical replay
-uses only the preserved outputs and does not rerun inference. Granite's
-`thinking=True` template is disclosed as a cross-family protocol sensitivity.
-
-## Seeds
-
-- master data/scenario seed: 20260819;
-- deterministic option-order seeds: 11, 23, 37;
-- stochastic generation seeds: 1, 7, 21, 42, 99;
-- fixed stochastic-study option order: 314159;
-- direct-game experiment seeds: 101, 202, 303;
-- primary stochastic/hybrid bootstrap seed: 20260819;
-- free-form and auction-CDF robustness seed: 20260822.
-
-Per-row generation seeds and candidate/order seeds are deterministically derived
-with SHA-256 and stored in the output records.
-
-## Important archival limitations
-
-The original-four model commits were the only snapshots found in the server
-cache during inspection and are recorded in `docs/HF_CACHE_AUDIT.json`.
-Historical JSON metadata did not independently log them, so exact historical
-identification assumes the cache was unchanged. The
-exact historical versions of every transitive Python dependency and the value
-of `PYTHONHASHSEED` were not saved. The repository states these gaps instead of
-inventing them.
-
-The original project software is released under MIT. The dataset mirror reports
-an unknown license, so the raw source is not redistributed; see `LICENSES.md`
-and `data/README.md`. Preserved processed artifacts are included only to audit
-and replay the reported experiment and are identified by checksum in the manifest.
+The integrated wrapper's existing-replay path passed with the saved-decision stage included. The original full replay and its component checks also passed. Repository synchronization validation is recorded in `docs/PUBLICATION_VALIDATION.json`. See `docs/SAVED_DECISION_AUDIT_VALIDATION.json` for the latest compilation, inspection and human-study status; `docs/CPU_REVISION_VALIDATION.json` records the preceding CPU stage.

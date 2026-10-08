@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-08",
+  "base_commit": "7f39263",
+  "full_cpu_reproduction_exit": 0,
+  "static_files_verified": 569,
+  "reference_tables": {
+    "byte_identical": 71,
+    "numeric_match": 0
+  },
+  "manuscript_pdf_sha256": "3c274f9420d0fa35be26828dbc11d381a08af8922717da73ad12f20e87c3e463",
+  "manuscript_source_and_bibliography": "exactly match delivered saved-decision revision",
+  "original_public_directories": "preserved; additive update",
+  "survey_mock_flow": "passed; live usability review pending",
+  "human_responses": 0,
+  "new_inference": false,
+  "anonymous_snapshot": "still at 29 August snapshot before publication; owner refresh pending",
+  "publication": "This report accompanies the commit; remote commit and mirror are checked separately after push.",
+  "privacy_review": {
+    "archived_local_path_fields": "18 machine-local paths replaced with <repository>/; numerical records unchanged",
+    "generated_text_examples": "Five /home/user/document occurrences in each of two randomized-order result tables are fictional paths in preserved model generations, not local user paths. Retained verbatim for the 71-table byte-comparison audit."
+  }
+}

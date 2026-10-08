@@ -1,0 +1,14 @@
+{
+  "mixed_interval": [
+    0.0003286027052518,
+    0.0003289091165272
+  ],
+  "independent_LP_probabilities": [
+    0.0058911738175611815,
+    0.009818623027729016,
+    0.9842902031547097
+  ],
+  "LP_value": 0.0,
+  "external_controls": "passed",
+  "frozen_input_and_replay_source_hashes": "passed"
+}

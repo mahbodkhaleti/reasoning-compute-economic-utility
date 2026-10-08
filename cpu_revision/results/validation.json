@@ -1,0 +1,19 @@
+{
+  "independent_equilibrium_LP_and_controls": "passed",
+  "client_provider_payment_cancellation": "passed",
+  "replay_table_statuses": {
+    "byte_identical": 71,
+    "numeric_match": 0
+  },
+  "four_legacy_revision_evidence_tables": "matched",
+  "all_bootstrap_draws_retained": 10000,
+  "nonpositive_primary_support_draws": {
+    "deepseek_r1_llama_8b": 0,
+    "phi4_mini_reasoning": 12,
+    "qwen3_4b": 0,
+    "qwen3_8b": 0,
+    "qwen3_14b": 0,
+    "granite_3_2_8b_instruct": 0
+  },
+  "new_inference": false
+}

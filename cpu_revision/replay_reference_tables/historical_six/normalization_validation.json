@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "comparisons": 648,
+  "max_absolute_error_in_delta_W_over_V": 4.6629367034256575e-15,
+  "allocation_result": "NE and planner totals exactly match",
+  "normalization": "kappa=lambda/V; rho=beta/V",
+  "reporting_caveat": "The legacy relative-loss omission rule |W_OPT|<=0.01 is not scale invariant. It is not used to define normalized phase regions."
+}

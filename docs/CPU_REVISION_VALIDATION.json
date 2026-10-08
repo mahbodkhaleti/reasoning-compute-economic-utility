@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-08",
+  "new_inference": false,
+  "full_original_canonical_replay_exit_code": 0,
+  "replay_csv_tables_byte_identical": 71,
+  "legacy_CPU_evidence_tables_matched": 4,
+  "independent_LP_and_accounting_checks": "passed",
+  "bootstrap_draws": 10000,
+  "main_text_pages": 9,
+  "total_pdf_pages": 34,
+  "original_numbered_equations_preserved": 11,
+  "compilation": "success; no undefined citations/references or overfull boxes",
+  "visual_inspection": "All pages inspected in contact sheets; new tables and changed main/reproducibility pages inspected at readable resolution. Final conclusion/reference break checked.",
+  "pdf_sha256": "c05038366c48e407cb9fc34fd05662d496cd41c3cd1a730c4e5964e39390c1f3",
+  "integrated_wrapper_existing_replay_mode": "passed, exit code 0",
+  "full_wrapper_mode": "Original full canonical replay and all revision components executed; wrapper existing-replay path and shell syntax passed.",
+  "venue_format": "pending venue selection"
+}

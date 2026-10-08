@@ -1,4 +1,4 @@
-# EconML 2026 workshop paper
+# Revised manuscript (8 October 2026)
 
 Compile from this directory with:
 
@@ -6,9 +6,9 @@ Compile from this directory with:
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-The submission uses the supplied NeurIPS 2026 double-blind workshop style. The
+The current draft retains the supplied NeurIPS 2026 double-blind workshop style. The
 main text occupies nine pages; references, appendices, and the NeurIPS checklist
-follow. The compiled manuscript is `main.pdf`.
+follow. The delivered 34-page PDF is `revised_saved_decision_audit.pdf`; compilation creates `main.pdf`. Target-venue requirements remain to be checked.
 
 The original-four outputs are under
 `../robustness_extensions/server_outputs/`; Qwen3-14B, Granite-8B, and
@@ -16,10 +16,12 @@ synthetic-IPV outputs are under `../preserved_outputs/`. Regenerate the complete
 six-model analysis without model inference from the repository root:
 
 ```bash
-bash reproduce_all_from_preserved.sh
+bash reproduce_cpu_revision.sh
 ```
 
-This verifies all six historical and synthetic panels and regenerates the core,
+The revision wrapper also regenerates the CPU uncertainty, mapping comparisons and saved-decision calculator audit. Human-study materials are prepared, with no participant observations collected.
+
+The original replay component verifies all six historical and synthetic panels and regenerates the core,
 free-form, stochastic-bootstrap, held-out-CDF, normalized-game, zero-compute,
 runtime/cost, and synthetic-IPV analyses. See `../offline_replay/README.md` and
 `../docs/RESULTS_PROVENANCE.md` for the output mapping.

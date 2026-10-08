@@ -1,0 +1,37 @@
+{
+  "rows": 23328,
+  "scenarios": 216,
+  "value_families": 54,
+  "products": 3,
+  "budgets": [
+    0,
+    64,
+    128,
+    256,
+    512,
+    768
+  ],
+  "draws": 10000,
+  "bootstrap_seed": 20261009,
+  "design": "Primary greedy frontier, averaged over three option orders; within-product value-family paired bootstrap retains four candidate variants and complete budget vectors.",
+  "prompt_probabilities": "Exactly reconstructed four-decimal display from archived formatter; stored full-precision train_u remains the published calculator baseline.",
+  "rounding_changed_baseline_scenarios": 1,
+  "calculator_mean_profit_usd": 212.6553378568665,
+  "calculator_mean_ratio": 0.9813640106761573,
+  "display_calculator_mean_profit_usd": 212.64402098443855,
+  "all_six_display_calculator_simultaneous_gap_upper_bounds_negative": true,
+  "calculator_mean_regret_usd": 3.0912222309925426,
+  "calculator_heldout_optimal_scenarios": 155,
+  "simultaneous_panel": "Six model-minus-calculator dollar-profit gaps at 768; exploratory 95% maximum-standardized-deviation bands.",
+  "simultaneous_critical_value": 2.5031571531745715,
+  "all_six_simultaneous_profit_gap_upper_bounds_negative": true,
+  "new_inference": false,
+  "limits": "Conditional on fixed products, prompts, construction/scoring CDFs and order design. Choice categories describe observable objective agreement, not an internal reasoning mechanism. Calculator runtime/cost placeholders are not measurements; no measured cost-effectiveness or net deployment-payoff comparison is claimed.",
+  "input_sha256": {
+    "scenarios.csv": "12a846cb3f9362ad9be5c5830d5aef71d7300328ce2399ac87cf2ef60f9986e6",
+    "archived_analytic_baselines.csv": "8ed940874e7fbf899ee30909b892e64895fda71a6e5e48b9162a53b684ae9b16",
+    "extraction_provenance.json": "4f300998db86c681484045f759cbd4390271cda9818ee29d3666ebe2f1878505",
+    "prompt_formatter_reference.py": "03cb1af4d23fdcf53d13061f0aeed3d70954734f8b9134e9a782b3d791f21cf1",
+    "saved_greedy_decisions.csv": "2ccbc3db34877e6d0cf56008158ef6db2d0607fe34715aa829ac1392d4995e60"
+  }
+}

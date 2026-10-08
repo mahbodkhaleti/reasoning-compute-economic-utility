@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Alternative selection assumptions on the same stochastic menu. Profit quality is mean expected bidder profit divided by mean oracle profit. Its signed high/high indifference bound has pointwise 95\% family/seed intervals, in units of $10^{-4}$; a nonpositive bound gives no high/high equilibrium at positive cost. Unsupported-draw percentages retain every draw. The matched logit uses fixed noise scale $s=\overline q_m$, matching the Tullock $\gamma=1$ local slope at equal reference quality. Ratios are point estimates; these alternatives are not fitted client behavior.}
+\label{tab:selectionmappings}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Profit/utility & Profit bound [95\% CI] & Unsupported (\%) & Logit/utility \\
+\midrule
+DeepSeek-8B & 1.09 & 0.94 [0.58, 1.39] & 0.00 & 1.03 \\
+Phi-mini & 0.59 & 0.20 [-0.34, 0.55] & 24.71 & 1.01 \\
+Qwen3-4B & 0.24 & 0.20 [-0.56, 0.66] & 36.68 & 1.04 \\
+Qwen3-8B & 0.52 & 0.29 [-0.15, 0.72] & 9.42 & 1.01 \\
+Qwen3-14B & 1.00 & 0.70 [0.34, 1.08] & 0.00 & 1.02 \\
+Granite-8B & 1.85 & 1.16 [0.40, 1.84] & 0.06 & 1.04 \\
+\bottomrule
+\end{tabular}
+\end{table}

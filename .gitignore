@@ -36,3 +36,9 @@ paper/figures/five_model_*
 paper/figures/synthetic_ipv_five_model_*
 paper/tables/synthetic_ipv_five_model_*
 synthetic_existing4_server_package.zip
+
+# Regenerated CPU replay products and participant responses
+.cache/
+offline_replay/outputs/
+cpu_revision/legacy_results/
+decision_audit/human_study/responses/

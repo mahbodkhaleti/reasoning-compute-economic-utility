@@ -1,0 +1,2 @@
+model,log_budget_slope,slope_ci_low,slope_ci_high,n_scenarios
+qwen3_14b,0.017258220908409515,0.01422084744948208,0.0205970216645077,216

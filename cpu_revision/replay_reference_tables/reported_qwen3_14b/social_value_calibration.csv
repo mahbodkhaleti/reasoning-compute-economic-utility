@@ -1,0 +1,7 @@
+item,split,n_auctions,mean_final_price,median_final_price
+Cartier wristwatch,test,41,795.7392682926829,510.0
+Cartier wristwatch,train,95,922.8893684210527,511.0
+Palm Pilot M515 PDA,test,103,232.82009708737866,232.5
+Palm Pilot M515 PDA,train,239,227.40669456066945,228.01
+Xbox game console,test,45,120.65111111111112,122.5
+Xbox game console,train,104,136.07105769230768,127.5

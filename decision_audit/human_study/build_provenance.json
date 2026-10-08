@@ -1,0 +1,14 @@
+{
+  "seed": "Participant-side seeded randomization from anonymous participant ID",
+  "source_sha256": {
+    "preserved_outputs/granite_3_2_8b_instruct/historical/raw/fixed_granite_3_2_8b_instruct_reasoning_stochastic.jsonl": "6f61c148bdf4f04304a3e022afed1f6fb9232e0b72edc52bba1bae1801805e83",
+    "preserved_outputs/qwen3_14b/historical/raw/fixed_qwen3_14b_reasoning_stochastic.jsonl": "ef817a92dd9811dffce04be81dbf7f4a45371a25d223f3af22a924d4cd1f6553",
+    "robustness_extensions/server_outputs/raw/fixed_deepseek_r1_llama_8b_reasoning_stochastic.jsonl": "98deba0fde4104f44f19adecd9cbf19522d7219d7616e72fa6bbe1d1cb4d8533",
+    "robustness_extensions/server_outputs/raw/fixed_phi4_mini_reasoning_reasoning_stochastic.jsonl": "a950034788f63393b675d384fdf894b47e1b9fb7626f9f00c9b9f640da5bec1c",
+    "robustness_extensions/server_outputs/raw/fixed_qwen3_4b_reasoning_stochastic.jsonl": "2060a571129580f6df8239af3bb02f7a0eb0f0b45508974e11e6c0755c699702",
+    "robustness_extensions/server_outputs/raw/fixed_qwen3_8b_reasoning_stochastic.jsonl": "1b41cb3e6ffe1eb67d250e626d66a8dc87f97f2751e6b829a9ece1c9d5e39426"
+  },
+  "profile_protocol": "Three-budget stochastic frontier; 216 scenarios x five stored generation seeds, plus calculator.",
+  "design": "Six contrast-selected equal-fee pairs and six fee tradeoffs; not a representative sample of service pairs.",
+  "human_responses_collected": 0
+}

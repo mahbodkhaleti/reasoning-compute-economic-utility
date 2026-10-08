@@ -1,0 +1,3 @@
+model,low_budget,high_budget,n_paired_scenarios,mean_paired_difference,ci_low,ci_high,two_sided_bootstrap_p
+granite_3_2_8b_instruct,0,768,216,0.1566315574971338,0.12215172961248258,0.19032602558741976,0.0
+qwen3_14b,0,768,216,0.16650068150546146,0.13817486527423245,0.19395690310898678,0.0

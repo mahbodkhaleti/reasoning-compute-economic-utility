@@ -1,0 +1,16 @@
+{
+  "new_inference": false,
+  "greedy_records_audited": 23328,
+  "bootstrap_draws": 10000,
+  "original_numbered_equations_preserved": 11,
+  "main_text_pages": 9,
+  "pdf_pages": 34,
+  "compilation": "passed; no undefined references/citations or overfull boxes",
+  "PDF_visual_review": "All pages inspected in contact sheets; main-text audit and appendix audited at readable resolution.",
+  "human_participants_observed": 0,
+  "human_gate": "pending",
+  "survey_code_and_mock_flow": "passed",
+  "survey_live_browser_render": "blocked by local-file URL policy; not performed",
+  "venue_specific_format": "pending venue",
+  "pdf_sha256": "3c274f9420d0fa35be26828dbc11d381a08af8922717da73ad12f20e87c3e463"
+}

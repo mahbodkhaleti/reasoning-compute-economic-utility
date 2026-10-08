@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering
+\caption{Legacy welfare-loss summary on the previously declared raw $(V,\lambda)$ grid at $\beta=\gamma=1$. Intervals are 95\% hierarchical-bootstrap intervals; relative loss uses the legacy, scale-dependent omission rule $|W_{\mathrm{OPT}}|\leq0.01$.}
+\label{tab:welfareuncertainty}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lcc}
+\toprule
+Model & Mean absolute loss (95\% CI) & Mean relative loss (95\% CI) \\
+\midrule
+DeepSeek-8B & 14.868 [13.898, 15.608] & 7.642 [7.389, 10.153] \\
+Phi-mini & 7.842 [0.807, 12.364] & 5.752 [3.159, 7.128] \\
+Qwen3-4B & 14.902 [13.470, 15.650] & 7.344 [7.081, 8.941] \\
+Qwen3-8B & 12.343 [9.597, 13.963] & 7.859 [5.329, 10.814] \\
+Qwen3-14B & 13.825 [12.234, 14.930] & 7.572 [5.909, 10.145] \\
+Granite-8B & 13.565 [10.239, 14.946] & 7.141 [6.473, 8.466] \\
+\bottomrule
+\end{tabular}
+\end{table}

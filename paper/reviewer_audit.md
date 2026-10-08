@@ -1,3 +1,5 @@
+> Historical submission audit retained for provenance. For the current revision, see `../decision_audit/submission_readiness.md`, `../cpu_revision/results_report.md`, and `../decision_audit/results_report.md`.
+
 # Current submission audit (2026-08-29)
 
 ## What is now supported

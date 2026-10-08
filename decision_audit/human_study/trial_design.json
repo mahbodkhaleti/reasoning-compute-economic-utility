@@ -1,0 +1,248 @@
+{
+  "version": "pilot_v1",
+  "profiles": {
+    "S01": {
+      "profile_id": "S01",
+      "display_q": 0.758,
+      "display_accuracy": 0.179,
+      "display_profit": 150.14,
+      "n_scenarios": 216
+    },
+    "S02": {
+      "profile_id": "S02",
+      "display_q": 0.777,
+      "display_accuracy": 0.222,
+      "display_profit": 147.48,
+      "n_scenarios": 216
+    },
+    "S03": {
+      "profile_id": "S03",
+      "display_q": 0.947,
+      "display_accuracy": 0.63,
+      "display_profit": 191.31,
+      "n_scenarios": 216
+    },
+    "S04": {
+      "profile_id": "S04",
+      "display_q": 0.746,
+      "display_accuracy": 0.191,
+      "display_profit": 172.04,
+      "n_scenarios": 216
+    },
+    "S05": {
+      "profile_id": "S05",
+      "display_q": 0.744,
+      "display_accuracy": 0.186,
+      "display_profit": 170.88,
+      "n_scenarios": 216
+    },
+    "S06": {
+      "profile_id": "S06",
+      "display_q": 0.813,
+      "display_accuracy": 0.321,
+      "display_profit": 180.88,
+      "n_scenarios": 216
+    },
+    "S07": {
+      "profile_id": "S07",
+      "display_q": 0.73,
+      "display_accuracy": 0.187,
+      "display_profit": 164.48,
+      "n_scenarios": 216
+    },
+    "S08": {
+      "profile_id": "S08",
+      "display_q": 0.803,
+      "display_accuracy": 0.256,
+      "display_profit": 168.96,
+      "n_scenarios": 216
+    },
+    "S09": {
+      "profile_id": "S09",
+      "display_q": 0.914,
+      "display_accuracy": 0.557,
+      "display_profit": 174.25,
+      "n_scenarios": 216
+    },
+    "S10": {
+      "profile_id": "S10",
+      "display_q": 0.775,
+      "display_accuracy": 0.202,
+      "display_profit": 160.64,
+      "n_scenarios": 216
+    },
+    "S11": {
+      "profile_id": "S11",
+      "display_q": 0.795,
+      "display_accuracy": 0.275,
+      "display_profit": 154.76,
+      "n_scenarios": 216
+    },
+    "S12": {
+      "profile_id": "S12",
+      "display_q": 0.893,
+      "display_accuracy": 0.487,
+      "display_profit": 172.93,
+      "n_scenarios": 216
+    },
+    "S13": {
+      "profile_id": "S13",
+      "display_q": 0.763,
+      "display_accuracy": 0.254,
+      "display_profit": 141.28,
+      "n_scenarios": 216
+    },
+    "S14": {
+      "profile_id": "S14",
+      "display_q": 0.793,
+      "display_accuracy": 0.332,
+      "display_profit": 146.16,
+      "n_scenarios": 216
+    },
+    "S15": {
+      "profile_id": "S15",
+      "display_q": 0.912,
+      "display_accuracy": 0.589,
+      "display_profit": 169.07,
+      "n_scenarios": 216
+    },
+    "S16": {
+      "profile_id": "S16",
+      "display_q": 0.747,
+      "display_accuracy": 0.219,
+      "display_profit": 145.29,
+      "n_scenarios": 216
+    },
+    "S17": {
+      "profile_id": "S17",
+      "display_q": 0.805,
+      "display_accuracy": 0.298,
+      "display_profit": 167.58,
+      "n_scenarios": 216
+    },
+    "S18": {
+      "profile_id": "S18",
+      "display_q": 0.886,
+      "display_accuracy": 0.443,
+      "display_profit": 200.37,
+      "n_scenarios": 216
+    },
+    "S19": {
+      "profile_id": "S19",
+      "display_q": 0.981,
+      "display_accuracy": 0.713,
+      "display_profit": 212.66,
+      "n_scenarios": 216
+    }
+  },
+  "trials": [
+    {
+      "trial_id": "E01",
+      "block": "equal_fee",
+      "profile_1": "S01",
+      "profile_2": "S02",
+      "fee_1": 10.0,
+      "fee_2": 10.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "E02",
+      "block": "equal_fee",
+      "profile_1": "S01",
+      "profile_2": "S04",
+      "fee_1": 10.0,
+      "fee_2": 10.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "E03",
+      "block": "equal_fee",
+      "profile_1": "S01",
+      "profile_2": "S05",
+      "fee_1": 10.0,
+      "fee_2": 10.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "E04",
+      "block": "equal_fee",
+      "profile_1": "S04",
+      "profile_2": "S05",
+      "fee_1": 10.0,
+      "fee_2": 10.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "E05",
+      "block": "equal_fee",
+      "profile_1": "S03",
+      "profile_2": "S07",
+      "fee_1": 10.0,
+      "fee_2": 10.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "E06",
+      "block": "equal_fee",
+      "profile_1": "S03",
+      "profile_2": "S19",
+      "fee_1": 10.0,
+      "fee_2": 10.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "F01",
+      "block": "fee_tradeoff",
+      "profile_1": "S02",
+      "profile_2": "S01",
+      "fee_1": 10,
+      "fee_2": 0.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "F02",
+      "block": "fee_tradeoff",
+      "profile_1": "S01",
+      "profile_2": "S04",
+      "fee_1": 25,
+      "fee_2": 0.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "F03",
+      "block": "fee_tradeoff",
+      "profile_1": "S01",
+      "profile_2": "S05",
+      "fee_1": 50,
+      "fee_2": 0.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "F04",
+      "block": "fee_tradeoff",
+      "profile_1": "S04",
+      "profile_2": "S05",
+      "fee_1": 10,
+      "fee_2": 0.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "F05",
+      "block": "fee_tradeoff",
+      "profile_1": "S03",
+      "profile_2": "S07",
+      "fee_1": 25,
+      "fee_2": 0.0,
+      "contrast_selected": true
+    },
+    {
+      "trial_id": "F06",
+      "block": "fee_tradeoff",
+      "profile_1": "S19",
+      "profile_2": "S03",
+      "fee_1": 50,
+      "fee_2": 0.0,
+      "contrast_selected": true
+    }
+  ]
+}

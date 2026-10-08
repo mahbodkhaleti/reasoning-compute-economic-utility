@@ -17,11 +17,12 @@
   "synthetic_records_per_model": 4536,
   "synthetic_records_total": 27216,
   "preserved_output_verification": "passed",
-  "python_files_parsed": 75,
-  "manifest_files_checked": 373,
+  "python_files_parsed": 86,
+  "manifest_files_checked": 569,
   "manifest_errors": [],
   "raw_auction_source_tracked": false,
   "transformed_scenario_artifacts_tracked": true,
   "transformed_artifact_license_caveat": "See LICENSES.md and data/README.md; no new license is asserted.",
-  "new_llm_inference_executed": false
+  "new_llm_inference_executed": false,
+  "revision": "CPU uncertainty, mappings and saved-decision audit; human responses pending"
 }

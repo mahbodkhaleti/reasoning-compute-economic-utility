@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-06",
+  "inference": "none",
+  "historical_rows": 50544,
+  "scenario_count": 216,
+  "category_value_families": 54,
+  "fixed_products": 3,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20261006,
+  "uncertainty": "Both bootstraps stratified by fixed product; family units keep four candidate variants together. Conditional on prompts, fixed CDFs and fixed products. No independent confirmation.",
+  "simultaneous_contrast_count": 72,
+  "simultaneous_max_standardized_critical_value": 3.343260105102687,
+  "point_reversals": 9,
+  "pointwise_family_supported_reversals": 0,
+  "simultaneous_supported_reversals": 0,
+  "open_interval_regimes": 160,
+  "mixed_only_open_intervals": 1,
+  "max_deviation_residual": 1.6653345369377348e-16,
+  "indifference_cut_merge_tolerance": "max(1e-15,1e-10*abs(cut)); eliminates machine-precision duplicate intersections",
+  "plots": [
+    "metric_frontiers.png",
+    "contest_boundary_sensitivity.png"
+  ]
+}

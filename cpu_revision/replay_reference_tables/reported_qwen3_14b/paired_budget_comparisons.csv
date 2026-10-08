@@ -1,0 +1,2 @@
+model,low_budget,high_budget,n_paired_scenarios,mean_paired_difference,ci_low,ci_high,two_sided_bootstrap_p
+qwen3_14b,0,768,216,0.16650068150546146,0.1383254574238412,0.1955071344659665,0.0

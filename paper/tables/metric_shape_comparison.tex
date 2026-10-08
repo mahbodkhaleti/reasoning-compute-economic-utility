@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Metric and shape sensitivity with paired uncertainty at $\gamma=1$. The threshold supports the 768/768 pure equilibrium. Accuracy/utility and linear change are point estimates. The accuracy-minus-utility threshold difference has exploratory simultaneous 95\% bands over six models, in units of $10^{-4}$; all bands exclude zero. The bootstrap uses 10,000 product-stratified family/seed draws, retaining all draws.}
+\label{tab:metricshapecomparison}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Utility threshold & Accuracy/utility & Difference [simult. band] & Linear change (\%) \\
+\midrule
+DeepSeek-8B & $8.65\times10^{-5}$ & 5.04 & 3.49 [2.39, 4.59] & -4.24 \\
+Phi-mini & $3.34\times10^{-5}$ & 5.96 & 1.66 [0.26, 3.06] & -1.68 \\
+Qwen3-4B & $8.39\times10^{-5}$ & 4.63 & 3.05 [1.92, 4.18] & -0.52 \\
+Qwen3-8B & $5.49\times10^{-5}$ & 5.89 & 2.69 [1.50, 3.87] & -2.73 \\
+Qwen3-14B & $6.98\times10^{-5}$ & 4.45 & 2.41 [1.51, 3.31] & -3.45 \\
+Granite-8B & $6.27\times10^{-5}$ & 4.05 & 1.91 [0.64, 3.18] & +3.12 \\
+\bottomrule
+\end{tabular}
+\end{table}

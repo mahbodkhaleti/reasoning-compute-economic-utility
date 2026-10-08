@@ -1,0 +1,14 @@
+{
+  "source_archive": "cpu_revision_complete_package.zip / preserved historical inference",
+  "source_sha256": {
+    "preserved_outputs/granite_3_2_8b_instruct/historical/raw/fixed_granite_3_2_8b_instruct_reasoning_greedy.jsonl": "dd6c28aca0c92de41c103f4392709a4645b33f9687e16ac1e82b3c972283830b",
+    "preserved_outputs/qwen3_14b/historical/raw/fixed_qwen3_14b_reasoning_greedy.jsonl": "92f607aa1aa887f8ec2f416dfa022fb2fe496e5c973b18b77eee2a04d253b560",
+    "robustness_extensions/server_outputs/raw/fixed_deepseek_r1_llama_8b_reasoning_greedy.jsonl": "14d09389d8384235a68cd48f38bcf443dd40c0215a555bd2eb11f32f48636cf9",
+    "robustness_extensions/server_outputs/raw/fixed_phi4_mini_reasoning_reasoning_greedy.jsonl": "7666545cdc974e2e442de9db73b133637acec2b74155924b4a931f9a36a9a4fc",
+    "robustness_extensions/server_outputs/raw/fixed_qwen3_4b_reasoning_greedy.jsonl": "312df4913d7e655ef964e251cfc160435c94d28c0e9f0e6f04b8fee2d300c600",
+    "robustness_extensions/server_outputs/raw/fixed_qwen3_8b_reasoning_greedy.jsonl": "d209a806d1bbe3257c8ce7c3f77f255824ed5a6c668db81b67efb1a533cacd00"
+  },
+  "rows": 23328,
+  "selection": "reasoning mode, greedy decoding, budgets 0/64/128/256/512/768, all three option-order seeds; excludes unconstrained control and stochastic frontier",
+  "new_inference": false
+}

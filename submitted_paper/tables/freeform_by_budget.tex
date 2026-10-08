@@ -1,0 +1,25 @@
+\begin{table}[H]
+\centering
+\caption{Available-case free-form diagnostics by assigned reasoning budget. Utility ratios average only valid parsed candidate bids at that budget and are therefore not compositionally balanced.}
+\label{tab:freeformbybudget}
+\scriptsize
+\setlength{\tabcolsep}{3.8pt}
+\begin{tabular}{llrrrrrr}
+\toprule
+Model & Statistic & 0 & 64 & 128 & 256 & 512 & 768 \\
+\midrule
+\multirow{2}{*}{DeepSeek-8B} & Validity (\%) & 99.2 & 73.8 & 56.5 & 42.6 & 66.0 & 62.5 \\
+ & Utility ratio & .733 & .700 & .760 & .785 & .886 & .973 \\
+\multirow{2}{*}{Phi-mini} & Validity (\%) & 62.8 & 42.4 & 21.5 & 17.7 & 15.9 & 14.2 \\
+ & Utility ratio & .779 & .776 & .782 & .875 & .859 & .976 \\
+\multirow{2}{*}{Qwen3-4B} & Validity (\%) & 99.5 & 96.6 & 67.7 & 69.3 & 53.2 & 59.3 \\
+ & Utility ratio & .736 & .721 & .751 & .761 & .880 & .966 \\
+\multirow{2}{*}{Qwen3-8B} & Validity (\%) & 98.3 & 2.8 & 6.5 & 42.1 & 68.1 & 88.0 \\
+ & Utility ratio & .750 & .893 & .770 & .758 & .849 & .922 \\
+\multirow{2}{*}{Qwen3-14B} & Validity (\%) & 100.0 & 100.0 & 97.4 & 97.8 & 96.1 & 89.0 \\
+ & Utility ratio & .741 & .726 & .742 & .758 & .870 & .934 \\
+\multirow{2}{*}{Granite-8B} & Validity (\%) & 0.0 & 0.0 & 0.0 & 21.3 & 83.5 & 70.8 \\
+ & Utility ratio & -- & -- & -- & .766 & .888 & .912 \\
+\bottomrule
+\end{tabular}
+\end{table}

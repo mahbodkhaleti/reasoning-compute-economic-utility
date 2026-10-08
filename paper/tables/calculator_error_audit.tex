@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Calculator and observable-error audit of the greedy 768-token frontier. Profit differences are model minus construction-split calculator, with exploratory simultaneous 95\% family bands over six models. Displayed-optimal actions maximize profit under the four-decimal probabilities actually shown; held-out optimality admits payoff ties and differs from exact-label accuracy. All 216 scenarios and three option orders are retained.}
+\label{tab:calculatorerroraudit}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+Model & Profit difference, USD [band] & Displayed-optimal (\%) & Both suboptimal (\%) \\
+\midrule
+DeepSeek-8B & -22.60 [-38.80, -6.39] & 86.3 & 11.9 \\
+Phi-mini & -33.67 [-55.78, -11.57] & 42.1 & 52.0 \\
+Qwen3-4B & -30.54 [-48.97, -12.11] & 71.1 & 25.6 \\
+Qwen3-8B & -30.37 [-45.84, -14.91] & 67.7 & 28.1 \\
+Qwen3-14B & -36.00 [-54.15, -17.86] & 76.7 & 20.5 \\
+Granite-8B & -15.09 [-24.89, -5.28] & 53.5 & 41.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,62 @@
+--- pre_cpu/main.tex
++++ cpu_revision/main.tex
+@@ -240,7 +240,7 @@
+ 
+ At $\gamma=1$, shifting quality to $q+0.5$ reduces the private maximum-budget threshold by 36.8--39.1\% (Appendix Table~\ref{tab:qualityoriginsensitivity}). Quality increments are unchanged, but relative selection advantages change. The measurements therefore matter through their shape and level under the assumed mapping.
+ 
+-At $\gamma=1$, accuracy-based selection makes the threshold supporting 768/768 equal to 4.05--5.96 times its utility-based value; endpoint-matched linear interpolation changes that utility threshold by only $-4.24\%$ to $+3.12\%$ (Appendix Table~\ref{tab:metricshapecomparison}). For DeepSeek-8B at hypothetical $\kappa=1.5\times10^{-4}$, utility-based selection yields a unique 128/128 equilibrium, whereas accuracy yields 768/768. Metric choice thus matters more than intermediate shape for these boundaries. This conditional comparison does not identify client selection or real-market inefficiency.
++At $\gamma=1$, accuracy-based selection makes the threshold supporting 768/768 equal to 4.05--5.96 times its utility-based value. All six accuracy-minus-utility differences remain positive under exploratory simultaneous family/seed bootstrap bands (Appendix Table~\ref{tab:metricshapecomparison}). DeepSeek-8B's hypothetical $\kappa=1.5\times10^{-4}$ contrast---128/128 under utility versus 768/768 under accuracy---persists in all 10,000 draws. Linear interpolation has smaller point effects but uncertain shape sensitivity. Alternative profit-based and quality-difference selection rules expose further mapping dependence (Table~\ref{tab:selectionmappings}); none identifies client choice or real-market inefficiency.
+ 
+ Within the contest, increasing $\gamma$ strengthens private incentives for compute. Across the six frontiers, private transition thresholds move rightward as $\gamma$ rises, expanding the overcompute region (Appendix Figure~\ref{fig:normalizedphasegamma}). Increasing $\rho$ instead lowers $\kappa/\rho$, raises planner compute, and moves a point upward from overcomputation through alignment toward undercomputation.
+ 
+@@ -271,7 +271,7 @@
+ 
+ \section{Conclusion}
+ 
+-Economic utility makes the consequences of reasoning errors visible beyond exact-answer accuracy. In the evaluated tasks, higher endpoint budgets improve bidder utility, while calculator superiority and uneven intermediate gains limit the practical interpretation. Linking these measurements to a service contest exposes the additional assumptions needed to compare private and planner compute. The paper contributes measured utility frontiers and conditional allocation boundaries; it does not establish excessive compute expenditure in deployed markets. Better decisions and efficient competition remain distinct claims.
++Economic utility reveals the consequences of reasoning errors beyond accuracy. Higher endpoint budgets improve bidder utility in these tasks, while calculator superiority and uneven intermediate gains limit practical significance. The service contest contributes conditional allocation boundaries and exposes their dependence on selection and value assumptions. It does not establish excessive compute expenditure in deployed markets. Better decisions and efficient competition remain distinct claims.
+ 
+ \bibliographystyle{plainnat}
+ \bibliography{references}
+@@ -368,12 +368,29 @@
+ \min_{a\in\{128,384\}}
+ \frac{\tfrac12-q(a)/(q(a)+q(768))}{768-a},
+ \]
+-obtained by checking both lower-budget deviations against a 768-token rival. These are point-frontier sensitivity comparisons without new inference or uncertainty intervals.
+-
+-The accuracy substitution changes the absolute score level and relative gains; it does not isolate frontier shape. The linear substitution does preserve the measured endpoints and shows that detailed intermediate shape has modest effects on this boundary. Together with the flat-frontier counterexample above, these comparisons distinguish conditional numerical content from generic three-region existence.
++obtained by checking both lower-budget deviations against a 768-token rival. Point comparisons use saved frontiers; the paired uncertainty extension below uses the same preserved decisions without new inference.
++
++The accuracy substitution changes the absolute score level and relative gains; it does not isolate frontier shape. At point estimates, the linear substitution preserves the measured endpoints and has modest effects on this boundary. Together with the flat-frontier counterexample above, these comparisons distinguish conditional numerical content from generic three-region existence.
+ 
+ In the DeepSeek-8B example, 128 strictly dominates both other budgets under utility-based selection at $\kappa=1.5\times10^{-4}$, whereas 768 strictly dominates under accuracy-based selection. Thus each reported equilibrium is unique, including mixed strategies. This hypothetical cost is outside the illustrative monetary anchor. The example demonstrates that changing the selection score can change compute prescriptions within the model, not that one score is an empirically correct service technology. No planner comparison is inferred: replacing quality by accuracy would also change client-value units, requiring a separate justification or adjustment of $\rho$.
+ \input{tables/metric_shape_comparison}
++
++\paragraph{Paired uncertainty and allocation stability.}
++We use 10,000 draws (seed 20261008). Within each fixed product, 18 product/private-value families are sampled with replacement, retaining all four candidate variants. Each selected scenario occurrence samples one of its five generation seeds, jointly across budgets and metrics, independently across models. Family selections are shared across models. This preserves paired decisions and family dependence while incorporating stored generation variation. The six accuracy-minus-utility threshold differences receive exploratory simultaneous 95\% maximum-standardized-deviation bands. All lower bounds are positive. Products, original prompts and scoring CDFs remain fixed; these bands exclude market shift, construction-split uncertainty and model misspecification.
++
++The DeepSeek strict-dominance contrast persists in all 10,000 draws, a bootstrap stability frequency rather than a posterior or market probability. Twelve Phi utility draws have nonpositive high/high indifference bounds, meaning 768/768 lacks support at positive cost; absolute-difference bands retain those draws. Supplementary ratio intervals condition on positive utility bounds and are labelled separately. Linear-minus-measured threshold intervals exclude zero only for DeepSeek and Qwen3-14B. Four include zero, and Qwen3-4B and Granite exhibit substantial upper-tail shape sensitivity. Small point changes therefore do not establish that intermediate shape is generally unimportant.
++
++\paragraph{Alternative client value and selection rules.}
++A profit-based alternative uses $q_m^{\$}(c)=\overline U_m(c)/\overline U^*$, where $\overline U^*$ is mean oracle profit on the same constructed scenarios. This weights dollar consequences rather than normalizing each scenario separately. If a client values the selected recommendation by its predicted bidder profit, service benefit is $\overline U_m(c)=\overline U^*q_m^{\$}(c)$. Summing client profit net of the contract payment with provider profit gives selected expected bidder profit minus both compute costs. This specification provides explicit client-value units, conditional on benchmark profit predicting service benefit; it remains distinct from auction total surplus, which includes the seller. It neither identifies service payment nor demonstrates external validity.
++
++A second alternative models noisy client comparison of quality differences. Assume a logistic noise term with fixed scale $s_m=\overline q_m$, the mean of the three point utility scores. Then selection probability is
++\[
++P_i^{L}(c_i,c_j)=\{1+\exp[-(q_m(c_i)-q_m(c_j))/s_m]\}^{-1}.
++\]
++At equal reference qualities, its slope in the quality difference is $1/(4\overline q_m)$, matching the Tullock $\gamma=1$ slope. With $s_m$ held fixed, a common origin shift leaves selection unchanged. This is a sensitivity specification, not a fitted client-choice model; the reference scale is frozen across draws to isolate frontier uncertainty.
++
++Table~\ref{tab:selectionmappings} reports private high/high bounds. Profit-based point thresholds are 0.24--1.85 times the utility thresholds, and high/high support disappears in 24.71\% of Phi, 36.68\% of Qwen3-4B, 9.42\% of Qwen3-8B and 0.06\% of Granite draws. Matched logit point thresholds increase by 1.40--4.28\%. Halving or doubling discrimination instead gives about 0.51--0.52 or 2.01--2.07 times the original thresholds. Thus both the score's economic weighting and the client's discrimination assumption matter. No common-$\rho$ planner comparison is inferred across different client-value units.
++\input{tables/selection_mappings}
+ 
+ \subsection{Zero-compute-augmented game sensitivity}
+ \label{app:zeroaugmented}
+@@ -483,7 +500,7 @@
+ \section{Reproducibility and model-revision provenance}
+ \label{app:reproducibility}
+ 
+-The archive provides a single machine-readable record at
++The accompanying revision archive adds the paired family/seed uncertainty and alternative-selection analyses through \texttt{reproduce\_cpu\_revision.sh}. Its updated manuscript and supplementary outputs are distinct from the preserved historical release. The archive provides a machine-readable record at
+ \texttt{docs/REPRODUCIBILITY\_MANIFEST.json}. It links all six reported checkpoints to their repository IDs, revisions and revision provenance, tokenizer and chat-template behavior, decoding and readout settings, seeds, software and hardware records, dataset hashes, runner hashes, and preserved historical and synthetic outputs. From the reproducibility repository root, the canonical command
+ \begin{quote}\footnotesize\ttfamily
+ bash reproduce\_all\_from\_preserved.sh

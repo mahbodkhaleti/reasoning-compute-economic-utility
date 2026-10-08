@@ -1,0 +1,32 @@
+--- cpu_completed/main.tex
++++ saved_decision_audit/main.tex
+@@ -214,7 +214,7 @@
+ 
+ \subsection{Baselines and task breadth}
+ 
+-The candidate construction avoids a fixed positional shortcut. The optimal option occupies every possible position in both task widths, and the median-position policy achieves 0.725 mean utility ratio and 18.7\% accuracy. At 768 tokens, every checkpoint exceeds that policy, uniform random choice (0.711), and the highest-win-probability rule (0.731). The construction-split calculator remains stronger than every fixed-budget model at 0.981. Unconstrained generations range from 0.846 to 0.972 (Appendix Table~\ref{tab:baselines}). Because the probabilities and feasible bids are supplied, this benchmark primarily tests calculation and action selection. The calculator's advantage is a practical limit on interpreting more tokens as useful economic reasoning; the experiment does not show that an LLM is the preferred solution to this task. Calculator resource costs were not benchmarked, so this performance comparison is not a measured cost-effectiveness ranking.
++The median-position policy achieves 0.725 utility ratio and 18.7\% accuracy. At 768 tokens, all checkpoints exceed it, random choice (0.711) and the highest-win-probability rule (0.731), but the calculator remains stronger at 0.981. A saved-decision audit also finds model-minus-calculator dollar-profit gaps of $-\$36.00$ to $-\$15.09$, with all six simultaneous exploratory bands below zero (Appendix Table~\ref{tab:calculatorerroraudit}). Unconstrained generations reach 0.846--0.972 (Table~\ref{tab:baselines}). Supplied probabilities make this a calculation and action-selection benchmark; extra LLM tokens improve the pipeline without establishing an advantage over numerical optimization. Calculator resource costs were not measured, so no deployment cost-effectiveness ranking is claimed.
+ 
+ \subsection{Free-form readout sensitivity}
+ 
+@@ -313,6 +313,20 @@
+ \section{Complete frontier and baseline results}
+ \label{app:fullresults}
+ Performance varies materially by product and option-set difficulty. At 768 tokens the category--width utility ratio ranges from 0.906 to 0.987 for DeepSeek-8B, 0.811 to 0.844 for Phi-mini, 0.860 to 0.967 for Qwen3-4B, 0.854 to 0.967 for Qwen3-8B, 0.829 to 0.982 for Qwen3-14B, and 0.868 to 0.917 for Granite-8B. Product, price scale, and auction support move together, so these are descriptive contrasts.
++\paragraph{Calculator comparison and observable objective agreement.}
++We audit all 23,328 greedy fixed-budget decisions, retaining the 216 scenarios and three option orders. Prompt-objective optimality uses the four-decimal probabilities actually displayed, reconstructed from the archived formatter. Held-out utility optimality permits payoff ties and therefore differs from exact-label accuracy. Each action belongs to one of four classes: optimal under both objectives, displayed-optimal only, held-out-optimal only, or suboptimal under both. These classes describe choices, not an internal arithmetic or reasoning mechanism.
++
++The published full-precision construction calculator earns mean expected bidder profit of \$212.66 and mean held-out regret of \$3.09; it is utility-optimal on 155/216 scoring scenarios. Display precision changes its selected bid in one scenario, reducing mean profit by only \$0.0113. A separately recomputed calculator using exactly the displayed probabilities retains the same six-model simultaneous disadvantage for the LLMs. Thus the result does not depend on granting the calculator undisplayed precision.
++
++For six 768-token model-minus-calculator profit gaps, 10,000 product-stratified value-family draws (seed 20261009) retain each family's four candidate variants and paired budget vectors, after averaging option orders. Exploratory simultaneous 95\% maximum-standardized-deviation bands all exclude zero. These draws condition on products, prompts and both CDFs; they do not add independent confirmation or stochastic-generation uncertainty to this greedy audit.
++
++At 768 tokens, 42.1--86.3\% of choices maximize the displayed objective. Displayed-optimal but held-out-suboptimal choices comprise 9.4--22.8\%, while choices suboptimal under both comprise 11.9--52.0\%. The exact accounting identity is
++\[
++R_{\mathrm{model}}^{\mathrm{test}}=R_{\mathrm{calculator}}^{\mathrm{test}}+
++\bigl(U_{\mathrm{calculator}}^{\mathrm{test}}-U_{\mathrm{model}}^{\mathrm{test}}\bigr).
++\]
++The second term is signed: model actions beat the calculator on held-out profit in 2.2--8.0\% of records, despite their aggregate disadvantage. Scoring-distribution differences can therefore reward a departure from the displayed objective. They do not explain all remaining action-selection losses. Supplementary product-level endpoints and regret concentration describe where gains and losses occur within these constructed tasks.
++\input{tables/calculator_error_audit}
+ \input{tables/family_clustered_endpoints}
+ \input{tables/full_five_bid}
+ \input{tables/freeform_sensitivity}

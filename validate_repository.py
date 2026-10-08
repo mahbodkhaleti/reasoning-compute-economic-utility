@@ -35,6 +35,11 @@ REQUIRED_PATHS = {
     "new_models_full_server_package/README.md",
     "synthetic_ipv_benchmark/synthetic_ipv_manifest.jsonl",
     "paper/main.tex",
+    "paper/revised_saved_decision_audit.pdf",
+    "reproduce_cpu_revision.sh",
+    "cpu_revision/analyze_cpu_extensions.py",
+    "decision_audit/analyze_saved_decisions.py",
+    "decision_audit/human_study/protocol.md",
     "paper/references.bib",
     "paper/checklist.tex",
     "paper/neurips_2026.sty",
@@ -48,6 +53,8 @@ SOURCE_DIRS = (
     "new_models_full_server_package/src",
     "synthetic_existing4_server_package/src",
     "synthetic_ipv_benchmark",
+    "cpu_revision",
+    "decision_audit",
 )
 MANIFEST_EXCLUSIONS = {"MANIFEST.sha256", "repository_validation.json"}
 
@@ -180,6 +187,7 @@ def main() -> None:
         "transformed_scenario_artifacts_tracked": True,
         "transformed_artifact_license_caveat": "See LICENSES.md and data/README.md; no new license is asserted.",
         "new_llm_inference_executed": False,
+        "revision": "CPU uncertainty, mappings and saved-decision audit; human responses pending",
     }
     (ROOT / "repository_validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))

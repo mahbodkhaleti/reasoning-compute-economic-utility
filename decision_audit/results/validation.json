@@ -1,0 +1,12 @@
+{
+  "record_and_design_counts": "passed",
+  "regret_identity": "passed",
+  "displayed_menu_oracle": "passed",
+  "two_calculator_baselines": "passed",
+  "error_categories_partition": "passed",
+  "human_diagnostic_exclusion": "passed",
+  "human_observed_responses": 0,
+  "human_evidence_gate": "pending",
+  "survey_browser_visual_check": "not performed: local-file URL policy blocked preview",
+  "survey_static_flow_check": "passed separately with mock document"
+}

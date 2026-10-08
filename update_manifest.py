@@ -8,7 +8,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-EXCLUDE = {"MANIFEST.sha256", "repository_validation.json"}
+EXCLUDE = {"MANIFEST.sha256", "repository_validation.json", "docs/CPU_REVISION_VALIDATION.json", "docs/SAVED_DECISION_AUDIT_VALIDATION.json", "docs/PUBLICATION_VALIDATION.json", "decision_audit/delivery_validation.json", "decision_audit/human_study/human_analysis_status.json"}
+DYNAMIC_PREFIXES = (".cache/", "offline_replay/outputs/", "cpu_revision/legacy_results/", "decision_audit/human_study/responses/")
 
 
 def sha256(path: Path) -> str:
@@ -25,7 +26,7 @@ def main() -> None:
     ).stdout.splitlines()
     entries = []
     for relative in sorted(files):
-        if relative in EXCLUDE:
+        if relative in EXCLUDE or relative.startswith(DYNAMIC_PREFIXES):
             continue
         path = ROOT / relative
         if path.is_file():

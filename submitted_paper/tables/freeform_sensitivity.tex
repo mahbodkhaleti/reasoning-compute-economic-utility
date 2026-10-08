@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering
+\caption{Free-form readout sensitivity for the deterministic six-budget study. Validity is the share of parsed bids that match a displayed candidate; agreement is conditional on validity. Endpoint utility ratios use scenario--order cells valid at both 0 and 768 tokens. Intervals are 95\% scenario-bootstrap intervals; dashes indicate that no paired endpoint cell was available.}
+\label{tab:freeformsensitivity}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & Valid (\%) & Agree (\%) & Paired scenarios & $q_{\mathrm{FF}}(0)$ & $q_{\mathrm{FF}}(768)$ & Difference (95\% CI) \\
+\midrule
+DeepSeek-8B & 66.8 & 46.6 & 197 & 0.739 & 0.969 & 0.230 [0.194, 0.270] \\
+Phi-mini & 29.1 & 32.7 & 47 & 0.805 & 0.983 & 0.178 [0.117, 0.249] \\
+Qwen3-4B & 74.3 & 54.5 & 169 & 0.740 & 0.954 & 0.215 [0.175, 0.254] \\
+Qwen3-8B & 51.0 & 71.3 & 210 & 0.751 & 0.912 & 0.161 [0.133, 0.192] \\
+Qwen3-14B & 96.7 & 75.5 & 216 & 0.739 & 0.932 & 0.193 [0.160, 0.227] \\
+Granite-8B & 29.3 & 82.2 & 0 & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
