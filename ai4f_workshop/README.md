@@ -10,10 +10,12 @@ Requires a LaTeX installation with `acmart`, BibTeX, `latexmk`, `stfloats` and `
 make
 make check
 python3 cpu_reference/check_saved_protocol.py
-python3 verify_numbers.py
+python3 verify_numbers.py --no-write
 ```
 
 The final PDF has 9 pages: main text and references on pages 1–7, Appendix A on pages 8–9, and Appendix B on page 9. Table 3 is cited and stays within Section 5 on page 4. Original propositions and equations retain their numbering.
+
+The root CPU driver can run directly from a static checkout without LaTeX or a local compilation log. It checks the published PDF against its recorded clean-build audit; this does not perform a new compilation. After `make`, the same number audit checks the current local compilation log. `--no-write` preserves the published report and release hashes.
 
 ## Contents
 

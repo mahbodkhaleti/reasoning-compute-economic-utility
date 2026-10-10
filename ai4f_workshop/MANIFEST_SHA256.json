@@ -4,7 +4,7 @@
   "Makefile": "2eabdf73c703bc43036d57caf2f07e06510eda6a6ece688c01adc097e9ec9763",
   "NUMBER_AUDIT.md": "a83af0fa43ca39fa0551922588bed88725a13f874304211fc3a217b7dd06038e",
   "PROSPECTIVE_EVALUATION.md": "93ecef4514c578b637e76f01f07b5860a11200d4c006d2fb6b23c4fb787a954d",
-  "README.md": "dda1402b40679d925ba2c765030e76da823f2a95757363ba10f19a291c3737d6",
+  "README.md": "5b80052139c4daa03674999b4e510047fbba7ef9b85327a0d51455810c1d7a7b",
   "REVIEW_REPORT.md": "886e2632a434a924149f3c46b9bfa6fa19cac5d8d5cc8cb129527012d58d880d",
   "SUBMISSION_READINESS.md": "0476c59306c7f5763267d46ec239a7c761df8f33e41ad6c02274cad69c592539",
   "audit_sources/adjacent_multiplicity.csv": "1d2e4ca5505b9ab59c5e1ae32f1bbf1b764d8c3271d48560b7ac7b08a8b806d5",
@@ -50,6 +50,6 @@
   "tables/money.tex": "72b4f33ea4c16c6124a502dd52f50e020c14a5b766606c80764700444193432c",
   "tables/resources.tex": "ec53d8ab83c9f1e03c5ee6d628c2bcccfa4da68bf97c27a29ae6e12607f13a5b",
   "technical_review.json": "7999299183d49c5ab204b6780d82cd30221a973447566661c97deccb6d233669",
-  "verify_numbers.py": "4a5444e623fd2ebeb4c336e471d751a305d1e4b0dda03f0908f0d3bca68a3563",
+  "verify_numbers.py": "a2fbb7d0c116ff318ca98b836b4fcc7137713db5bb9d596b900af456aa500302",
   "verify_release.py": "30b874e3e9d210bdf63b0670c4f4b77ec314a3915f1d6112d36341a2526ebee3"
 }

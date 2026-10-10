@@ -1,5 +1,8 @@
 from pathlib import Path
-import csv,json,re,hashlib,shutil,collections,subprocess
+import argparse,csv,json,re,hashlib,shutil,collections,subprocess
+parser=argparse.ArgumentParser(description='Audit saved manuscript evidence without new inference.')
+parser.add_argument('--no-write',action='store_true',help='Print audit results without replacing the published number_audit.json.')
+args=parser.parse_args()
 N=Path(__file__).resolve().parent
 C=lambda p:list(csv.DictReader(Path(p).open()))
 read_inputs={p.name:p for p in (N/'audit_sources').iterdir() if p.is_file() and p.name in json.loads((N/'audit_sources/source_hashes.json').read_text())}
@@ -74,11 +77,22 @@ assert r'\label{eq:contest}' not in main and r'\begin{proposition}' not in main 
 abstract=re.search(r'\\begin\{abstract\}(.*?)\\end\{abstract\}',new,re.S).group(1)
 report['checks']['abstract_words']=len(abstract.split());assert 150<=len(abstract.split())<=180
 report['checks']['intro_numbers']='No experimental numerical claim introduced; financial example is explicitly motivating analogy'
-log=(N/'main_ai4f_v4.log').read_text();assert not re.search(r'Overfull|undefined|LaTeX Warning|Package .* Warning|^!',log,re.M)
+log_path=N/'main_ai4f_v4.log'
+if log_path.is_file():
+ log=log_path.read_text();assert not re.search(r'Overfull|undefined|LaTeX Warning|Package .* Warning|^!',log,re.M)
+ latex_check='Current local compilation log: no errors, warnings, undefined references or overfull boxes'
+else:
+ # A static checkout ships the reviewed PDF and its recorded build audit, not local compiler logs.
+ build=json.loads((N/'package_validation.json').read_text())
+ assert build['passed'] and build['fresh_extracted_package_checks']['compile']=='passed'
+ assert all(build[k]==0 for k in ('latex_errors','undefined_references','overfull_boxes'))
+ assert hashlib.sha256((N/'main_ai4f_v4.pdf').read_bytes()).hexdigest()==build['PDF_sha256']
+ latex_check='Published PDF matches recorded clean compilation audit; no new compilation performed'
 text=subprocess.check_output(['pdftotext','-layout',str(N/'main_ai4f_v4.pdf'),'-'],text=True);pages=text.split('\f')[:-1];ref=next(i+1 for i,p in enumerate(pages) if 'References' in p);app=next(i+1 for i,p in enumerate(pages) if 'Service-contest sensitivity model' in p)
 report['pages']={'total':len(pages),'main_and_references':app-1,'main_narrative_end':ref,'references_start':ref,'appendix_start':app,'appendix_pages':len(pages)-app+1,'appendix_B_start':next(i+1 for i,p in enumerate(pages) if 'Executable admission and CPU reference' in p)}
-report['checks']['latex']='No errors, warnings, undefined references or overfull boxes'
+report['checks']['latex']=latex_check
 report['checks']['anonymous_pdf']='Anonymous Author(s)' in text and not bool(re.search(r'/(?:Users|home)/',text+subprocess.check_output(['pdfinfo',str(N/'main_ai4f_v4.pdf')],text=True)));assert report['checks']['anonymous_pdf']
 report['PDF_sha256']=hashlib.sha256((N/'main_ai4f_v4.pdf').read_bytes()).hexdigest()
-(N/'number_audit.json').write_text(json.dumps(report,indent=2)+'\n')
-print(json.dumps({'checks_passed':len(report['checks']),'discrepancies':report['discrepancies'],'pages':report['pages']},indent=2))
+if not args.no_write:
+ (N/'number_audit.json').write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps({'checks_passed':len(report['checks']),'discrepancies':report['discrepancies'],'pages':report['pages'],'compilation_evidence':latex_check,'published_report_replaced':not args.no_write},indent=2))
