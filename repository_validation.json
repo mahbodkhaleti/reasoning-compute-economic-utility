@@ -17,13 +17,13 @@
   "synthetic_records_per_model": 4536,
   "synthetic_records_total": 27216,
   "preserved_output_verification": "passed",
-  "python_files_parsed": 92,
-  "manifest_files_checked": 624,
+  "python_files_parsed": 94,
+  "manifest_files_checked": 636,
   "manifest_errors": [],
   "raw_auction_source_tracked": false,
   "transformed_scenario_artifacts_tracked": true,
   "transformed_artifact_license_caveat": "See LICENSES.md and data/README.md; no new license is asserted.",
   "new_llm_inference_executed": false,
-  "AI4F_workshop_release": "Anonymous v4 source and CPU reference; independent method evaluation remains open",
-  "revision": "CPU uncertainty, mappings and saved-decision audit; human responses pending"
+  "AI4F_workshop_release": "Current anonymous main.tex/paper.pdf and CPU companion; independent method evaluation remains open",
+  "revision": "AI4F availability and repository organization; historical inference preserved; human responses pending"
 }

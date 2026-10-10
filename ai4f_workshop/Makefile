@@ -1,8 +1,12 @@
-.PHONY: all check clean
+.PHONY: all check audit clean
+PYTHON ?= python3
 all:
-	latexmk -pdf -interaction=nonstopmode -halt-on-error main_ai4f_v4.tex
+	latexmk -pdf -outdir=build -interaction=nonstopmode -halt-on-error main.tex
 check:
-	python3 check_method_bounds.py
-	python3 cpu_reference/test_reference.py
+	$(PYTHON) check_method_bounds.py
+	$(PYTHON) cpu_reference/test_reference.py
+	$(PYTHON) cpu_reference/check_saved_protocol.py
+audit:
+	$(PYTHON) verify_numbers.py --built --no-write
 clean:
-	latexmk -C main_ai4f_v4.tex
+	latexmk -outdir=build -C main.tex

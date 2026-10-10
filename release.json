@@ -1,0 +1,26 @@
+{
+  "paper_title": "Evaluating Reasoning Budgets for LLM Decision Services: Auction Utility, Calculator Gaps, and Resource Accounting",
+  "release_date": "2026-10-10",
+  "paper_identity": "anonymous; named submission supplied separately",
+  "paths": {
+    "paper_source": "ai4f_workshop/main.tex",
+    "paper_pdf": "ai4f_workshop/paper.pdf",
+    "compact_bundle": "releases/ai4f_cpu_reference.zip",
+    "CPU_reference": "ai4f_workshop/cpu_reference/reference.py",
+    "reference_contract": "ai4f_workshop/cpu_reference/CONTRACT.md",
+    "number_audit": "ai4f_workshop/number_audit.json",
+    "reproduction_guide": "docs/REPRODUCE.md",
+    "repository_map": "docs/REPOSITORY_MAP.md",
+    "previous_AI4F_source": "ai4f_workshop/archive/v4/main_ai4f_v4.tex",
+    "previous_AI4F_PDF": "ai4f_workshop/archive/v4/main_ai4f_v4.pdf",
+    "earlier_full_paper_source": "paper/main.tex",
+    "original_submission": "submitted_paper"
+  },
+  "evidence_status": {
+    "empirical_results": "preserved saved runs; no new inference",
+    "prospective_method": "CPU fixtures and conditional algebra only; no independent model/service evaluation",
+    "financial_transfer": "untested",
+    "human_study": "protocol prepared; no responses",
+    "anonymous_mirror": "owner refresh deferred by user"
+  }
+}

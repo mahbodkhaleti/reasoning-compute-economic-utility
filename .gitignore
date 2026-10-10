@@ -52,3 +52,4 @@ ai4f_workshop/*.fls
 ai4f_workshop/*.log
 ai4f_workshop/*.out
 ai4f_workshop/*.synctex.gz
+ai4f_workshop/build/

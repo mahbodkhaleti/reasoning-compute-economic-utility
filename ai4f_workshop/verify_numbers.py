@@ -2,8 +2,10 @@ from pathlib import Path
 import argparse,csv,json,re,hashlib,shutil,collections,subprocess
 parser=argparse.ArgumentParser(description='Audit saved manuscript evidence without new inference.')
 parser.add_argument('--no-write',action='store_true',help='Print audit results without replacing the published number_audit.json.')
+parser.add_argument('--built',action='store_true',help='Audit build/main.pdf and its compilation log instead of the published paper.pdf.')
 args=parser.parse_args()
 N=Path(__file__).resolve().parent
+pdf_path=N/'build/main.pdf' if args.built else N/'paper.pdf'
 C=lambda p:list(csv.DictReader(Path(p).open()))
 read_inputs={p.name:p for p in (N/'audit_sources').iterdir() if p.is_file() and p.name in json.loads((N/'audit_sources/source_hashes.json').read_text())}
 inputs_sha={name:hashlib.sha256(p.read_bytes()).hexdigest() for name,p in read_inputs.items()}
@@ -63,22 +65,22 @@ for line,r in zip(lines,a):
  fields=[x.strip().removesuffix('\\\\').strip() for x in line.split('&')];c=resource[r['model']]
  assert fields[1:]==[f"{c['primary_hours']:.2f}",f"{c['readout_hours']:.3f}",f"{c['primary_kwh']:.2f}"]
 report['checks']['resource_table']=resource
-old=(N/'audit_sources/main_ai4f_v1_reference.tex').read_text();new=(N/'main_ai4f_v4.tex').read_text()
+old=(N/'audit_sources/main_ai4f_v1_reference.tex').read_text();new=(N/'main.tex').read_text()
 cites=lambda s:sorted(x.strip() for a in re.findall(r'\\cite\w*\{([^}]+)\}',s) for x in a.split(','))
 assert collections.Counter(cites(old)) <= collections.Counter(cites(new))
 newkeys={'chen2023frugalgpt','wang2026conformalthinking','wilder2019melding','chen2021finqa','zhu2021tatqa'}
 assert set(cites(new))-set(cites(old))==newkeys
 eq=lambda s:{re.search(r'\\label\{([^}]+)\}',e).group(1):e for e in re.findall(r'\\begin\{equation\}.*?\\end\{equation\}',s,re.S)}
 assert eq(old)==eq(new);report['checks']['equations']='All 11 existing numbered equation blocks preserved verbatim; accounting identity is explicitly not an independent-cause decomposition'
-repo='https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/';assert repo in new and new.count(repo)==old.count(repo)
+repo='https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/';assert repo in new and new.count(repo)==old.count(repo)+1
 report['checks']['citations_and_repo']='All original citation occurrences, bibliography bytes and anonymous URL preserved; five verified references added in a separate bibliography'
 main=new.split(r'\section{Service-contest sensitivity model}')[0]
 assert r'\label{eq:contest}' not in main and r'\begin{proposition}' not in main and r'\input{tables/money}' not in main
 abstract=re.search(r'\\begin\{abstract\}(.*?)\\end\{abstract\}',new,re.S).group(1)
 report['checks']['abstract_words']=len(abstract.split());assert 150<=len(abstract.split())<=180
 report['checks']['intro_numbers']='No experimental numerical claim introduced; financial example is explicitly motivating analogy'
-log_path=N/'main_ai4f_v4.log'
-if log_path.is_file():
+log_path=N/'build/main.log'
+if args.built:
  log=log_path.read_text();assert not re.search(r'Overfull|undefined|LaTeX Warning|Package .* Warning|^!',log,re.M)
  latex_check='Current local compilation log: no errors, warnings, undefined references or overfull boxes'
 else:
@@ -86,13 +88,13 @@ else:
  build=json.loads((N/'package_validation.json').read_text())
  assert build['passed'] and build['fresh_extracted_package_checks']['compile']=='passed'
  assert all(build[k]==0 for k in ('latex_errors','undefined_references','overfull_boxes'))
- assert hashlib.sha256((N/'main_ai4f_v4.pdf').read_bytes()).hexdigest()==build['PDF_sha256']
+ assert hashlib.sha256(pdf_path.read_bytes()).hexdigest()==build['PDF_sha256']
  latex_check='Published PDF matches recorded clean compilation audit; no new compilation performed'
-text=subprocess.check_output(['pdftotext','-layout',str(N/'main_ai4f_v4.pdf'),'-'],text=True);pages=text.split('\f')[:-1];ref=next(i+1 for i,p in enumerate(pages) if 'References' in p);app=next(i+1 for i,p in enumerate(pages) if 'Service-contest sensitivity model' in p)
+text=subprocess.check_output(['pdftotext','-layout',str(pdf_path),'-'],text=True);pages=text.split('\f')[:-1];ref=next(i+1 for i,p in enumerate(pages) if 'References' in p);app=next(i+1 for i,p in enumerate(pages) if 'Service-contest sensitivity model' in p)
 report['pages']={'total':len(pages),'main_and_references':app-1,'main_narrative_end':ref,'references_start':ref,'appendix_start':app,'appendix_pages':len(pages)-app+1,'appendix_B_start':next(i+1 for i,p in enumerate(pages) if 'Executable admission and CPU reference' in p)}
 report['checks']['latex']=latex_check
-report['checks']['anonymous_pdf']='Anonymous Author(s)' in text and not bool(re.search(r'/(?:Users|home)/',text+subprocess.check_output(['pdfinfo',str(N/'main_ai4f_v4.pdf')],text=True)));assert report['checks']['anonymous_pdf']
-report['PDF_sha256']=hashlib.sha256((N/'main_ai4f_v4.pdf').read_bytes()).hexdigest()
+report['checks']['anonymous_pdf']='Anonymous Author(s)' in text and not bool(re.search(r'/(?:Users|home)/',text+subprocess.check_output(['pdfinfo',str(pdf_path)],text=True)));assert report['checks']['anonymous_pdf']
+report['PDF_sha256']=hashlib.sha256(pdf_path.read_bytes()).hexdigest()
 if not args.no_write:
  (N/'number_audit.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({'checks_passed':len(report['checks']),'discrepancies':report['discrepancies'],'pages':report['pages'],'compilation_evidence':latex_check,'published_report_replaced':not args.no_write},indent=2))

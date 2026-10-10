@@ -1,6 +1,6 @@
 # AI4F reproducibility release and submission boundary
 
-This directory publishes the anonymous v4 source, checked PDF, compact numeric evidence, five verified new references and CPU policy/fixtures. It is an additive update; the older paper, saved inference and legacy replay are preserved. The separate authored submission copy contains the user-supplied author list and affiliations. Its scientific body matches this anonymous version; author/layout metadata differ.
+This directory publishes the current anonymous source, checked PDF, compact numeric evidence, five verified new references and CPU policy/fixtures. It is an additive update; the older paper, saved inference and legacy replay are preserved. The separate authored submission copy contains the user-supplied author list and affiliations. Its scientific body matches this anonymous version; author/layout metadata and the availability URL differ.
 
 The historical evidence remains reproducible without GPU inference. The new CPU reference is a conservative declared-source-contract implementation, not empirical validation of real-language extraction or policy gains. Original `package_validation.json` records the pre-publication source-package checks; `release_validation.json` records this directory's checks. Publication/snapshot status is checked separately against served remote files and is not inferred from local tests.
 

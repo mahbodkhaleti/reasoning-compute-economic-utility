@@ -2,7 +2,7 @@
 
 `verify_numbers.py` passed all 21 compact-evidence checks with **no discrepancies**. Previous-version preservation is checked separately in `technical_review.json`; it is not counted as a saved-number check.
 
-- Abstract is byte-identical to v3 (161 words), including six checkpoints, 216 tasks, 0/768 budgets, 42–85% aggregate gap closure, and the $0.03–$0.18 / $0.02–$0.12 cost-scenario ranges.
+- The abstract’s empirical text is unchanged from v3; adding the repository availability sentence makes the current abstract 169 words, including six checkpoints, 216 tasks, 0/768 budgets, 42–85% aggregate gap closure, and the $0.03–$0.18 / $0.02–$0.12 cost-scenario ranges.
 - No empirical number was added to the introduction or the new method/contract text. New bibliography dates, pages, and identifier digits describe references rather than our experiments.
 - All original main/appendix table assets are byte-identical. Endpoint, accuracy, confidence-interval, calculator-audit and resource rows match the original source tables and saved CSVs. New table placement does not change values or captions.
 - Calculator mean held-out profit $212.66, regret $3.09, optimum 155/216, q=0.981364, rounding sensitivity and all six simultaneous-band rows agree with evidence.

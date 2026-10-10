@@ -1,6 +1,6 @@
-# Results and table provenance
+# Historical results and table provenance
 
-The manuscript's LaTeX tables are checked in under `paper/tables/`. The files
+The earlier full-paper revision's LaTeX tables are under `paper/tables/`. Current AI4F tables are under `ai4f_workshop/tables/`, with compact numeric checks in [NUMBER_AUDIT.md](../ai4f_workshop/NUMBER_AUDIT.md). The files
 below are the machine-readable sources or analysis outputs behind the reported tables.
 The LaTeX formatting is currently a frozen presentation layer; there is not a
 separate CSV-to-LaTeX generator, and this limitation is stated rather than

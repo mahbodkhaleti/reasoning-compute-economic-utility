@@ -1,4 +1,4 @@
-# AI4F v4 final review
+# AI4F review with current editorial release
 
 ## Judgment
 
@@ -26,7 +26,7 @@ The manuscript is strongest as an evaluation paper with a prospective extension.
 - 21 contract and policy integration test methods pass; independent algebra cross-checks, decimal/threshold/tie handling, unknown record denominator, transaction rejection, manifest unit/ID conflicts, no-progress limits, invalid runtime metadata and failed-call charging are covered.
 - Exact-rational mathematical fixtures pass: 6,845 sandwich checks, 1,369 conditional-regret cases, 256 nested pairs and 147 sensitivity checks. These are finite engineering/algebra fixtures, not model evaluation samples.
 - Read-only grammar compatibility check covers 184 public records from six reused development families. None matches the new grammar. This is expected protocol incompatibility, not an accuracy or coverage result for the proposed method on independent data.
-- 21 saved-number checks pass with no numerical discrepancy. Original result tables, figure, bibliography, abstract and numbered equations are preserved. Five sourced citations were added in a separate bibliography; original citation occurrences remain intact.
+- 21 saved-number checks pass with no numerical discrepancy. Original result tables, figure, bibliography, abstract empirical text and numbered equations are preserved; the current abstract adds only the repository availability sentence. Five sourced citations were added in a separate bibliography; original citation occurrences remain intact.
 - Final PDF: 9 pages. Table 3 appears inside Section 5 on page 4; main text/references 1–7, Appendix A 8–9, Appendix B 9. All pages were visually inspected. Reference columns are balanced; the earlier excessive table-related blank space and orphaned appendix tail were removed.
 - No LaTeX errors, undefined references/citations or overfull boxes. Six inherited omitted-publisher/address BibTeX metadata warnings remain in unchanged original entries; no new warning is introduced.
 - Earlier AI4F v3, v2 and other workshop artifacts remain unchanged. No file under `sources/` was modified.
@@ -35,6 +35,6 @@ The manuscript is strongest as an evaluation paper with a prospective extension.
 
 Independent raw-language extraction/repair evidence, justified semantic interval containment, matched-baseline cost/utility/coverage, and methodological priority remain unestablished. A target-server timing pilot and a frozen independent protocol are required before an empirical method claim or a one-day run guarantee. These weaknesses cannot be removed by further PDF or CPU-fixture polishing.
 
-The anonymous historical repository opens but currently shows an 8 October release. This directory now supplies the v4 source/CPU supplement for an authorized GitHub update; the mirror refresh is separately verified. Author metadata is retained in the separate authored submission copy; reviewer-service agreement and portal actions remain user-owned finalization items. See `SUBMISSION_READINESS.md`. The old source-only citation TODO is deliberately retained for optional further references and is not visible in the PDF.
+The anonymous historical repository opens but currently shows an 8 October release. This directory now supplies the v4 source/CPU supplement for an authorized GitHub update; the mirror refresh is deferred by the user and has not been performed. Author metadata is retained in the separate authored submission copy; reviewer-service agreement and portal actions remain user-owned finalization items. See `SUBMISSION_READINESS.md`. The old source-only citation TODO is deliberately retained for optional further references and is not visible in the PDF.
 
 No detected manuscript-layout, conditional-algebra or covered CPU-contract defect remains after the checks performed. This is not a guarantee that no defect exists, and it is not independent scientific validation.

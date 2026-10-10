@@ -151,9 +151,9 @@
     },
     "equations": "All 11 existing numbered equation blocks preserved verbatim; accounting identity is explicitly not an independent-cause decomposition",
     "citations_and_repo": "All original citation occurrences, bibliography bytes and anonymous URL preserved; five verified references added in a separate bibliography",
-    "abstract_words": 161,
+    "abstract_words": 169,
     "intro_numbers": "No experimental numerical claim introduced; financial example is explicitly motivating analogy",
-    "latex": "No errors, warnings, undefined references or overfull boxes",
+    "latex": "Current local compilation log: no errors, warnings, undefined references or overfull boxes",
     "anonymous_pdf": true
   },
   "calculator_rows": [
@@ -215,5 +215,5 @@
     "appendix_pages": 2,
     "appendix_B_start": 9
   },
-  "PDF_sha256": "84866fda7777a69a0b838d0cb96dc89383da4a547f593d9e48689c6007b84b81"
+  "PDF_sha256": "8b268b332a2f8fa5e44eb822344197f85d6207ca9d560fb6f5e2b9f944d01acb"
 }

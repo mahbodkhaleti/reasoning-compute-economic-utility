@@ -43,8 +43,15 @@ REQUIRED_PATHS = {
     "paper/references.bib",
     "paper/checklist.tex",
     "paper/neurips_2026.sty",
-    "ai4f_workshop/main_ai4f_v4.tex",
-    "ai4f_workshop/main_ai4f_v4.pdf",
+    "ai4f_workshop/main.tex",
+    "ai4f_workshop/paper.pdf",
+    "ai4f_workshop/archive/v4/main_ai4f_v4.tex",
+    "ai4f_workshop/archive/v4/main_ai4f_v4.pdf",
+    "docs/REPOSITORY_MAP.md",
+    "docs/REPRODUCE.md",
+    "releases/ai4f_cpu_reference.zip",
+    "Makefile",
+    "release.json",
     "ai4f_workshop/cpu_reference/reference.py",
     "ai4f_workshop/verify_release.py",
     "reproduce_ai4f_workshop.sh",
@@ -61,6 +68,7 @@ SOURCE_DIRS = (
     "cpu_revision",
     "decision_audit",
     "ai4f_workshop",
+    "scripts",
 )
 MANIFEST_EXCLUSIONS = {"MANIFEST.sha256", "repository_validation.json"}
 
@@ -193,8 +201,8 @@ def main() -> None:
         "transformed_scenario_artifacts_tracked": True,
         "transformed_artifact_license_caveat": "See LICENSES.md and data/README.md; no new license is asserted.",
         "new_llm_inference_executed": False,
-        "AI4F_workshop_release": "Anonymous v4 source and CPU reference; independent method evaluation remains open",
-        "revision": "CPU uncertainty, mappings and saved-decision audit; human responses pending",
+        "AI4F_workshop_release": "Current anonymous main.tex/paper.pdf and CPU companion; independent method evaluation remains open",
+        "revision": "AI4F availability and repository organization; historical inference preserved; human responses pending",
     }
     (ROOT / "repository_validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
