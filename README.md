@@ -1,3 +1,19 @@
+# Reasoning compute and economic utility: reproducibility
+
+## Current AI4F workshop version — 10 October 2026
+
+The current workshop manuscript is **Evaluating Reasoning Budgets for LLM Decision Services: Auction Utility, Calculator Gaps, and Resource Accounting**. Its anonymous reproducibility source and checked PDF are in [`ai4f_workshop/`](ai4f_workshop/README.md): [`main_ai4f_v4.tex`](ai4f_workshop/main_ai4f_v4.tex), [`main_ai4f_v4.pdf`](ai4f_workshop/main_ai4f_v4.pdf).
+
+This additive release includes the original held-out calculator/economic/resource findings, compact number-audit inputs, five sourced references, and a CPU reference for prospective decision-sensitive extraction repair. All original experimental values are preserved. The new policy has **no independent model/service evaluation**; fixtures verify conditional algebra and execution, not empirical cost or utility gains. The authored submission copy is separate from this anonymous evidence release.
+
+```sh
+bash reproduce_ai4f_workshop.sh
+```
+
+The AI4F CPU core uses Python's standard library. Number/PDF audits require Poppler; source compilation requires LaTeX with `acmart`. The existing `reproduce_cpu_revision.sh` and historical directories remain available below. No new GPU inference or human responses were collected.
+
+## Preserved historical release
+
 # CPU-completed manuscript revision and reproducibility package
 
 8 October 2026. Latest stage: saved-decision audit and human-study preparation. This package integrates the original preserved inference archive, the focused manuscript revision, the accuracy/utility comparison, and the completed CPU uncertainty and alternative-mapping extensions. No new inference was performed.

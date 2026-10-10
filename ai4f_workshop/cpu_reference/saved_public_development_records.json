@@ -1,0 +1,922 @@
+[
+  {
+    "family": "diagnostic-0000",
+    "id": "X003",
+    "text": "Record X003 was withdrawn; its bid $18 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R007",
+    "text": "Record R007 remains active with final bid $30; an earlier draft of $35 was superseded."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R009",
+    "text": "Record R009 is active: original bid $10, then reduced by $5."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "X001",
+    "text": "Record X001 was withdrawn; its bid $18 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "X000",
+    "text": "Record X000 was withdrawn; its bid $6 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R010",
+    "text": "Record R010 remains active with final bid $15; an earlier draft of $20 was superseded."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R000",
+    "text": "Record R000 is active: original bid $12, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R006",
+    "text": "Record R006 is active: original bid $32, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R013",
+    "text": "Record R013 remains active with final bid $30; an earlier draft of $35 was superseded."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R011",
+    "text": "Record R011: active bid $35; apply a downward correction of $5."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R003",
+    "text": "Record R003 is active: original bid $27, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R015",
+    "text": "Record R015 is active: original bid $30, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R005",
+    "text": "Record R005: active bid $12; apply a downward correction of $2."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R014",
+    "text": "Record R014: active bid $17; apply a downward correction of $2."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R004",
+    "text": "Record R004 remains active with final bid $40; an earlier draft of $45 was superseded."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R001",
+    "text": "Record R001 remains active with final bid $10; an earlier draft of $15 was superseded."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R002",
+    "text": "Record R002: active bid $5; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R008",
+    "text": "Record R008: active bid $10; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "R012",
+    "text": "Record R012 is active: original bid $32, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0000",
+    "id": "X002",
+    "text": "Record X002 was withdrawn; its bid $8 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R009",
+    "text": "Record R009 is active: original bid $51, then reduced by $6."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R000",
+    "text": "Record R000 is active: original bid $90, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R005",
+    "text": "Record R005: active bid $120; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R014",
+    "text": "Record R014: active bid $36; apply a downward correction of $6."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "X001",
+    "text": "Record X001 was withdrawn; its bid $150 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R010",
+    "text": "Record R010 remains active with final bid $120; an earlier draft of $135 was superseded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R002",
+    "text": "Record R002: active bid $105; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R011",
+    "text": "Record R011: active bid $30; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "X002",
+    "text": "Record X002 was withdrawn; its bid $108 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R012",
+    "text": "Record R012 is active: original bid $30, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R008",
+    "text": "Record R008: active bid $60; apply a downward correction of $15."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "X000",
+    "text": "Record X000 was withdrawn; its bid $84 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "X003",
+    "text": "Record X003 was withdrawn; its bid $87 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R006",
+    "text": "Record R006 is active: original bid $120, then reduced by $15."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R004",
+    "text": "Record R004 remains active with final bid $90; an earlier draft of $105 was superseded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R001",
+    "text": "Record R001 remains active with final bid $60; an earlier draft of $75 was superseded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R003",
+    "text": "Record R003 is active: original bid $120, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R013",
+    "text": "Record R013 remains active with final bid $90; an earlier draft of $105 was superseded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R007",
+    "text": "Record R007 remains active with final bid $45; an earlier draft of $60 was superseded."
+  },
+  {
+    "family": "diagnostic-0001",
+    "id": "R015",
+    "text": "Record R015 is active: original bid $60, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R047",
+    "text": "Record R047: active bid $80; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R034",
+    "text": "Record R034 remains active with final bid $320; an earlier draft of $360 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R024",
+    "text": "Record R024 is active: original bid $296, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R022",
+    "text": "Record R022 remains active with final bid $200; an earlier draft of $240 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R023",
+    "text": "Record R023: active bid $136; apply a downward correction of $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R035",
+    "text": "Record R035: active bid $240; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R001",
+    "text": "Record R001 remains active with final bid $200; an earlier draft of $240 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R026",
+    "text": "Record R026: active bid $240; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R036",
+    "text": "Record R036 is active: original bid $240, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R029",
+    "text": "Record R029: active bid $240; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R010",
+    "text": "Record R010 remains active with final bid $40; an earlier draft of $80 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R040",
+    "text": "Record R040 remains active with final bid $240; an earlier draft of $280 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R027",
+    "text": "Record R027 is active: original bid $200, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R018",
+    "text": "Record R018 is active: original bid $216, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R007",
+    "text": "Record R007 remains active with final bid $240; an earlier draft of $280 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R004",
+    "text": "Record R004 remains active with final bid $200; an earlier draft of $240 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "X000",
+    "text": "Record X000 was withdrawn; its bid $96 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R015",
+    "text": "Record R015 is active: original bid $240, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R033",
+    "text": "Record R033 is active: original bid $280, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R006",
+    "text": "Record R006 is active: original bid $200, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R044",
+    "text": "Record R044: active bid $280; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "X001",
+    "text": "Record X001 was withdrawn; its bid $272 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R025",
+    "text": "Record R025 remains active with final bid $160; an earlier draft of $200 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R043",
+    "text": "Record R043 remains active with final bid $40; an earlier draft of $80 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R002",
+    "text": "Record R002: active bid $360; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R021",
+    "text": "Record R021 is active: original bid $80, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R038",
+    "text": "Record R038: active bid $360; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R017",
+    "text": "Record R017: active bid $296; apply a downward correction of $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R046",
+    "text": "Record R046 remains active with final bid $200; an earlier draft of $240 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R039",
+    "text": "Record R039 is active: original bid $216, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R042",
+    "text": "Record R042 is active: original bid $120, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R041",
+    "text": "Record R041: active bid $240; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R031",
+    "text": "Record R031 remains active with final bid $200; an earlier draft of $240 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R011",
+    "text": "Record R011: active bid $240; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R009",
+    "text": "Record R009 is active: original bid $136, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R020",
+    "text": "Record R020: active bid $256; apply a downward correction of $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R014",
+    "text": "Record R014: active bid $296; apply a downward correction of $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R028",
+    "text": "Record R028 remains active with final bid $120; an earlier draft of $160 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R005",
+    "text": "Record R005: active bid $80; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "X003",
+    "text": "Record X003 was withdrawn; its bid $224 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R012",
+    "text": "Record R012 is active: original bid $40, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R019",
+    "text": "Record R019 remains active with final bid $200; an earlier draft of $240 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R037",
+    "text": "Record R037 remains active with final bid $40; an earlier draft of $80 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "X002",
+    "text": "Record X002 was withdrawn; its bid $256 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R003",
+    "text": "Record R003 is active: original bid $296, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R032",
+    "text": "Record R032: active bid $160; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R008",
+    "text": "Record R008: active bid $120; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R013",
+    "text": "Record R013 remains active with final bid $240; an earlier draft of $280 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R045",
+    "text": "Record R045 is active: original bid $280, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R016",
+    "text": "Record R016 remains active with final bid $280; an earlier draft of $320 was superseded."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R000",
+    "text": "Record R000 is active: original bid $56, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0002",
+    "id": "R030",
+    "text": "Record R030 is active: original bid $120, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R030",
+    "text": "Record R030 is active: original bid $30, then reduced by $5."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R031",
+    "text": "Record R031 remains active with final bid $20; an earlier draft of $25 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R000",
+    "text": "Record R000 is active: original bid $35, then reduced by $5."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R015",
+    "text": "Record R015 is active: original bid $7, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R016",
+    "text": "Record R016 remains active with final bid $10; an earlier draft of $15 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R022",
+    "text": "Record R022 remains active with final bid $15; an earlier draft of $20 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R012",
+    "text": "Record R012 is active: original bid $15, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R021",
+    "text": "Record R021 is active: original bid $25, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "X000",
+    "text": "Record X000 was withdrawn; its bid $36 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R004",
+    "text": "Record R004 remains active with final bid $35; an earlier draft of $40 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R027",
+    "text": "Record R027 is active: original bid $42, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R024",
+    "text": "Record R024 is active: original bid $15, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R008",
+    "text": "Record R008: active bid $17; apply a downward correction of $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R011",
+    "text": "Record R011: active bid $7; apply a downward correction of $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "X003",
+    "text": "Record X003 was withdrawn; its bid $35 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R029",
+    "text": "Record R029: active bid $42; apply a downward correction of $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R019",
+    "text": "Record R019 remains active with final bid $30; an earlier draft of $35 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R001",
+    "text": "Record R001 remains active with final bid $40; an earlier draft of $45 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R023",
+    "text": "Record R023: active bid $22; apply a downward correction of $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R017",
+    "text": "Record R017: active bid $30; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R014",
+    "text": "Record R014: active bid $15; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R006",
+    "text": "Record R006 is active: original bid $7, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "X001",
+    "text": "Record X001 was withdrawn; its bid $46 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R003",
+    "text": "Record R003 is active: original bid $12, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R010",
+    "text": "Record R010 remains active with final bid $15; an earlier draft of $20 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R025",
+    "text": "Record R025 remains active with final bid $15; an earlier draft of $20 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R005",
+    "text": "Record R005: active bid $27; apply a downward correction of $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R013",
+    "text": "Record R013 remains active with final bid $5; an earlier draft of $10 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R007",
+    "text": "Record R007 remains active with final bid $30; an earlier draft of $35 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "X002",
+    "text": "Record X002 was withdrawn; its bid $27 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R018",
+    "text": "Record R018 is active: original bid $37, then reduced by $2."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R026",
+    "text": "Record R026: active bid $30; apply a downward correction of $5."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R028",
+    "text": "Record R028 remains active with final bid $15; an earlier draft of $20 was superseded."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R002",
+    "text": "Record R002: active bid $15; apply a downward correction of $5."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R020",
+    "text": "Record R020: active bid $10; apply a downward correction of $5."
+  },
+  {
+    "family": "diagnostic-0003",
+    "id": "R009",
+    "text": "Record R009 is active: original bid $5, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R002",
+    "text": "Record R002: active bid $105; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R001",
+    "text": "Record R001 remains active with final bid $105; an earlier draft of $120 was superseded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R014",
+    "text": "Record R014: active bid $96; apply a downward correction of $6."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "X000",
+    "text": "Record X000 was withdrawn; its bid $33 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R012",
+    "text": "Record R012 is active: original bid $60, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "X003",
+    "text": "Record X003 was withdrawn; its bid $33 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "X001",
+    "text": "Record X001 was withdrawn; its bid $135 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R009",
+    "text": "Record R009 is active: original bid $105, then reduced by $15."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R004",
+    "text": "Record R004 remains active with final bid $120; an earlier draft of $135 was superseded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "X002",
+    "text": "Record X002 was withdrawn; its bid $96 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R011",
+    "text": "Record R011: active bid $30; apply a downward correction of $15."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R005",
+    "text": "Record R005: active bid $105; apply a downward correction of $15."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R008",
+    "text": "Record R008: active bid $30; apply a downward correction of $15."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R013",
+    "text": "Record R013 remains active with final bid $15; an earlier draft of $30 was superseded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R007",
+    "text": "Record R007 remains active with final bid $90; an earlier draft of $105 was superseded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R006",
+    "text": "Record R006 is active: original bid $135, then reduced by $15."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R015",
+    "text": "Record R015 is active: original bid $111, then reduced by $6."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R003",
+    "text": "Record R003 is active: original bid $81, then reduced by $6."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R010",
+    "text": "Record R010 remains active with final bid $120; an earlier draft of $135 was superseded."
+  },
+  {
+    "family": "diagnostic-0004",
+    "id": "R000",
+    "text": "Record R000 is active: original bid $21, then reduced by $6."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R024",
+    "text": "Record R024 is active: original bid $256, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R000",
+    "text": "Record R000 is active: original bid $160, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R012",
+    "text": "Record R012 is active: original bid $280, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "X000",
+    "text": "Record X000 was withdrawn; its bid $200 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R017",
+    "text": "Record R017: active bid $280; apply a downward correction of $0."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R013",
+    "text": "Record R013 remains active with final bid $280; an earlier draft of $320 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R029",
+    "text": "Record R029: active bid $320; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "X002",
+    "text": "Record X002 was withdrawn; its bid $80 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R008",
+    "text": "Record R008: active bid $120; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R010",
+    "text": "Record R010 remains active with final bid $320; an earlier draft of $360 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R007",
+    "text": "Record R007 remains active with final bid $320; an earlier draft of $360 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R025",
+    "text": "Record R025 remains active with final bid $40; an earlier draft of $80 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R026",
+    "text": "Record R026: active bid $176; apply a downward correction of $16."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R014",
+    "text": "Record R014: active bid $280; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R015",
+    "text": "Record R015 is active: original bid $216, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R019",
+    "text": "Record R019 remains active with final bid $200; an earlier draft of $240 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R002",
+    "text": "Record R002: active bid $136; apply a downward correction of $16."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R005",
+    "text": "Record R005: active bid $240; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R018",
+    "text": "Record R018 is active: original bid $160, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R027",
+    "text": "Record R027 is active: original bid $336, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R020",
+    "text": "Record R020: active bid $240; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R009",
+    "text": "Record R009 is active: original bid $160, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R022",
+    "text": "Record R022 remains active with final bid $120; an earlier draft of $160 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R011",
+    "text": "Record R011: active bid $200; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R021",
+    "text": "Record R021 is active: original bid $160, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R016",
+    "text": "Record R016 remains active with final bid $160; an earlier draft of $200 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "X003",
+    "text": "Record X003 was withdrawn; its bid $400 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R031",
+    "text": "Record R031 remains active with final bid $240; an earlier draft of $280 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R006",
+    "text": "Record R006 is active: original bid $80, then reduced by $0."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R004",
+    "text": "Record R004 remains active with final bid $80; an earlier draft of $120 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R003",
+    "text": "Record R003 is active: original bid $320, then reduced by $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R028",
+    "text": "Record R028 remains active with final bid $240; an earlier draft of $280 was superseded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R023",
+    "text": "Record R023: active bid $240; apply a downward correction of $40."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "X001",
+    "text": "Record X001 was withdrawn; its bid $80 is inactive and must be excluded."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R030",
+    "text": "Record R030 is active: original bid $336, then reduced by $16."
+  },
+  {
+    "family": "diagnostic-0005",
+    "id": "R001",
+    "text": "Record R001 remains active with final bid $160; an earlier draft of $200 was superseded."
+  }
+]

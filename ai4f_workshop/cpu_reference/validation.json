@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "test_methods": 21,
+  "scope": "CPU contract/integration fixtures only; no model, real-data coverage or timing validation",
+  "failures": 0,
+  "errors": 0
+}

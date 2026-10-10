@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "fresh_extracted_package_checks": {
+    "compile": "passed",
+    "math": "passed",
+    "CPU_policy": "passed",
+    "saved_protocol": "passed",
+    "numbers": "passed"
+  },
+  "PDF_text_matches_visually_checked_document": true,
+  "pages": 9,
+  "latex_errors": 0,
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "inherited_bibtex_metadata_warnings": 6,
+  "original_number_checks": 21,
+  "number_discrepancies": [],
+  "CPU_policy_test_methods": 21,
+  "algebra_fixture_replay": "passed",
+  "saved_protocol_replay": "passed",
+  "previous_versions_unchanged": true,
+  "package_text_anonymity_scan": "passed",
+  "independent_model_or_service_validation": "not performed",
+  "publication_or_submission": "Original v4 validation predates publication; GitHub publication now authorized and separately verified",
+  "PDF_sha256": "84866fda7777a69a0b838d0cb96dc89383da4a547f593d9e48689c6007b84b81"
+}

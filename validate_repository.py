@@ -43,6 +43,11 @@ REQUIRED_PATHS = {
     "paper/references.bib",
     "paper/checklist.tex",
     "paper/neurips_2026.sty",
+    "ai4f_workshop/main_ai4f_v4.tex",
+    "ai4f_workshop/main_ai4f_v4.pdf",
+    "ai4f_workshop/cpu_reference/reference.py",
+    "ai4f_workshop/verify_release.py",
+    "reproduce_ai4f_workshop.sh",
     "paper/figures/strategic_input_pipeline_overview.pdf",
     "paper/figures/synthetic_ipv_six_model_frontier.pdf",
     "paper/tables/synthetic_ipv_endpoints.tex",
@@ -55,6 +60,7 @@ SOURCE_DIRS = (
     "synthetic_ipv_benchmark",
     "cpu_revision",
     "decision_audit",
+    "ai4f_workshop",
 )
 MANIFEST_EXCLUSIONS = {"MANIFEST.sha256", "repository_validation.json"}
 
@@ -187,6 +193,7 @@ def main() -> None:
         "transformed_scenario_artifacts_tracked": True,
         "transformed_artifact_license_caveat": "See LICENSES.md and data/README.md; no new license is asserted.",
         "new_llm_inference_executed": False,
+        "AI4F_workshop_release": "Anonymous v4 source and CPU reference; independent method evaluation remains open",
         "revision": "CPU uncertainty, mappings and saved-decision audit; human responses pending",
     }
     (ROOT / "repository_validation.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

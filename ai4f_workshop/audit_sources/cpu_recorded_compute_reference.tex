@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering\small
+\caption{Sums of saved historical cell counters: no-thinking, unconstrained controls, greedy assigned budgets and stochastic generations. Each checkpoint has 8,424 records. Primary timers cover generation/answer calls; constrained readout and verbal-confidence queries are recorded separately. Energy is integrated device telemetry for primary calls, expressed in kWh; it is not total project or isolated-model energy. Loading, downtime, failed/preliminary work and some host overhead remain outside these counters.}
+\label{tab:cpucompute}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & Saved cells & Primary h & Readout h & Verbal h & Primary kWh \\
+\midrule
+DeepSeek-8B & 8424 & 17.84 & 0.160 & 0.097 & 5.08 \\
+Phi-mini & 8424 & 10.53 & 0.091 & 0.042 & 2.68 \\
+Qwen3-4B & 8424 & 12.48 & 0.109 & 0.062 & 3.01 \\
+Qwen3-8B & 8424 & 19.30 & 0.181 & 0.097 & 5.18 \\
+Qwen3-14B & 8424 & 39.44 & 0.273 & 0.219 & 11.85 \\
+Granite-8B & 8424 & 18.34 & 0.237 & 0.187 & 5.20 \\
+\bottomrule
+\end{tabular}
+\end{table}

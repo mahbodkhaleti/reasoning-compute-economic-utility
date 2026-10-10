@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "scope": "Exact-rational finite algebra fixtures, not experiments or model/service evaluation",
+  "sandwich_checks": 6845,
+  "conditional_regret_cases": 1369,
+  "nested_refinement_pairs": 256,
+  "sensitivity_bound_checks": 147,
+  "edge_cases": [
+    "inclusive threshold ties",
+    "bid equal to value",
+    "unbounded upper prices",
+    "singleton menu",
+    "exact point intervals",
+    "empty population rejected",
+    "empty menu rejected",
+    "infeasible bid rejected",
+    "empty interval rejected"
+  ],
+  "invalid_containment_negative_control": "Zero reported certificate can fail when a true price lies outside its interval; condition is essential",
+  "limitations": [
+    "No real extraction or containment validation",
+    "No runtime, utility improvement or statistical coverage evidence",
+    "Formal proof, rather than finite fixtures, states the general conditional result"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "Additive anonymous AI4F source and CPU reference release; no new inference",
+  "number_checks_passed": 21,
+  "CPU_contract_and_policy_tests": 21,
+  "conditional_algebra_checks": "passed",
+  "saved_development_protocol_check": "passed; unsupported grammar, not independent validation",
+  "PDF_pages": 9,
+  "PDF_sha256": "84866fda7777a69a0b838d0cb96dc89383da4a547f593d9e48689c6007b84b81",
+  "source_sha256": "e25716328fa4561c899feeb505a9fa354d35b80076f3e804b0b460694b6415a3",
+  "author_identity_in_this_directory": "anonymous; authored submission maintained separately",
+  "independent_method_evaluation": "not performed",
+  "no_new_GPU_inference": true,
+  "original_historical_assets": "preserved; top-level index/hash validator checks them",
+  "mirror_refresh": "requires owner session; not inferred from local/GitHub validation"
+}

@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "scope": "Manuscript, conditional mathematics and CPU fixtures; no independent scientific validation",
+  "previous_versions_unchanged": true,
+  "original_abstract_unchanged": true,
+  "original_service_contest_text_unchanged": true,
+  "original_numbered_equations_unchanged": 11,
+  "original_citation_occurrences_preserved": true,
+  "new_cited_keys": [
+    "chen2021finqa",
+    "chen2023frugalgpt",
+    "wang2026conformalthinking",
+    "wilder2019melding",
+    "zhu2021tatqa"
+  ],
+  "duplicate_labels": 0,
+  "dangling_refs": [],
+  "undefined_citations": [],
+  "pages": {
+    "total": 9,
+    "main_and_references": 7,
+    "main_narrative_end": 7,
+    "references_start": 7,
+    "appendix_start": 8,
+    "appendix_pages": 2,
+    "appendix_B_start": 9
+  },
+  "table_3_page": 4,
+  "all_pages_visually_reviewed": true,
+  "latex_errors": 0,
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "inherited_bibtex_metadata_warnings": 6,
+  "saved_number_checks": 21,
+  "numeric_discrepancies": [],
+  "CPU_contract_tests": {
+    "passed": true,
+    "test_methods": 21,
+    "scope": "CPU contract/integration fixtures only; no model, real-data coverage or timing validation",
+    "failures": 0,
+    "errors": 0
+  },
+  "algebra_fixtures": {
+    "passed": true,
+    "scope": "Exact-rational finite algebra fixtures, not experiments or model/service evaluation",
+    "sandwich_checks": 6845,
+    "conditional_regret_cases": 1369,
+    "nested_refinement_pairs": 256,
+    "sensitivity_bound_checks": 147,
+    "edge_cases": [
+      "inclusive threshold ties",
+      "bid equal to value",
+      "unbounded upper prices",
+      "singleton menu",
+      "exact point intervals",
+      "empty population rejected",
+      "empty menu rejected",
+      "infeasible bid rejected",
+      "empty interval rejected"
+    ],
+    "invalid_containment_negative_control": "Zero reported certificate can fail when a true price lies outside its interval; condition is essential",
+    "limitations": [
+      "No real extraction or containment validation",
+      "No runtime, utility improvement or statistical coverage evidence",
+      "Formal proof, rather than finite fixtures, states the general conditional result"
+    ]
+  },
+  "new_GPU_inference": false,
+  "new_scientific_experiment": false,
+  "model_backend_supplied": false,
+  "callback_CPU_orchestration_supplied": true,
+  "overall_subjective_reviewer_rating": 6.5,
+  "topic_fit_subjective_rating": 7.5,
+  "independent_method_validation": "open",
+  "anonymous_repository": "This is the new GitHub release; served anonymous mirror must be separately verified",
+  "source_SHA256": "e25716328fa4561c899feeb505a9fa354d35b80076f3e804b0b460694b6415a3",
+  "PDF_SHA256": "84866fda7777a69a0b838d0cb96dc89383da4a547f593d9e48689c6007b84b81"
+}

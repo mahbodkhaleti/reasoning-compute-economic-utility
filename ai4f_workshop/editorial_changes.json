@@ -1,0 +1,42 @@
+[
+  {
+    "before": "Section~\\ref{sec:selectiverepair} additionally specifies decision-sensitive extraction repair for a prospective raw-record extension; its cost and utility effects have not been evaluated.",
+    "after": "These findings motivate a division of labor: preserve exact calculation and investigate whether language-processing effort should target ambiguities that can change the chosen action. Section~\\ref{sec:selectiverepair} specifies that prospective extension. Its raw-record inputs differ from the supplied-probability benchmark, so the historical gains do not validate the repair policy."
+  },
+  {
+    "before": "% TODO: add 2-4 references on LLM numerical/financial reasoning evaluation",
+    "after": "Adaptive allocation is established prior work: FrugalGPT learns model cascades to trade inference cost against answer accuracy \\citep{chen2023frugalgpt}, while Conformal Thinking calibrates reasoning stopping rules to specified error risks \\citep{wang2026conformalthinking}. Decision-focused learning trains predictors for downstream optimization quality rather than prediction accuracy alone \\citep{wilder2019melding}. Our prospective policy instead prioritizes extraction chunks using a bound on action-utility ambiguity and stops on conditional construction regret. It is neither a learned cascade nor a calibrated risk-control procedure; this operational distinction does not establish novelty priority or empirical superiority.\n% TODO: add 2-4 references on LLM numerical/financial reasoning evaluation"
+  },
+  {
+    "before": "% TODO: position selective repair against adaptive-inference, cascade and decision-focused information-acquisition methods before any novelty claim.",
+    "after": "% Prior-art positioning appears in Related work; no novelty-priority claim is made."
+  },
+  {
+    "before": "Missing source records, inconsistent unit contracts or unresolved inclusion prevent certification. Source spans verify provenance, not semantics; unverified model estimates cannot define certified point intervals.",
+    "after": "Missing source records, inconsistent unit contracts or unresolved inclusion prevent certification. Source spans verify provenance, not semantics; unverified model estimates cannot define certified point intervals.\n\n\\textbf{Executable admission boundary.} The CPU reference profile checks exact record identity, source offsets, currency and a restricted, explicitly typed construction-price field before admitting a point interval; it rejects ambiguous or unsupported prose. Repairs must pass the same checks and produce nested, nonempty intervals. Appendix~\\ref{app:admission} specifies the contract and failure handling. This profile makes admission reproducible, but cannot certify unrestricted language or the source's factual accuracy. Since the parser can itself read every field it admits, parser-only calculation remains a necessary comparator."
+  },
+  {
+    "before": "Intervals crossing no feasible bid contribute zero. $W_t$ bounds potential utility uncertainty, not expected repair gain.",
+    "after": "Intervals crossing no feasible bid contribute zero. For any fixed bid, the chunk contribution to $H_t-L_t$ is at most $W_t(g)$ because the sum of per-record maxima bounds the maximum of the corresponding sum. Thus $W_t$ bounds potential utility uncertainty, not expected repair gain."
+  },
+  {
+    "before": "Additional calls do not guarantee progress or lower cost. If evidence cannot justify narrower intervals, the policy may abstain. Arithmetic, tie handling and certificate evaluation remain deterministic CPU operations; the language model supplies extraction proposals.",
+    "after": "Additional calls do not guarantee progress or lower cost. If evidence cannot justify narrower intervals, the policy may abstain. Arithmetic, tie handling and certificate evaluation remain deterministic CPU operations; the language model supplies extraction proposals. The companion CPU reference implements admission, interval updates, action selection, chunk priority and call-budget accounting; it has no model backend or independent service evaluation."
+  },
+  {
+    "before": "Report held-out profit and regret, executable extraction, containment failures, coverage, and full stage resources.",
+    "after": "Evaluate cost, held-out profit and completion coverage jointly: apparent savings obtained by abstaining on harder decisions are not sufficient evidence of efficiency. Report held-out profit and regret, executable extraction, containment failures, coverage, and full stage resources."
+  },
+  {
+    "before": "The proposed extraction-repair policy has no independent evaluation. Its certificate is conditional on complete relevant records and valid construction-price intervals, and does not bound held-out regret.",
+    "after": "The proposed extraction-repair policy has no independent evaluation. Its conservative admission profile covers an explicit source grammar, not general financial language; rejecting unsupported prose can sharply limit completion coverage. CPU fixtures check implementation and conditional algebra, not model extraction accuracy. Its certificate is conditional on complete relevant records and valid construction-price intervals, and does not bound held-out regret."
+  },
+  {
+    "before": "\\bibliography{references}",
+    "after": "\\bibliography{references,method_references}"
+  },
+  {
+    "before": "\\end{document}",
+    "after": "\n\\section{Executable admission and CPU reference contract}\\label{app:admission}\n\\textbf{Public inputs and interpretation.} A frozen manifest lists every relevant construction record, its unique ID and source text, a common currency, supplied private value and feasible menu. Record inclusion must be resolved from public information before evaluation. The CPU profile interprets only a whole-record field of the form \\texttt{record\\_id=<ID>; price\\_to\\_beat=<amount> <currency>}, with a finite nonnegative decimal amount in the declared currency. It performs no currency conversion or implicit interpretation of an opening bid, offer, superseded draft or withdrawal. Different wording, multiple amounts, missing units or extra prose remain unresolved. The declared source schema must actually identify the construction price for this task; syntactic acceptance alone cannot establish real-world factual truth.\n\n\\textbf{Admission and updates.} An extraction proposal must name a manifest ID and exact character offsets for the amount in that record. The verifier checks the entire source grammar, ID, currency, amount and offsets independently of the proposal, and admits the verified amount as a point interval. Schema-valid but numerically wrong proposals, hallucinated or duplicate IDs, unsupported spans and conflicting updates are logged and rejected. Unknown records retain $[0,+\\infty)$ and stay in the fixed denominator. A repair batch is checked atomically against its declared chunk IDs; invalid batches preserve the prior intervals. Source text is immutable and never treated as an instruction. Accepted updates must be nonempty subsets of prior intervals. No hidden prices, scoring labels or claimed model confidence enter admission.\n\n\\textbf{Accounting and validation boundary.} The reference uses exact rational arithmetic, the stated inclusive price threshold, lowest-bid ties and fixed chunk IDs. Each attempted call reserves an output cap within the remaining total allowance and consumes a call slot before execution; failures retain their charged tokens and recorded stage time. No model, prompt adapter or GPU timing pilot is supplied by this reference. Finite fixtures cover invalid manifests, unsupported amounts, stale spans, unit conflicts, nonnested updates, cap exhaustion and conditional action bounds. They are engineering checks, not independent extraction, coverage, utility or runtime results. Future evaluation must keep parser successes and failures and audit source-schema validity separately from numeric extraction correctness. The existing development traces use a different record-language protocol and cannot validate this profile without a separately frozen adapter and independent cases.\n\n\\end{document}"
+  }
+]

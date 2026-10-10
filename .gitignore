@@ -42,3 +42,13 @@ synthetic_existing4_server_package.zip
 offline_replay/outputs/
 cpu_revision/legacy_results/
 decision_audit/human_study/responses/
+
+# Local AI4F LaTeX build products; checked release PDF is tracked.
+ai4f_workshop/*.aux
+ai4f_workshop/*.bbl
+ai4f_workshop/*.blg
+ai4f_workshop/*.fdb_latexmk
+ai4f_workshop/*.fls
+ai4f_workshop/*.log
+ai4f_workshop/*.out
+ai4f_workshop/*.synctex.gz

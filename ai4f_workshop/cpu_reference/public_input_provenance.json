@@ -1,0 +1,12 @@
+{
+  "source_relative_path": "output/development_revision/data/diagnostic/tasks.json",
+  "source_sha256": "035afbefe784a8bb117fcdeba8f25ffeb0745e289cc698fbccbc6163dca28f4c",
+  "development_families_reused": 6,
+  "retained_fields": [
+    "family",
+    "id",
+    "text"
+  ],
+  "hidden_active_and_bid_fields_removed": true,
+  "role": "Engineering protocol check only; not held-out evaluation"
+}

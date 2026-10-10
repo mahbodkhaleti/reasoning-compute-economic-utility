@@ -1,0 +1,16 @@
+{
+  "calculator_comparison.csv": "39fd18c42f2be5a88f2e90926a34305dccc72b3b0d536303532d3345df890969",
+  "calculator_scenarios.csv": "d0e4f05a3f082d26c73f5e37880deb29df09b4e0824545c10283082890b96f2c",
+  "calculator_audit_manifest.json": "001815bb586892e79569ac1a8cad1484aa7bdf3aa1ef1c7432beea306f28cea1",
+  "adjacent_multiplicity.csv": "1d2e4ca5505b9ab59c5e1ae32f1bbf1b764d8c3271d48560b7ac7b08a8b806d5",
+  "gain_concentration.csv": "b8fc5d709b2b78f49aa292e3c1f2839c48ee665eb5c4c89efed24252e8189d29",
+  "recorded_compute_counters.csv": "b90d91d18a7493d5657ab02d6572915a6285e70517880bc70e989a0494114187",
+  "joint_monetary_uncertainty.csv": "6b52d3201807e67ff1e8297b2c6d5e2edb1b940d18ee406fa58b5278744f93ba",
+  "product_thresholds.csv": "f397ec5db878a039425889fb8d4a46c3c58c96516e98f1d76dc51b1de9d1447a",
+  "calculator_gap_closed.csv": "b0e49414e7ef9eea42e6ae6e3eb92a167d04b3a54e02f81024c74171d4db2500",
+  "freeform_sensitivity_summary.csv": "edd590be54195ed03411d4226261a19a07dcf20519a733eb318544dfc839b219",
+  "calculator_error_audit_reference.tex": "19f82a22b21f0fc800d49e588463fd4623d5ced6d06e5b82838a9559907c5de0",
+  "cross_model_summary_reference.tex": "3c7d705b2bc69218f894168b61bedbc03e2f3843eda010a82a089a710d1f51b2",
+  "cpu_recorded_compute_reference.tex": "34a6883c8f61309a93b8dab6d717dbb0717e67a7106ef833c9ee19caa3cb6495",
+  "main_ai4f_v1_reference.tex": "a88ad57955c167ac952762ea07d8983c7974d31d71e035ecad4e035bc7f41579"
+}

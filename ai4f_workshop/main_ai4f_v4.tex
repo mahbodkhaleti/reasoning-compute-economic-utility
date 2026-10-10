@@ -1,0 +1,291 @@
+\documentclass[sigconf,anonymous,nonacm]{acmart}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\citestyle{acmauthoryear}
+\usepackage{amsmath,booktabs,tabularx}
+\usepackage{siunitx,xurl,placeins,stfloats,balance}
+\setlength{\emergencystretch}{2em}
+\newtheorem{proposition}{Proposition}
+\newtheorem{repairlemma}{Lemma}
+\sisetup{detect-all,table-number-alignment=center}
+\makeatletter\@ACM@balancefalse\makeatother
+\raggedbottom
+\acmConference[ICAIF 2026 Workshop]{The 3rd Workshop on LLMs and Generative AI for Finance}{November 2026}{Milan, Italy}
+\title[Reasoning Budgets for LLM Decision Services]{Evaluating Reasoning Budgets for LLM Decision Services: Auction Utility, Calculator Gaps, and Resource Accounting}
+\author{Anonymous Author(s)}
+\begin{document}
+\begin{abstract}
+We present an evaluation design for numerical LLM decision services that connects held-out economic scoring, a construction-calculator comparator and recorded resource use. Six checkpoints choose bids in 216 constructed consumer-auction tasks under supplied win probabilities and assigned reasoning budgets. Increasing budgets from 0 to 768 tokens closes 42--85\% of the aggregate zero-to-calculator utility gap, while every checkpoint remains below the calculator in simultaneous dollar-profit comparisons. Observable action classes distinguish displayed-objective optimality from held-out performance. Ratio and dollar aggregation can disagree, gains are concentrated, and free-form validity varies across checkpoints; conditional-on-valid-output utility therefore requires explicit denominators. Stage-specific accounting separates generation/answer, readout and confidence-query resources while disclosing excluded overheads. We specify decision-sensitive extraction repair as an untested prospective method. An appendix analyzes an assumed service contest: pooled cost scenarios imply private payment break-evens of \$0.03--\$0.18 and planner coefficients of \$0.02--\$0.12, with hardware and product sensitivity. The contribution is a controlled auction benchmark and audit design, not a validated financial deployment or agent system.
+\end{abstract}
+\keywords{LLM decision services, numerical consistency, calculator comparator, held-out economic utility, test-time compute, resource accounting}
+\maketitle
+\section{Introduction}
+An LLM embedded in a decision workflow should be assessed by the consequences of the action it recommends, as well as by the resources required to produce it. Fluent reasoning is insufficient when an inexpensive numerical method can solve the calculation. A useful preliminary evaluation isolates action selection, supplies a transparent objective and checks whether additional assigned reasoning budget buys economic utility.
+
+A numerical subtask that can arise in financial decision-support services is choosing among candidate quotes or prices conditional on supplied probabilities. This is a motivating analogy: our benchmark isolates the calculation/action-selection step in a controlled consumer-auction setting. Models receive a private value, feasible bids and estimated win probabilities, removing forecasting and strategic learning. No securities, credit or banking data are used, and transfer to institutional finance is untested.
+
+The evaluation contribution combines held-out bidder profit and regret, a construction-calculator comparator, observable objective-agreement classes, output-validity and aggregation checks, and recorded inference-call resources. It connects numerical consistency to decision consequences without treating either fluent explanations or conditional-on-valid-output scores as sufficient workflow validation. The ancillary service contest is analyzed in Appendix~\ref{app:servicecontest}: it tests allocation assumptions using the measured frontiers, rather than evaluating interacting LLM agents or governance interventions.
+These findings motivate a division of labor: preserve exact calculation and investigate whether language-processing effort should target ambiguities that can change the chosen action. Section~\ref{sec:selectiverepair} specifies that prospective extension. Its raw-record inputs differ from the supplied-probability benchmark, so the historical gains do not validate the repair policy.
+\section{Related work}
+Test-time scaling studies compare prompt, sampling and search budgets \citep{wei2022chain,snell2024scaling,wu2024inference,alomrani2025budget}. Centralized allocation \citep{wan2026shadowprice} and confidence-based stopping \citep{jurayj2025finalanswer} ask different questions from service competition. Economic benchmarks study rational choice, auctions and interacting markets \citep{fish2025econevals,chen2024aucarena,zhu2024synthetic}; Bazaar studies repeated pricing with hidden preferences \citep{ahmed2026bazaar}. The contest in Appendix~\ref{app:servicecontest} draws on rent seeking \citep{tullock1980efficient} and compute-provider games \citep{artola2026games}.
+The main empirical addition is held-out economic scoring with a construction-calculator comparator, observable action-loss diagnostics and resource accounting. Appendix~\ref{app:servicecontest} uses that evidence in a conditional service-allocation sensitivity analysis; neither component evaluates an autonomous multi-agent market.
+Adaptive allocation is established prior work: FrugalGPT learns model cascades to trade inference cost against answer accuracy \citep{chen2023frugalgpt}, while Conformal Thinking calibrates reasoning stopping rules to specified error risks \citep{wang2026conformalthinking}. Decision-focused learning trains predictors for downstream optimization quality rather than prediction accuracy alone \citep{wilder2019melding}. Our prospective policy instead prioritizes extraction chunks using a bound on action-utility ambiguity and stops on conditional construction regret. It is neither a learned cascade nor a calibrated risk-control procedure; this operational distinction does not establish novelty priority or empirical superiority.
+Financial numerical-reasoning benchmarks include FinQA, which couples financial-report questions with reasoning programs \citep{chen2021finqa}, and TAT-QA, which combines financial tables and text with symbolic numerical reasoning \citep{zhu2021tatqa}. These motivate separating language interpretation from calculation. Our auction benchmark instead measures the consequences of selecting an action under supplied probabilities and a held-out price distribution; it does not test performance on either financial benchmark.
+% TODO: add 2-4 references on LLM numerical/financial reasoning evaluation
+\section{Economic decision measurement}
+\label{sec:framework}
+\subsection{Economic consequences of a bid choice}
+A risk-neutral bidder with value $v$ selects a feasible $b\leq v$. Historical closing price $P$ is an exogenous price-to-beat proxy. Its empirical distribution gives
+\begin{equation}\begin{aligned}
+\widehat p(b)&=\widehat F_P(b)=N^{-1}\sum_{n=1}^N\mathbf1\{P_n\leq b\},\\
+U(b\mid v)&=\widehat p(b)(v-b).
+\end{aligned}\label{eq:auctionutility}\end{equation}
+The first-price payoff is a constructed decision objective; historical closing prices do not identify a first-price strategic equilibrium. Let $b_s^*=\arg\max_{b\in B_s}U_s(b\mid v_s)$ and let $\widehat b_{msc}$ be model $m$'s choice at budget $c$:
+\begin{equation}\begin{aligned}
+A_{msc}&=\mathbf1\{\widehat b_{msc}=b_s^*\},\\
+R_{msc}&=U_s(b_s^*\mid v_s)-U_s(\widehat b_{msc}\mid v_s),\\
+Q_{msc}&=U_s(\widehat b_{msc}\mid v_s)/U_s(b_s^*\mid v_s).
+\end{aligned}\label{eq:metrics}\end{equation}
+All optimum profits are positive. Repetitions are averaged within scenario/budget cells. Equal-scenario summaries are
+\begin{equation}\begin{aligned}
+q_m(c)&=S^{-1}\sum_s Q_{msc},\qquad
+\overline R_m(c)=S^{-1}\sum_s R_{msc},\\
+\overline A_m(c)&=S^{-1}\sum_s A_{msc}.
+\end{aligned}\label{eq:frontier}\end{equation}
+Mean dollar profit $\overline U_m(c)=S^{-1}\sum_s U_s(\widehat b_{msc}\mid v_s)$ instead weights each dollar equally. It need not rank intermediate budgets like mean scenario ratios. Neither statistic is total auction surplus. We retain the discrete frontiers without smoothing.
+
+\section{Data, inference protocol and uncertainty}
+\label{sec:protocol}
+We use 10,681 bid records from 628 eBay auctions in Palm Pilot M515 PDA, Xbox and Cartier categories \citep{jank2010modeling,onlineauctionsdataset}. After excluding inconsistent opening bids, seed 20260819 assigns auctions within product to a 70/30 construction/scoring split. The 216 constructed tasks form 54 product/private-value families, with four candidate variants across five- and seven-bid menus. Candidate generation does not condition on the optimum.
+
+Prompts supply private value, bids and construction-sample win probabilities rounded to four decimals; scoring uses held-out prices. The calculator maximizes the construction objective; a display-matched sensitivity checks the effect of its precision advantage. Option-order replications retain labels rather than positions. This setup isolates calculation/action selection, not financial forecasting, strategic bidding or elicited preferences.
+
+Six checkpoints span Phi-mini, Qwen3-4B/8B/14B, DeepSeek-8B and Granite-8B. Greedy assigned budgets are $\{0,\allowbreak64,\allowbreak128,\allowbreak256,\allowbreak512,\allowbreak768\}$, with orders $\{11,23,37\}$. The stochastic frontier protocol uses $\mathcal C_S=\{128,\allowbreak384,\allowbreak768\}$, five seeds $\{1,7,21,42,99\}$, temperature 0.6, top-$p$ 0.95 and fixed order 314159. For positive budgets, the runner fixes minimum and maximum new tokens and suppresses EOS. Thus budget is a token boundary, not semantic completion. A separate constrained-label forward pass selects the candidate; final-answer/readout tokens are outside $c$. No-thinking, native-length and free-form controls are separate. Granite has a different native template. The original four checkpoint revisions were attributed retrospectively from a disclosed server-cache audit; Qwen3-14B and Granite revisions were recorded contemporaneously.
+
+Greedy endpoints average orders before 2,000 paired scenario draws. The same sampled scenarios retain cross-budget dependence:
+\begin{equation}
+q_m^{(d)}(c)=S^{-1}\sum_{r=1}^S Q_{m,I_r^{(d)},c}.
+\label{eq:bootstrapfrontier}\end{equation}
+Economic contrasts use 10,000 product-stratified value-family draws, preserving all four variants. These exploratory intervals condition on the original products, prompts and construction/scoring split. A separate auction-CDF bootstrap re-scores fixed choices; it does not represent every source of uncertainty. Appendix~\ref{app:servicecontest} reports joint runtime/quality uncertainty for the cost-scenario sensitivity, including its ratio-conditioning rules.
+
+\section{Evaluation design for numerical decision services}\label{sec:evaluation}
+\subsection{Held-out utility and construction-calculator comparison}
+All six greedy 0-to-768 utility gains are positive (Table~\ref{tab:endpoints}, Figure~\ref{fig:benchmark}); intermediate curves have dips and plateaus. Five stochastic generations retain positive 128-to-768 endpoint gains of 0.067--0.189. Family-clustered dollar-profit gains are \$11.11--\$46.36 per constructed decision, with pointwise intervals above zero. Greedy and stochastic estimates are separate protocols, not interchangeable endpoints.
+\input{tables/endpoints}
+\begin{figure*}[t]\centering
+\includegraphics[width=0.9\textwidth]{figures/benchmark_frontiers.pdf}
+\Description{Left: stochastic utility curves at three assigned budgets for six checkpoints. Right: greedy zero-to-768 aggregate calculator-gap closure with conditional family intervals.}
+\caption{Separate protocols: left shows means over 216 scenarios and five stochastic seeds at 128, 384 and 768 tokens; right shows order-averaged greedy gap closure, with pointwise 95\% value-family bootstrap intervals. Gap closure is a fraction of aggregate mean-ratio deficit, not the fraction of tasks solved. The calculator remains stronger in simultaneous dollar-profit comparisons.}\label{fig:benchmark}\end{figure*}
+
+The full-precision construction calculator has $q_{\rm calc}=0.981364$. The gap-closed statistic is $(q_m(768)-q_m(0))/(q_{\rm calc}-q_m(0))$, an aggregate mean-ratio comparison, not the fraction of tasks solved. At 768 tokens, all six model-minus-calculator dollar-profit simultaneous bands remain negative. Rounding the calculator's probabilities to the prompt's display precision changes one scenario's bid and mean profit by only \$0.0113, retaining the six disadvantages. More reasoning therefore shows progress without eliminating the comparator deficit.
+
+The full-precision construction calculator, scored on held-out prices, earns mean expected bidder profit of \$212.66 and mean held-out regret of \$3.09; it is utility-optimal on 155 of 216 scoring scenarios. Table~\ref{tab:calculatorerroraudit} reports the greedy 768-token comparison, with exploratory simultaneous 95\% bands across six checkpoints. Each row retains all 216 scenarios and three option orders. The fraction of records beating the construction calculator on held-out profit is only 2.2--8.0\%; occasional wins do not reverse the aggregate deficit.
+\input{tables/calculator_error_audit}
+\subsection{Three-part loss and resource audit}
+A numerical decision service should be evaluated on three distinct components, rather than a single success score:
+\begin{enumerate}
+\item \textbf{Action loss under displayed information.} Let $b_{\rm disp}^*$ maximize expected profit using the four-decimal probabilities actually shown to the model. Displayed-objective regret compares the chosen bid with that optimum under the same information. At 768 tokens, 42.1--86.3\% of choices maximize the displayed objective; 11.9--52.0\% are suboptimal under both displayed and held-out objectives. These observable action classes audit numerical consistency, not the model's internal arithmetic or reasoning mechanism.
+\item \textbf{Distribution-transfer loss.} Displayed-optimal but held-out-suboptimal actions constitute 9.4--22.8\% of 768-token choices. They illustrate why optimizing the supplied construction distribution need not optimize held-out profit. This class is a diagnostic of objective agreement, not a causal attribution to distribution shift alone: rounding and ties also enter the comparison.
+\item \textbf{Complete recorded service-call resources.} Inference-call accounting should cover generation plus answer, constrained readout, and confidence queries where the protocol performs them. The historical counters record these stages separately. Their sums exclude loading, failed/preliminary work, downtime, some host overhead and project-wide wall clock; they are not complete deployment cost or matched GPU/CPU latency. Section~\ref{sec:callresources} states the measured boundary.
+\end{enumerate}
+These are three audit components, not three independent, nonnegative terms that can simply be added. The held-out regret accounting is
+\[
+R^{\rm test}(\widehat b)=R^{\rm test}(b_{\rm disp}^*)+
+\bigl[U^{\rm test}(b_{\rm disp}^*)-U^{\rm test}(\widehat b)\bigr].
+\]
+The second term can be negative. Displayed-objective loss uses a different payoff function; its magnitude is not interchangeable with that held-out difference. Resource use is reported alongside decision loss rather than silently converted into bidder profit. This separation makes the evaluation design auditable while preserving the limits of what the experiment identifies.
+
+\begin{table*}[!b]
+\caption{Reporting checklist for numerical decision services.}\label{tab:reportingchecklist}
+\centering\small
+\begin{tabularx}{\textwidth}{@{}p{0.20\textwidth}XX@{}}\toprule
+Audit item & What we measured here & What remains unmeasured \\\midrule
+Deterministic comparator & Construction calculator and display-matched sensitivity versus model choices & Tool routing and escalation policies \\
+Displayed-objective optimality & Agreement with the optimum under supplied, displayed probabilities & Internal arithmetic and reasoning mechanisms \\
+Held-out transfer loss & Objective disagreement and regret on held-out auction prices & Causal attribution to distribution shift alone; financial transfer \\
+Ratio vs dollar aggregation & Scenario ratios, dollar profit, concentration and corrected adjacent contrasts & Broad-population or causal decomposition \\
+Offered-decision denominator (validity) & Free-form validity, paired-valid utility sensitivities and complete constrained-label decisions & Utility under an invalid-action, abstention or retry policy \\
+Recorded stage resources & Generation/answer, readout and confidence-query counters, with protocol-specific coverage & Loading, failed work, complete wall clock and end-to-end deployment cost \\
+\bottomrule\end{tabularx}
+\end{table*}
+
+\subsection{Ratio versus dollar aggregation}
+Nine of thirty adjacent contrasts (five adjacent budget pairs across six checkpoints) have opposite point directions under ratio and dollar aggregation. Zero of those nine have both directions significant after Holm correction across sixty exploratory family sign-flip tests; those tests assume sign symmetry under the null. The largest 22 tasks contribute 80.0--86.7\% of positive dollar gains; negative gains remain in the means. Product, option width and checkpoint main effects explain little of this variation. These are descriptive concentration checks, not a causal attribution or broad-population decomposition.
+
+\subsection{Invalid outputs and decision denominators}
+The fixed free-form parser accepts displayed candidate bids only; invalid responses remain missing, and validity ranges from 29.1\% to 96.7\%. Paired-valid sensitivities change sample composition. Readout disagreement is associated with greater regret for five checkpoints at 768; Granite's contrast has only twelve disagreement records and is excluded from pooled statements. Literal closure markers cannot establish semantic completion or the causal effect of forced length.
+For workflow-level evaluation, report validity and utility on an \emph{offered-decision denominator}, alongside any conditional-on-valid-output statistics. This avoids presenting a selected subset as the performance of all offered decisions. A prospective service must specify how invalid actions are handled; an abstention payoff or retry policy is not invented here. The free-form utility sensitivities remain conditional on valid paired cells. The primary constrained-label results remain separate and retain all candidate decisions; this recommendation does not rescore either protocol.
+
+\subsection{Construction calculator as a required tool comparator}
+The construction calculator is a mandatory comparator for this benchmark because the supplied quantities define a small numerical optimization. The endpoint gains establish progress with assigned reasoning budget, not a reason to replace that comparator: it remains stronger in simultaneous dollar-profit comparisons, and intermediate gains are uneven. This is an evaluation of a comparator, not an experiment in which an LLM calls a tool.
+
+\textbf{Untested design implication.} A potential decision-support workflow should retain a deterministic calculation path when the objective and numerical inputs are known, and evaluate the LLM on language interpretation or uncertain-context components. That division of labor, tool routing and any escalation policy have not been implemented or evaluated. Section~\ref{sec:selectiverepair} specifies a prospective repair policy within this division of labor. Before applying the design to investment, credit or risk, one would need an appropriate action set, payoff, information-at-decision-time specification, financial data and temporal validation. Table~\ref{tab:reportingchecklist} summarizes what this benchmark does and does not measure.
+
+\subsection{Recorded service-call resources}\label{sec:callresources}
+The audit retains 50,544 historical records, 8,424 per checkpoint, and separates primary generation/answer, constrained readout and verbal-confidence query counters (Table~\ref{tab:resources}). All recorded primary timers are finite. Loading, downtime, host overhead, failed/preliminary work and complete project wall clock remain outside these sums. Whole-device energy telemetry is not isolated-model energy. These stage totals describe the historical protocols, not matched-hardware speed rankings.
+\input{tables/resources}
+For the fixed-budget protocol, the primary timer already includes generation and answer, so those stages must not be counted twice when adding constrained-readout and confidence-query counters. Stage coverage varies across historical control protocols and must be checked against the runner before summing components. Table~\ref{tab:resources} preserves the primary/readout totals; the separately stored confidence-query counters are retained in the companion evidence. Recorded stage sums are a resource-accounting component of the evaluation, not an end-to-end service-cost estimate. A complete deployed-call measurement would also need the excluded overheads and its actual invalid-output/retry policy.
+
+\FloatBarrier
+\section{Proposed method: decision-sensitive extraction repair}\label{sec:selectiverepair}
+\textbf{Status and task boundary.} This prospective method has no service evaluation or new experimental results. It targets extraction of construction-sample price-to-beat records from raw text; private value and the feasible menu remain supplied. The historical benchmark already supplies numerical probabilities, so direct calculation remains its appropriate baseline. The proposed distinction is economic sensitivity of extraction repair; generic adaptive allocation and tool use are not claimed as new.
+% Prior-art positioning appears in Related work; no novelty-priority claim is made.
+
+\subsection{Source-grounded ambiguity and numerical bounds}
+Let $B$ be a finite nonempty feasible menu with $0\leq b\leq v$. A public manifest defines the complete relevant population of size $N>0$, record IDs, source text and units. Resolve inclusion publicly before applying the fixed-$N$ calculation; hidden activity labels and scoring prices are unavailable. At state $t$, each construction price has an interval $I_{jt}=[\ell_{jt},u_{jt}]$. Unresolved values retain the full nonnegative range, possibly with $u_{jt}=+\infty$. Missing source records, inconsistent unit contracts or unresolved inclusion prevent certification. Source spans verify provenance, not semantics; unverified model estimates cannot define certified point intervals.
+
+\textbf{Executable admission boundary.} The CPU reference profile checks exact record identity, source offsets, currency and a restricted, explicitly typed construction-price field before admitting a point interval; it rejects ambiguous or unsupported prose. Repairs must pass the same checks and produce nested, nonempty intervals. Appendix~\ref{app:admission} specifies the contract and failure handling. This profile makes admission reproducible, but cannot certify unrestricted language or the source's factual accuracy. Since the parser can itself read every field it admits, parser-only calculation remains a necessary comparator.
+
+Using the price-to-beat objective and the $\leq$ convention of Eq.~\ref{eq:auctionutility}, define
+\[
+\begin{aligned}
+p_t^-(b)&=N^{-1}\sum_j\mathbf1\{u_{jt}\leq b\},\\
+p_t^+(b)&=N^{-1}\sum_j\mathbf1\{\ell_{jt}\leq b\},\\
+L_t(b)&=(v-b)p_t^-(b),\quad
+H_t(b)=(v-b)p_t^+(b).
+\end{aligned}
+\]
+For an action $b$, a conservative regret certificate is
+\[
+\begin{aligned}
+D_t(b)&=\max\bigl(\{0\}\cup
+\{H_t(a)-L_t(b):a\in B\setminus\{b\}\}\bigr),\\
+\widehat b_t&\in\arg\min_{b\in B}D_t(b),
+\end{aligned}
+\]
+Ties select the lowest bid. $U_{\rm raw}$ is Eq.~\ref{eq:auctionutility} on correctly read construction records; bounds exclude held-out scoring and market welfare.
+
+\begin{repairlemma}[Conditional construction-regret certificate]\label{lem:repaircertificate}
+If every true relevant construction price belongs to its stated interval, then
+\[
+\max_{a\in B}U_{\rm raw}(a)-U_{\rm raw}(\widehat b_t)
+\leq D_t(\widehat b_t).
+\]
+For a fixed record population, value and menu, nonempty nested interval refinements make $\min_{b\in B}D_t(b)$ nonincreasing.
+\end{repairlemma}
+\begin{proof}
+Interval containment implies $L_t(b)\leq U_{\rm raw}(b)\leq H_t(b)$ because $v-b\geq0$. If the selected action is optimal, regret is zero; otherwise the optimal-minus-selected utility is bounded by $H_t(a)-L_t(\widehat b_t)$, hence by its certificate. Nesting weakly increases lower bounds and decreases upper bounds, so each $D_t(b)$ and its minimum decrease weakly. This does not imply monotone realized utility when actions change.
+\end{proof}
+Containment is an assumption to check, not a consequence of LLM confidence. Learnt intervals require separate calibration and empirical containment reporting; no distribution-free coverage claim is made. Repair cannot certify population profit under a different scoring distribution, even when the construction intervals are exact.
+
+\subsection{Selective repair and stopping policy}
+Partition the source records into fixed chunks $g$. An inexpensive initial extraction supplies candidate values, source spans and unresolved fields. CPU checks retain conservative ambiguity intervals and compute the certificate. For each chunk, define the potential decision sensitivity
+\[
+W_t(g)=N^{-1}\sum_{j\in g}\max_{b\in B}
+(v-b)\mathbf1\{\ell_{jt}\leq b<u_{jt}\}.
+\]
+Intervals crossing no feasible bid contribute zero. For any fixed bid, the chunk contribution to $H_t-L_t$ is at most $W_t(g)$ because the sum of per-record maxima bounds the maximum of the corresponding sum. Thus $W_t$ bounds potential utility uncertainty, not expected repair gain. Chunks with positive sensitivity and remaining repair allowance are eligible. Select the largest $W_t(g)/\widehat c(g)$, where the strictly positive cost estimate $\widehat c(g)$ comes from a separate timing pilot and includes the specified repair-call stages. Ties use public chunk IDs.
+
+The policy takes a construction-regret tolerance $\epsilon\geq0$, a hard total generation cap and a finite repair-call limit as inputs. Every call must fit its configured output cap within the remaining generation allowance:
+\begin{enumerate}
+\item Validate the manifest, feasible menu and unit contract; return unresolved if invalid. Extract once, retaining every manifest ID and unknown prices as full-range intervals.
+\item If the manifest is valid and $D_t(\widehat b_t)\leq\epsilon$, return $\widehat b_t$ with its certificate and provenance trace.
+\item If another call fits both caps, re-extract the highest-priority eligible chunk. Accept only nonempty, evidence-supported nested refinements; conflicting or unsupported updates leave the prior interval intact and are logged. Recompute the action and certificate after each accepted update.
+\item When no call fits or a cap is reached, return unresolved/abstention if the tolerance is unmet. Count all unsuccessful calls and verification work in resources.
+\end{enumerate}
+Additional calls do not guarantee progress or lower cost. If evidence cannot justify narrower intervals, the policy may abstain. Arithmetic, tie handling and certificate evaluation remain deterministic CPU operations; the language model supplies extraction proposals. The companion CPU reference implements admission, interval updates, action selection, chunk priority and call-budget accounting; it has no model backend or independent service evaluation.
+
+\subsection{Prospective evaluation and claim boundary}
+Freeze prompts, interval-admission rules, tolerance, caps and timing estimates on development families before evaluation on disjoint families. A one-checkpoint pilot can cap repairs at two calls per offered task; the task count must be fixed from timing before inspecting evaluation outcomes. Reused development families cannot supply independent confirmation. Compare inexpensive extraction plus calculator, uniform high-budget extraction plus calculator, random-chunk repair with matched resource caps, and a public-text scripted parser plus calculator. Verified-record calculation is an explicitly information-advantaged diagnostic, not a deployable baseline.
+
+Evaluate cost, held-out profit and completion coverage jointly: apparent savings obtained by abstaining on harder decisions are not sufficient evidence of efficiency. Report held-out profit and regret, executable extraction, containment failures, coverage, and full stage resources. Report offered-decision performance under a predeclared abstention payoff alongside conditional-on-completion scores; no payoff or repaired historical score is assigned here. Keep construction certificates separate from held-out losses, stratify the certificate audit by containment, and pair comparisons at the family level. Shared cached extraction may accelerate replay, but its full cost must be charged to every compared workflow that requires it. Retain rule-based parser successes and failures. Sensitivity-priority ablations should include random repair and confidence-based repair; no fixed-budget dominance, governance validation or method-novelty priority is asserted without evidence.
+
+\section{Resource-cost scenarios and incentive sensitivity (summary)}\label{sec:costsummary}
+Hardware and prices are cost scenarios, not historical bills or a controlled comparison across all checkpoints. An assumed service contest, rather than observed LLM-agent behavior, maps quality into private and planner allocations. At $\gamma=1$, pooled private payment break-even values are \$0.03--\$0.18 and planner coefficients are \$0.02--\$0.12 per unit benchmark quality. Qwen3-14B uses a separate L40S scenario; the other five use RTX 4090 scenarios. Product-specific private bounds vary up to 30.40-fold, so the pooled headline is task-mixture dependent. These bounds support only the maximum \emph{tested} budgets, not an unrestricted optimum.
+
+Appendix~\ref{app:servicecontest} gives the model, complete finite-game analysis, proofs, cost accounting and the break-even table (Table~\ref{tab:money}). It is an incentive sensitivity analysis, not evidence of strategic compute choices or identified client demand.
+
+\section{Limitations and reproducibility}\label{sec:limitations}
+Three products, fixed prompts/splits, supplied probabilities and a small bid menu limit transfer. Historical prices are an exogenous proxy. Forced tokens imperfectly represent useful computation, templates differ, and original-four revision attribution is retrospective. A development diagnostic/probe uses only six adapted families and supports no primary claim; its richer raw-record extraction losses do not substitute for independent validation. Human-study materials have no collected responses.
+The proposed extraction-repair policy has no independent evaluation. Its conservative admission profile covers an explicit source grammar, not general financial language; rejecting unsupported prose can sharply limit completion coverage. CPU fixtures check implementation and conditional algebra, not model extraction accuracy. Its certificate is conditional on complete relevant records and valid construction-price intervals, and does not bound held-out regret. An executable extraction or a source citation alone does not establish interval containment. Empirical cost savings, improved utility, financial transfer and novelty over existing adaptive methods remain unestablished.
+
+Independent richer/strategic decisions, matched native and above-768 reasoning, observed client selection/value and endogenous compute choices remain missing. Modeled service welfare (Appendix~\ref{app:servicecontest}) excludes latency/environmental externalities and heterogeneous clients. Saved-output replay cannot fill those identification gaps. The anonymous primary release preserves prompts, revision provenance and full historical outputs; the companion evidence package preserves CPU scripts, compact inputs, hash manifests and conditional uncertainty.\footnote{\url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}} All empirical analyses reuse the saved runs; the CPU reference adds engineering fixtures only, and no new GPU inference was performed. The main evaluation results and limits are stated here; the ancillary contest assumptions and results are reported in Appendix~\ref{app:servicecontest}. The companion evidence supports saved-data replay without adding independent confirmation.
+\section{Conclusion}
+Held-out economic utility, a construction-calculator comparator and recorded resources provide complementary evidence for evaluating numerical LLM decision services. Assigned reasoning budgets improve endpoint utility while leaving an aggregate calculator deficit; weighting, invalid-output denominators and task composition materially affect interpretation. Decision-sensitive extraction repair specifies a prospective extension with a conditional construction-regret certificate; its utility and cost effects remain untested. The design implications for deterministic calculation paths and financial workflows remain untested. Appendix incentive sensitivity clarifies compute assumptions without establishing observed strategic behavior or financial deployment.
+\FloatBarrier
+\balance
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references,method_references}
+\clearpage
+\nobalance
+\appendix
+\section{Service-contest sensitivity model}\label{app:servicecontest}
+This appendix presents the ancillary allocation model and its sensitivity evidence. It is an assumed contest between recommendation providers, not observed LLM-agent behavior or identified financial service demand.
+\input{tables/money}
+\subsection{A specified contest between recommendation providers}
+Two providers choose $c_i\in\mathcal C$ and pay incremental inference cost. Benchmark quality is treated as a proxy for recommendation quality; it is not empirically identified service demand. The selected provider receives fixed payment $V$. For symmetric quality $q(c)>0$, the Tullock rule and private payoff are
+\begin{equation}\begin{aligned}
+P_i(c_i,c_j;\gamma)&=\frac{q(c_i)^\gamma}{q(c_i)^\gamma+q(c_j)^\gamma},\\
+\pi_i(c_i,c_j)&=VP_i(c_i,c_j;\gamma)-\lambda c_i.
+\end{aligned}\label{eq:contest}\end{equation}
+Here $\gamma>0$ is specified selection sensitivity; service selection differs from the bid-win probability $\widehat p$. Dividing by payment gives
+\begin{equation}
+\widetilde\pi_i=P_i-\kappa c_i,\qquad \kappa=\lambda/V.
+\label{eq:normalizedprivate}\end{equation}
+If selected-service benefit is $\beta q(c_{\rm winner})$, contract payments cancel when client and provider payoffs are summed:
+\begin{equation}\begin{aligned}
+W_\beta(c_1,c_2)&=\beta Q_\gamma(c_1,c_2)-\lambda(c_1+c_2),\\
+Q_\gamma(c_1,c_2)&=P_1q(c_1)+P_2q(c_2).
+\end{aligned}\label{eq:welfare}\end{equation}
+This modeled service welfare differs from auction surplus. Its normalized form is
+\begin{equation}
+\widetilde W=\rho Q_\gamma-\kappa(c_1+c_2),\qquad \rho=\beta/V.
+\label{eq:normalizedwelfare}\end{equation}
+A symmetric pure equilibrium is a mutual best response; we select the cheapest symmetric one under ties and separately enumerate the full equilibrium set. The planner maximizes over all ordered pairs. Total private compute above, equal to or below planner compute defines overcompute, alignment or undercompute. Against a fixed rival action, an increase from $c_a$ to $c_b$ is privately attractive when
+\begin{equation}
+\kappa<\frac{P_i(c_b,c_j;\gamma)-P_i(c_a,c_j;\gamma)}{c_b-c_a}.
+\label{eq:privatethreshold}\end{equation}
+For planner changes $(\Delta Q_\gamma,\Delta C)$, the comparison is
+\begin{equation}
+\kappa/\rho=\lambda/\beta<\Delta Q_\gamma/\Delta C.
+\label{eq:plannerthreshold}\end{equation}
+For provider-specific frontiers and costs, substitute $q_i(c_i)$ and $\lambda_i$; cross-checkpoint quality comparability remains an assumption. Absolute modeled welfare loss is $\Delta W=W_{\rm OPT}-W_{\rm NE}$. Relative loss divides by $W_{\rm OPT}$ only when positive; otherwise it is undefined, without a near-zero cutoff.
+\subsection{Finite-game enumeration}
+All nine planner pairs and all private pure best responses are enumerated. For the symmetric game, let $R_{ab}=P_{ab}-1/2-\kappa(c_a-c_b)$. Adding the rival's cost leaves best responses unchanged and gives a constant-sum game. $R$ is skew symmetric, with value zero and common optimal-strategy polytope
+\begin{equation}
+\mathcal S=\{x\geq0:\mathbf1^\top x=1,\ Rx\leq0\}.
+\label{eq:equilibriumpolytope}\end{equation}
+The complete Nash set is $\mathcal S\times\mathcal S$; vertices and vertex pairs bound expected compute and welfare. Exact payoff crossings define allocation boundaries; phase-grid areas have no market-frequency interpretation. Ties use cheapest best responses and lexicographic planner maximizers.
+\subsection{Cost-accounting scenarios}
+Incremental costs use OLS runtime slopes with an intercept over the three stochastic budgets. The five RTX 4090 scenarios use \$0.74/hour; Qwen3-14B uses its own L40S slope at a separate \$1/hour scenario \citep{runpod2026pricing}. These imply \$2.46--\$4.46$\times10^{-6}$ and \$1.23$\times10^{-5}$ per reasoning token, respectively. Hardware is not matched across all six models, and the prices are accounting scenarios rather than measured historical bills.
+
+An electricity-only component uses incremental whole-device joules at hypothetical \$0.10/kWh. It is neither a complete deployment-cost bound nor added to rental accounting. Illustrative \$10$^{-5}$ and \$10$^{-4}$/token brackets are not measured API tariffs. At the higher bracket, pooled private-support margins at secondary $V_0=\$328.23$ remain 110--284. A local 21,600-call calculator-kernel benchmark has median 1.917 microseconds on a different CPU host, excludes parsing, and supports no GPU/CPU cost or speed comparison.
+\subsection{Joint runtime and quality uncertainty}
+Economic-contrast and auction-CDF bootstrap details are reported above (see Sec.~\ref{sec:protocol}). Joint cost/quality draws (seed 20261011) sample a stored seed for each selected scenario occurrence jointly across budgets, quality, runtime and energy. Prices and hardware are held fixed; these intervals do not capture deployment uncertainty. These are exploratory conditional intervals, fixing products, prompts, construction/scoring split, hardware and price. Ratio intervals condition on positive support bounds: Phi has seven of 10,000 draws with nonpositive private and planner bounds, retained as unsupported counts. Absolute-bound draws remain included.
+
+\subsection{Exact boundaries and break-even values}\label{sec:allocation}
+\begin{proposition}[Maximum-budget support]\label{prop:maxsupport}
+Let $c_H$ be the maximum budget. For symmetric positive quality under the stated selection rule, define
+\[
+K=\min_{c<c_H}\frac{P(c_H,c_H)-P(c,c_H)}{c_H-c}.\]
+\[
+r_1=\min_{(a,b)\ne(H,H)}\frac{q(c_H)-Q_\gamma(c_a,c_b)}{2c_H-c_a-c_b}.
+\]
+If $K,r_1>0$, high/high is a pure equilibrium iff $V\geq\lambda/K$, and is a planner maximizer iff $\beta\geq\lambda/r_1$, allowing equality ties.
+\end{proposition}
+\begin{proof}
+For each unilateral lower-budget deviation, high/high support is $\lambda/V\leq[P(H,H)-P(c,H)]/(c_H-c)$. Taking the minimum gives $K$. Comparing high/high with every lower-total planner pair gives $\lambda/\beta\leq[q(c_H)-Q_\gamma(a,b)]/(2c_H-c_a-c_b)$, hence $r_1$. Rearranging proves both bounds. If a bound is nonpositive, that ratio cannot give positive-cost support.
+\end{proof}
+At $\gamma=1$, pooled private break-evens $V^*=\lambda/K$ are \$0.034--\$0.080 for the five RTX scenarios and \$0.176 for Qwen3-14B's own L40S scenario. Planner coefficients $\beta^*=\lambda/r_1$ are \$0.022--\$0.051 and \$0.116 per unit benchmark quality (Table~\ref{tab:money}). These avoid dependence on an arbitrary reference payment. Above the respective bounds, both choices retain the maximum tested budgets; alignment is constrained by the menu, not proof of an unrestricted optimum.
+
+At $\gamma=1$, every pooled stochastic frontier yields overcompute, alignment and undercompute regions. Four checkpoints jump from 768 to 128 as private normalized cost rises; Qwen3-4B and Granite pass through 384. Planner total compute follows $1536\to896\to256$; the middle pair concentrates 768 on one provider and 128 on the other.
+
+\begin{proposition}[Structural regions]\label{prop:regions}
+For a finite menu with distinct costs, positive quality strictly maximized at its highest budget, and finite $\gamma>0$, all three allocation regions occur on open neighborhoods when positive cost and client-value domains are sufficiently broad.
+\end{proposition}
+\begin{proof}
+At zero cost, highest quality strictly dominates under the Tullock rule, and remains dominant at sufficiently small positive cost. Bounded selection gains make the cheapest action dominant at sufficiently large private cost. At fixed positive cost, the planner selects the cheapest pair for sufficiently small client value and highest/highest for sufficiently large value. Combining extremes yields all three regions; finiteness and strict choices give open neighborhoods. A flat frontier instead yields cheapest-action alignment at positive cost.
+\end{proof}
+The regions' existence is structural; the data locate their boundaries. Across six frontiers and four tested $\gamma$ values, full finite-game analysis finds one mixed-only open interval: Qwen3-4B at $\gamma=4$, approximately $(3.28603,3.28909)\times10^{-4}$. Score-origin shifts, isotonic envelopes and matched logit selection expose mapping dependence. Accuracy-based private support thresholds are 4.05--5.96 times utility-based bounds, with all six simultaneous differences positive. These changes concern selection assumptions, not measured client choice. Product-specific private bounds vary 1.59--30.40-fold within checkpoint, with Granite at the upper end: pooled cents-level thresholds depend on task mixture.
+
+\subsection{Different providers and modeled welfare}
+Fifteen distinct pairs at a common cost and ten RTX pairs at their own costs are evaluated at seven payments and $\gamma\in\{1,4\}$ with $\beta=V$: 210 common-cost plus 140 own-RTX games. Each of these 350 sampled points has one pure equilibrium, without establishing uniqueness over all parameters or excluding mixed equilibria. For DeepSeek/Phi at own costs and $\gamma=1$, payment \$0.03 gives private 128/128 and planner 768/128; \$0.07 gives private 768/128 and planner 768/768. Welfare losses are 2.69\% and 0.50\% of positive planner welfare, respectively. All 350 planner welfare denominators are positive. Changing $V$ alone leaves the planner unchanged at fixed $\beta$; a path with $\beta=V$ changes client value too.
+
+\section{Executable admission and CPU reference contract}\label{app:admission}
+\textbf{Public source contract.} A frozen manifest supplies unique relevant record IDs, immutable source text, one currency, private value and the feasible menu. Inclusion must already be resolved publicly. The CPU profile interprets only a whole-record field of the form \texttt{record\_id=<ID>; price\_to\_beat=<amount> <currency>}, with a finite nonnegative decimal amount. It performs no currency conversion or implicit interpretation of opening bids, superseded drafts or withdrawals. Extra prose, multiple amounts and missing units remain unresolved. The declared schema must identify this task's construction price; syntax alone cannot establish factual truth.
+
+\textbf{Atomic admission.} A proposal names a manifest ID and exact amount offsets. The verifier independently checks the entire grammar, identity, units, amount and offsets before admitting a point interval. Wrong numbers, duplicate IDs, unsupported spans or nonnested updates reject the whole repair batch without altering prior intervals. Unknown records retain $[0,+\infty)$ and stay in the fixed denominator. No hidden prices, scoring labels or model confidence enter admission. The parser can read every admitted field without an LLM.
+
+\textbf{Execution boundary.} Exact rational arithmetic preserves inclusive thresholds and lowest-bid ties. Each attempted call reserves an output cap within the remaining allowance and consumes a call slot before execution; failures retain their charged tokens and recorded stage times. The reference has no model backend or GPU timing pilot. Fixtures check malformed inputs, interval updates, action bounds and exhausted caps, not real extraction or statistical coverage. Existing development traces use a different record-language protocol; adapting them would require a frozen adapter and independent cases. The companion contract documents all checks and preserves unresolved outcomes.
+
+\end{document}

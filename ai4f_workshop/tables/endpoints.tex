@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Order-averaged deterministic endpoints over 216 paired scenarios. Accuracy is percent; intervals are 95\% paired scenario-bootstrap intervals for $q(768)-q(0)$. Gap closed is relative to the construction calculator's aggregate utility ratio 0.981364; it is not task accuracy.}
+\label{tab:endpoints}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & $q(0)$ & $q(768)$ & Difference (95\% CI) & Acc. 0 & Acc. 768 & Gap closed (\%) \\
+\midrule
+DeepSeek-8B & 0.775 & 0.950 & 0.175 [0.147, 0.204] & 21.5 & 64.7 & 84.8 \\
+Phi-mini & 0.718 & 0.829 & 0.111 [0.085, 0.139] & 19.1 & 38.3 & 42.2 \\
+Qwen3-4B & 0.752 & 0.916 & 0.164 [0.136, 0.193] & 21.1 & 57.4 & 71.4 \\
+Qwen3-8B & 0.763 & 0.907 & 0.144 [0.118, 0.170] & 23.1 & 55.2 & 65.8 \\
+Qwen3-14B & 0.749 & 0.916 & 0.167 [0.138, 0.196] & 23.8 & 59.6 & 71.8 \\
+Granite-8B & 0.740 & 0.897 & 0.157 [0.122, 0.190] & 20.7 & 46.3 & 65.0 \\
+\bottomrule
+\end{tabular}
+\end{table*}

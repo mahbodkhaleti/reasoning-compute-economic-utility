@@ -1,0 +1,219 @@
+{
+  "scope": "Read-only verification of existing values and editorial preservation; no experiment or new inference",
+  "discrepancies": [],
+  "inputs_sha256": {
+    "recorded_compute_counters.csv": "b90d91d18a7493d5657ab02d6572915a6285e70517880bc70e989a0494114187",
+    "calculator_comparison.csv": "39fd18c42f2be5a88f2e90926a34305dccc72b3b0d536303532d3345df890969",
+    "calculator_scenarios.csv": "d0e4f05a3f082d26c73f5e37880deb29df09b4e0824545c10283082890b96f2c",
+    "freeform_sensitivity_summary.csv": "edd590be54195ed03411d4226261a19a07dcf20519a733eb318544dfc839b219",
+    "calculator_audit_manifest.json": "001815bb586892e79569ac1a8cad1484aa7bdf3aa1ef1c7432beea306f28cea1",
+    "adjacent_multiplicity.csv": "1d2e4ca5505b9ab59c5e1ae32f1bbf1b764d8c3271d48560b7ac7b08a8b806d5",
+    "calculator_error_audit_reference.tex": "19f82a22b21f0fc800d49e588463fd4623d5ced6d06e5b82838a9559907c5de0",
+    "main_ai4f_v1_reference.tex": "a88ad57955c167ac952762ea07d8983c7974d31d71e035ecad4e035bc7f41579",
+    "cpu_recorded_compute_reference.tex": "34a6883c8f61309a93b8dab6d717dbb0717e67a7106ef833c9ee19caa3cb6495",
+    "cross_model_summary_reference.tex": "3c7d705b2bc69218f894168b61bedbc03e2f3843eda010a82a089a710d1f51b2",
+    "calculator_gap_closed.csv": "b0e49414e7ef9eea42e6ae6e3eb92a167d04b3a54e02f81024c74171d4db2500",
+    "joint_monetary_uncertainty.csv": "6b52d3201807e67ff1e8297b2c6d5e2edb1b940d18ee406fa58b5278744f93ba",
+    "product_thresholds.csv": "f397ec5db878a039425889fb8d4a46c3c58c96516e98f1d76dc51b1de9d1447a",
+    "gain_concentration.csv": "b8fc5d709b2b78f49aa292e3c1f2839c48ee665eb5c4c89efed24252e8189d29"
+  },
+  "checks": {
+    "supplied_calculator_table_values": "All six supplied rows match source rounded values; simultaneous rather than pointwise bands used",
+    "displayed_optimal_rate": {
+      "printed_range": [
+        42.1,
+        86.3
+      ],
+      "unrounded_range": [
+        42.12962962962961,
+        86.26543209876543
+      ]
+    },
+    "both_suboptimal_rate": {
+      "printed_range": [
+        11.9,
+        52.0
+      ],
+      "unrounded_range": [
+        11.882716049382715,
+        52.006172839506185
+      ]
+    },
+    "display_optimal_heldout_suboptimal_rate": {
+      "printed_range": [
+        9.4,
+        22.8
+      ],
+      "unrounded_range": [
+        9.413580246913583,
+        22.839506172839506
+      ]
+    },
+    "heldout_beats_calculator_rate": {
+      "printed_range": [
+        2.2,
+        8.0
+      ],
+      "unrounded_range": [
+        2.1604938271604937,
+        8.024691358024691
+      ]
+    },
+    "construction_calculator": {
+      "mean_heldout_profit": 212.65533785686654,
+      "mean_heldout_regret": 3.0912222309925426,
+      "heldout_optimal": 155,
+      "scenarios": 216,
+      "rounding_changes": 1,
+      "rounding_mean_loss": 0.011316872427983071
+    },
+    "aggregation": {
+      "adjacent_comparisons": 30,
+      "opposite_point_directions": 9,
+      "both_opposite_significant_after_Holm": 0,
+      "exploratory_tests": 60
+    },
+    "positive_gain_concentration": {
+      "tasks": 22,
+      "unrounded_range_percent": [
+        79.98224476441514,
+        86.73190774489188
+      ],
+      "negative_gains_remain_in_means": true
+    },
+    "freeform_validity_percent": [
+      29.089506172839506,
+      96.7335390946502
+    ],
+    "headline_break_even": {
+      "private_raw_range": [
+        0.034053511366046604,
+        0.176437717107846
+      ],
+      "planner_raw_range": [
+        0.022434548131585724,
+        0.11566435363083767
+      ],
+      "headline_rounding_decimals": 2,
+      "gamma": 1,
+      "Qwen3_14B_hardware": "separate L40S scenario"
+    },
+    "product_private_bound_max_fold": 30.404773874587526,
+    "abstract_gap_closed_percent": {
+      "raw_range": [
+        42.154760237289125,
+        84.77650253097273
+      ],
+      "whole_percent_rounding": [
+        42,
+        85
+      ]
+    },
+    "all_existing_tables": "Byte-identical; monetary table now in appendix; calculator audit values preserved",
+    "main_endpoint_table": "All six endpoint/accuracy/CI rows match full-paper source; gap-closed column matches saved CSV",
+    "resource_table": {
+      "deepseek_r1_llama_8b": {
+        "cells": 8424,
+        "primary_hours": 17.83771661680968,
+        "readout_hours": 0.16010777304712165,
+        "primary_kwh": 5.077185287085658
+      },
+      "granite_3_2_8b_instruct": {
+        "cells": 8424,
+        "primary_hours": 18.336550141522892,
+        "readout_hours": 0.23683550680345636,
+        "primary_kwh": 5.199781650477892
+      },
+      "phi4_mini_reasoning": {
+        "cells": 8424,
+        "primary_hours": 10.52504559942379,
+        "readout_hours": 0.09103336504712287,
+        "primary_kwh": 2.675399516307441
+      },
+      "qwen3_14b": {
+        "cells": 8424,
+        "primary_hours": 39.44102459072271,
+        "readout_hours": 0.27264930808664456,
+        "primary_kwh": 11.845981088945045
+      },
+      "qwen3_4b": {
+        "cells": 8424,
+        "primary_hours": 12.475965177629972,
+        "readout_hours": 0.10879646891715108,
+        "primary_kwh": 3.0065891956576376
+      },
+      "qwen3_8b": {
+        "cells": 8424,
+        "primary_hours": 19.29872573637499,
+        "readout_hours": 0.18087052067892362,
+        "primary_kwh": 5.176671269072382
+      }
+    },
+    "equations": "All 11 existing numbered equation blocks preserved verbatim; accounting identity is explicitly not an independent-cause decomposition",
+    "citations_and_repo": "All original citation occurrences, bibliography bytes and anonymous URL preserved; five verified references added in a separate bibliography",
+    "abstract_words": 161,
+    "intro_numbers": "No experimental numerical claim introduced; financial example is explicitly motivating analogy",
+    "latex": "No errors, warnings, undefined references or overfull boxes",
+    "anonymous_pdf": true
+  },
+  "calculator_rows": [
+    {
+      "model": "DeepSeek-8B",
+      "mean_difference": "-22.595285566304057",
+      "simultaneous_low": "-38.79868058985924",
+      "simultaneous_high": "-6.391890542748875",
+      "displayed_optimal_percent": 86.26543209876543,
+      "both_suboptimal_percent": 11.882716049382715
+    },
+    {
+      "model": "Phi-mini",
+      "mean_difference": "-33.67274969165848",
+      "simultaneous_low": "-55.77995345628888",
+      "simultaneous_high": "-11.56554592702808",
+      "displayed_optimal_percent": 42.12962962962961,
+      "both_suboptimal_percent": 52.006172839506185
+    },
+    {
+      "model": "Qwen3-4B",
+      "mean_difference": "-30.53534448819857",
+      "simultaneous_low": "-48.965350356888806",
+      "simultaneous_high": "-12.105338619508338",
+      "displayed_optimal_percent": 71.14197530864196,
+      "both_suboptimal_percent": 25.61728395061728
+    },
+    {
+      "model": "Qwen3-8B",
+      "mean_difference": "-30.374694419514018",
+      "simultaneous_low": "-45.84014792209905",
+      "simultaneous_high": "-14.909240916928987",
+      "displayed_optimal_percent": 67.74691358024693,
+      "both_suboptimal_percent": 28.08641975308642
+    },
+    {
+      "model": "Qwen3-14B",
+      "mean_difference": "-36.00386567841466",
+      "simultaneous_low": "-54.14635041378699",
+      "simultaneous_high": "-17.86138094304233",
+      "displayed_optimal_percent": 76.69753086419753,
+      "both_suboptimal_percent": 20.52469135802469
+    },
+    {
+      "model": "Granite-8B",
+      "mean_difference": "-15.086853883641314",
+      "simultaneous_low": "-24.893156706513125",
+      "simultaneous_high": "-5.280551060769502",
+      "displayed_optimal_percent": 53.54938271604941,
+      "both_suboptimal_percent": 41.2037037037037
+    }
+  ],
+  "pages": {
+    "total": 9,
+    "main_and_references": 7,
+    "main_narrative_end": 7,
+    "references_start": 7,
+    "appendix_start": 8,
+    "appendix_pages": 2,
+    "appendix_B_start": 9
+  },
+  "PDF_sha256": "84866fda7777a69a0b838d0cb96dc89383da4a547f593d9e48689c6007b84b81"
+}
