@@ -1,0 +1,2 @@
+qwen3_4b: smoke 1763 tokens in 10s (173 tok/s at smoke batch size; full batches are faster). Upper bounds at this rate: forced 56 min, unforced1024 64 min, unforced4096 256 min
+qwen3_4b: smoke 1688 tokens in 13s (130 tok/s at smoke batch size; full batches are faster). Upper bounds at this rate: forced 74 min, unforced1024 85 min, unforced4096 340 min

@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Where the eBay 768-token gap goes, \% of the gap [95\% interval], letters read with the block open; rows sum to 100 up to rounding, and intervals can dip below zero because a wrong answer can beat the calculator on held-out data. Finished: forced 768-token traces in which the matcher finds every option's value. Median: tokens by which half of unforced traces finish ($K=5$/$K=7$). Arithmetic uses the lower bound (matcher value where found); Arith., upper counts every misread value as miscomputed.}
+\label{tab:splitebay}
+\footnotesize
+\centering
+
+\begin{tabular}{lcccccc c}
+\toprule
+Model & Finished & Median & Not reached & Arithmetic & Cut off & Passed over & Arith., upper \\
+\midrule
+DeepSeek-8B & 90 & 440/544 & 2 [0, 7] & 5 [0, 17] & 44 [24, 61] & 48 [32, 67] & 7 \\
+Phi-mini & 84 & 544/664 & 5 [2, 9] & 2 [0, 3] & 11 [7, 17] & 82 [74, 89] & 17 \\
+Qwen3-4B & 64 & 608/776 & 15 [8, 24] & 0 [0, 0] & 63 [51, 73] & 22 [12, 34] & 3 \\
+Qwen3-8B & 53 & 656/840 & 34 [24, 44] & 4 [0, 8] & 39 [29, 50] & 23 [15, 32] & 12 \\
+Qwen3-14B & 66 & 616/704 & 20 [11, 30] & 3 [$-$1, 9] & 59 [49, 70] & 18 [7, 30] & 3 \\
+Granite-8B & 71 & 464/616 & 11 [6, 17] & 22 [13, 32] & 6 [1, 11] & 61 [51, 70] & 45 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,13 @@
+Thu Nov 12 17:40:44 UTC 2026 waiting for P0 and the eBay check
+Thu Nov 12 19:47:45 UTC 2026 P0 and eBay check finished
+Thu Nov 12 19:48:02 UTC 2026 R1 AuctionNet smoke reproduces saved letters: yes
+Thu Nov 12 19:49:29 UTC 2026 R1 AuctionNet phi4_mini_reasoning exit 0
+Thu Nov 12 19:52:54 UTC 2026 R1 AuctionNet granite_3_2_8b_instruct exit 0
+Thu Nov 12 19:54:33 UTC 2026 R1 AuctionNet qwen3_4b exit 0
+Thu Nov 12 19:57:10 UTC 2026 R1 AuctionNet qwen3_8b exit 0
+Thu Nov 12 19:59:36 UTC 2026 R1 AuctionNet deepseek_r1_llama_8b exit 0
+Thu Nov 12 20:04:14 UTC 2026 R1 AuctionNet qwen3_14b exit 0
+Thu Nov 12 20:12:53 UTC 2026 P1 qwen3_4b exit 0
+Thu Nov 12 20:22:56 UTC 2026 P1 qwen3_8b exit 0
+Thu Nov 12 20:32:22 UTC 2026 P1 deepseek_r1_llama_8b exit 0
+Thu Nov 12 20:49:30 UTC 2026 P1 qwen3_14b exit 0

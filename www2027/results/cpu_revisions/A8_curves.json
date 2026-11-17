@@ -1,0 +1,44 @@
+{
+ "deepseek_r1_llama_8b": {
+  "empirical": 0.8537941828441115,
+  "lognormal": 0.8524133111842984,
+  "shaded_085": 0.8343247615586327,
+  "order_statistic": 0.8688114496050383,
+  "first_price_equilibrium": 0.8522003963645634
+ },
+ "phi4_mini_reasoning": {
+  "empirical": 0.42389173516552214,
+  "lognormal": 0.43939879015639743,
+  "shaded_085": 0.3404829120379713,
+  "order_statistic": 0.4329382233754504,
+  "first_price_equilibrium": 0.3975837797585063
+ },
+ "qwen3_4b": {
+  "empirical": 0.7187679402558081,
+  "lognormal": 0.7281627734120459,
+  "shaded_085": 0.7283900744727049,
+  "order_statistic": 0.758564274914584,
+  "first_price_equilibrium": 0.742520646503661
+ },
+ "qwen3_8b": {
+  "empirical": 0.6624360446001236,
+  "lognormal": 0.655886665426963,
+  "shaded_085": 0.6405879758032967,
+  "order_statistic": 0.690384625499395,
+  "first_price_equilibrium": 0.6711363895582049
+ },
+ "qwen3_14b": {
+  "empirical": 0.7222069991848787,
+  "lognormal": 0.7175128573167705,
+  "shaded_085": 0.7182822771510426,
+  "order_statistic": 0.760018106317786,
+  "first_price_equilibrium": 0.7456579746409534
+ },
+ "granite_3_2_8b_instruct": {
+  "empirical": 0.6540662679810184,
+  "lognormal": 0.6654099704651204,
+  "shaded_085": 0.7567952191374381,
+  "order_statistic": 0.7302640987185988,
+  "first_price_equilibrium": 0.7401295242346525
+ }
+}

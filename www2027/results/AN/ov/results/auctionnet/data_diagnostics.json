@@ -1,0 +1,21 @@
+{
+ "pvalue_tercile_cuts": [
+  0.0004838351257300625,
+  0.0005585534769731263
+ ],
+ "leastWinningCost_check_max_abs": 0.0,
+ "share_construction": 0.7499994999779991,
+ "median_m_any_cpm_by_product": {
+  "high-intent impressions": 107.74057006835938,
+  "low-intent impressions": 80.84232330322266,
+  "mid-intent impressions": 98.45514678955078
+ },
+ "median_m_any_cpm_excluding_each_category": {
+  "m_any_excl_cat0": 91.86888122558594,
+  "m_any_excl_cat1": 92.90182495117188,
+  "m_any_excl_cat2": 92.17230987548828,
+  "m_any_excl_cat3": 92.60379028320312,
+  "m_any_excl_cat4": 91.633056640625,
+  "m_any_excl_cat5": 92.90888214111328
+ }
+}

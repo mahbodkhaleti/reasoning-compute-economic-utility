@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Wrong answers at 768 tokens and their cost on eBay. Wrong: number of the 648 answers that differ from the calculator. Highest: share of wrong answers that are the menu's highest bid (\%), against the share expected if a wrong answer were a uniformly random non-calculator option (Chance). Closed: same share with the closed-block readout. Sampled: temperature 0.6, top-$p$ 0.95, five seeds. AuctionNet: same share on the second market. Loss: pay-your-bid surplus lost relative to the calculator's bids, as \% of the calculator's surplus and in thousands of dollars per 1,000 decisions. From highest: share of that loss due to answers that are the highest bid (\%).}
+\label{tab:wrong}
+\footnotesize
+\centering
+
+\begin{tabular}{lccccccccc}
+\toprule
+Model & Wrong & Highest & Chance & Closed & Sampled & AuctionNet & Loss & \$k/1{,}000 & From highest \\
+\midrule
+DeepSeek-8B & 89 & 44 & 19 & 38 & 43 & 21 & 11 & 22.6 & 78 \\
+Phi-mini & 375 & 22 & 17 & 42 & 23 & 23 & 16 & 33.7 & 37 \\
+Qwen3-4B & 187 & 40 & 18 & 45 & 40 & 33 & 14 & 30.5 & 60 \\
+Qwen3-8B & 209 & 48 & 18 & 42 & 51 & 52 & 14 & 30.4 & 51 \\
+Qwen3-14B & 151 & 48 & 18 & 38 & 52 & 58 & 17 & 36.0 & 68 \\
+Granite-8B & 301 & 20 & 17 & 21 & 19 & 11 & 7 & 15.1 & 26 \\
+\bottomrule
+\end{tabular}
+\end{table*}

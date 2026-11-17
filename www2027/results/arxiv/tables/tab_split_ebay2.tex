@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{The eBay gap split under the closed-block readout (\% [95\% interval]) and for the unforced 1,024-token run (\%, point estimates). NR: not reached; Ar: arithmetic (lower bound); Cut: cut off; Pass: passed over.}
+\label{tab:splitebay2}
+\footnotesize
+\centering
+
+\begin{tabular}{lcccc cccc}
+\toprule
+& \multicolumn{4}{c}{768 tokens, closed block} & \multicolumn{4}{c}{No forcing, 1,024 cap} \\ \cmidrule(lr){2-5}\cmidrule(lr){6-9} Model & NR & Ar & Cut & Pass & NR & Ar & Cut & Pass \\
+\midrule
+DeepSeek-8B & 4 [0, 12] & 8 [0, 21] & 46 [22, 71] & 42 [23, 62] & 6 & 0 & 0 & 94 \\
+Phi-mini & 8 [2, 17] & 3 [0, 8] & 27 [15, 39] & 62 [50, 74] & 1 & 1 & 2 & 97 \\
+Qwen3-4B & 19 [10, 27] & 0 [$-$1, 1] & 62 [51, 74] & 19 [8, 32] & 9 & 1 & 46 & 44 \\
+Qwen3-8B & 37 [26, 48] & 4 [0, 10] & 52 [42, 62] & 7 [$-$3, 18] & 30 & $-$1 & 52 & 20 \\
+Qwen3-14B & 32 [15, 54] & 2 [$-$8, 9] & 61 [44, 77] & 5 [$-$10, 20] & 13 & 3 & 49 & 36 \\
+Granite-8B & 13 [7, 19] & 25 [15, 37] & 4 [0, 9] & 58 [47, 68] & 14 & 27 & 4 & 55 \\
+\bottomrule
+\end{tabular}
+\end{table*}

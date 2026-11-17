@@ -1,0 +1,29 @@
+\begin{table}[h!]
+\caption{All coefficients of the passing-over regression (odds ratios [95\% interval], errors clustered by scenario; reference model Qwen3-8B). On eBay the reference product is Cartier watches; on AuctionNet it is high-intent impressions.}
+\label{tab:regfull}
+\footnotesize
+\centering
+
+\begin{tabular}{lcc}
+\toprule
+Term & eBay & AuctionNet \\
+\midrule
+Intercept & 0.68 [0.47, 0.99] & 0.49 [0.34, 0.72] \\
+Relative profit gap & 0.36 [0.13, 0.99] & 0.09 [0.03, 0.26] \\
+Position of best option & 1.93 [1.42, 2.61] & 2.48 [1.84, 3.35] \\
+$K=7$ & 1.89 [1.48, 2.41] & 1.95 [1.57, 2.43] \\
+log value / product median & 1.08 [0.77, 1.51] & 3.10 [1.98, 4.83] \\
+Best option is the highest bid & 0.36 [0.28, 0.46] & 0.29 [0.22, 0.38] \\
+List finished & 0.38 [0.29, 0.51] & 0.43 [0.32, 0.58] \\
+Model: DeepSeek-8B & 0.49 [0.35, 0.68] & 0.31 [0.22, 0.43] \\
+Model: Phi-mini & 5.92 [4.27, 8.21] & 5.92 [4.36, 8.04] \\
+Model: Qwen3-4B & 1.03 [0.80, 1.32] & 0.71 [0.54, 0.92] \\
+Model: Qwen3-14B & 0.74 [0.58, 0.94] & 0.70 [0.54, 0.91] \\
+Model: Granite-8B & 3.04 [2.12, 4.34] & 3.07 [2.29, 4.11] \\
+eBay product: Palm Pilot & 0.50 [0.37, 0.68] & -- \\
+eBay product: Xbox & 0.48 [0.35, 0.65] & -- \\
+AuctionNet product: low-intent & -- & 0.94 [0.73, 1.22] \\
+AuctionNet product: mid-intent & -- & 1.03 [0.81, 1.32] \\
+\bottomrule
+\end{tabular}
+\end{table}

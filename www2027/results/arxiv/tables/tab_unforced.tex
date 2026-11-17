@@ -1,0 +1,19 @@
+\begin{table}[h!]
+\caption{Token use without forcing: mean or median reasoning tokens and the share of decisions that reach the cap (\%).}
+\label{tab:unforced}
+\footnotesize
+\centering
+
+\begin{tabular}{lcccccccc}
+\toprule
+& \multicolumn{4}{c}{eBay} & \multicolumn{4}{c}{AuctionNet} \\ \cmidrule(lr){2-5}\cmidrule(lr){6-9} & \multicolumn{2}{c}{1,024 cap} & \multicolumn{2}{c}{4,096 cap} & \multicolumn{2}{c}{1,024 cap} & \multicolumn{2}{c}{4,096 cap} \\ Model & Mean tok. & At cap & Median tok. & At cap & Mean tok. & At cap & Median tok. & At cap \\
+\midrule
+DeepSeek-8B & 1008 & 86 & 1327 & 0.6 & 1014 & 87 & 1324 & 0.9 \\
+Phi-mini & 1002 & 87 & 1364 & 6.8 & 1022 & 97 & -- & -- \\
+Qwen3-4B & 950 & 70 & 1390 & 1.1 & 970 & 74 & 1474 & 0.0 \\
+Qwen3-8B & 969 & 73 & 1226 & 0.6 & 999 & 79 & 1265 & 0.2 \\
+Qwen3-14B & 870 & 46 & 980 & 0.0 & 929 & 52 & 1047 & 0.0 \\
+Granite-8B & 560 & 0 & -- & -- & 562 & 0 & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,17 @@
+\begin{table}[t]
+\caption{Size or position? Conditional logit over the non-calculator options of each wrong 768-token answer, odds ratios [95\% scenario-bootstrap interval]. Option order is randomised, so position is independent of size.}
+\label{tab:possize}
+\footnotesize
+\centering
+
+\begin{tabular}{lcccc}
+\toprule
+Sample & Wrong answers & Highest bid & Listed first & Listed last \\
+\midrule
+eBay, DeepSeek-8B and Qwen & 636 & 3.91 [2.93, 5.13] & 0.59 [0.34, 0.93] & 0.50 [0.32, 0.70] \\
+eBay, all models & 1312 & 2.31 [1.93, 2.78] & 1.10 [0.88, 1.32] & 0.54 [0.43, 0.67] \\
+AuctionNet, DeepSeek-8B and Qwen & 619 & 3.91 [3.22, 4.84] & 0.40 [0.25, 0.58] & 0.96 [0.70, 1.20] \\
+AuctionNet, all models & 1360 & 2.17 [1.87, 2.55] & 1.38 [1.20, 1.57] & 0.87 [0.69, 1.01] \\
+\bottomrule
+\end{tabular}
+\end{table}

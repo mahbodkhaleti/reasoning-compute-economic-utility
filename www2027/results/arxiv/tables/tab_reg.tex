@@ -1,0 +1,19 @@
+\begin{table}[t]
+\caption{Passing over the best option: logistic regression, odds ratios [95\% interval], errors clustered by scenario. Sample: 768-token traces that write the best option's value and rank it first (eBay $n=3519$, 1074 passed over; AuctionNet $n=3614$, 1133 passed over). Product (category) and model fixed effects are included; the reference model is Qwen3-8B.}
+\label{tab:reg}
+\small
+\centering
+
+\begin{tabular}{lcc}
+\toprule
+Covariate & eBay & AuctionNet \\
+\midrule
+Best option is the highest bid & 0.36 [0.28, 0.46] & 0.29 [0.22, 0.38] \\
+List finished & 0.38 [0.29, 0.51] & 0.43 [0.32, 0.58] \\
+Relative profit gap, best vs runner-up & 0.36 [0.13, 0.99] & 0.09 [0.03, 0.26] \\
+Position of best option (0 first, 1 last) & 1.93 [1.42, 2.61] & 2.48 [1.84, 3.35] \\
+$K=7$ & 1.89 [1.48, 2.41] & 1.95 [1.57, 2.43] \\
+log value relative to product median & 1.08 [0.77, 1.51] & 3.10 [1.98, 4.83] \\
+\bottomrule
+\end{tabular}
+\end{table}

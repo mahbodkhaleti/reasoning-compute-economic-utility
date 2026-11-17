@@ -1,0 +1,19 @@
+DeepSeek-8B {'not_reached': (2, [0, 7], 5), 'arith': (5, [0, 17], 2), 'incomplete': (44, [24, 61], 19), 'passed': (48, [32, 67], 63)} missed 93 misc 0.005
+   natural 90 0.14 0.986 0.022 {}
+Phi-mini {'not_reached': (5, [2, 9], 17), 'arith': (2, [0, 3], 7), 'incomplete': (11, [7, 17], 38), 'passed': (82, [74, 89], 313)} missed 93 misc 0.016
+   natural 83 0.13 0.994 0.024 {}
+Qwen3-4B {'not_reached': (15, [8, 24], 33), 'arith': (0, [0, 0], 1), 'incomplete': (63, [51, 73], 76), 'passed': (22, [12, 34], 77)} missed 85 misc 0.02
+   natural 193 0.3 0.984 0.0 {}
+Qwen3-8B {'not_reached': (34, [24, 44], 59), 'arith': (4, [0, 8], 7), 'incomplete': (39, [29, 50], 70), 'passed': (23, [15, 32], 73)} missed 62 misc 0.026
+   natural 178 0.27 0.985 0.006 {}
+Qwen3-14B {'not_reached': (20, [11, 30], 27), 'arith': (3, [-1, 9], 7), 'incomplete': (59, [49, 70], 58), 'passed': (18, [7, 30], 59)} missed 77 misc 0.027
+   natural 347 0.54 0.982 0.0 {}
+Granite-8B {'not_reached': (11, [6, 17], 23), 'arith': (22, [13, 32], 50), 'incomplete': (6, [1, 11], 6), 'passed': (61, [51, 70], 222)} missed 67 misc 0.14
+   natural 648 1.0 0.912 0.432 {'not_reached': (14, [8, 21], 24), 'arith': (27, [16, 39], 46), 'incomplete': (4, [0, 10], 5), 'passed': (55, [44, 67], 205)}
+{"right_complete": {"deepseek_r1_llama_8b": 0.8932203389830509, "phi4_mini_reasoning": 0.44601769911504424, "qwen3_4b": 0.8242009132420092, "qwen3_8b": 0.8005464480874317, "qwen3_14b": 0.8688888888888889, "granite_3_2_8b_instruct": 0.589648798521257}, "right_incomplete": {"deepseek_r1_llama_8b": 0.5581395348837209, "phi4_mini_reasoning": 0.24, "qwen3_4b": 0.5064935064935064, "qwen3_8b": 0.6195652173913043, "qwen3_14b": 0.5572519083969466, "granite_3_2_8b_instruct": 0.14285714285714285}, "n_incomplete": {"deepseek_r1_llama_8b": 43, "phi4_mini_reasoning": 50, "qwen3_4b": 154, "qwen3_8b": 184, "qwen3_14b": 131, "granite_3_2_8b_instruct": 7}, "pooled_bins": {"<64": {"n": 103, "right": 0.5436893203883495}, "64-192": {"n": 173, "right": 0.5549132947976878}, ">192": {"n": 293, "right": 0.5119453924914675}}, "logit_coef": -2.115292253546246, "logit_p": 0.06197269490088452}
+DeepSeek-8B {'not_reached': 9, 'arith': 27, 'incomplete': 51, 'passed': 13, 'missed_written_best': 64} {'or_': 0.444, 'ci': [0.0951036036582033, 2.0703350816051205], 'p': 0.301, 'events': 24}
+Phi-mini {'not_reached': 5, 'arith': 5, 'incomplete': 50, 'passed': 40, 'missed_written_best': 90} {'or_': 17.237, 'ci': [6.213273764486268, 47.81778584722502], 'p': 0.0, 'events': 113}
+Qwen3-4B {'not_reached': 16, 'arith': 5, 'incomplete': 59, 'passed': 19, 'missed_written_best': 78} {'events': 13}
+Qwen3-8B {'not_reached': 9, 'arith': 3, 'incomplete': 66, 'passed': 21, 'missed_written_best': 88} {'or_': 1.735, 'ci': [0.276907766872162, 10.873816052783607], 'p': 0.556, 'events': 18}
+Qwen3-14B {'not_reached': 5, 'arith': 1, 'incomplete': 76, 'passed': 18, 'missed_written_best': 94} {'or_': 0.538, 'ci': [0.056477384960048546, 5.121394233187982], 'p': 0.59, 'events': 16}
+Granite-8B {'not_reached': 1, 'arith': 50, 'incomplete': 23, 'passed': 26, 'missed_written_best': 49} {'or_': 0.087, 'ci': [0.01919154285429847, 0.39170007073774005], 'p': 0.001, 'events': 52}

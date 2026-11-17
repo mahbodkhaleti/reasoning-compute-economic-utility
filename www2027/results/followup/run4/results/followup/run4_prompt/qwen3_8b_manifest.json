@@ -1,0 +1,44 @@
+{
+  "run_name": "run4_prompt",
+  "model": "qwen3_8b",
+  "hf_id": "Qwen/Qwen3-8B",
+  "requested_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "requested_tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "pipeline_package": "orig",
+  "pipeline_common_sha256": "03cb1af4d23fdcf53d13061f0aeed3d70954734f8b9134e9a782b3d791f21cf1",
+  "pipeline_config_sha256": "90dee7c1b1a3d6894d06f090fb370ffc2a7a3543063a9d296dfdc9aeb6325027",
+  "runner_sha256": "813f89f0f6dbecbd2d1d5958126e51826e968ff3d010f994b64a8100de3e2db9",
+  "harness_ext_sha256": "f02ff944cbc5522b0bd660d4240879d266688c623f8d2ea7f773e5bd475e0f5e",
+  "scenarios_sha256": "12a846cb3f9362ad9be5c5830d5aef71d7300328ce2399ac87cf2ef60f9986e6",
+  "settings": [
+    [
+      "forced768",
+      768,
+      1024
+    ],
+    [
+      "unforced1024",
+      -1,
+      1024
+    ]
+  ],
+  "repeat_seeds": [
+    11,
+    23,
+    37
+  ],
+  "smoke": false,
+  "first_started_utc": "2026-11-11T23:09:05.774939+00:00",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.15.0",
+  "accelerate": "1.14.0",
+  "python": "3.10.22",
+  "cuda_build": "13.0",
+  "starts_utc": [
+    "2026-11-11T23:09:05.774953+00:00"
+  ],
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "resolved_model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "resolved_tokenizer_revision": null,
+  "completed_utc": "2026-11-12T13:44:48.819525+00:00"
+}

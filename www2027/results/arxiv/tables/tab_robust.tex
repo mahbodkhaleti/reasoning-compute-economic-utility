@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Robustness of gap recovered at 768 tokens (\%). Family boot.: the main interval. Product boot.: resampling the three products, then families within them. Calc. ahead: share of landscape-bootstrap draws (construction and held-out auctions both resampled) in which the calculator beats the model (\%). First-price variants: value distribution (lognormal, gamma, Weibull), a coarser bid increment, and one bidder fewer or more.}
+\label{tab:robust}
+\footnotesize
+\centering
+
+\begin{tabular}{lccc cccccc}
+\toprule
+& \multicolumn{3}{c}{Empirical curve} & \multicolumn{6}{c}{First-price equilibrium curve, variants} \\ \cmidrule(lr){2-4}\cmidrule(lr){5-10} Model & Family boot. & Product boot. & Calc. ahead & Logn. & Gamma & Weib. & Incr. & $n-1$ & $n+1$ \\
+\midrule
+DeepSeek-8B & 85 [78, 92] & 85 [67, 99] & 96.3 & 85 & 86 & 86 & 85 & 84 & 86 \\
+Phi-mini & 42 [34, 50] & 42 [10, 59] & 100.0 & 39 & 39 & 38 & 39 & 36 & 43 \\
+Qwen3-4B & 72 [66, 78] & 72 [54, 87] & 99.9 & 74 & 75 & 75 & 74 & 74 & 74 \\
+Qwen3-8B & 66 [60, 73] & 66 [53, 82] & 99.9 & 67 & 68 & 68 & 67 & 67 & 67 \\
+Qwen3-14B & 72 [66, 78] & 72 [51, 94] & 99.8 & 74 & 76 & 75 & 74 & 74 & 74 \\
+Granite-8B & 65 [57, 73] & 65 [35, 79] & 100.0 & 75 & 75 & 75 & 74 & 77 & 71 \\
+\bottomrule
+\end{tabular}
+\end{table*}

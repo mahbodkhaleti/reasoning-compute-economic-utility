@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Where the AuctionNet 768-token gap goes, \% of the gap. Open block: [95\% interval]; closed block: point estimates. Fin.: forced traces that evaluate every option. Abbreviations as in Table~\ref{tab:splitebay2}.}
+\label{tab:ansplit}
+\footnotesize
+\centering
+
+\begin{tabular}{lc cccc cccc}
+\toprule
+& & \multicolumn{4}{c}{Open block} & \multicolumn{4}{c}{Closed block} \\ \cmidrule(lr){3-6}\cmidrule(lr){7-10} Model & Fin. & NR & Ar & Cut & Pass & NR & Ar & Cut & Pass \\
+\midrule
+DeepSeek-8B & 88 & 8 [2, 18] & 0 [0, 0] & 27 [10, 43] & 65 [48, 82] & 8 & 0 & 43 & 49 \\
+Phi-mini & 93 & 3 [1, 6] & 1 [0, 3] & 6 [3, 9] & 90 [86, 94] & 14 & 2 & 14 & 70 \\
+Qwen3-4B & 75 & 22 [13, 33] & 1 [0, 3] & 42 [28, 55] & 35 [23, 48] & 26 & 1 & 47 & 26 \\
+Qwen3-8B & 58 & 22 [15, 28] & 3 [0, 6] & 55 [45, 64] & 21 [14, 29] & 27 & 4 & 56 & 13 \\
+Qwen3-14B & 81 & 11 [5, 17] & 2 [0, 7] & 48 [35, 59] & 39 [29, 51] & 22 & 2 & 54 & 22 \\
+Granite-8B & 91 & 9 [5, 15] & 19 [13, 25] & 5 [1, 10] & 67 [59, 74] & 11 & 20 & 5 & 64 \\
+\bottomrule
+\end{tabular}
+\end{table*}

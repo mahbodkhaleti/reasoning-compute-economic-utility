@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Gap to the calculator recovered on eBay, \% [95\% family-bootstrap interval]. Columns 256--768: forced budgets with the paper's letter readout. Stated: the answer the trace states, where it states one, and the letter otherwise. 1,024 and 4,096 run: no forcing, letter read after the model stops. FP eq.: 768 tokens scored against the first-price equilibrium win curve.}
+\label{tab:gapebay}
+\footnotesize
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccccc}
+\toprule
+Model & 256 & 512 & 768 & 768, stated & 1,024 run & 4,096 run & 768, FP eq. \\
+\midrule
+DeepSeek-8B & $-$9 [$-$17, 0] & 30 [22, 37] & 85 [78, 92] & 77 [69, 85] & 96 [93, 98] & 99 [98, 100] & 85 [77, 92] \\
+Phi-mini & 15 [7, 22] & 17 [8, 25] & 42 [34, 50] & 64 [56, 71] & 49 [40, 57] & 91 [87, 94] & 40 [28, 49] \\
+Qwen3-4B & 8 [$-$3, 19] & 50 [43, 58] & 72 [66, 78] & 73 [66, 80] & 91 [87, 96] & 100 [100, 100] & 74 [69, 80] \\
+Qwen3-8B & 6 [$-$1, 12] & 28 [22, 34] & 66 [60, 73] & 66 [58, 74] & 87 [82, 92] & 100 [100, 100] & 67 [61, 73] \\
+Qwen3-14B & 8 [3, 14] & 36 [29, 43] & 72 [66, 78] & 73 [66, 80] & 89 [83, 94] & 100 [100, 100] & 75 [68, 81] \\
+Granite-8B & 3 [$-$2, 9] & 56 [47, 64] & 65 [57, 73] & 72 [66, 77] & 72 [66, 77] & -- & 74 [68, 80] \\
+\bottomrule
+\end{tabular}
+\end{table*}

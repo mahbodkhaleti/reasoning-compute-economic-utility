@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Held-out utility ratio $q$ on eBay by forced reasoning budget, and without forcing under a 1,024-token and a 4,096-token cap. Calculator: 0.981; random choice: 0.711; 648 decisions per cell.}
+\label{tab:qbudget}
+\small
+\centering
+
+\begin{tabular}{lcccccccc}
+\toprule
+Model & $q(0)$ & $q(64)$ & $q(128)$ & $q(256)$ & $q(512)$ & $q(768)$ & 1,024 run & 4,096 run \\
+\midrule
+DeepSeek-8B & 0.775 & 0.754 & 0.763 & 0.758 & 0.836 & 0.950 & 0.972 & 0.978 \\
+Phi-mini & 0.718 & 0.722 & 0.727 & 0.758 & 0.762 & 0.829 & 0.846 & 0.956 \\
+Qwen3-4B & 0.752 & 0.753 & 0.720 & 0.771 & 0.867 & 0.916 & 0.960 & 0.980 \\
+Qwen3-8B & 0.763 & 0.766 & 0.784 & 0.775 & 0.823 & 0.907 & 0.951 & 0.980 \\
+Qwen3-14B & 0.749 & 0.751 & 0.761 & 0.769 & 0.833 & 0.916 & 0.954 & 0.980 \\
+Granite-8B & 0.740 & 0.741 & 0.754 & 0.749 & 0.875 & 0.897 & 0.912 & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}
