@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline robustness analyses for the EconML workshop submission.
+"""Offline robustness analyses of the saved model outputs.
 
 The script uses only saved constrained-readout outputs.  It does not call a
 model.  It produces (i) beta and gamma comparative statics for the primary

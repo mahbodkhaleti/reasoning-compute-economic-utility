@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-EXCLUDE = {"MANIFEST.sha256", "repository_validation.json", "docs/CPU_REVISION_VALIDATION.json", "docs/SAVED_DECISION_AUDIT_VALIDATION.json", "docs/PUBLICATION_VALIDATION.json", "decision_audit/delivery_validation.json", "decision_audit/human_study/human_analysis_status.json"}
+EXCLUDE = {"MANIFEST.sha256", "repository_validation.json", "docs/CPU_REVISION_VALIDATION.json", "docs/SAVED_DECISION_AUDIT_VALIDATION.json", "decision_audit/delivery_validation.json", "decision_audit/human_study/human_analysis_status.json"}
 DYNAMIC_PREFIXES = (".cache/", "offline_replay/outputs/", "cpu_revision/legacy_results/", "decision_audit/human_study/responses/")
 
 

@@ -1,26 +1,19 @@
 {
-  "paper_title": "Evaluating Reasoning Budgets for LLM Decision Services: Auction Utility, Calculator Gaps, and Resource Accounting",
-  "release_date": "2026-10-10",
-  "paper_identity": "anonymous; named submission supplied separately",
+  "paper_title": "Budget, Readout or Reasoning? Where Small Reasoning Models Lose Value in Auction Bidding",
+  "paper_identity": "anonymous",
   "paths": {
-    "paper_source": "ai4f_workshop/main.tex",
-    "paper_pdf": "ai4f_workshop/paper.pdf",
-    "compact_bundle": "releases/ai4f_cpu_reference.zip",
-    "CPU_reference": "ai4f_workshop/cpu_reference/reference.py",
-    "reference_contract": "ai4f_workshop/cpu_reference/CONTRACT.md",
-    "number_audit": "ai4f_workshop/number_audit.json",
+    "paper_source": "www2027/paper/main.tex",
+    "paper_pdf": "www2027/paper/main.pdf",
+    "paper_readme": "www2027/README.md",
+    "analysis": "www2027/analysis",
+    "results": "www2027/results",
+    "gpu_runners": "www2027/gpu_followup/followup_gpu",
     "reproduction_guide": "docs/REPRODUCE.md",
-    "repository_map": "docs/REPOSITORY_MAP.md",
-    "previous_AI4F_source": "ai4f_workshop/archive/v4/main_ai4f_v4.tex",
-    "previous_AI4F_PDF": "ai4f_workshop/archive/v4/main_ai4f_v4.pdf",
-    "earlier_full_paper_source": "paper/main.tex",
-    "original_submission": "submitted_paper"
+    "repository_map": "docs/REPOSITORY_MAP.md"
   },
   "evidence_status": {
-    "empirical_results": "preserved saved runs; no new inference",
-    "prospective_method": "CPU fixtures and conditional algebra only; no independent model/service evaluation",
-    "financial_transfer": "untested",
-    "human_study": "protocol prepared; no responses",
-    "anonymous_mirror": "owner refresh deferred by user"
+    "ebay_runs": "preserved saved runs plus follow-up GPU runs; all decisions included",
+    "auctionnet_runs": "saved decisions included; raw AuctionNet data downloaded separately",
+    "raw_ebay_source": "not included; obtain from the source provider"
   }
 }

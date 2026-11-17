@@ -3,8 +3,8 @@
 The original software written for this project is released under the MIT
 License in `LICENSE`. That license covers the runner, prompt construction,
 analysis, plotting, validation, and packaging source code. It does not relicense
-third-party checkpoints, source data, model-generated text, the NeurIPS style,
-or other third-party material.
+third-party checkpoints, source data, model-generated text, the ACM LaTeX
+class, or other third-party material.
 
 Third-party checkpoints are not included. Users obtain them from their original
 hosts and must follow their licenses:
@@ -20,8 +20,12 @@ hosts and must follow their licenses:
 - IBM Granite-3.2-8B-Instruct: Apache-2.0
   (`https://huggingface.co/ibm-granite/granite-3.2-8b-instruct`).
 
-The NeurIPS style in `paper/neurips_2026.sty` is the official submission style
-distributed for paper preparation.
+The ACM `acmart` class and bibliography style in `www2027/paper/` are
+distributed by ACM for paper preparation.
+
+AuctionNet (used in `www2027/`) is simulated data released under Apache-2.0 by
+its authors (Su et al., 2024). Its raw files are not included; only derived
+scenario files and model decisions are, with attribution.
 
 The Online Auctions Kaggle mirror reports an unknown license. The raw dataset is
 excluded. The archive includes the exact transformed split and scenario

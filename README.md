@@ -1,66 +1,44 @@
-# Reasoning budgets for numerical decision services
+# Budget, Readout or Reasoning? Where Small Reasoning Models Lose Value in Auction Bidding
 
-Reproducibility repository for **Evaluating Reasoning Budgets for LLM Decision Services: Auction Utility, Calculator Gaps, and Resource Accounting**, prepared for the ICAIF 2026 AI4F workshop.
+Code, saved model decisions and analyses for the paper. Six open reasoning models (Phi-4-mini-reasoning, Qwen3-4B, -8B and -14B, DeepSeek-R1-Distill-Llama-8B and Granite-3.2-8B-Instruct) choose a bid from a bid landscape. Win curves come from eBay closing prices and from AuctionNet, a simulated advertising market. Bids are scored on held-out auctions against an exact calculator, and every reasoning trace is parsed by code to find where the gap to the calculator opens.
 
-[Read the current anonymous paper](ai4f_workshop/paper.pdf) · [LaTeX source](ai4f_workshop/main.tex) · [Download the compact CPU package](releases/ai4f_cpu_reference.zip) · [Reproduction guide](docs/REPRODUCE.md)
+**Start with [`www2027/README.md`](www2027/README.md).** It describes the paper's folder and maps every result in the paper to the script that produces it and the file it writes. The paper source and PDF are in [`www2027/paper/`](www2027/paper/).
 
-## WWW 2027 short paper
+## Quick start
 
-**Budget, Readout or Reasoning? Where Small Reasoning Models Lose Value in Auction Bidding.** The code, saved decisions and analysis outputs for this paper are in [`www2027/`](www2027/README.md), with a table that maps every result in the paper to the script that produces it. Reproducing the paper's numbers needs no GPU:
+No GPU is needed to reproduce the paper's numbers from the saved decisions.
 
 ```sh
 bash www2027/setup_paths.sh
-```
-
-The sections below describe the earlier workshop paper and the archive it builds on. The WWW 2027 analyses reuse the eBay model traces stored in that archive.
-
-## Start here
-
-The compact package contains the current paper, saved-number audit inputs and the prospective CPU reference. It avoids downloading the complete historical inference archive. Extract it and run:
-
-```sh
-bash reproduce_ai4f_workshop.sh
-```
-
-For a complete repository checkout:
-
-```sh
+pip install numpy pandas scipy statsmodels matplotlib
 make check
 ```
 
-These checks use Python 3.10+ and Poppler. They verify saved values, source/PDF provenance, conditional algebra and CPU execution. They do not generate new model responses or demonstrate method performance.
+`make check` validates the repository (file hashes, preserved outputs, scenario files) and rebuilds the AuctionNet summary and the full set of result tables from the saved decisions.
 
 | Task | Command | Requirements |
 | --- | --- | --- |
-| Check the current release | `make check` | Python 3.10+, Poppler; no GPU |
-| Compile the current paper | `make paper` | LaTeX/acmart, latexmk, BibTeX, Poppler |
-| Replay the complete experiment archive | `make reproduce` | Python 3.13 and pinned analysis dependencies; no GPU |
-| Rebuild the compact download | `make package` | Python standard library |
+| Validate and rebuild key results | `make check` | Python 3.10+; no GPU |
+| Replay the complete preserved eBay archive | `make reproduce` | Python 3.13 and `offline_replay/requirements.txt`; no GPU |
+| Compile the paper | `make paper` | LaTeX with the ACM `acmart` class |
 
-The checked PDF is `ai4f_workshop/paper.pdf`. Local compilation writes to `ai4f_workshop/build/` and does not replace it. See the [reproduction guide](docs/REPRODUCE.md) for environment setup and the difference between verification and full replay.
-
-## What the evidence supports
-
-The empirical benchmark measures held-out bidder profit, regret, construction-calculator gaps, aggregation, output validity and recorded resources in controlled consumer-auction tasks with supplied probabilities and assigned reasoning budgets. It does not use financial deployment data. The calculator remains stronger in the reported aggregate profit comparisons.
-
-Decision-sensitive extraction repair is a **prospective method**. The CPU reference and fixtures check its restricted source contract and conditional arithmetic; independent language-model/service evaluation, cost savings and financial transfer remain untested. The appendix service contest is an assumed allocation sensitivity model, not observed strategic LLM-agent behavior.
+See the [reproduction guide](docs/REPRODUCE.md) for details.
 
 ## Repository guide
 
 | Area | Contents |
 | --- | --- |
-| [ai4f_workshop/](ai4f_workshop/README.md) | Current anonymous manuscript, compact evidence, CPU reference and audits |
-| [docs/](docs/REPOSITORY_MAP.md) | Repository map, reproduction instructions, provenance and release history |
-| [preserved_outputs/](preserved_outputs/) | Historical/synthetic model outputs preserved for replay |
-| [offline_replay/](offline_replay/README.md) | Rebuild historical and synthetic analyses without inference |
-| [cpu_revision/](cpu_revision/) and [decision_audit/](decision_audit/) | Saved-data analyses and supporting evidence |
-| [paper/](paper/) and [submitted_paper/](submitted_paper/) | Earlier full-paper revision and original submission; not the current AI4F paper |
-| [releases/](releases/) | Compact anonymous source/audit download |
+| [www2027/](www2027/README.md) | The paper, its analysis code, results, saved decisions from the follow-up and AuctionNet runs, and the GPU runners |
+| [preserved_outputs/](preserved_outputs/) | Saved model outputs from the original eBay runs |
+| [robustness_extensions/](robustness_extensions/) | Runner and analysis code for the original eBay runs, with server outputs |
+| [new_models_full_server_package/](new_models_full_server_package/), [qwen3_14b_addition/](qwen3_14b_addition/) | Run packages for Granite-8B and Qwen3-14B, with transformed scenarios |
+| [synthetic_ipv_benchmark/](synthetic_ipv_benchmark/), [synthetic_existing4_server_package/](synthetic_existing4_server_package/) | The synthetic first-price task and its runs |
+| [offline_replay/](offline_replay/README.md) | CPU replay of the preserved archive |
+| [cpu_revision/](cpu_revision/), [decision_audit/](decision_audit/) | Saved-data analyses: uncertainty, calculator comparisons, decision checks |
+| [environment/](environment/), [data/](data/README.md) | Recorded inference environment; data acquisition and provenance |
 
-The [complete directory map](docs/REPOSITORY_MAP.md) explains the retained model-run packages and older robustness evidence. Their paths remain stable so historical scripts and provenance hashes continue to work. [Release history](docs/RELEASES.md) separates the current paper from previous versions.
+The [repository map](docs/REPOSITORY_MAP.md) describes each folder in more detail.
 
-## Data, licenses and anonymity
+## Data and licences
 
-Raw eBay auction-source data must be obtained separately under the source provider's terms; transformed scenarios and preserved outputs are included. See [data provenance](data/README.md) and [licenses](LICENSES.md). No model weights are distributed.
-
-This repository contains the anonymous paper. The named submission copy is delivered separately. The anonymous mirror is a separate snapshot and requires its owner's refresh; a GitHub update does not automatically prove mirror synchronization.
+The raw eBay auction data must be obtained separately under the source provider's terms ([data/README.md](data/README.md)); transformed scenarios and saved outputs are included. AuctionNet is simulated data released under Apache-2.0; its raw files are downloaded by the runner and only derived scenarios and decisions are included. No model weights are distributed. Code is MIT-licensed; see [LICENSES.md](LICENSES.md) for third-party terms.

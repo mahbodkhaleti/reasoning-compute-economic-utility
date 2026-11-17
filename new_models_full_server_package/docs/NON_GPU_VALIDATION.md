@@ -21,7 +21,7 @@ Completed during package construction:
 No CUDA inference was performed during these local construction checks, and no
 model outputs were fabricated. Completed Qwen3-14B, Granite, and six-model
 synthetic outputs produced later on the GPU servers are preserved at the
-repository-level paths documented in `../../docs/RESULTS_PROVENANCE.md`; the
+repository-level paths listed in `../../docs/REPOSITORY_MAP.md`; the
 package's `results/` directory remains empty so that a fresh server rerun cannot
 silently mix with the archived records. A GPU smoke test is the required first
 step only when rerunning inference from this package.

@@ -1,18 +1,15 @@
-.PHONY: help check reproduce paper package
+.PHONY: help check reproduce paper
 PYTHON ?= $(if $(REPRO_PYTHON_BIN),$(REPRO_PYTHON_BIN),python3)
 help:
-	@echo 'make check       Verify the current release and run the AI4F CPU audits'
-	@echo 'make reproduce   Replay the complete preserved experiment archive (CPU)'
-	@echo 'make paper       Compile the current anonymous AI4F source into build/'
-	@echo 'make package     Rebuild the compact AI4F download'
+	@echo 'make check       Validate the repository and rebuild key paper numbers from saved decisions (CPU)'
+	@echo 'make reproduce   Replay the complete preserved eBay experiment archive (CPU)'
+	@echo 'make paper       Compile the paper in www2027/paper/'
 check:
-	"$(PYTHON)" scripts/check_release.py
-	REPRO_PYTHON_BIN="$(PYTHON)" bash reproduce_ai4f_workshop.sh
 	"$(PYTHON)" validate_repository.py
+	bash www2027/setup_paths.sh
+	cd /tmp/www2027/analysis/auctionnet && "$(PYTHON)" an_overnight_analysis.py
+	cd /tmp/www2027/analysis/arxiv && "$(PYTHON)" make_tables.py
 reproduce:
 	REPRO_PYTHON_BIN="$(PYTHON)" bash reproduce_cpu_revision.sh
 paper:
-	$(MAKE) -C ai4f_workshop all PYTHON="$(PYTHON)"
-	$(MAKE) -C ai4f_workshop audit PYTHON="$(PYTHON)"
-package:
-	"$(PYTHON)" scripts/package_ai4f.py
+	cd www2027/paper && pdflatex -interaction=nonstopmode main && bibtex main && pdflatex -interaction=nonstopmode main && pdflatex -interaction=nonstopmode main

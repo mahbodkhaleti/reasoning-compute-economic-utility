@@ -260,8 +260,6 @@
     "inference_required": false,
     "bootstrap_draws": 10000,
     "bootstrap_seed": 20261008,
-    "current_manuscript": "paper/main.tex",
-    "submitted_manuscript": "submitted_paper/main.tex",
     "new_results": "cpu_revision/results",
     "known_remaining_gaps": [
       "unestimated client selection/value",

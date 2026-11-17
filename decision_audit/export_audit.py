@@ -2,7 +2,7 @@ from pathlib import Path
 import json
 import numpy as np
 import pandas as pd
-ROOT=Path(__file__).resolve().parent;PAPER=ROOT/'paper' if (ROOT/'paper').exists() else ROOT.parent/'paper';df=pd.read_csv(ROOT/'results/calculator_comparison.csv');audit=pd.read_csv(ROOT/'results/decision_error_audit.csv',dtype={'scenario_id':str});j=json.loads((ROOT/'results/audit_manifest.json').read_text());high=df[df.budget==768]
+ROOT=Path(__file__).resolve().parent;PAPER=ROOT/'results';(PAPER/'tables').mkdir(parents=True,exist_ok=True);df=pd.read_csv(ROOT/'results/calculator_comparison.csv');audit=pd.read_csv(ROOT/'results/decision_error_audit.csv',dtype={'scenario_id':str});j=json.loads((ROOT/'results/audit_manifest.json').read_text());high=df[df.budget==768]
 table=r'''\begin{table}[htbp]
 \centering\small
 \caption{Calculator and observable-error audit of the greedy 768-token frontier. Profit differences are model minus construction-split calculator, with exploratory simultaneous 95\% family bands over six models. Displayed-optimal actions maximize profit under the four-decimal probabilities actually shown; held-out optimality admits payoff ties and differs from exact-label accuracy. All 216 scenarios and three option orders are retained.}

@@ -1,6 +1,6 @@
 # Reproducibility record
 
-The current AI4F commands are in [REPRODUCE.md](REPRODUCE.md). This document records the historical inference environment and checkpoint attribution, not the current paper location. The preserved model-output evidence below is unchanged.
+Commands are in [REPRODUCE.md](REPRODUCE.md). This document records the inference environment and checkpoint attribution for the preserved eBay runs. The preserved model-output evidence below is unchanged.
 
 This document records the software, hardware, and Hugging Face snapshots
 available for the experiments. The canonical structured record is

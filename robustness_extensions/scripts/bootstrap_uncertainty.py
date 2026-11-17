@@ -19,10 +19,10 @@ import pandas as pd
 
 
 MODEL_FILES = {
-    "Phi-mini-reasoning": ("econml_complete_package_FINAL_v2/raw/phi_5bid_repaired.csv", "repaired_regret", "repaired_correct"),
-    "Qwen3-4B": ("econml_complete_package_FINAL_v2/raw/qwen_5bid_raw.csv", "regret", "correct"),
+    "Phi-mini-reasoning": ("pilot_package_v2/raw/phi_5bid_repaired.csv", "repaired_regret", "repaired_correct"),
+    "Qwen3-4B": ("pilot_package_v2/raw/qwen_5bid_raw.csv", "regret", "correct"),
     "DeepSeek-R1-Distill-Llama-8B": ("deepseek_third_model_complete/deepseek_5bid_raw.csv", "regret", "correct"),
-    "Qwen3-8B": ("qwen3_8b_econml_complete/raw_results/qwen3_8b_5bid_raw.csv", "regret", "correct"),
+    "Qwen3-8B": ("qwen3_8b_pilot_package/raw_results/qwen3_8b_5bid_raw.csv", "regret", "correct"),
 }
 
 

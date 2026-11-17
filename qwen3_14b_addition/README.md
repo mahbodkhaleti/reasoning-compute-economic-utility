@@ -2,8 +2,7 @@
 
 This package collects every **new model inference** and **cheap downstream
 analysis** required to evaluate Qwen3-14B under the protocol already used in
-the EconML paper. It does not edit the manuscript and does not fabricate table
-entries. Run it first; merge the validated outputs into the paper only after
+the earlier runs. It does not fabricate table entries. Run it first; merge the validated outputs into the paper only after
 the results have been inspected.
 
 ## Pinned model
