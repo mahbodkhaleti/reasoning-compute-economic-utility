@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{Closing the reasoning block before reading the answer, at 768 forced tokens. Repro.: share of the saved letters that the rerun reproduces before the change (\%). Agree: share of decisions where the letter equals the answer the trace states (\%). Open, Closed, Change: gap recovered with the paper's readout (rerun letters), with the closed-block readout, and their difference, \% [95\% interval].}
+\label{tab:readout}
+\scriptsize
+\centering
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccccccc}
+\toprule
+& \multicolumn{6}{c}{eBay} & \multicolumn{3}{c}{AuctionNet} \\ \cmidrule(lr){2-7}\cmidrule(lr){8-10} Model & Repro. & Agree, open & Agree, closed & Open & Closed & Change & Open & Closed & Change \\
+\midrule
+DeepSeek-8B & 99 & 89 & 89 & 85 [77, 91] & 91 [86, 95] & 6 [1, 11] & 92 [89, 95] & 95 [92, 97] & 2 [1, 4] \\
+Phi-mini & 94 & 57 & 95 & 41 [31, 50] & 84 [79, 88] & 43 [33, 54] & 24 [15, 32] & 81 [75, 86] & 57 [48, 66] \\
+Qwen3-4B & 99 & 96 & 97 & 72 [65, 79] & 72 [63, 79] & 0 [$-$6, 5] & 80 [75, 85] & 81 [76, 87] & 2 [$-$2, 6] \\
+Qwen3-8B & 99 & 98 & 99 & 67 [60, 75] & 77 [70, 85] & 10 [4, 16] & 67 [62, 73] & 82 [78, 86] & 15 [11, 19] \\
+Qwen3-14B & 100 & 98 & 98 & 72 [65, 79] & 86 [80, 92] & 14 [10, 19] & 83 [78, 87] & 94 [92, 96] & 11 [8, 15] \\
+Granite-8B & 99 & 91 & 96 & 65 [58, 72] & 70 [63, 76] & 5 [2, 9] & 73 [68, 78] & 76 [72, 81] & 3 [1, 5] \\
+\bottomrule
+\end{tabular}
+\end{table*}

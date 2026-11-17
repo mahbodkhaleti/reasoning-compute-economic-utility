@@ -2,6 +2,17 @@
 
 Start with the [current AI4F paper](../ai4f_workshop/paper.pdf), its [source](../ai4f_workshop/main.tex), and [reproduction guide](REPRODUCE.md). The root [release.json](../release.json) records these canonical paths.
 
+## WWW 2027 short paper
+
+| Path | Purpose |
+| --- | --- |
+| `www2027/README.md` | Paper overview and a map from every result to its script and output |
+| `www2027/paper/` | Anonymous paper source and PDF |
+| `www2027/analysis/` | All analysis code for the paper (eBay and AuctionNet) |
+| `www2027/results/` | Analysis outputs and saved decisions from the follow-up and AuctionNet runs |
+| `www2027/gpu_followup/` | GPU runners for the follow-up eBay runs and the AuctionNet runs |
+| `www2027/setup_paths.sh` | Points the scripts' fixed root at this folder and links the raw eBay traces |
+
 ## Current paper and its compact checks
 
 | Path | Purpose |

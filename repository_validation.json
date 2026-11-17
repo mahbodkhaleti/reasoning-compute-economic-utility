@@ -18,7 +18,7 @@
   "synthetic_records_total": 27216,
   "preserved_output_verification": "passed",
   "python_files_parsed": 94,
-  "manifest_files_checked": 636,
+  "manifest_files_checked": 1254,
   "manifest_errors": [],
   "raw_auction_source_tracked": false,
   "transformed_scenario_artifacts_tracked": true,

@@ -1,0 +1,164 @@
+23c23
+< Ad platforms and marketplaces show bidders a bid landscape, the estimated chance of winning at each candidate bid, and leave the choice to them or their agents, which increasingly run on reasoning language models. We ask where the value of the reasoning tokens goes in that decision. Six small ($\le$14B) open models choose among 5--7 bids with win probabilities drawn from eBay price data, under forced budgets of up to 768 tokens, and each choice is scored on held-out auctions against an oracle calculator. The models recover 42--85\% of the calculator's lead. Their arithmetic is not the problem: in parsed traces, stated expected profits are almost always right. The loss comes at the end, when traces run out of tokens before every option is compared or the final answer ignores the comparison already made. Picking the best option the trace has already evaluated, with the same tokens, would recover 80--100\% of the lead. A router trained on known products only modestly predicts where reasoning helps, and fails on a new product.
+---
+> Ad platforms and marketplaces show bidders a bid landscape, the estimated chance of winning at each candidate bid, and leave the choice to them or their agents, which increasingly run on reasoning language models. We ask where the value of the reasoning tokens goes in that decision. Six small ($\le$14B) open models choose among 5--7 bids with empirical win curves from eBay prices, under forced budgets of up to 768 tokens, scored on held-out auctions against an oracle calculator. They recover 42--85\% of the calculator's lead. Splitting the remaining loss, arithmetic slips are a large share for one model only; the rest comes at the end of the trace. Traces run out of tokens before every option is compared, or the final answer passes over the best option the trace computed, usually for the runner-up, in a way that follows list position within the same scenario. The information for the right bid is usually in the trace by 768 tokens: a lightweight verifier that reads it out recovers 77--100\% of the lead with the same tokens.
+36c36
+< Much of the web's commerce is priced by automated auction, and platforms increasingly hand the bidder the hard part of the forecast. Ad platforms and marketplaces expose a bid landscape or win-rate simulator, the estimated chance of winning at each candidate bid, and leave the choice of bid to the advertiser, seller or buyer, or to the agent acting for them. Display-ad exchanges have run first-price, pay-your-bid auctions since 2019 \cite{despotakis2021firstprice}, and LLM agents are being built to bid, price and negotiate in such markets \cite{chen2024aucarena,zhu2024synthetic,ahmed2026bazaar}. Those agents increasingly run on reasoning models that spend tokens before acting, or they can call a tool for the arithmetic \cite{schick2023toolformer,gao2023pal,chen2023pot}. This Web Economics and Digital Society paper asks where the value of reasoning tokens is lost in the bid-landscape decision, and whether an agent can tell in advance when the tokens are worth spending.
+---
+> Much of the web's commerce is priced by automated auction, and platforms increasingly hand the bidder the forecast. Ad platforms and marketplaces expose a bid landscape or win-rate simulator, the estimated chance of winning at each candidate bid, and leave the choice of bid to the advertiser, seller or buyer, or to the agent acting for them. Display-ad exchanges have run first-price, pay-your-bid auctions since 2019 \cite{despotakis2021firstprice}, and LLM agents are being built to bid, price and negotiate in such markets \cite{chen2024aucarena,zhu2024synthetic,ahmed2026bazaar}. Those agents increasingly run on reasoning models that spend tokens before acting, or they can call a tool for the arithmetic \cite{schick2023toolformer,gao2023pal,chen2023pot}. This Web Economics and Digital Society paper asks where the value of reasoning tokens is lost in the bid-landscape decision.
+38c38
+< Because the agent receives the estimates, the optimum is known exactly, every lost dollar comes from the agent's own reasoning, and an oracle calculator gives the value of a perfect tool call. The scope follows from that design: one bidder, a pay-your-bid objective, win probabilities estimated from eBay closing prices, and $\le$14B open checkpoints with at most 768 forced (1{,}024 natural) tokens. The question is how well the agent turns a given landscape into a bid, not how it forecasts the landscape or how to bid under eBay's own rules.
+---
+> Because the agent receives the estimates, the optimum is known exactly, every lost dollar comes from the agent's own reasoning, and an oracle calculator gives the value of a perfect tool call. The scope follows from that design: one bidder, a pay-your-bid objective, empirical win curves from eBay closing prices, and $\le$14B open checkpoints. The budget cap is the experimental lever: forced budgets run to 768 tokens, a length that already costs seconds per bid, and an unconstrained run up to 1{,}024 tokens shows what letting the model finish adds.
+40c40,50
+< We contribute: (1) held-out utility frontiers for six open checkpoints under forced budgets, with uncertainty from value families and the auctions themselves; (2) a decomposition of the gap to the calculator into unfinished comparisons and final answers that ignore finished ones, stable across parser tolerances, with a same-token counterfactual readout; (3) a nested, grouped evaluation of selective spending. Code, saved decisions and scripts are in an anonymous repository.\footnote{\url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}}
+---
+> We contribute: (1) held-out utility frontiers for six open checkpoints under forced and unconstrained budgets; (2) a split of the gap to the calculator into arithmetic, unfinished comparisons and answers that pass over the best computed option, with a within-scenario test of why answers pass over it; (3) a lightweight verifier that reads the trace's own comparison, evaluated on a tokens-versus-value curve. Code, saved decisions and scripts are in an anonymous repository.\footnote{\url{https://anonymous.4open.science/r/reasoning-compute-economic-utility-EED7/}}
+> 
+> \begin{figure}[t]
+> \centering
+> \fbox{\begin{minipage}{0.95\columnwidth}\footnotesize
+> \textbf{Worked example} (Qwen3-4B, Cartier watch, private value $v=\$2{,}510$). Options: A \$870 ($\hat p$=0.6421), B \$830 (0.6105), C \$2{,}475 (0.9368), D \$1{,}890 (0.8947), E \$1{,}235 (0.7263). The calculator picks A (expected profit \$1{,}053).
+> \textit{768-token trace} computes A, B, C and D correctly, then is cut off at ``Option E: bid \$1235. Win probability 0.7263. (''. The model answers C ($q=0.03$), the option with the highest win probability, although the trace had already found A best among A--D; a verifier reading the trace picks A.
+> \textit{Unconstrained trace}, identical up to that point, finishes E at about 900 tokens, compares all five and picks A ($q=0.98$).
+> \end{minipage}}
+> \vspace{-3mm}
+> \end{figure}
+44c54
+< Test-time scaling trades tokens for accuracy through longer chains of thought, sampling and search \cite{wei2022chain,snell2024scaling,wu2024inference,alomrani2025budget}; our forcing resembles budget forcing \cite{muennighoff2025s1}. Work on overthinking \cite{chen2024overthinking}, length control \cite{aggarwal2025l1} and learned think-or-not decisions \cite{zhang2025adaptthink} asks when reasoning is needed, and \citet{wan2026shadowprice} allocate tokens across queries for accuracy. We ask per decision, in held-out dollars and quality, and locate the loss inside the trace. Program-aided and tool-using models offload arithmetic \cite{schick2023toolformer,gao2023pal,chen2023pot}. LLM agents have been studied as auction bidders and economic actors \cite{chen2024aucarena,zhu2024synthetic,ahmed2026bazaar,raman2024steer,fish2025econevals,deng2024bargaining}, and \citet{artola2026games} model providers that compete through test-time compute.
+---
+> Test-time scaling trades tokens for accuracy through longer chains of thought, sampling and search \cite{wei2022chain,snell2024scaling,wu2024inference,alomrani2025budget}; our forcing resembles budget forcing \cite{muennighoff2025s1}. Work on overthinking \cite{chen2024overthinking}, length control \cite{aggarwal2025l1} and learned think-or-not decisions \cite{zhang2025adaptthink} asks when reasoning is needed, and \citet{wan2026shadowprice} allocate tokens across queries for accuracy. We locate the loss inside the trace for an economic decision. Program-aided and tool-using models offload arithmetic \cite{schick2023toolformer,gao2023pal,chen2023pot}. LLM agents have been studied as auction bidders and economic actors \cite{chen2024aucarena,zhu2024synthetic,ahmed2026bazaar,raman2024steer,fish2025econevals,deng2024bargaining}, and \citet{artola2026games} model providers that compete through test-time compute.
+48,49c58,62
+< \paragraph{Scenarios and estimator.}
+< We use 628 eBay auctions of Palm Pilot PDAs, Xbox consoles and Cartier watches \cite{jank2010modeling,onlineauctionsdataset}, split 70/30 within product. A scenario gives a private value $v$, $K\in\{5,7\}$ candidate bids and, for each bid, the displayed win probability $\hat p(b)$: the empirical share of that product's construction-sample closing prices at or below $b$. This is the bid landscape. A chosen bid is scored with the same estimator on 189 held-out auctions (41--103 per product; median standard error of $p$ at a candidate bid 0.047), as expected profit $U(\hat b)=p(\hat b)(v-\hat b)$ and utility ratio $q=U(\hat b)/\max_b U(b)$. eBay prices come from proxy bidding, so closing prices are a biased estimate of first-price win rates; the models and the calculator see the same landscape and are scored the same way, so the comparison between them is unaffected. Eighteen values per product and two candidate sets per menu size give 216 scenarios. The oracle calculator returns $\arg\max_b \hat p(b)(v-b)$ and scores $q=0.981$; random choice scores 0.711. The \emph{gap recovered} at budget $c$ is $(q(c)-q(0))/(q_{\text{calc}}-q(0))$.
+---
+> \paragraph{Scenarios.}
+> We use 628 eBay auctions of Palm Pilot PDAs, Xbox consoles and Cartier watches \cite{jank2010modeling,onlineauctionsdataset}, split 70/30 within product. A scenario gives a private value $v$, $K\in\{5,7\}$ candidate bids and, for each bid, the displayed win probability $\hat p(b)$: the share of that product's construction-sample closing prices at or below $b$. A chosen bid is scored with the same estimator on 189 held-out auctions (41--103 per product). eBay prices come from proxy bidding, so these are realistic empirical win curves rather than first-price win rates; the models and the calculator see the same landscape and are scored the same way. Eighteen values per product and two candidate sets per menu size give 216 scenarios.
+> 
+> \paragraph{Measures.}
+> \emph{Utility ratio} $q=U(\hat b)/\max_b U(b)$ with expected profit $U(b)=p(b)(v-b)$ under held-out probabilities $p$. The oracle calculator returns $\arg\max_b \hat p(b)(v-b)$ and scores $q=0.981$; random choice scores 0.711. \emph{Gap recovered} at budget $c$ is $(q(c)-q(0))/(q_{\text{calc}}-q(0))$; the \emph{dollar gap} uses $U$ instead of $q$. \emph{Break-even} (B/e) is the smallest best expected profit per decision at which 768 tokens pay for themselves at rental prices.
+52c65
+< The checkpoints are Phi-4-mini-reasoning, Qwen3-4B, Qwen3-8B, Qwen3-14B, DeepSeek-R1-Distill-\allowbreak Llama-8B and Granite-3.2-8B \cite{microsoft2025phireasoning,yang2025qwen3,guo2025deepseek,ibmgranite2025}. For each budget $c\in\{0,64,128,\allowbreak 256,512,768\}$ we force exactly $c$ reasoning tokens by suppressing end-of-sequence, then read the action in a separate pass as the most likely option letter; the model's free-text answer is also recorded. We stop at 768 because a 768-token decision already takes 9--35 seconds end to end on our hardware, long when bids are placed in an auction's final seconds \cite{roth2002lastminute}, and costs under one cent at RunPod rental rates on an RTX 4090 or L40S \cite{runpod2026pricing}. Greedy decoding runs under three option orders per scenario (648 decisions per model and budget); five sampled seeds run at three budgets; an unconstrained run lets each model stop within 1{,}024 tokens. Completion at 768 tokens inferred from the unconstrained trace matches the forced trace in 96--99.8\% of cases, consistent with greedy forced traces being prefixes of unconstrained ones. A synthetic independent-private-values version with exact payoffs \cite{krishna2010auction} uses the same protocol.
+---
+> The checkpoints are Phi-4-mini-reasoning, Qwen3-4B, Qwen3-8B, Qwen3-14B, DeepSeek-R1-Distill-\allowbreak Llama-8B and Granite-3.2-8B \cite{microsoft2025phireasoning,yang2025qwen3,guo2025deepseek,ibmgranite2025}. For each budget $c\in\{0,64,128,\allowbreak 256,512,768\}$ we force exactly $c$ reasoning tokens by suppressing end-of-sequence, then read the action in a separate pass as the most likely option letter; the free-text answer is also recorded. At 768 tokens a decision already takes 9--35 seconds end to end, long when bids are placed in an auction's final seconds \cite{roth2002lastminute}, and costs under one cent at RunPod rates \cite{runpod2026pricing}. Greedy decoding runs under three option orders per scenario (648 decisions per model and budget); five sampled seeds run at three budgets; an unconstrained run lets each model stop within 1{,}024 tokens. Completion at 768 tokens inferred from the unconstrained trace matches the forced trace in 96--99.8\% of cases, consistent with greedy forced traces being prefixes of unconstrained ones. A synthetic version with exact payoffs \cite{krishna2010auction} uses the same protocol.
+54,55c67,68
+< \paragraph{Trace parser.}
+< An option counts as \emph{evaluated} when the trace states a number within 2\% of its expected profit $(v-b)\hat p(b)$; a trace is \emph{complete} when all options are evaluated. We report results at 1\% and 5\% as well. Two LLM annotators, blind to the parser and told to label by reading, annotated 150 random traces; a third relabeled 60 of them with perfect agreement ($\kappa=1.0$). Against the annotations the parser has 92\% precision and 97\% recall per option ($\kappa=0.70$) and slightly over-counts completion (72\% versus 65\% of traces). Of the values the annotators found, 97\% are within 2\% of the truth.
+---
+> \paragraph{Trace parser and verifier.}
+> An option counts as \emph{evaluated} when the trace states a number within 2\% of its expected profit $(v-b)\hat p(b)$; a trace is \emph{complete} when all options are evaluated. Two LLM annotators, blind to the parser, annotated 150 random traces; a third relabeled 60 with perfect agreement ($\kappa=1.0$). Against them the parser has 92\% precision and 97\% recall per option ($\kappa=0.70$). The \emph{verifier} reads out the evaluated option with the highest expected profit, falling back to the model's answer when nothing is evaluated; a stricter variant acts only when at least $K-1$ options are evaluated. Both are lightweight post-hoc readers, not the model alone.
+63c76
+< \caption{(a) Held-out utility ratio by forced budget, mean of 648 decisions per point. (b) Share of unconstrained traces that have evaluated every option by token $t$ (Kaplan--Meier, censored at stopping or the 1{,}024 cap). (c) Share of the 0-to-768 gain kept when only top-ranked decisions get 768 tokens, ranking by value scored on the dollar gain and on the ratio gain, and by budget-zero confidence; means over models, bands the range.}
+---
+> \caption{(a) Held-out utility ratio by forced budget (filled markers, 648 decisions per point) and for the unconstrained run at its mean token use (hollow). (b) Share of unconstrained traces that have evaluated every option by token $t$ (Kaplan--Meier, censored at stopping or the 1{,}024 cap). (c) Utility ratio of the model's answer and of the two verifiers by forced budget; means over models, bands the range.}
+69c82
+< \caption{Gap to the calculator recovered at 768 forced tokens by the model's readout and by a readout that picks the best option the trace has already evaluated (95\% family-bootstrap intervals; parser at 2\%). Dollar: gap measured in expected profit instead of $q$. Synth.: gap recovered on the synthetic exact-payoff scenarios. B/e (break-even): smallest best expected profit per decision at which 768 tokens pay for themselves at rental prices.}
+---
+> \caption{Gap to the calculator recovered at 768 forced tokens (95\% family-bootstrap intervals), by the model's answer, by the two verifiers, and for the model's answer in the unconstrained run (Uncon.). Dollar gap and break-even (B/e) are defined in Section 3.}
+73,74c86,87
+< \setlength{\tabcolsep}{2.0pt}
+< \begin{tabular}{lcccccc}
+---
+> \setlength{\tabcolsep}{1.7pt}
+> \begin{tabular}{lccccccc}
+76,78c89,91
+< & & \multicolumn{2}{c}{Gap recovered ($q$)} & \multicolumn{2}{c}{Other gap measures} & \\
+< \cmidrule(lr){3-4}\cmidrule(lr){5-6}
+< Model & $q(768)$ & Readout & Best eval. & Dollar & Synth. & B/e \\
+---
+> & & \multicolumn{3}{c}{Gap recovered at 768 ($q$)} & & & \\
+> \cmidrule(lr){3-5}
+> Model & $q(768)$ & Answer & $\geq K{-}1$ & Any eval. & Uncon. & Dollar & B/e \\
+80,85c93,98
+< DeepSeek-8B & .950 & 85\% [78, 91] & 100\% & 57\% & 94\% & 1.8\textcent \\
+< Phi-mini    & .829 & 42\% [34, 50] & \phantom{0}98\% [97, 99] & 25\% & 47\% & 1.7\textcent \\
+< Qwen3-4B    & .916 & 72\% [66, 78] & \phantom{0}96\% [94, 98] & 50\% & 91\% & 1.3\textcent \\
+< Qwen3-8B    & .907 & 66\% [60, 72] & \phantom{0}92\% [88, 95] & 51\% & 85\% & 2.3\textcent \\
+< Qwen3-14B   & .916 & 72\% [66, 79] & \phantom{0}98\% [96, 99] & 47\% & 98\% & 4.5\textcent \\
+< Granite-8B  & .897 & 65\% [57, 73] & \phantom{0}81\% [75, 87] & 75\% & 65\% & 2.2\textcent \\
+---
+> DeepSeek-8B & .950 & 85\% [78, 91] & 96\% & 100\% & 96\% & 57\% & 1.8\textcent \\
+> Phi-mini    & .829 & 42\% [34, 50] & 93\% & \phantom{0}98\% & 49\% & 25\% & 1.7\textcent \\
+> Qwen3-4B    & .916 & 72\% [66, 78] & 84\% & \phantom{0}96\% & 91\% & 50\% & 1.3\textcent \\
+> Qwen3-8B    & .907 & 66\% [60, 72] & 77\% & \phantom{0}92\% & 87\% & 51\% & 2.3\textcent \\
+> Qwen3-14B   & .916 & 72\% [66, 79] & 84\% & \phantom{0}98\% & 89\% & 47\% & 4.5\textcent \\
+> Granite-8B  & .897 & 65\% [57, 73] & 85\% & \phantom{0}81\% & 72\% & 75\% & 2.2\textcent \\
+92,102c105
+< Forcing 768 tokens raises the utility ratio by 0.11--0.18 (all intervals exclude zero after a Bonferroni correction for six models), mostly between 512 and 768 tokens (Figure~\ref{fig:main}a), and recovers 42--85\% of the calculator's lead in $q$ (Table~\ref{tab:main}); in dollars, where high-stakes Cartier decisions weigh more, it recovers 25--75\%. Resampling the held-out auctions together with value families leaves the gain positive and the calculator ahead in every draw for every model. The synthetic replication recovers more for five models. This is not because synthetic traces finish more often; they finish less often (34--53\% complete at 768 tokens, against 53--90\%). Synthetic menus spread expected profits more widely across options (median coefficient of variation 0.50 against 0.30), and in a pooled regression of the per-decision gain that spread is the only significant scenario feature; adding it and the other features shrinks the synthetic advantage from 0.088 ($p<0.001$) to 0.030 ($p=0.38$). Reasoning gains more where wrong options are clearly worse.
+< 
+< \begin{figure}[t]
+< \centering
+< \fbox{\begin{minipage}{0.95\columnwidth}\footnotesize
+< \textbf{Worked example} (Qwen3-4B, Cartier watch, $v=\$2{,}510$). Options: A \$870 ($\hat p$=0.6421), B \$830 (0.6105), C \$2{,}475 (0.9368), D \$1{,}890 (0.8947), E \$1{,}235 (0.7263). The calculator picks A (expected profit \$1{,}053).
+< \textit{768-token trace} computes A, B, C and D correctly, then is cut off at ``Option E: bid \$1235. Win probability 0.7263. (''. The readout picks C ($q=0.03$), the option with the highest win probability, although the trace had already found A best among A--D.
+< \textit{Unconstrained trace}, identical up to that point, finishes E at about 900 tokens, compares all five and picks A ($q=0.98$).
+< \end{minipage}}
+< \vspace{-3mm}
+< \end{figure}
+---
+> Forcing 768 tokens raises $q$ by 0.11--0.18 (all intervals exclude zero after a Bonferroni correction), mostly between 512 and 768 tokens, and recovers 42--85\% of the calculator's lead (Table~\ref{tab:main}). Letting the models stop on their own within 1{,}024 tokens recovers 72--96\% for five models but only 49\% for Phi-mini (Figure~\ref{fig:main}a). Dollar recovery is lower for most models because the dollar gap is dominated by Cartier listings, where the gap at budget zero is \$113--\$186 per decision against \$2--\$15 elsewhere, and where recovery is weakest for five of the six models. The calculator stays ahead of every model in every bootstrap draw that also resamples the held-out auctions. The synthetic replication recovers more (47--98\%), not because its traces finish more often (they finish less often), but because its menus spread expected profits more widely: in a pooled regression of the per-decision gain, that spread is the only significant scenario feature, and adding it cuts the synthetic advantage from 0.088 ($p<0.001$) to 0.030 ($p=0.38$).
+105c108
+< \caption{Where the 768-token gap goes. Complete: share of traces that evaluate every option. Median: tokens needed to finish for $K=5$/$K=7$ (Kaplan--Meier). Unfinished: share of the gap from incomplete traces at a 2\% parser tolerance [95\% interval], with the range over 1--5\%. Ignored: share from complete traces whose answer is not their best evaluated option. Natural: $q$ of unconstrained traces that stopped before the cap.}
+---
+> \caption{Where the 768-token gap goes. Complete: share of traces that evaluate every option. Median: tokens needed to finish for $K=5$/$K=7$ (Kaplan--Meier). The gap is split into three parts that sum to 100\% [95\% intervals]: Arith., the trace's own stated values rank a wrong option first; Unfin., the trace is incomplete; Passed, the trace is complete but the answer is not its best option.}
+109,110c112,113
+< \setlength{\tabcolsep}{1.8pt}
+< \begin{tabular}{lcccccc}
+---
+> \setlength{\tabcolsep}{1.9pt}
+> \begin{tabular}{lccccc}
+112,114c115,117
+< & & & \multicolumn{2}{c}{Unfinished} & & \\
+< \cmidrule(lr){4-5}
+< Model & Complete & Median & 2\% & 1--5\% & Ignored & Natural \\
+---
+> & & & \multicolumn{3}{c}{Share of the gap} \\
+> \cmidrule(lr){4-6}
+> Model & Complete & Median & Arith. & Unfin. & Passed \\
+116,121c119,124
+< DeepSeek-8B & 90\% & 440/544 & 59\% [42, 74] & 46--65\% & 41\% & .99 \\
+< Phi-mini    & 84\% & 544/664 & 24\% [16, 34] & 18--28\% & 76\% & .99 \\
+< Qwen3-4B    & 64\% & 608/776 & 84\% [75, 93] & 71--87\% & 16\% & .98 \\
+< Qwen3-8B    & 53\% & 648/840 & 85\% [76, 92] & 73--87\% & 15\% & .98 \\
+< Qwen3-14B   & 66\% & 600/696 & 90\% [81, 100] & 74--95\% & 10\% & .98 \\
+< Granite-8B  & 71\% & 456/600 & 48\% [38, 58] & 43--53\% & 52\% & .91 \\
+---
+> DeepSeek-8B & 90\% & 440/544 & 26\% [11, 38] & 47\% [35, 63] & 27\% [13, 43] \\
+> Phi-mini    & 84\% & 544/664 & \phantom{0}1\% [0, 3] & 24\% [15, 33] & 75\% [65, 84] \\
+> Qwen3-4B    & 64\% & 608/776 & 11\% [5, 17] & 74\% [64, 84] & 15\% [6, 25] \\
+> Qwen3-8B    & 53\% & 648/840 & \phantom{0}5\% [1, 10] & 80\% [70, 88] & 15\% [8, 23] \\
+> Qwen3-14B   & 66\% & 600/696 & \phantom{0}2\% [0, 6] & 90\% [80, 99] & \phantom{0}8\% [$-$1, 18] \\
+> Granite-8B  & 71\% & 456/600 & \phantom{0}0\% [0, 1] & 48\% [37, 59] & 52\% [41, 63] \\
+127,128c130,134
+< \paragraph{The arithmetic is right; the loss is at the end.}
+< Since stated values are almost always correct, the gap at 768 tokens splits into two parts (Table~\ref{tab:traces}). The first is traces that run out of tokens. Evaluating every option takes a median of 440--648 tokens with five options and 544--840 with seven (Figure~\ref{fig:main}b), so almost no trace finishes by 256 tokens. For the three Qwen models unfinished traces cause 71--95\% of the gap across parser tolerances. The second is complete traces whose final answer is not the best option they computed, the main loss for Phi-mini and Granite-8B. Ignoring follows list position, in opposite directions: Phi-mini ignores its best option in 32\% of complete traces when it is listed first and 74\% when it is listed last, Granite-8B in 79\% and 18\%. Qwen and DeepSeek ignore it in only 8--11\% of complete traces. For every family, ignoring is less likely when the best option is also the highest-probability bid (odds ratio 0.31--0.57, scenario-clustered logit) and when it clearly beats the runner-up. It is not an artifact of our letter readout: the model's own free-text answer names the calculator's bid in at most 25\% of these traces.
+---
+> \paragraph{Arithmetic costs one model; the rest is lost at the end.}
+> Table~\ref{tab:traces} splits the 768-token gap. Arithmetic slips that change which option the trace ranks first account for 26\% of DeepSeek-8B's gap and at most 11\% for the others; on the annotated traces they change the ranking in 4\% of traces. The Qwen models lose most by running out of tokens (74--90\%): a full comparison takes a median of 440--648 tokens with five options and 544--840 with seven (Figure~\ref{fig:main}b). Phi-mini and Granite-8B lose most by passing over their own best option (75\% and 52\%). Completion does not just mark easy scenarios: within the same model and scenario, a complete trace scores 0.075 higher than an unfinished one, and the calculator is equally accurate on scenarios models usually finish and those they do not.
+> 
+> \paragraph{Answers pass over the best option by list position.}
+> Each scenario appears in three option orders, so the list position of the best option varies within a scenario. A conditional logit with scenario fixed effects shows that moving the best option from first to last raises the odds of passing over it 12-fold for Phi-mini and 3--35-fold for the Qwen models ($p\le0.01$), lowers them to 0.06 for Granite-8B ($p<0.001$), and has no significant effect for DeepSeek-8B. When the answer passes over the best option it usually takes the runner-up (29--68\% of cases) or the highest-probability bid (19--56\%); Phi-mini's choice is the first-listed option in 38\% of these cases and Granite-8B's the last-listed in 28\%. The model's free-text answer names the calculator's bid in at most 25\% of these traces, so this is not an artifact of the letter readout.
+130,131c136,137
+< \paragraph{The trace already holds most of the value.}
+< Reading out the best option the trace has evaluated, with no extra tokens, recovers 80--100\% of the gap at 768 tokens across parser tolerances (Table~\ref{tab:main}) and 67--89\% at 512 tokens, where the model's own answer recovers 17--56\%. On the 150 annotated traces, the same readout built from the annotators' labels scores 0.963, against 0.959 from the parser and 0.897 for the model's answer. Finishing also counts: unconstrained traces that stopped on their own score 0.98--0.99 for five models, and within the same model and scenario a complete trace scores 0.075 higher than an unfinished one, while the calculator is equally accurate on scenarios that models usually finish and those they do not, so completion does not just mark easy scenarios.
+---
+> \paragraph{The trace already holds the right bid.}
+> The verifier recovers 81--100\% of the gap at 768 tokens with no extra tokens, and 80--100\% across parser tolerances of 1--5\% (Table~\ref{tab:main}); built from the annotators' labels instead of the parser on the 150 annotated traces it scores 0.963, against 0.959 from the parser and 0.897 for the model's answer. It helps only once most options are evaluated: at 256 tokens it lowers $q$ by 0.002--0.046 (Figure~\ref{fig:main}c). The stricter $K-1$ variant never lowers $q$ by more than 0.001 at any budget and recovers 77--96\% at 768 tokens. Sampling is no substitute for length: two 384-token samples with majority voting score 0.06--0.18 below one 768-token sample at the same token count.
+134c140
+< Routing 768 tokens to high-value decisions keeps 88--91\% of the dollar gain while saving 34--72\% of tokens, but only because dollar gains scale with value: scored on the ratio gain, the same rule ranks decisions no better than chance (Figure~\ref{fig:main}c). Single signals, including budget-zero confidence, early progress and order disagreement, give areas under the ratio-gain-kept curve of 0.31--0.59 (random 0.50). We then trained a gradient-boosted router with nested cross-validation, grouping all orders of a scenario by value family so that no scenario appears in both training and test data. Within the products it was trained on, it reaches 0.54--0.71 without probes and 0.61--0.74 with a charged 128-token probe; at the spend of a fixed 512-token budget it beats a random mix of 0 and 768 tokens by 0.012--0.031 in $q$. Trained on two products and tested on the third, it falls to 0.31--0.58.
+---
+> Routing tokens to high-value decisions keeps most of the dollar gain only because dollar gains scale with value. A gradient-boosted router trained with nested cross-validation grouped by value family beats a random mix of 0 and 768 tokens by 0.012--0.031 in $q$ at equal spend within known products; with three product categories, we cannot show that it transfers to a new one (areas 0.31--0.58, random 0.50).
+136,137c142,143
+< \paragraph{Costs relative to the calculator.}
+< At 768 tokens the models still lose \$15--\$36 of expected profit per decision against the calculator, which costs essentially nothing. Without a tool, the tokens pay over budget zero whenever a decision's best expected profit exceeds a few cents (Table~\ref{tab:main}, B/e), and break-even stays below \$0.35 even at \$50 per million tokens, the top of current API list prices \cite{openai2026pricing,anthropic2026pricing,google2026pricing,deepseek2026pricing}.
+---
+> \paragraph{Costs.}
+> Without a tool, 768 tokens pay over budget zero whenever a decision's best expected profit exceeds a few cents (Table~\ref{tab:main}), and break-even stays below \$0.35 even at \$50 per million tokens, the top of current API list prices \cite{openai2026pricing,anthropic2026pricing,google2026pricing,deepseek2026pricing}. The models still lose \$15--\$36 of expected profit per decision against the calculator.
+141c147
+< Our objective is the pay-your-bid rule of first-price ad exchanges. eBay itself runs proxy bidding, under which bidding one's value is optimal \cite{roth2002lastminute}; we use eBay only as a source of realistic price distributions for the landscape, and we use no ad-exchange data. The calculator is an oracle readout and the best-evaluated readout uses our parser, so neither is a tool-calling agent with its own failure rate. Forced budgets stop at 768 and natural ones at 1{,}024 tokens, and all models are $\le$14B open checkpoints.
+---
+> Our objective is the pay-your-bid rule of first-price ad exchanges, used as motivation rather than tested: eBay itself runs proxy bidding, under which bidding one's value is optimal \cite{roth2002lastminute}, and we use eBay only for realistic win curves. The calculator is an oracle readout and the verifier uses our parser, so neither is a tool-calling agent with its own failure rate. Whether larger models, longer budgets or prompting remove the end-of-trace loss is untested.
+143c149
+< Within that scope, the shortfall of small reasoning models on a bid-landscape decision is decided at the end of the trace. The models compute correctly, but run out of tokens before every option is compared, or answer against their own comparison in a way that tracks list position. Agent designers should give such an agent the tool. If tokens are spent anyway, the budget should cover the 450--850 tokens a full comparison needs, and the final answer should be taken from the comparison the trace has already made.
+---
+> For $\le$14B open reasoning models making a single-bidder, pay-your-bid bid-landscape decision under budgets up to 768 forced tokens, the value of reasoning is lost mostly at the end of the trace, in different ways for different models: the Qwen models run out of tokens, while Phi-mini and Granite-8B compute the comparison and then answer against it in a way that follows list position. The information for the right bid is usually already in the trace by 768 tokens, so in this setting a lightweight verifier that reads the trace's own comparison recovers most of what a calculator would.

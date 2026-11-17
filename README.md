@@ -4,6 +4,16 @@ Reproducibility repository for **Evaluating Reasoning Budgets for LLM Decision S
 
 [Read the current anonymous paper](ai4f_workshop/paper.pdf) · [LaTeX source](ai4f_workshop/main.tex) · [Download the compact CPU package](releases/ai4f_cpu_reference.zip) · [Reproduction guide](docs/REPRODUCE.md)
 
+## WWW 2027 short paper
+
+**Budget, Readout or Reasoning? Where Small Reasoning Models Lose Value in Auction Bidding.** The code, saved decisions and analysis outputs for this paper are in [`www2027/`](www2027/README.md), with a table that maps every result in the paper to the script that produces it. Reproducing the paper's numbers needs no GPU:
+
+```sh
+bash www2027/setup_paths.sh
+```
+
+The sections below describe the earlier workshop paper and the archive it builds on. The WWW 2027 analyses reuse the eBay model traces stored in that archive.
+
 ## Start here
 
 The compact package contains the current paper, saved-number audit inputs and the prospective CPU reference. It avoids downloading the complete historical inference archive. Extract it and run:

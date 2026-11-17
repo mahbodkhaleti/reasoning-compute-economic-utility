@@ -1,0 +1,19 @@
+\begin{table}[h!]
+\caption{The stated-answer parser on eBay (\%). Coverage: traces in which the parser finds a stated choice. Agrees: that choice equals the letter. Stated right and Letter right: share of parsed traces in which the stated choice, or the letter, is the calculator's bid.}
+\label{tab:stated}
+\footnotesize
+\centering
+
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{4}{c}{768 forced tokens} & \multicolumn{2}{c}{1,024 run} \\ \cmidrule(lr){2-5}\cmidrule(lr){6-7} Model & Coverage & Agrees & Stated right & Letter right & Coverage & Agrees \\
+\midrule
+DeepSeek-8B & 82 & 89 & 85 & 94 & 96 & 94 \\
+Phi-mini & 60 & 57 & 94 & 55 & 92 & 54 \\
+Qwen3-4B & 37 & 96 & 98 & 97 & 67 & 99 \\
+Qwen3-8B & 27 & 98 & 98 & 99 & 62 & 99 \\
+Qwen3-14B & 47 & 98 & 98 & 98 & 74 & 98 \\
+Granite-8B & 74 & 92 & 57 & 53 & 73 & 99 \\
+\bottomrule
+\end{tabular}
+\end{table}

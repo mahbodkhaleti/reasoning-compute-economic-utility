@@ -1,0 +1,44 @@
+{
+  "run_name": "run4_prompt",
+  "model": "granite_3_2_8b_instruct",
+  "hf_id": "ibm-granite/granite-3.2-8b-instruct",
+  "requested_model_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "requested_tokenizer_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "pipeline_package": "new",
+  "pipeline_common_sha256": "4501b822d3e87316c450a775391f0634702cecdfe5474ad26a51b8c7b8ff78b1",
+  "pipeline_config_sha256": "4f3eaf5ec0906cb72c5a1640fb6868c8cbb907f4b4519e71b94cb144b456874e",
+  "runner_sha256": "813f89f0f6dbecbd2d1d5958126e51826e968ff3d010f994b64a8100de3e2db9",
+  "harness_ext_sha256": "f02ff944cbc5522b0bd660d4240879d266688c623f8d2ea7f773e5bd475e0f5e",
+  "scenarios_sha256": "12a846cb3f9362ad9be5c5830d5aef71d7300328ce2399ac87cf2ef60f9986e6",
+  "settings": [
+    [
+      "forced768",
+      768,
+      1024
+    ],
+    [
+      "unforced1024",
+      -1,
+      1024
+    ]
+  ],
+  "repeat_seeds": [
+    11,
+    23,
+    37
+  ],
+  "smoke": false,
+  "first_started_utc": "2026-11-11T20:10:52.190096+00:00",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.15.0",
+  "accelerate": "1.14.0",
+  "python": "3.10.22",
+  "cuda_build": "13.0",
+  "starts_utc": [
+    "2026-11-11T20:10:52.190113+00:00"
+  ],
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "resolved_model_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "resolved_tokenizer_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+  "completed_utc": "2026-11-12T09:42:05.318617+00:00"
+}

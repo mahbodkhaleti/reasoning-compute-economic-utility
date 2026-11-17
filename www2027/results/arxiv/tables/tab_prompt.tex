@@ -1,0 +1,21 @@
+\begin{table}[t]
+\caption{Adding one instruction (``End by listing the expected profit of each option, then answer with the option that has the largest.''): gap recovered, \% [95\% interval].}
+\label{tab:prompt}
+\footnotesize
+\centering
+
+\begin{tabular}{llccc}
+\toprule
+Model & Setting & Original prompt & With list instruction & Change \\
+\midrule
+Phi-mini & 768 & 42 [34, 50] & 38 [29, 45] & $-$5 [$-$13, 4] \\
+Phi-mini & 1,024 run & 49 [41, 56] & 54 [43, 62] & 5 [$-$5, 13] \\
+Granite-8B & 768 & 65 [57, 73] & 68 [60, 76] & 3 [$-$4, 10] \\
+Granite-8B & 1,024 run & 72 [65, 78] & 77 [70, 83] & 5 [$-$3, 13] \\
+DeepSeek-8B & 768 & 85 [78, 91] & 82 [75, 89] & $-$3 [$-$8, 2] \\
+DeepSeek-8B & 1,024 run & 96 [93, 98] & 94 [90, 97] & $-$2 [$-$6, 2] \\
+Qwen3-8B & 768 & 66 [60, 72] & 44 [36, 52] & $-$22 [$-$31, $-$14] \\
+Qwen3-8B & 1,024 run & 87 [82, 91] & 73 [66, 80] & $-$14 [$-$21, $-$8] \\
+\bottomrule
+\end{tabular}
+\end{table}

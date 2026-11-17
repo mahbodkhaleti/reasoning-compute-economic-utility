@@ -1,0 +1,254 @@
+{
+ "models": {
+  "deepseek_r1_llama_8b": {
+   "label": "DeepSeek-8B",
+   "U0": 160.44693241206053,
+   "U768": 190.06005229056245,
+   "Ucalc": 212.6553378568665,
+   "Ustar": 215.74656008785908,
+   "Q0": 0.775316463220151,
+   "Q768": 0.9499963675041995,
+   "Qcalc": 0.9813640106761573,
+   "profit_gain": 29.61311987850192,
+   "profit_gain_ci": [
+    17.391407342482722,
+    45.402428465500364
+   ],
+   "gap_closed_profit": 0.5672098127917067,
+   "gap_closed_profit_ci": [
+    0.406993995585353,
+    0.7239995382184635
+   ],
+   "gap_closed_ratio": 0.8477650253097275,
+   "lambda_usd_per_token": 4.0433705778884685e-06,
+   "cost_768_usd": 0.0031053086038183436,
+   "value_per_compute_dollar": 9536.288870642065,
+   "breakeven_stakes_multiplier": 0.00010486259524693608,
+   "share_scenarios_gain_exceeds_cost": 0.8379629629629629,
+   "share_scenarios_worse": 0.10648148148148148
+  },
+  "phi4_mini_reasoning": {
+   "label": "Phi-mini",
+   "U0": 167.87489260425386,
+   "U768": 178.98258816520806,
+   "Ucalc": 212.6553378568665,
+   "Ustar": 215.74656008785908,
+   "Q0": 0.7182502098403684,
+   "Q768": 0.8291652017339136,
+   "Qcalc": 0.9813640106761573,
+   "profit_gain": 11.107695560954198,
+   "profit_gain_ci": [
+    4.3492143595137005,
+    18.443700815184467
+   ],
+   "gap_closed_profit": 0.24804790346085573,
+   "gap_closed_profit_ci": [
+    0.10507684224482987,
+    0.4144910072611956
+   ],
+   "gap_closed_ratio": 0.42154760237289124,
+   "lambda_usd_per_token": 2.462993843244236e-06,
+   "cost_768_usd": 0.0018915792716115735,
+   "value_per_compute_dollar": 5872.180842566935,
+   "breakeven_stakes_multiplier": 0.00017029448288633856,
+   "share_scenarios_gain_exceeds_cost": 0.6851851851851852,
+   "share_scenarios_worse": 0.22685185185185186
+  },
+  "qwen3_4b": {
+   "label": "Qwen3-4B",
+   "U0": 151.6504281862308,
+   "U768": 182.11999336866796,
+   "Ucalc": 212.6553378568665,
+   "Ustar": 215.74656008785908,
+   "Q0": 0.7518967069539123,
+   "Q768": 0.9157846218383072,
+   "Qcalc": 0.9813640106761573,
+   "profit_gain": 30.46956518243715,
+   "profit_gain_ci": [
+    18.78983663300165,
+    44.29001160889141
+   ],
+   "gap_closed_profit": 0.4994608687553466,
+   "gap_closed_profit_ci": [
+    0.4075642330837338,
+    0.6036522288416369
+   ],
+   "gap_closed_ratio": 0.7142103133035912,
+   "lambda_usd_per_token": 2.858105559124685e-06,
+   "cost_768_usd": 0.002195025069407758,
+   "value_per_compute_dollar": 13881.192341305778,
+   "breakeven_stakes_multiplier": 7.203992102496377e-05,
+   "share_scenarios_gain_exceeds_cost": 0.8055555555555556,
+   "share_scenarios_worse": 0.14814814814814814
+  },
+  "qwen3_8b": {
+   "label": "Qwen3-8B",
+   "U0": 151.10204475816184,
+   "U768": 182.28064343735252,
+   "Ucalc": 212.6553378568665,
+   "Ustar": 215.74656008785908,
+   "Q0": 0.7627822957954359,
+   "Q768": 0.9066148404532766,
+   "Qcalc": 0.9813640106761573,
+   "profit_gain": 31.178598679190685,
+   "profit_gain_ci": [
+    16.9203955038172,
+    49.4701926496971
+   ],
+   "gap_closed_profit": 0.5065301482602043,
+   "gap_closed_profit_ci": [
+    0.37938075044114106,
+    0.615317028853943
+   ],
+   "gap_closed_ratio": 0.6580264261186217,
+   "lambda_usd_per_token": 4.382830405077996e-06,
+   "cost_768_usd": 0.003366013751099901,
+   "value_per_compute_dollar": 9262.766282224058,
+   "breakeven_stakes_multiplier": 0.00010795910957173505,
+   "share_scenarios_gain_exceeds_cost": 0.7361111111111112,
+   "share_scenarios_worse": 0.09722222222222222
+  },
+  "qwen3_14b": {
+   "label": "Qwen3-14B",
+   "U0": 145.07746140493288,
+   "U768": 176.65147217845185,
+   "Ucalc": 212.6553378568665,
+   "Ustar": 215.74656008785908,
+   "Q0": 0.7493647196357931,
+   "Q768": 0.9158654011412545,
+   "Qcalc": 0.9813640106761573,
+   "profit_gain": 31.574010773518978,
+   "profit_gain_ci": [
+    17.60226227515107,
+    49.80378784289087
+   ],
+   "gap_closed_profit": 0.4672240743755353,
+   "gap_closed_profit_ci": [
+    0.3500400209058817,
+    0.5652747756397454
+   ],
+   "gap_closed_ratio": 0.717677544439103,
+   "lambda_usd_per_token": null,
+   "cost_768_usd": null,
+   "value_per_compute_dollar": null,
+   "breakeven_stakes_multiplier": null,
+   "share_scenarios_gain_exceeds_cost": 0.7129629629629629,
+   "share_scenarios_worse": 0.0787037037037037
+  },
+  "granite_3_2_8b_instruct": {
+   "label": "Granite-8B",
+   "U0": 151.20371860511725,
+   "U768": 197.5684839732252,
+   "Ucalc": 212.6553378568665,
+   "Ustar": 215.74656008785908,
+   "Q0": 0.7404354550623404,
+   "Q768": 0.8970670125594743,
+   "Qcalc": 0.9813640106761573,
+   "profit_gain": 46.36476536810795,
+   "profit_gain_ci": [
+    25.907783878221586,
+    71.1672277708671
+   ],
+   "gap_closed_profit": 0.7544921668892907,
+   "gap_closed_profit_ci": [
+    0.5958736118185352,
+    0.8637980665049487
+   ],
+   "gap_closed_ratio": 0.6501162018677344,
+   "lambda_usd_per_token": 4.462877595235689e-06,
+   "cost_768_usd": 0.0034274899931410092,
+   "value_per_compute_dollar": 13527.323335995652,
+   "breakeven_stakes_multiplier": 7.392445461394724e-05,
+   "share_scenarios_gain_exceeds_cost": 0.6990740740740741,
+   "share_scenarios_worse": 0.21296296296296297
+  }
+ },
+ "routing": {
+  "deepseek_r1_llama_8b": {
+   "label": "DeepSeek-8B",
+   "tau": 0.84,
+   "escalate_share": 0.9737654320987654,
+   "mean_tokens": 747.8518518518518,
+   "token_saving": 0.026234567901234573,
+   "heldout_gain_retained": 0.9221045175340221,
+   "heldout_profit": 187.75332403030373,
+   "profit_768": 190.06005229056248,
+   "profit_0": 160.44693241206053,
+   "cheapest_fixed_budget_matching": 768,
+   "auroc_p0_for_budget0_optimal": 0.5430637738330046
+  },
+  "phi4_mini_reasoning": {
+   "label": "Phi-mini",
+   "tau": 0.79,
+   "escalate_share": 0.9614197530864198,
+   "mean_tokens": 738.3703703703704,
+   "token_saving": 0.038580246913580196,
+   "heldout_gain_retained": 0.9686122244305851,
+   "heldout_profit": 178.6339423098474,
+   "profit_768": 178.98258816520803,
+   "profit_0": 167.87489260425386,
+   "cheapest_fixed_budget_matching": 768,
+   "auroc_p0_for_budget0_optimal": 0.4758240917782027
+  },
+  "qwen3_4b": {
+   "label": "Qwen3-4B",
+   "tau": 0.9,
+   "escalate_share": 0.9552469135802469,
+   "mean_tokens": 733.6296296296297,
+   "token_saving": 0.04475308641975306,
+   "heldout_gain_retained": 0.9266816508198964,
+   "heldout_profit": 179.8860151492561,
+   "profit_768": 182.11999336866796,
+   "profit_0": 151.6504281862308,
+   "cheapest_fixed_budget_matching": 768,
+   "auroc_p0_for_budget0_optimal": 0.5630861040068201
+  },
+  "qwen3_8b": {
+   "label": "Qwen3-8B",
+   "tau": 1.0,
+   "escalate_share": 1.0,
+   "mean_tokens": 768.0,
+   "token_saving": 0.0,
+   "heldout_gain_retained": 1.0,
+   "heldout_profit": 182.2806434373525,
+   "profit_768": 182.2806434373525,
+   "profit_0": 151.10204475816184,
+   "cheapest_fixed_budget_matching": 768,
+   "auroc_p0_for_budget0_optimal": 0.5727998943685219
+  },
+  "qwen3_14b": {
+   "label": "Qwen3-14B",
+   "tau": 1.0,
+   "escalate_share": 1.0,
+   "mean_tokens": 768.0,
+   "token_saving": 0.0,
+   "heldout_gain_retained": 1.0,
+   "heldout_profit": 176.65147217845188,
+   "profit_768": 176.65147217845188,
+   "profit_0": 145.07746140493288,
+   "cheapest_fixed_budget_matching": null,
+   "auroc_p0_for_budget0_optimal": 0.6287182015125767
+  },
+  "granite_3_2_8b_instruct": {
+   "label": "Granite-8B",
+   "tau": 0.97,
+   "escalate_share": 0.9645061728395061,
+   "mean_tokens": 740.7407407407406,
+   "token_saving": 0.035493827160493985,
+   "heldout_gain_retained": 0.9243800540124877,
+   "heldout_profit": 194.0623829203652,
+   "profit_768": 197.5684839732252,
+   "profit_0": 151.20371860511725,
+   "cheapest_fixed_budget_matching": 768,
+   "auroc_p0_for_budget0_optimal": 0.5686145671147171
+  }
+ },
+ "accuracy_gain_pp": {
+  "deepseek_r1_llama_8b": 43.518518518518526,
+  "phi4_mini_reasoning": 19.290123456790123,
+  "qwen3_4b": 36.574074074074076,
+  "qwen3_8b": 32.25308641975309,
+  "qwen3_14b": 35.49382716049383,
+  "granite_3_2_8b_instruct": 25.308641975308642
+ }
+}

@@ -1,0 +1,29 @@
+--- main_v22.tex	2026-11-08 22:02:41.141900640 +0330
++++ main.tex	2026-11-08 22:03:27.013250394 +0330
+@@ -65,7 +65,7 @@
+ The \emph{text reader} picks the option with the largest value the trace wrote; it does no arithmetic and could run on any agent's trace. The \emph{oracle reader} picks, among options whose true value appears in the trace, the one with the highest true value; it uses the answer key and serves only as an upper bound. Each wrong 768-token answer falls in one category, checked in this order. \emph{Not reached}: the trace never writes the best option's value. \emph{Arith.}: the trace's own values rank another option above the best. \emph{Incompl.}: the best option is written and ranked first, the list is unfinished, and the answer is another bid. \emph{Passed}: the same, but the list is finished.
+ 
+ \paragraph{Models and protocol.}
+-The checkpoints are Phi-4-mini-reasoning, Qwen3-4B, Qwen3-8B, Qwen3-14B, DeepSeek-R1-Distill-\allowbreak Llama-8B and Granite-3.2-8B-Instruct with its reasoning mode on \cite{microsoft2025phireasoning,yang2025qwen3,guo2025deepseek,ibmgranite2025}. For each budget $c\in\{0,64,128,\allowbreak 256,512,768\}$ we force exactly $c$ reasoning tokens by suppressing end-of-sequence, then append an answer prompt and take the most likely option letter; the free-text answer is also recorded. The prompt lists the options in randomized order, gives the objective as ``(private value $-$ b) $\times$ estimated win probability'' and asks the model not to infer the answer from option position. Greedy decoding runs under three option orders per scenario (648 decisions per model and budget); five sampled seeds run at 128, 384 and 768 tokens (seed s.d. of $q$ at most 0.017); a run without forcing lets each model stop within 1{,}024 tokens. A 768-token decision takes 9--35 seconds and its tokens cost $c_{768}=0.19$--$0.75$\textcent{} at RunPod rates \cite{runpod2026pricing}; break-even is $\text{B/e}=c_{768}/(q(768)-q(0))$, the best expected profit above which the expected gain $\max_b U(b)\,(q(768)-q(0))$ covers $c_{768}$. A synthetic version \cite{krishna2010auction} uses the same protocol on 216 scenarios with values 8--99 and integer bids, against two rivals with uniform values on 0--99 who bid two thirds of them, so payoffs are exact.
++The checkpoints are Phi-4-mini-reasoning (Phi-mini), Qwen3-4B, -8B and -14B, DeepSeek-R1-Distill-\allowbreak Llama-8B (DeepSeek-8B) and Granite-3.2-8B-\allowbreak Instruct (Granite-8B) with reasoning on \cite{microsoft2025phireasoning,yang2025qwen3,guo2025deepseek,ibmgranite2025}. For each budget $c$ in $\{0,\allowbreak 64,\allowbreak 128,\allowbreak 256,\allowbreak 512,\allowbreak 768\}$ we force exactly $c$ reasoning tokens by suppressing end-of-sequence, then append an answer prompt and take the most likely option letter; the free-text answer is also recorded. The prompt lists the options in randomized order, gives the objective as ``(private value $-$ b) $\times$ estimated win probability'' and asks the model not to infer the answer from option position. Greedy decoding runs under three option orders per scenario (648 decisions per model and budget); five sampled seeds run at 128, 384 and 768 tokens (seed s.d. of $q$ at most 0.017); a run without forcing lets each model stop within 1{,}024 tokens. A 768-token decision takes 9--35 seconds and its tokens cost $c_{768}=0.19$--$0.75$\textcent{} at RunPod rates \cite{runpod2026pricing}; break-even is $\text{B/e}=c_{768}/(q(768)-q(0))$, the best expected profit above which the expected gain $\max_b U(b)\,(q(768)-q(0))$ covers $c_{768}$. A synthetic version \cite{krishna2010auction} uses the same protocol on 216 scenarios with values 8--99 and integer bids, against two rivals with uniform values on 0--99 who bid two thirds of them, so payoffs are exact.
+ 
+ \paragraph{Trace parsing.}
+ The \emph{text reader} does no arithmetic: it splits the trace at each option's mention and takes the last result number written in that option's segment, skipping the inputs. On 150 traces labeled by two LLM annotators (a check, not ground truth), it finds 96\% of stated values and reads 95\% correctly. A second parser marks an option \emph{evaluated} when the trace states its true expected profit within 2\% (92\% precision, 97\% recall per option against the annotators). An option's written value is its true value when the parser finds it and the reader's number otherwise, so a value counts as miscomputed only if the true one appears nowhere. The split in Table~\ref{tab:traces} therefore rests mostly on exact numeric matches to computed expected profits (97--100\% of written values for five models, 86\% for Granite-8B); the LLM annotations only estimate how often the matcher misses a value written in another form. Miscomputed values are 14\% of Granite-8B's written values and at most 3\% for the others, against the annotators' 16\% and $\le$1\%.
+@@ -87,7 +87,7 @@
+ \vspace{-2mm}
+ \scriptsize
+ \setlength{\tabcolsep}{0.9pt}
+-\begin{tabular}{lccccccc}
++\resizebox{\columnwidth}{!}{\begin{tabular}{lccccccc}
+ \toprule
+ Model & $q(768)$ & Answer & Text reader & Oracle & 1{,}024 run & Dollar & B/e \\
+ \midrule
+@@ -98,7 +98,7 @@
+ Qwen3-14B   & .916 & 72 [66,78] & 89 [86,93] & 98 [96,100] & 89 [83,94] & 47 [35,56] & 4.5\textcent \\
+ Granite-8B  & .897 & 65 [57,73] & 73 [66,78] & 81 [75,87] & 72 [66,77] & 75 [59,86] & 2.2\textcent \\
+ \bottomrule
+-\end{tabular}
++\end{tabular}}
+ \vspace{-3mm}
+ \end{table}
+ 

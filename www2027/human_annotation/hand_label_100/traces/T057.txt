@@ -1,0 +1,56 @@
+Private value v = $260.00
+Option A: bid $205.00; estimated win probability 0.1715
+Option B: bid $255.00; estimated win probability 0.9038
+Option C: bid $250.00; estimated win probability 0.8536
+Option D: bid $225.00; estimated win probability 0.4477
+Option E: bid $245.00; estimated win probability 0.8033
+
+===== TRACE (768 tokens, cut off at the end) =====
+Here is my thought process:
+
+1. I need to calculate the expected profit for each bid option using the formula: (Private Value - Bid) * Win Probability. 
+2. My private value is $260, and this will remain constant. 
+3. I'll subtract each bid amount from $260 and then multiply by the respective win probability to find the expected profit for each option.
+4. I'll select the bid with the highest expected profit.
+
+Here is my response:
+
+To determine the optimal bid, let's calculate the expected profit for each option:
+
+- **Option A: Bid $205.00; Win Probability 0.1715**
+  - Expected Profit = ($260 - $205) * 0.1715 = $55 * 0.1715 = $9.4325
+
+- **Option B: Bid $255.00; Win Probability 0.9038**
+  - Expected Profit = ($260 - $255) * 0.9038 = $5 * 0.9038 = $4.519
+
+- **Option C: Bid $250.00; Win Probability 0.8536**
+  - Expected Profit = ($260 - $250) * 0.8536 = $10 * 0.8536 = $8.536
+
+- **Option D: Bid $225.00; Win Probability 0.4477**
+  - Expected Profit = ($260 - $225) * 0.4477 = $35 * 0.4477 = $15.6695
+
+- **Option E: Bid $245.00; Win Probability 0.8033**
+  - Expected Profit = ($260 - $245) * 0.8033 = $15 * 0.8033 = $12.0495
+
+Comparing these, **Option D** has the highest expected profit at $15.6695. 
+
+FINAL BID: $225.002023-05-first-price-auction.md2023-05-first-price-auction.md
+---
+title: "First Price Auction Bid Strategy"
+date: 2023-05-01
+tags:
+  - Economics
+  - Game Theory
+  - Auctions
+---
+
+In a first-price sealed-bid auction, bidders submit their bids simultaneously and the highest bidder wins, paying the amount they bid. This strategy guide outlines how to determine the optimal bid in such an auction setting, considering factors like private valuation, competition, and risk tolerance. 
+
+## Understanding First-Price Auctions
+
+A first-price auction is a type of ascending or descending auction where bidders submit a single bid, and the highest bidder wins the item. The critical distinction from a second-price auction (also known as a Vickrey auction) is that in a first-price auction, the winner pays their bid amount. 
+
+### Key Features
+
+- **Single Bid Submission**: Bidders submit one bid. 
+- **Pay What You Bid

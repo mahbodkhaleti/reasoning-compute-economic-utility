@@ -1,0 +1,13 @@
+{
+  "seed": 20260819,
+  "hf_cache": null,
+  "models": [
+    {"slug":"qwen3_14b","hf_id":"Qwen/Qwen3-14B","revision":"40c069824f4251a91eefaf281ebe4c544efd3e18","tokenizer_revision":"40c069824f4251a91eefaf281ebe4c544efd3e18","chat_template_argument":"enable_thinking","template_argument_required":true,"reasoning_protocol":"qwen3_native_thinking_external_exact_token_budget","reasoning_protocol_matched":true,"device_map":"auto"},
+    {"slug":"granite_3_2_8b_instruct","hf_id":"ibm-granite/granite-3.2-8b-instruct","revision":"610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695","tokenizer_revision":"610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695","chat_template_argument":"thinking","template_argument_required":true,"reasoning_protocol":"granite_template_thinking_prompt_external_exact_token_budget","reasoning_protocol_matched":false,"device_map":"auto"}
+  ],
+  "data":{"categories":["Palm Pilot M515 PDA","Xbox game console","Cartier wristwatch"],"train_fraction":0.70,"values_per_category":18,"candidate_sets_per_value":2,"option_sizes":[5,7],"bid_step":5,"min_auctions":40},
+  "evaluation":{"budgets":[0,64,128,256,512,768],"repeat_seeds":[11,23,37],"unconstrained_max_tokens":1024,"answer_tokens":20,"temperature":0.6,"top_p":0.95,"bootstrap_samples":2000},
+  "seed_robustness":{"budgets":[128,384,768],"seeds":[1,7,21,42,99],"temperature":0.6,"top_p":0.95},
+  "uncertainty":{"bootstrap_samples":1000,"bootstrap_seed":20260819,"relative_welfare_epsilon":0.01},
+  "cost":{"gpu_hour_usd":null,"gpu_count_billed":1,"price_basis":null,"hardware_name":null,"electricity_usd_per_kwh":null,"power_poll_seconds":0.1}
+}

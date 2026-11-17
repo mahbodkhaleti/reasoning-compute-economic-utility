@@ -1,0 +1,104 @@
+{
+ "deepseek_r1_llama_8b": {
+  "n": 90,
+  "share": 0.1388888888888889,
+  "too_small": false,
+  "q": 0.9858810469896754,
+  "qcalc": 0.9870703594693105,
+  "gap_recovered": 0.9928950460174706,
+  "split": {
+   "not_reached": 0.8493150684931509,
+   "arith": 0.0,
+   "incomplete": 0.0,
+   "passed": 0.15068493150684917
+  },
+  "n_finished": 82,
+  "passed_rate_finished": 0.012195121951219513,
+  "wrong_rate": 0.022222222222222223
+ },
+ "phi4_mini_reasoning": {
+  "n": 83,
+  "share": 0.12808641975308643,
+  "too_small": false,
+  "q": 0.9939620685435532,
+  "qcalc": 0.9943660919090783,
+  "gap_recovered": 0.9980538905706156,
+  "split": {
+   "not_reached": 0.0,
+   "arith": 0.0,
+   "incomplete": 0.0,
+   "passed": 1.0
+  },
+  "n_finished": 59,
+  "passed_rate_finished": 0.03389830508474576,
+  "wrong_rate": 0.024096385542168676
+ },
+ "qwen3_4b": {
+  "n": 193,
+  "share": 0.2978395061728395,
+  "too_small": false,
+  "q": 0.9836175077642559,
+  "qcalc": 0.9836175077642559,
+  "gap_recovered": 1.0,
+  "split": {
+   "not_reached": null,
+   "arith": null,
+   "incomplete": null,
+   "passed": null
+  },
+  "n_finished": 185,
+  "passed_rate_finished": 0.0,
+  "wrong_rate": 0.0
+ },
+ "qwen3_8b": {
+  "n": 178,
+  "share": 0.27469135802469136,
+  "too_small": false,
+  "q": 0.9845164553248692,
+  "qcalc": 0.9845352027470987,
+  "gap_recovered": 0.9998411109980596,
+  "split": {
+   "not_reached": 1.0,
+   "arith": 0.0,
+   "incomplete": 0.0,
+   "passed": 0.0
+  },
+  "n_finished": 151,
+  "passed_rate_finished": 0.0,
+  "wrong_rate": 0.0056179775280898875
+ },
+ "qwen3_14b": {
+  "n": 347,
+  "share": 0.5354938271604939,
+  "too_small": false,
+  "q": 0.98228231474773,
+  "qcalc": 0.98228231474773,
+  "gap_recovered": 1.0,
+  "split": {
+   "not_reached": null,
+   "arith": null,
+   "incomplete": null,
+   "passed": null
+  },
+  "n_finished": 300,
+  "passed_rate_finished": 0.0,
+  "wrong_rate": 0.0
+ },
+ "granite_3_2_8b_instruct": {
+  "n": 648,
+  "share": 1.0,
+  "too_small": false,
+  "q": 0.9119526449544579,
+  "qcalc": 0.979908984221131,
+  "gap_recovered": 0.7162260918549688,
+  "split": {
+   "not_reached": 0.1380688013195995,
+   "arith": 0.2707551582627278,
+   "incomplete": 0.0406962147712322,
+   "passed": 0.5504798256464406
+  },
+  "n_finished": 606,
+  "passed_rate_finished": 0.33828382838283827,
+  "wrong_rate": 0.43209876543209874
+ }
+}

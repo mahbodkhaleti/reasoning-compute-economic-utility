@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\caption{The audit: gap recovered (\%) when bids on which the text reader and the answer disagree are flagged and overridden with the calculator's bid. Answer: no audit. Syn.$\to$eBay: reader setting chosen on synthetic traces. LPO: nested, setting chosen on two products and tested on the third. Fam.: nested, family 6-fold. eBay$\to$Syn.: chosen on eBay, tested on synthetic traces. Flags: share of decisions flagged (\%). AuctionNet: setting chosen on eBay alone, and nested leave-one-category-out.}
+\label{tab:audit}
+\footnotesize
+\centering
+
+\begin{tabular}{lccccccccc}
+\toprule
+& \multicolumn{6}{c}{eBay} & \multicolumn{3}{c}{AuctionNet} \\ \cmidrule(lr){2-7}\cmidrule(lr){8-10} Model & Answer & Syn.$\to$eBay & LPO & Fam. & eBay$\to$Syn. & Flags & eBay set. & LOCO & Flags \\
+\midrule
+DeepSeek-8B & 85 & 100 & 100 & 100 & 98 & 18 & 99 & 99 & 15 \\
+Phi-mini & 42 & 98 & 98 & 97 & 95 & 57 & 98 & 98 & 63 \\
+Qwen3-4B & 72 & 98 & 98 & 98 & 98 & 33 & 99 & 99 & 29 \\
+Qwen3-8B & 66 & 96 & 96 & 96 & 99 & 33 & 96 & 96 & 36 \\
+Qwen3-14B & 72 & 99 & 99 & 99 & 100 & 32 & 99 & 99 & 31 \\
+Granite-8B & 65 & 84 & 84 & 84 & 81 & 34 & 86 & 86 & 29 \\
+\bottomrule
+\end{tabular}
+\end{table*}

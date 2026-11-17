@@ -1,0 +1,350 @@
+{
+ "deepseek_r1_llama_8b|768": {
+  "coverage": 0.8225308641975309,
+  "coverage_finished": 0.8547297297297297,
+  "agree_with_letter": 0.8893058161350844,
+  "agree_with_letter_finished": 0.8873517786561265,
+  "letter_right_where_parsed": 0.9399624765478424,
+  "stated_right_where_parsed": 0.8461538461538461,
+  "gap_recovered_stated": {
+   "pt": 0.7746328040875233,
+   "ci": [
+    0.6851113231268596,
+    0.8522215188780551
+   ]
+  },
+  "gap_recovered_letter": 0.8537941828441115,
+  "split_stated": {
+   "not_reached": {
+    "pt": 0.013333431202438295,
+    "ci": [
+     -0.0027679439366806247,
+     0.03887955093602144
+    ]
+   },
+   "arith": {
+    "pt": 0.033926947547133296,
+    "ci": [
+     0.0,
+     0.11136311723702803
+    ]
+   },
+   "incomplete": {
+    "pt": 0.29865077343851815,
+    "ci": [
+     0.1519962298050419,
+     0.4211588674540165
+    ]
+   },
+   "passed": {
+    "pt": 0.6540888478119102,
+    "ci": [
+     0.5370874930427304,
+     0.7985613932073408
+    ]
+   }
+  },
+  "letter_passed_n": 63,
+  "letter_passed_with_stated": 28,
+  "letter_passed_where_stated_is_best": 4,
+  "stated_passed_n": 112
+ },
+ "deepseek_r1_llama_8b|-1": {
+  "coverage": 0.9583333333333334,
+  "coverage_finished": 0.9579967689822294,
+  "agree_with_letter": 0.9388083735909822,
+  "agree_with_letter_finished": 0.9376053962900506,
+  "letter_right_where_parsed": 0.9533011272141707,
+  "stated_right_where_parsed": 0.895330112721417
+ },
+ "phi4_mini_reasoning|768": {
+  "coverage": 0.5972222222222222,
+  "coverage_finished": 0.6309314586994728,
+  "agree_with_letter": 0.5684754521963824,
+  "agree_with_letter_finished": 0.5821727019498607,
+  "letter_right_where_parsed": 0.5503875968992248,
+  "stated_right_where_parsed": 0.9405684754521964,
+  "gap_recovered_stated": {
+   "pt": 0.6416775967527605,
+   "ci": [
+    0.5601892678280072,
+    0.7147294990211358
+   ]
+  },
+  "gap_recovered_letter": 0.4238917351655219,
+  "split_stated": {
+   "not_reached": {
+    "pt": 0.07898742866229451,
+    "ci": [
+     0.01755341445740889,
+     0.14712229264823976
+    ]
+   },
+   "arith": {
+    "pt": 0.018361850816561755,
+    "ci": [
+     0.001593288218187719,
+     0.04222339430036029
+    ]
+   },
+   "incomplete": {
+    "pt": 0.18091865072978824,
+    "ci": [
+     0.10557427967910571,
+     0.2610644309633454
+    ]
+   },
+   "passed": {
+    "pt": 0.7217320697913555,
+    "ci": [
+     0.6092450349249888,
+     0.8315405489376443
+    ]
+   }
+  },
+  "letter_passed_n": 313,
+  "letter_passed_with_stated": 156,
+  "letter_passed_where_stated_is_best": 139,
+  "stated_passed_n": 177
+ },
+ "phi4_mini_reasoning|-1": {
+  "coverage": 0.9197530864197531,
+  "coverage_finished": 0.9282218597063622,
+  "agree_with_letter": 0.5436241610738255,
+  "agree_with_letter_finished": 0.5272407732864675,
+  "letter_right_where_parsed": 0.5285234899328859,
+  "stated_right_where_parsed": 0.9513422818791947
+ },
+ "qwen3_4b|768": {
+  "coverage": 0.36728395061728397,
+  "coverage_finished": 0.502262443438914,
+  "agree_with_letter": 0.957983193277311,
+  "agree_with_letter_finished": 0.963963963963964,
+  "letter_right_where_parsed": 0.9705882352941176,
+  "stated_right_where_parsed": 0.9789915966386554,
+  "gap_recovered_stated": {
+   "pt": 0.7271971197471192,
+   "ci": [
+    0.6585804118167295,
+    0.7961435217490733
+   ]
+  },
+  "gap_recovered_letter": 0.7187679402558081,
+  "split_stated": {
+   "not_reached": {
+    "pt": 0.1584004704688176,
+    "ci": [
+     0.08156723527024802,
+     0.2376025561538226
+    ]
+   },
+   "arith": {
+    "pt": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "incomplete": {
+    "pt": 0.6453333805559741,
+    "ci": [
+     0.530413624354952,
+     0.7499102345064228
+    ]
+   },
+   "passed": {
+    "pt": 0.19626614897520828,
+    "ci": [
+     0.09163445588779372,
+     0.3190949037446851
+    ]
+   }
+  },
+  "letter_passed_n": 77,
+  "letter_passed_with_stated": 6,
+  "letter_passed_where_stated_is_best": 5,
+  "stated_passed_n": 75
+ },
+ "qwen3_4b|-1": {
+  "coverage": 0.6743827160493827,
+  "coverage_finished": 0.7264957264957265,
+  "agree_with_letter": 0.9862700228832952,
+  "agree_with_letter_finished": 0.9858823529411764,
+  "letter_right_where_parsed": 0.988558352402746,
+  "stated_right_where_parsed": 0.9839816933638444
+ },
+ "qwen3_8b|768": {
+  "coverage": 0.2700617283950617,
+  "coverage_finished": 0.42276422764227645,
+  "agree_with_letter": 0.9828571428571429,
+  "agree_with_letter_finished": 0.9935897435897436,
+  "letter_right_where_parsed": 0.9885714285714285,
+  "stated_right_where_parsed": 0.9828571428571429,
+  "gap_recovered_stated": {
+   "pt": 0.6633002218308661,
+   "ci": [
+    0.5826453842390772,
+    0.7449966342639049
+   ]
+  },
+  "gap_recovered_letter": 0.6624360446001236,
+  "split_stated": {
+   "not_reached": {
+    "pt": 0.34279533181140753,
+    "ci": [
+     0.23545946350911065,
+     0.44163790957697113
+    ]
+   },
+   "arith": {
+    "pt": 0.0368940530535309,
+    "ci": [
+     0.002281733165638232,
+     0.08727854463817085
+    ]
+   },
+   "incomplete": {
+    "pt": 0.3948685590577114,
+    "ci": [
+     0.2942859594216062,
+     0.5027559200407119
+    ]
+   },
+   "passed": {
+    "pt": 0.22544205607735013,
+    "ci": [
+     0.1420534765959596,
+     0.32336242880590427
+    ]
+   }
+  },
+  "letter_passed_n": 73,
+  "letter_passed_with_stated": 1,
+  "letter_passed_where_stated_is_best": 1,
+  "stated_passed_n": 72
+ },
+ "qwen3_8b|-1": {
+  "coverage": 0.625,
+  "coverage_finished": 0.7214953271028037,
+  "agree_with_letter": 0.9925925925925926,
+  "agree_with_letter_finished": 0.9974093264248705,
+  "letter_right_where_parsed": 0.9950617283950617,
+  "stated_right_where_parsed": 0.9876543209876543
+ },
+ "qwen3_14b|768": {
+  "coverage": 0.4660493827160494,
+  "coverage_finished": 0.5701754385964912,
+  "agree_with_letter": 0.9801324503311258,
+  "agree_with_letter_finished": 0.9846153846153847,
+  "letter_right_where_parsed": 0.9801324503311258,
+  "stated_right_where_parsed": 0.9801324503311258,
+  "gap_recovered_stated": {
+   "pt": 0.7280912079580198,
+   "ci": [
+    0.6557388072115948,
+    0.8006311471589534
+   ]
+  },
+  "gap_recovered_letter": 0.7222069991848787,
+  "split_stated": {
+   "not_reached": {
+    "pt": 0.20502879517928665,
+    "ci": [
+     0.11012129011254951,
+     0.3007754102710591
+    ]
+   },
+   "arith": {
+    "pt": 0.029336291877742268,
+    "ci": [
+     -0.0139869158108723,
+     0.0883169756362478
+    ]
+   },
+   "incomplete": {
+    "pt": 0.6044360912837031,
+    "ci": [
+     0.4988536939041991,
+     0.7155977288686752
+    ]
+   },
+   "passed": {
+    "pt": 0.16119882165926808,
+    "ci": [
+     0.04981300229611473,
+     0.27302352728181634
+    ]
+   }
+  },
+  "letter_passed_n": 59,
+  "letter_passed_with_stated": 6,
+  "letter_passed_where_stated_is_best": 3,
+  "stated_passed_n": 57
+ },
+ "qwen3_14b|-1": {
+  "coverage": 0.7438271604938271,
+  "coverage_finished": 0.7873462214411248,
+  "agree_with_letter": 0.983402489626556,
+  "agree_with_letter_finished": 0.9888392857142857,
+  "letter_right_where_parsed": 1.0,
+  "stated_right_where_parsed": 0.983402489626556
+ },
+ "granite_3_2_8b_instruct|768": {
+  "coverage": 0.7438271604938271,
+  "coverage_finished": 0.7528830313014827,
+  "agree_with_letter": 0.9190871369294605,
+  "agree_with_letter_finished": 0.9299781181619255,
+  "letter_right_where_parsed": 0.529045643153527,
+  "stated_right_where_parsed": 0.5663900414937759,
+  "gap_recovered_stated": {
+   "pt": 0.7170070528028101,
+   "ci": [
+    0.6628460179224103,
+    0.769418524467375
+   ]
+  },
+  "gap_recovered_letter": 0.6540662679810184,
+  "split_stated": {
+   "not_reached": {
+    "pt": 0.11358135419977114,
+    "ci": [
+     0.06075350171517736,
+     0.17130894670543212
+    ]
+   },
+   "arith": {
+    "pt": 0.2566236076456189,
+    "ci": [
+     0.15541051205853743,
+     0.36685124721098117
+    ]
+   },
+   "incomplete": {
+    "pt": 0.0427233877649442,
+    "ci": [
+     0.0,
+     0.09684613420381191
+    ]
+   },
+   "passed": {
+    "pt": 0.5870716503896658,
+    "ci": [
+     0.48535178401614165,
+     0.6907822964108322
+    ]
+   }
+  },
+  "letter_passed_n": 222,
+  "letter_passed_with_stated": 171,
+  "letter_passed_where_stated_is_best": 16,
+  "stated_passed_n": 208
+ },
+ "granite_3_2_8b_instruct|-1": {
+  "coverage": 0.7330246913580247,
+  "coverage_finished": 0.7458745874587459,
+  "agree_with_letter": 0.9852631578947368,
+  "agree_with_letter_finished": 0.9933628318584071,
+  "letter_right_where_parsed": 0.5642105263157895,
+  "stated_right_where_parsed": 0.5642105263157895
+ }
+}

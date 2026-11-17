@@ -1,0 +1,26 @@
+{
+ "granite_3_2_8b_instruct": {
+  "n": 144,
+  "error_rate": 0.1597222222222222
+ },
+ "qwen3_14b": {
+  "n": 116,
+  "error_rate": 0.0
+ },
+ "deepseek_r1_llama_8b": {
+  "n": 141,
+  "error_rate": 0.0
+ },
+ "phi4_mini_reasoning": {
+  "n": 125,
+  "error_rate": 0.008
+ },
+ "qwen3_4b": {
+  "n": 104,
+  "error_rate": 0.0
+ },
+ "qwen3_8b": {
+  "n": 120,
+  "error_rate": 0.0
+ }
+}

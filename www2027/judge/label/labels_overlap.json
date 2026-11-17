@@ -1,0 +1,2072 @@
+[
+ {
+  "item": 6,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 8.536
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 9.4325
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 12.0495
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 4.519
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 15.6695
+   }
+  ]
+ },
+ {
+  "item": 7,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 4.184
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 8.16
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 6.999
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 2.9905
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 5.9975
+   }
+  ]
+ },
+ {
+  "item": 8,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 59.578
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 77.968
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 73.264
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 68.685
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 63.406
+   }
+  ]
+ },
+ {
+  "item": 9,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 24.21
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 8.995
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 16.101
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 17.211
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 15.477
+   }
+  ]
+ },
+ {
+  "item": 10,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 9.519
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 18.846
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 14.1345
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 23.5575
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 37.308
+   },
+   {
+    "label": "F",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 11,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 21.53
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 21.71
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 17.07
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 20.08
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 20.58
+   }
+  ]
+ },
+ {
+  "item": 12,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 14.54
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 15.57
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 27.795
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 20.159
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 13.46
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 15.9775
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 14.9355
+   }
+  ]
+ },
+ {
+  "item": 13,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 240.195
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 322.445
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 319.94
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 324.445
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 320.0
+   }
+  ]
+ },
+ {
+  "item": 14,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 103.04
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 83.94
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 94.89
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 102.53
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 92.31
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 87.54
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 98.36
+   }
+  ]
+ },
+ {
+  "item": 18,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 4.184
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 8.16
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 6.999
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 2.9905
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 5.9975
+   }
+  ]
+ },
+ {
+  "item": 24,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 12.52
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 27.69
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 3.93
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 13.84
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 38.97
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 55.62
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 54.33
+   }
+  ]
+ },
+ {
+  "item": 25,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 36.54
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 33.32
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 64.04
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 110.14
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 14.28
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 19.04
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 102.7
+   }
+  ]
+ },
+ {
+  "item": 27,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 11.15
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 10.43
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 11.68
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 15.0
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 17.88
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 50.768
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 38.51
+   }
+  ]
+ },
+ {
+  "item": 28,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 101.54
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 102.84
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 110.14
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 30,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 7.029
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 4.184
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 6.0025
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 3.0105
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 31,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 9.43
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 4.52
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 8.54
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 15.6695
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 12.05
+   }
+  ]
+ },
+ {
+  "item": 35,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 7.03
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 21.44
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 13.6
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 9.0
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 5.46
+   }
+  ]
+ },
+ {
+  "item": 37,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 61.25
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 75.96
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 69.23
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 58.12
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 15.14
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 36.06
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 18.846
+   }
+  ]
+ },
+ {
+  "item": 38,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 6.15
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 3.65
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 6.49
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 10.0485
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 9.52
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 7.49
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 12.69
+   }
+  ]
+ },
+ {
+  "item": 47,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 49.18
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 36.92
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 45.19
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 41.54
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 53.65
+   }
+  ]
+ },
+ {
+  "item": 52,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 2.26
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 3.66
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 5.15
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 2.68
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 5.86
+   }
+  ]
+ },
+ {
+  "item": 54,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 28.12
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 22.6
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 25.61
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 14.5
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 18.91
+   }
+  ]
+ },
+ {
+  "item": 55,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 29.0435
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 8.94
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 21.4
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 33.076
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 13.13
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 24.81
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 17.12
+   }
+  ]
+ },
+ {
+  "item": 57,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 5.02
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 11.14
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 1.2
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 20.15
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 13.56
+   }
+  ]
+ },
+ {
+  "item": 63,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 9.81
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 12.69
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 12.99
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 12.69
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 12.02
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 12.47
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 10.04
+   }
+  ]
+ },
+ {
+  "item": 69,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 6.5
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 11.78
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 2.21
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 7.51
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 6.39
+   }
+  ]
+ },
+ {
+  "item": 70,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 723.0
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 1068.88
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 304.0
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 1082.0
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "F",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 71,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 97.11
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 110.0
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 129.7
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 72,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 3.345
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 1.906
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 2.761
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 9.792
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 2.262
+   }
+  ]
+ },
+ {
+  "item": 73,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 1172.15
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 1169.43
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 1162.22
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 1156.59
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 1164.62
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 1155.78
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 74,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 32.79
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 1051.61
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 565.87
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 1045.02
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 93.68
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 398.96
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 4.74
+   }
+  ]
+ },
+ {
+  "item": 75,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 7.12
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 54.81
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 11.44
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 47.07
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 11.92
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 26.83
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 10.1
+   }
+  ]
+ },
+ {
+  "item": 79,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 42.4
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 28.27
+   },
+   {
+    "label": "C",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "F",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 80,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 13.6
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 21.44
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 9.03
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 81,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 505.77
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 591.25
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 74.0
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 66.1
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 574.37
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 522.08
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 315.9405
+   }
+  ]
+ },
+ {
+  "item": 82,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 3.08
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 4.71
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 4.23
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 3.56
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 87,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 6.8
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 18.45
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 17.91
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "F",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 91,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 5.383
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 5.384
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 5.0
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 5.05
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 4.9
+   }
+  ]
+ },
+ {
+  "item": 92,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 14.5
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 9.87
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 2.64
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 16.4
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 28.95
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 4.52
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 25.73
+   }
+  ]
+ },
+ {
+  "item": 98,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 277.87
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 280.77
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 274.12
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 271.17
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "F",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 100,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 16.0
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 7.63
+   },
+   {
+    "label": "C",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 101,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 10.96
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 13.07
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 13.46
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 13.84
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 12.11
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 14.27
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 12.45
+   }
+  ]
+ },
+ {
+  "item": 104,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 771.46
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 767.04
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 773.68
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 801.34
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 106,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 97.93
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 105.31
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 83.52
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 94.42
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 90.79
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 101.68
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 87.16
+   }
+  ]
+ },
+ {
+  "item": 107,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 109.02
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 74.24
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 112.83
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "F",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 108,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 4.71
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 9.42
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 6.86
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 8.954
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 9.792
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 7.72
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 8.2
+   }
+  ]
+ },
+ {
+  "item": 121,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 7.238
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 7.72
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 3.012
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 11.3
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "F",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 122,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 2.26
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 3.66
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 5.15
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 2.68
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 5.86
+   }
+  ]
+ },
+ {
+  "item": 124,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 44.77
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 35.9
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 26.94
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 48.89
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 61.52
+   }
+  ]
+ },
+ {
+  "item": 125,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 8.536
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 15.67
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 4.519
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 9.4325
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 12.0495
+   }
+  ]
+ },
+ {
+  "item": 126,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 3.56
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 5.72
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 4.71
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 127,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 327.64
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 94.1
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 934.92
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 679.09
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 943.61
+   }
+  ]
+ },
+ {
+  "item": 128,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 36.49
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 34.18
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 28.94
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 129,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 7.12
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 54.81
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 11.44
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 47.07
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 11.92
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 26.83
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 130,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 82.69
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 86.82
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 83.56
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 77.02
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 78.56
+   }
+  ]
+ },
+ {
+  "item": 132,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 1084.74
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 1013.2
+   },
+   {
+    "label": "C",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 136,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 841.08
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 857.2
+   },
+   {
+    "label": "C",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "D",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "E",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "F",
+    "stated": false,
+    "value": null
+   },
+   {
+    "label": "G",
+    "stated": false,
+    "value": null
+   }
+  ]
+ },
+ {
+  "item": 137,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 39.54
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 6.78
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 64.26
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 64.02
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 61.46
+   }
+  ]
+ },
+ {
+  "item": 145,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 26.05
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 31.84
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 28.95
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 37.62
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 34.73
+   }
+  ]
+ },
+ {
+  "item": 149,
+  "options": [
+   {
+    "label": "A",
+    "stated": true,
+    "value": 4.61
+   },
+   {
+    "label": "B",
+    "stated": true,
+    "value": 5.48
+   },
+   {
+    "label": "C",
+    "stated": true,
+    "value": 4.23
+   },
+   {
+    "label": "D",
+    "stated": true,
+    "value": 4.33
+   },
+   {
+    "label": "E",
+    "stated": true,
+    "value": 4.62
+   },
+   {
+    "label": "F",
+    "stated": true,
+    "value": 3.89
+   },
+   {
+    "label": "G",
+    "stated": true,
+    "value": 5.72
+   }
+  ]
+ }
+]

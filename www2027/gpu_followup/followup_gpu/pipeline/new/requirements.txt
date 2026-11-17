@@ -1,0 +1,11 @@
+accelerate==1.12.0
+huggingface-hub>=0.34
+jinja2>=3.1
+matplotlib>=3.8
+numpy>=1.26
+pandas>=2.2
+nvidia-ml-py>=12.0
+scipy>=1.12
+torch==2.9.1
+transformers==5.1.0
+tqdm>=4.66

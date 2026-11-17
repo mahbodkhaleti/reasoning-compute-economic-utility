@@ -1,0 +1,655 @@
+nohup: ignoring input
+run1_nat4096 phi4_mini_reasoning: 648 decisions, 0 already done
+[transformers] This model config has set a `rope_parameters['original_max_position_embeddings']` field, to be used together with `max_position_embeddings` to determine a scaling factor. Please set the `factor` field of `rope_parameters`with this ratio instead -- we recommend the use of this field over `original_max_position_embeddings`, as it is compatible with most model architectures.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/194 [00:00<?, ?it/s]Loading weights:   1%|          | 1/194 [00:00<00:37,  5.11it/s]Loading weights:   8%|▊         | 16/194 [00:00<00:02, 61.77it/s]Loading weights:  14%|█▍        | 27/194 [00:00<00:02, 76.39it/s]Loading weights:  19%|█▊        | 36/194 [00:00<00:02, 74.52it/s]Loading weights:  23%|██▎       | 45/194 [00:00<00:01, 75.31it/s]Loading weights:  27%|██▋       | 53/194 [00:00<00:02, 69.22it/s]Loading weights:  32%|███▏      | 63/194 [00:00<00:01, 72.80it/s]Loading weights:  42%|████▏     | 82/194 [00:01<00:01, 102.24it/s]Loading weights:  49%|████▉     | 96/194 [00:01<00:00, 108.64it/s]Loading weights:  56%|█████▌    | 108/194 [00:01<00:00, 106.20it/s]Loading weights:  61%|██████▏   | 119/194 [00:01<00:00, 103.74it/s]Loading weights:  70%|██████▉   | 135/194 [00:01<00:00, 115.70it/s]Loading weights:  78%|███████▊  | 152/194 [00:01<00:00, 127.10it/s]Loading weights:  85%|████████▌ | 165/194 [00:01<00:00, 126.95it/s]Loading weights:  92%|█████████▏| 178/194 [00:01<00:00, 113.10it/s]Loading weights:  98%|█████████▊| 190/194 [00:02<00:00, 99.00it/s] Loading weights: 100%|██████████| 194/194 [00:02<00:00, 95.11it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded microsoft/Phi-4-mini-reasoning on NVIDIA RTX 6000 Ada Generation
+[1/648] unforced4096 925969353749 seed=11 tokens=1110 q=0.884 26.0s eta=4.7h
+[2/648] unforced4096 925969353749 seed=23 tokens=1113 q=0.884 24.8s eta=4.6h
+[3/648] unforced4096 925969353749 seed=37 tokens=1139 q=0.884 25.7s eta=4.6h
+[4/648] unforced4096 518109905229 seed=11 tokens=1144 q=0.767 25.5s eta=4.6h
+[5/648] unforced4096 518109905229 seed=23 tokens=1276 q=0.767 28.2s eta=4.7h
+[6/648] unforced4096 518109905229 seed=37 tokens=4096 CAP q=0.953 92.3s eta=6.6h
+[7/648] unforced4096 398446947739 seed=11 tokens=2643 q=0.859 61.3s eta=7.2h
+[8/648] unforced4096 398446947739 seed=23 tokens=1674 q=0.859 38.4s eta=7.2h
+[9/648] unforced4096 398446947739 seed=37 tokens=1670 q=0.859 37.7s eta=7.1h
+[10/648] unforced4096 294162488990 seed=11 tokens=1513 q=1.000 34.2s eta=7.0h
+[11/648] unforced4096 294162488990 seed=23 tokens=1362 q=1.000 30.6s eta=6.8h
+[12/648] unforced4096 294162488990 seed=37 tokens=1452 q=1.000 32.8s eta=6.7h
+[13/648] unforced4096 659307641500 seed=11 tokens=785 q=1.000 17.7s eta=6.4h
+[14/648] unforced4096 659307641500 seed=23 tokens=4096 CAP q=0.571 93.6s eta=7.2h
+[15/648] unforced4096 659307641500 seed=37 tokens=1022 q=1.000 23.5s eta=6.9h
+[16/648] unforced4096 511224957935 seed=11 tokens=1842 q=0.953 42.7s eta=7.0h
+[17/648] unforced4096 511224957935 seed=23 tokens=2479 q=0.953 56.0s eta=7.1h
+[18/648] unforced4096 511224957935 seed=37 tokens=2011 q=0.953 43.6s eta=7.1h
+[19/648] unforced4096 333933243805 seed=11 tokens=1589 q=1.000 33.9s eta=7.1h
+[20/648] unforced4096 333933243805 seed=23 tokens=1238 q=1.000 26.7s eta=6.9h
+[21/648] unforced4096 333933243805 seed=37 tokens=1525 q=1.000 32.0s eta=6.9h
+[22/648] unforced4096 208230175698 seed=11 tokens=1362 q=1.000 29.3s eta=6.8h
+[23/648] unforced4096 208230175698 seed=23 tokens=1496 q=1.000 31.3s eta=6.7h
+[24/648] unforced4096 208230175698 seed=37 tokens=1674 q=1.000 35.5s eta=6.7h
+[25/648] unforced4096 609046733411 seed=11 tokens=762 q=1.000 16.0s eta=6.5h
+[26/648] unforced4096 609046733411 seed=23 tokens=519 q=1.000 10.9s eta=6.3h
+[27/648] unforced4096 609046733411 seed=37 tokens=1029 q=1.000 21.9s eta=6.2h
+[28/648] unforced4096 017919024851 seed=11 tokens=1419 q=0.967 30.3s eta=6.2h
+[29/648] unforced4096 017919024851 seed=23 tokens=1417 q=0.967 30.5s eta=6.1h
+[30/648] unforced4096 017919024851 seed=37 tokens=1614 q=0.967 34.4s eta=6.1h
+[31/648] unforced4096 802821132157 seed=11 tokens=1348 q=1.000 28.5s eta=6.1h
+[32/648] unforced4096 802821132157 seed=23 tokens=1769 q=1.000 38.2s eta=6.1h
+[33/648] unforced4096 802821132157 seed=37 tokens=3730 q=1.000 80.2s eta=6.3h
+[34/648] unforced4096 063455003797 seed=11 tokens=1757 q=0.957 38.7s eta=6.3h
+[35/648] unforced4096 063455003797 seed=23 tokens=1809 q=0.957 39.9s eta=6.3h
+[36/648] unforced4096 063455003797 seed=37 tokens=2339 q=0.957 51.2s eta=6.3h
+[37/648] unforced4096 013561167988 seed=11 tokens=1296 q=0.984 28.0s eta=6.3h
+[38/648] unforced4096 013561167988 seed=23 tokens=1053 q=0.984 23.2s eta=6.2h
+[39/648] unforced4096 013561167988 seed=37 tokens=1018 q=0.984 22.2s eta=6.1h
+[40/648] unforced4096 278077936666 seed=11 tokens=1144 q=1.000 24.8s eta=6.1h
+[41/648] unforced4096 278077936666 seed=23 tokens=1010 q=1.000 21.9s eta=6.0h
+[42/648] unforced4096 278077936666 seed=37 tokens=1344 q=1.000 28.9s eta=6.0h
+[43/648] unforced4096 494358510696 seed=11 tokens=1395 q=0.996 30.1s eta=6.0h
+[44/648] unforced4096 494358510696 seed=23 tokens=1641 q=0.996 35.8s eta=5.9h
+[45/648] unforced4096 494358510696 seed=37 tokens=1878 q=0.996 38.9s eta=5.9h
+[46/648] unforced4096 811873191753 seed=11 tokens=3150 q=1.000 66.1s eta=6.0h
+[47/648] unforced4096 811873191753 seed=23 tokens=3339 q=1.000 69.9s eta=6.2h
+[48/648] unforced4096 811873191753 seed=37 tokens=1645 q=1.000 35.0s eta=6.1h
+[49/648] unforced4096 225044794425 seed=11 tokens=593 q=1.000 12.7s eta=6.1h
+[50/648] unforced4096 225044794425 seed=23 tokens=780 q=0.969 16.6s eta=6.0h
+[51/648] unforced4096 225044794425 seed=37 tokens=742 q=1.000 15.7s eta=5.9h
+[52/648] unforced4096 984755000638 seed=11 tokens=1407 q=1.000 29.3s eta=5.9h
+[53/648] unforced4096 984755000638 seed=23 tokens=1210 q=1.000 25.6s eta=5.8h
+[54/648] unforced4096 984755000638 seed=37 tokens=2198 q=1.000 47.2s eta=5.9h
+[55/648] unforced4096 429463378625 seed=11 tokens=1947 q=0.980 40.9s eta=5.9h
+[56/648] unforced4096 429463378625 seed=23 tokens=1940 q=0.980 41.0s eta=5.9h
+[57/648] unforced4096 429463378625 seed=37 tokens=2614 q=0.980 55.1s eta=5.9h
+[58/648] unforced4096 622532607340 seed=11 tokens=1462 q=0.914 31.3s eta=5.9h
+[59/648] unforced4096 622532607340 seed=23 tokens=1547 q=0.914 32.8s eta=5.9h
+[60/648] unforced4096 622532607340 seed=37 tokens=1245 q=0.914 26.2s eta=5.8h
+[61/648] unforced4096 434963451631 seed=11 tokens=515 q=0.971 10.9s eta=5.8h
+[62/648] unforced4096 434963451631 seed=23 tokens=815 q=0.969 17.4s eta=5.7h
+[63/648] unforced4096 434963451631 seed=37 tokens=1029 q=0.969 21.7s eta=5.7h
+[64/648] unforced4096 104006074461 seed=11 tokens=1507 q=0.951 32.1s eta=5.6h
+[65/648] unforced4096 104006074461 seed=23 tokens=923 q=0.951 19.2s eta=5.6h
+[66/648] unforced4096 104006074461 seed=37 tokens=1507 q=0.951 31.3s eta=5.6h
+[67/648] unforced4096 467672980829 seed=11 tokens=2319 q=1.000 48.5s eta=5.6h
+[68/648] unforced4096 467672980829 seed=23 tokens=2270 q=1.000 47.9s eta=5.6h
+[69/648] unforced4096 467672980829 seed=37 tokens=4096 CAP q=0.108 86.7s eta=5.7h
+[70/648] unforced4096 552254574701 seed=11 tokens=2541 q=1.000 53.9s eta=5.8h
+[71/648] unforced4096 552254574701 seed=23 tokens=4096 CAP q=1.000 86.9s eta=5.9h
+[72/648] unforced4096 552254574701 seed=37 tokens=2423 q=1.000 52.5s eta=5.9h
+[73/648] unforced4096 713438754930 seed=11 tokens=2782 q=1.000 60.0s eta=5.9h
+[74/648] unforced4096 713438754930 seed=23 tokens=1259 q=1.000 27.3s eta=5.9h
+[75/648] unforced4096 713438754930 seed=37 tokens=1762 q=1.000 37.3s eta=5.9h
+[76/648] unforced4096 074855897818 seed=11 tokens=1976 q=1.000 41.8s eta=5.9h
+[77/648] unforced4096 074855897818 seed=23 tokens=1253 q=1.000 26.5s eta=5.9h
+[78/648] unforced4096 074855897818 seed=37 tokens=1612 q=1.000 34.4s eta=5.8h
+[79/648] unforced4096 797360296602 seed=11 tokens=584 q=1.000 12.3s eta=5.8h
+[80/648] unforced4096 797360296602 seed=23 tokens=1029 q=1.000 21.5s eta=5.7h
+[81/648] unforced4096 797360296602 seed=37 tokens=998 q=1.000 21.0s eta=5.7h
+[82/648] unforced4096 639023601069 seed=11 tokens=1538 q=0.981 33.0s eta=5.7h
+[83/648] unforced4096 639023601069 seed=23 tokens=1992 q=0.981 42.7s eta=5.7h
+[84/648] unforced4096 639023601069 seed=37 tokens=1440 q=0.981 30.6s eta=5.7h
+[85/648] unforced4096 260466441485 seed=11 tokens=929 q=1.000 20.1s eta=5.6h
+[86/648] unforced4096 260466441485 seed=23 tokens=919 q=1.000 20.0s eta=5.6h
+[87/648] unforced4096 260466441485 seed=37 tokens=580 q=1.000 12.5s eta=5.5h
+[88/648] unforced4096 064889516251 seed=11 tokens=1393 q=0.989 29.6s eta=5.5h
+[89/648] unforced4096 064889516251 seed=23 tokens=1200 q=0.989 25.6s eta=5.5h
+[90/648] unforced4096 064889516251 seed=37 tokens=4096 CAP q=0.989 88.3s eta=5.6h
+[91/648] unforced4096 200072566784 seed=11 tokens=2575 q=0.987 54.9s eta=5.6h
+[92/648] unforced4096 200072566784 seed=23 tokens=1784 q=0.987 37.6s eta=5.6h
+[93/648] unforced4096 200072566784 seed=37 tokens=2766 q=0.987 58.2s eta=5.6h
+[94/648] unforced4096 623708696368 seed=11 tokens=1998 q=0.965 42.6s eta=5.6h
+[95/648] unforced4096 623708696368 seed=23 tokens=1942 q=0.965 42.1s eta=5.6h
+[96/648] unforced4096 623708696368 seed=37 tokens=1988 q=0.965 41.8s eta=5.6h
+[97/648] unforced4096 855604219881 seed=11 tokens=1257 q=1.000 26.8s eta=5.6h
+[98/648] unforced4096 855604219881 seed=23 tokens=1912 q=1.000 41.0s eta=5.6h
+[99/648] unforced4096 855604219881 seed=37 tokens=1196 q=1.000 25.0s eta=5.6h
+[100/648] unforced4096 848613237931 seed=11 tokens=535 q=1.000 11.1s eta=5.5h
+[101/648] unforced4096 848613237931 seed=23 tokens=1219 q=1.000 25.3s eta=5.5h
+[102/648] unforced4096 848613237931 seed=37 tokens=737 q=1.000 15.3s eta=5.4h
+[103/648] unforced4096 791562298791 seed=11 tokens=1827 q=1.000 38.0s eta=5.4h
+[104/648] unforced4096 791562298791 seed=23 tokens=1739 q=1.000 36.5s eta=5.4h
+[105/648] unforced4096 791562298791 seed=37 tokens=4096 CAP q=0.558 86.3s eta=5.5h
+[106/648] unforced4096 070457685213 seed=11 tokens=1582 q=1.000 33.2s eta=5.5h
+[107/648] unforced4096 070457685213 seed=23 tokens=1811 q=1.000 38.4s eta=5.5h
+[108/648] unforced4096 070457685213 seed=37 tokens=1608 q=1.000 34.1s eta=5.5h
+[109/648] unforced4096 400879547499 seed=11 tokens=4096 CAP q=1.000 86.8s eta=5.5h
+[110/648] unforced4096 400879547499 seed=23 tokens=1032 q=1.000 22.1s eta=5.5h
+[111/648] unforced4096 400879547499 seed=37 tokens=1371 q=1.000 28.5s eta=5.5h
+[112/648] unforced4096 957476380683 seed=11 tokens=2424 q=1.000 50.8s eta=5.5h
+[113/648] unforced4096 957476380683 seed=23 tokens=1377 q=1.000 29.2s eta=5.4h
+[114/648] unforced4096 957476380683 seed=37 tokens=1127 q=1.000 24.0s eta=5.4h
+[115/648] unforced4096 526396366141 seed=11 tokens=2111 q=1.000 44.9s eta=5.4h
+[116/648] unforced4096 526396366141 seed=23 tokens=1916 q=1.000 39.7s eta=5.4h
+[117/648] unforced4096 526396366141 seed=37 tokens=3302 q=1.000 68.7s eta=5.4h
+[118/648] unforced4096 866903629085 seed=11 tokens=1453 q=0.984 30.8s eta=5.4h
+[119/648] unforced4096 866903629085 seed=23 tokens=1452 q=0.984 30.3s eta=5.4h
+[120/648] unforced4096 866903629085 seed=37 tokens=1873 q=0.984 39.0s eta=5.4h
+[121/648] unforced4096 581494003377 seed=11 tokens=537 q=0.974 11.2s eta=5.4h
+[122/648] unforced4096 581494003377 seed=23 tokens=608 q=0.974 13.0s eta=5.3h
+[123/648] unforced4096 581494003377 seed=37 tokens=537 q=0.974 11.3s eta=5.3h
+[124/648] unforced4096 396669839345 seed=11 tokens=1208 q=1.000 25.8s eta=5.3h
+[125/648] unforced4096 396669839345 seed=23 tokens=924 q=1.000 19.2s eta=5.2h
+[126/648] unforced4096 396669839345 seed=37 tokens=1170 q=1.000 25.0s eta=5.2h
+[127/648] unforced4096 424814787601 seed=11 tokens=3023 q=1.000 64.1s eta=5.2h
+[128/648] unforced4096 424814787601 seed=23 tokens=2289 q=1.000 48.3s eta=5.2h
+[129/648] unforced4096 424814787601 seed=37 tokens=2607 q=1.000 55.5s eta=5.2h
+[130/648] unforced4096 948883425483 seed=11 tokens=3003 q=0.986 63.1s eta=5.3h
+[131/648] unforced4096 948883425483 seed=23 tokens=2268 q=0.986 48.1s eta=5.3h
+[132/648] unforced4096 948883425483 seed=37 tokens=3626 q=0.986 77.5s eta=5.3h
+[133/648] unforced4096 420243339467 seed=11 tokens=3690 q=1.000 78.0s eta=5.3h
+[134/648] unforced4096 420243339467 seed=23 tokens=1369 q=1.000 29.4s eta=5.3h
+[135/648] unforced4096 420243339467 seed=37 tokens=2754 q=1.000 58.8s eta=5.3h
+[136/648] unforced4096 884133050084 seed=11 tokens=1115 q=1.000 23.6s eta=5.3h
+[137/648] unforced4096 884133050084 seed=23 tokens=1149 q=1.000 24.3s eta=5.3h
+[138/648] unforced4096 884133050084 seed=37 tokens=1108 q=1.000 23.9s eta=5.3h
+[139/648] unforced4096 094658446432 seed=11 tokens=3045 q=1.000 64.8s eta=5.3h
+[140/648] unforced4096 094658446432 seed=23 tokens=4096 CAP q=0.810 86.9s eta=5.3h
+[141/648] unforced4096 094658446432 seed=37 tokens=1347 q=1.000 28.3s eta=5.3h
+[142/648] unforced4096 382407304442 seed=11 tokens=3709 q=0.926 78.3s eta=5.3h
+[143/648] unforced4096 382407304442 seed=23 tokens=2205 q=0.926 46.4s eta=5.3h
+[144/648] unforced4096 382407304442 seed=37 tokens=1966 q=0.926 41.4s eta=5.3h
+[145/648] unforced4096 386153714808 seed=11 tokens=1733 q=0.970 36.5s eta=5.3h
+[146/648] unforced4096 386153714808 seed=23 tokens=1410 q=0.970 29.7s eta=5.3h
+[147/648] unforced4096 386153714808 seed=37 tokens=4096 CAP q=0.053 89.0s eta=5.3h
+[148/648] unforced4096 222185784636 seed=11 tokens=659 q=1.000 14.3s eta=5.3h
+[149/648] unforced4096 222185784636 seed=23 tokens=472 q=1.000 10.3s eta=5.3h
+[150/648] unforced4096 222185784636 seed=37 tokens=1121 q=1.000 25.2s eta=5.2h
+[151/648] unforced4096 946171838107 seed=11 tokens=1451 q=1.000 32.1s eta=5.2h
+[152/648] unforced4096 946171838107 seed=23 tokens=1781 q=1.000 39.6s eta=5.2h
+[153/648] unforced4096 946171838107 seed=37 tokens=3745 q=1.000 79.9s eta=5.2h
+[154/648] unforced4096 582107328547 seed=11 tokens=2943 q=0.835 62.6s eta=5.2h
+[155/648] unforced4096 582107328547 seed=23 tokens=1971 q=0.835 42.3s eta=5.2h
+[156/648] unforced4096 582107328547 seed=37 tokens=1742 q=0.835 36.8s eta=5.2h
+[157/648] unforced4096 338899261939 seed=11 tokens=1235 q=0.976 26.8s eta=5.2h
+[158/648] unforced4096 338899261939 seed=23 tokens=4096 CAP q=0.033 86.7s eta=5.2h
+[159/648] unforced4096 338899261939 seed=37 tokens=1515 q=0.976 31.9s eta=5.2h
+[160/648] unforced4096 432954375923 seed=11 tokens=1166 q=0.993 24.6s eta=5.2h
+[161/648] unforced4096 432954375923 seed=23 tokens=1528 q=0.993 32.1s eta=5.2h
+[162/648] unforced4096 432954375923 seed=37 tokens=1219 q=0.993 25.5s eta=5.2h
+[163/648] unforced4096 303731732623 seed=11 tokens=3174 q=0.984 66.7s eta=5.2h
+[164/648] unforced4096 303731732623 seed=23 tokens=3255 q=0.984 67.8s eta=5.2h
+[165/648] unforced4096 303731732623 seed=37 tokens=4096 CAP q=0.059 86.9s eta=5.2h
+[166/648] unforced4096 248355632782 seed=11 tokens=3601 q=1.000 76.1s eta=5.2h
+[167/648] unforced4096 248355632782 seed=23 tokens=3183 q=1.000 66.1s eta=5.2h
+[168/648] unforced4096 248355632782 seed=37 tokens=4096 CAP q=0.005 85.9s eta=5.3h
+[169/648] unforced4096 527627041645 seed=11 tokens=2632 q=1.000 55.3s eta=5.3h
+[170/648] unforced4096 527627041645 seed=23 tokens=4096 CAP q=0.910 86.6s eta=5.3h
+[171/648] unforced4096 527627041645 seed=37 tokens=2140 q=1.000 45.8s eta=5.3h
+[172/648] unforced4096 808794410392 seed=11 tokens=2279 q=0.970 47.7s eta=5.3h
+[173/648] unforced4096 808794410392 seed=23 tokens=1172 q=0.970 24.7s eta=5.3h
+[174/648] unforced4096 808794410392 seed=37 tokens=3391 q=0.970 71.7s eta=5.3h
+[175/648] unforced4096 038394214062 seed=11 tokens=2578 q=1.000 54.1s eta=5.3h
+[176/648] unforced4096 038394214062 seed=23 tokens=2164 q=0.984 45.4s eta=5.3h
+[177/648] unforced4096 038394214062 seed=37 tokens=1867 q=1.000 39.3s eta=5.3h
+[178/648] unforced4096 070662672531 seed=11 tokens=2694 q=1.000 56.9s eta=5.3h
+[179/648] unforced4096 070662672531 seed=23 tokens=4096 CAP q=0.044 86.3s eta=5.3h
+[180/648] unforced4096 070662672531 seed=37 tokens=2709 q=1.000 57.0s eta=5.3h
+[181/648] unforced4096 773047409323 seed=11 tokens=2044 q=1.000 42.8s eta=5.3h
+[182/648] unforced4096 773047409323 seed=23 tokens=2565 q=1.000 54.1s eta=5.3h
+[183/648] unforced4096 773047409323 seed=37 tokens=1483 q=1.000 31.1s eta=5.3h
+[184/648] unforced4096 765845066086 seed=11 tokens=577 q=1.000 12.1s eta=5.2h
+[185/648] unforced4096 765845066086 seed=23 tokens=477 q=1.000 10.1s eta=5.2h
+[186/648] unforced4096 765845066086 seed=37 tokens=962 q=1.000 20.5s eta=5.2h
+[187/648] unforced4096 857902917119 seed=11 tokens=2604 q=1.000 56.1s eta=5.2h
+[188/648] unforced4096 857902917119 seed=23 tokens=2304 q=0.364 48.7s eta=5.2h
+[189/648] unforced4096 857902917119 seed=37 tokens=1737 q=1.000 36.3s eta=5.1h
+[190/648] unforced4096 514277589394 seed=11 tokens=582 q=0.975 12.2s eta=5.1h
+[191/648] unforced4096 514277589394 seed=23 tokens=1274 q=0.975 26.7s eta=5.1h
+[192/648] unforced4096 514277589394 seed=37 tokens=1235 q=0.975 26.1s eta=5.1h
+[193/648] unforced4096 024224343077 seed=11 tokens=655 q=1.000 13.7s eta=5.0h
+[194/648] unforced4096 024224343077 seed=23 tokens=707 q=1.000 15.0s eta=5.0h
+[195/648] unforced4096 024224343077 seed=37 tokens=786 q=1.000 16.5s eta=5.0h
+[196/648] unforced4096 433688350235 seed=11 tokens=783 q=1.000 16.5s eta=5.0h
+[197/648] unforced4096 433688350235 seed=23 tokens=774 q=1.000 16.5s eta=4.9h
+[198/648] unforced4096 433688350235 seed=37 tokens=4096 CAP q=0.984 86.2s eta=5.0h
+[199/648] unforced4096 891917669648 seed=11 tokens=2343 q=0.972 50.6s eta=5.0h
+[200/648] unforced4096 891917669648 seed=23 tokens=4096 CAP q=1.000 87.2s eta=5.0h
+[201/648] unforced4096 891917669648 seed=37 tokens=3277 q=0.972 69.1s eta=5.0h
+[202/648] unforced4096 339456741556 seed=11 tokens=1229 q=1.000 25.9s eta=5.0h
+[203/648] unforced4096 339456741556 seed=23 tokens=841 q=1.000 17.7s eta=4.9h
+[204/648] unforced4096 339456741556 seed=37 tokens=1055 q=1.000 22.2s eta=4.9h
+[205/648] unforced4096 887649202227 seed=11 tokens=760 q=1.000 16.0s eta=4.9h
+[206/648] unforced4096 887649202227 seed=23 tokens=741 q=1.000 15.6s eta=4.9h
+[207/648] unforced4096 887649202227 seed=37 tokens=774 q=1.000 16.3s eta=4.8h
+[208/648] unforced4096 539624842241 seed=11 tokens=1204 q=0.985 25.2s eta=4.8h
+[209/648] unforced4096 539624842241 seed=23 tokens=1902 q=0.985 40.2s eta=4.8h
+[210/648] unforced4096 539624842241 seed=37 tokens=1438 q=0.985 30.9s eta=4.8h
+[211/648] unforced4096 161374259776 seed=11 tokens=1139 q=1.000 23.8s eta=4.8h
+[212/648] unforced4096 161374259776 seed=23 tokens=1548 q=1.000 32.5s eta=4.8h
+[213/648] unforced4096 161374259776 seed=37 tokens=1129 q=1.000 23.6s eta=4.7h
+[214/648] unforced4096 746663488853 seed=11 tokens=2976 q=0.950 63.3s eta=4.7h
+[215/648] unforced4096 746663488853 seed=23 tokens=2275 q=0.950 47.8s eta=4.7h
+[216/648] unforced4096 746663488853 seed=37 tokens=2833 q=0.950 59.5s eta=4.7h
+[217/648] unforced4096 068945567628 seed=11 tokens=1352 q=0.944 28.6s eta=4.7h
+[218/648] unforced4096 068945567628 seed=23 tokens=936 q=0.944 19.7s eta=4.7h
+[219/648] unforced4096 068945567628 seed=37 tokens=1058 q=0.944 22.3s eta=4.7h
+[220/648] unforced4096 322855072278 seed=11 tokens=1027 q=1.000 21.6s eta=4.7h
+[221/648] unforced4096 322855072278 seed=23 tokens=1438 q=1.000 30.1s eta=4.6h
+[222/648] unforced4096 322855072278 seed=37 tokens=964 q=1.000 20.3s eta=4.6h
+[223/648] unforced4096 951067943830 seed=11 tokens=905 q=0.944 19.0s eta=4.6h
+[224/648] unforced4096 951067943830 seed=23 tokens=1138 q=0.944 23.7s eta=4.6h
+[225/648] unforced4096 951067943830 seed=37 tokens=2497 q=0.944 52.3s eta=4.6h
+[226/648] unforced4096 746822044044 seed=11 tokens=1184 q=1.000 25.1s eta=4.6h
+[227/648] unforced4096 746822044044 seed=23 tokens=1289 q=1.000 27.5s eta=4.5h
+[228/648] unforced4096 746822044044 seed=37 tokens=1255 q=1.000 27.0s eta=4.5h
+[229/648] unforced4096 035165802988 seed=11 tokens=1090 q=0.981 23.7s eta=4.5h
+[230/648] unforced4096 035165802988 seed=23 tokens=965 q=0.981 20.6s eta=4.5h
+[231/648] unforced4096 035165802988 seed=37 tokens=930 q=0.981 19.7s eta=4.5h
+[232/648] unforced4096 771806975012 seed=11 tokens=941 q=1.000 20.2s eta=4.4h
+[233/648] unforced4096 771806975012 seed=23 tokens=3431 q=1.000 73.5s eta=4.5h
+[234/648] unforced4096 771806975012 seed=37 tokens=976 q=1.000 20.6s eta=4.4h
+[235/648] unforced4096 071177767141 seed=11 tokens=2185 q=0.981 45.7s eta=4.4h
+[236/648] unforced4096 071177767141 seed=23 tokens=1030 q=0.981 21.7s eta=4.4h
+[237/648] unforced4096 071177767141 seed=37 tokens=1726 q=0.981 37.0s eta=4.4h
+[238/648] unforced4096 373834897409 seed=11 tokens=1123 q=1.000 23.9s eta=4.4h
+[239/648] unforced4096 373834897409 seed=23 tokens=1113 q=1.000 24.2s eta=4.4h
+[240/648] unforced4096 373834897409 seed=37 tokens=1355 q=1.000 28.7s eta=4.3h
+[241/648] unforced4096 790451449507 seed=11 tokens=1073 q=1.000 22.5s eta=4.3h
+[242/648] unforced4096 790451449507 seed=23 tokens=1574 q=1.000 33.1s eta=4.3h
+[243/648] unforced4096 790451449507 seed=37 tokens=1174 q=1.000 24.8s eta=4.3h
+[244/648] unforced4096 153660455236 seed=11 tokens=1055 q=1.000 22.4s eta=4.3h
+[245/648] unforced4096 153660455236 seed=23 tokens=1510 q=1.000 31.9s eta=4.3h
+[246/648] unforced4096 153660455236 seed=37 tokens=1216 q=1.000 26.0s eta=4.2h
+[247/648] unforced4096 042772501531 seed=11 tokens=4096 CAP q=0.205 86.6s eta=4.3h
+[248/648] unforced4096 042772501531 seed=23 tokens=4096 CAP q=0.846 87.1s eta=4.3h
+[249/648] unforced4096 042772501531 seed=37 tokens=1080 q=1.000 23.2s eta=4.3h
+[250/648] unforced4096 380495036609 seed=11 tokens=1134 q=1.000 24.0s eta=4.2h
+[251/648] unforced4096 380495036609 seed=23 tokens=1154 q=1.000 24.1s eta=4.2h
+[252/648] unforced4096 380495036609 seed=37 tokens=1466 q=1.000 30.5s eta=4.2h
+[253/648] unforced4096 416370773144 seed=11 tokens=1254 q=1.000 26.2s eta=4.2h
+[254/648] unforced4096 416370773144 seed=23 tokens=1217 q=1.000 25.8s eta=4.2h
+[255/648] unforced4096 416370773144 seed=37 tokens=1173 q=1.000 24.7s eta=4.2h
+[256/648] unforced4096 016641371250 seed=11 tokens=974 q=1.000 20.7s eta=4.1h
+[257/648] unforced4096 016641371250 seed=23 tokens=4096 CAP q=0.887 87.0s eta=4.1h
+[258/648] unforced4096 016641371250 seed=37 tokens=905 q=1.000 19.0s eta=4.1h
+[259/648] unforced4096 504277047756 seed=11 tokens=1538 q=1.000 32.4s eta=4.1h
+[260/648] unforced4096 504277047756 seed=23 tokens=1436 q=1.000 30.5s eta=4.1h
+[261/648] unforced4096 504277047756 seed=37 tokens=1422 q=1.000 30.8s eta=4.1h
+[262/648] unforced4096 087740532780 seed=11 tokens=1256 q=1.000 26.5s eta=4.1h
+[263/648] unforced4096 087740532780 seed=23 tokens=1356 q=1.000 28.2s eta=4.1h
+[264/648] unforced4096 087740532780 seed=37 tokens=1342 q=1.000 27.9s eta=4.0h
+[265/648] unforced4096 520400107397 seed=11 tokens=964 q=1.000 20.1s eta=4.0h
+[266/648] unforced4096 520400107397 seed=23 tokens=1063 q=1.000 22.4s eta=4.0h
+[267/648] unforced4096 520400107397 seed=37 tokens=964 q=1.000 21.4s eta=4.0h
+[268/648] unforced4096 441207510768 seed=11 tokens=1268 q=1.000 27.7s eta=4.0h
+[269/648] unforced4096 441207510768 seed=23 tokens=4096 CAP q=0.486 88.7s eta=4.0h
+[270/648] unforced4096 441207510768 seed=37 tokens=869 q=1.000 18.3s eta=4.0h
+[271/648] unforced4096 837367827346 seed=11 tokens=1297 q=1.000 27.1s eta=4.0h
+[272/648] unforced4096 837367827346 seed=23 tokens=1300 q=1.000 27.1s eta=3.9h
+[273/648] unforced4096 837367827346 seed=37 tokens=2421 q=1.000 50.4s eta=3.9h
+[274/648] unforced4096 136530104738 seed=11 tokens=1184 q=1.000 24.7s eta=3.9h
+[275/648] unforced4096 136530104738 seed=23 tokens=1334 q=1.000 27.8s eta=3.9h
+[276/648] unforced4096 136530104738 seed=37 tokens=2662 q=1.000 55.9s eta=3.9h
+[277/648] unforced4096 252276429376 seed=11 tokens=962 q=1.000 20.2s eta=3.9h
+[278/648] unforced4096 252276429376 seed=23 tokens=1018 q=1.000 21.3s eta=3.9h
+[279/648] unforced4096 252276429376 seed=37 tokens=1155 q=1.000 23.9s eta=3.9h
+[280/648] unforced4096 663670655837 seed=11 tokens=1155 q=1.000 24.1s eta=3.8h
+[281/648] unforced4096 663670655837 seed=23 tokens=842 q=1.000 17.9s eta=3.8h
+[282/648] unforced4096 663670655837 seed=37 tokens=1074 q=1.000 23.0s eta=3.8h
+[283/648] unforced4096 619054667495 seed=11 tokens=2248 q=0.982 47.3s eta=3.8h
+[284/648] unforced4096 619054667495 seed=23 tokens=1297 q=0.982 27.1s eta=3.8h
+[285/648] unforced4096 619054667495 seed=37 tokens=2344 q=0.982 49.5s eta=3.8h
+[286/648] unforced4096 431585619359 seed=11 tokens=1791 q=0.894 38.4s eta=3.8h
+[287/648] unforced4096 431585619359 seed=23 tokens=1708 q=0.894 36.5s eta=3.8h
+[288/648] unforced4096 431585619359 seed=37 tokens=2598 q=0.894 54.8s eta=3.8h
+[289/648] unforced4096 207081679369 seed=11 tokens=1080 q=1.000 22.8s eta=3.7h
+[290/648] unforced4096 207081679369 seed=23 tokens=3073 q=1.000 65.0s eta=3.7h
+[291/648] unforced4096 207081679369 seed=37 tokens=990 q=1.000 21.0s eta=3.7h
+[292/648] unforced4096 214593437423 seed=11 tokens=1193 q=1.000 25.8s eta=3.7h
+[293/648] unforced4096 214593437423 seed=23 tokens=4096 CAP q=0.321 86.6s eta=3.7h
+[294/648] unforced4096 214593437423 seed=37 tokens=1400 q=1.000 29.8s eta=3.7h
+[295/648] unforced4096 290890483500 seed=11 tokens=4096 CAP q=0.511 87.3s eta=3.7h
+[296/648] unforced4096 290890483500 seed=23 tokens=1329 q=0.825 28.0s eta=3.7h
+[297/648] unforced4096 290890483500 seed=37 tokens=4096 CAP q=0.607 87.1s eta=3.7h
+[298/648] unforced4096 371870758277 seed=11 tokens=1145 q=1.000 23.9s eta=3.7h
+[299/648] unforced4096 371870758277 seed=23 tokens=1658 q=1.000 34.7s eta=3.7h
+[300/648] unforced4096 371870758277 seed=37 tokens=1176 q=1.000 24.7s eta=3.7h
+[301/648] unforced4096 121789872393 seed=11 tokens=1547 q=1.000 32.4s eta=3.6h
+[302/648] unforced4096 121789872393 seed=23 tokens=1125 q=1.000 23.8s eta=3.6h
+[303/648] unforced4096 121789872393 seed=37 tokens=1137 q=1.000 23.9s eta=3.6h
+[304/648] unforced4096 702983169429 seed=11 tokens=977 q=1.000 20.6s eta=3.6h
+[305/648] unforced4096 702983169429 seed=23 tokens=1001 q=1.000 21.2s eta=3.6h
+[306/648] unforced4096 702983169429 seed=37 tokens=1025 q=1.000 21.6s eta=3.6h
+[307/648] unforced4096 386150312651 seed=11 tokens=4096 CAP q=0.348 87.7s eta=3.6h
+[308/648] unforced4096 386150312651 seed=23 tokens=1610 q=1.000 34.4s eta=3.6h
+[309/648] unforced4096 386150312651 seed=37 tokens=1681 q=1.000 35.7s eta=3.5h
+[310/648] unforced4096 369821591917 seed=11 tokens=1705 q=1.000 35.8s eta=3.5h
+[311/648] unforced4096 369821591917 seed=23 tokens=2047 q=1.000 43.5s eta=3.5h
+[312/648] unforced4096 369821591917 seed=37 tokens=1304 q=1.000 27.4s eta=3.5h
+[313/648] unforced4096 223339127085 seed=11 tokens=1448 q=1.000 30.4s eta=3.5h
+[314/648] unforced4096 223339127085 seed=23 tokens=1149 q=1.000 24.0s eta=3.5h
+[315/648] unforced4096 223339127085 seed=37 tokens=1709 q=1.000 35.7s eta=3.5h
+[316/648] unforced4096 364572167359 seed=11 tokens=1282 q=1.000 26.8s eta=3.5h
+[317/648] unforced4096 364572167359 seed=23 tokens=1191 q=1.000 25.0s eta=3.5h
+[318/648] unforced4096 364572167359 seed=37 tokens=1105 q=1.000 23.0s eta=3.4h
+[319/648] unforced4096 057404911136 seed=11 tokens=1409 q=1.000 29.7s eta=3.4h
+[320/648] unforced4096 057404911136 seed=23 tokens=1263 q=1.000 26.7s eta=3.4h
+[321/648] unforced4096 057404911136 seed=37 tokens=1182 q=1.000 24.6s eta=3.4h
+[322/648] unforced4096 766176519775 seed=11 tokens=1454 q=1.000 30.4s eta=3.4h
+[323/648] unforced4096 766176519775 seed=23 tokens=4096 CAP q=0.424 86.1s eta=3.4h
+[324/648] unforced4096 766176519775 seed=37 tokens=1445 q=1.000 30.2s eta=3.4h
+[325/648] unforced4096 463904202131 seed=11 tokens=2461 q=1.000 51.4s eta=3.4h
+[326/648] unforced4096 463904202131 seed=23 tokens=1278 q=1.000 26.9s eta=3.4h
+[327/648] unforced4096 463904202131 seed=37 tokens=1192 q=1.000 25.3s eta=3.3h
+[328/648] unforced4096 492044685550 seed=11 tokens=1149 q=1.000 23.9s eta=3.3h
+[329/648] unforced4096 492044685550 seed=23 tokens=910 q=1.000 18.9s eta=3.3h
+[330/648] unforced4096 492044685550 seed=37 tokens=974 q=1.000 20.2s eta=3.3h
+[331/648] unforced4096 280017967452 seed=11 tokens=1170 q=1.000 24.5s eta=3.3h
+[332/648] unforced4096 280017967452 seed=23 tokens=1214 q=1.000 25.5s eta=3.3h
+[333/648] unforced4096 280017967452 seed=37 tokens=2108 q=1.000 44.7s eta=3.3h
+[334/648] unforced4096 563352396823 seed=11 tokens=1249 q=1.000 26.1s eta=3.2h
+[335/648] unforced4096 563352396823 seed=23 tokens=1715 q=1.000 35.9s eta=3.2h
+[336/648] unforced4096 563352396823 seed=37 tokens=1247 q=1.000 26.4s eta=3.2h
+[337/648] unforced4096 333749980096 seed=11 tokens=1184 q=1.000 24.9s eta=3.2h
+[338/648] unforced4096 333749980096 seed=23 tokens=1184 q=1.000 24.8s eta=3.2h
+[339/648] unforced4096 333749980096 seed=37 tokens=1117 q=1.000 23.4s eta=3.2h
+[340/648] unforced4096 066659472051 seed=11 tokens=1259 q=1.000 26.7s eta=3.2h
+[341/648] unforced4096 066659472051 seed=23 tokens=1412 q=1.000 29.9s eta=3.2h
+[342/648] unforced4096 066659472051 seed=37 tokens=1387 q=0.758 29.1s eta=3.1h
+[343/648] unforced4096 102353684876 seed=11 tokens=1715 q=1.000 36.1s eta=3.1h
+[344/648] unforced4096 102353684876 seed=23 tokens=1696 q=1.000 35.9s eta=3.1h
+[345/648] unforced4096 102353684876 seed=37 tokens=1524 q=1.000 32.0s eta=3.1h
+[346/648] unforced4096 847279319637 seed=11 tokens=1434 q=1.000 30.2s eta=3.1h
+[347/648] unforced4096 847279319637 seed=23 tokens=1286 q=1.000 27.3s eta=3.1h
+[348/648] unforced4096 847279319637 seed=37 tokens=1414 q=1.000 30.3s eta=3.1h
+[349/648] unforced4096 657413701149 seed=11 tokens=1168 q=1.000 24.7s eta=3.1h
+[350/648] unforced4096 657413701149 seed=23 tokens=1018 q=1.000 21.3s eta=3.0h
+[351/648] unforced4096 657413701149 seed=37 tokens=1045 q=1.000 21.9s eta=3.0h
+[352/648] unforced4096 377700135092 seed=11 tokens=1082 q=1.000 22.6s eta=3.0h
+[353/648] unforced4096 377700135092 seed=23 tokens=1110 q=1.000 23.2s eta=3.0h
+[354/648] unforced4096 377700135092 seed=37 tokens=1087 q=1.000 23.0s eta=3.0h
+[355/648] unforced4096 124457135492 seed=11 tokens=1282 q=1.000 27.3s eta=3.0h
+[356/648] unforced4096 124457135492 seed=23 tokens=1181 q=1.000 24.9s eta=3.0h
+[357/648] unforced4096 124457135492 seed=37 tokens=1451 q=1.000 30.8s eta=3.0h
+[358/648] unforced4096 472050123863 seed=11 tokens=1613 q=0.967 34.4s eta=2.9h
+[359/648] unforced4096 472050123863 seed=23 tokens=4096 CAP q=0.909 87.7s eta=2.9h
+[360/648] unforced4096 472050123863 seed=37 tokens=1658 q=0.967 35.3s eta=2.9h
+[361/648] unforced4096 227727030786 seed=11 tokens=1111 q=1.000 23.6s eta=2.9h
+[362/648] unforced4096 227727030786 seed=23 tokens=1002 q=1.000 21.3s eta=2.9h
+[363/648] unforced4096 227727030786 seed=37 tokens=982 q=1.000 21.0s eta=2.9h
+[364/648] unforced4096 329921425111 seed=11 tokens=1086 q=1.000 22.9s eta=2.9h
+[365/648] unforced4096 329921425111 seed=23 tokens=1066 q=1.000 22.7s eta=2.9h
+[366/648] unforced4096 329921425111 seed=37 tokens=1205 q=1.000 25.7s eta=2.9h
+[367/648] unforced4096 623662538994 seed=11 tokens=2388 q=1.000 50.8s eta=2.9h
+[368/648] unforced4096 623662538994 seed=23 tokens=1201 q=1.000 26.2s eta=2.8h
+[369/648] unforced4096 623662538994 seed=37 tokens=1207 q=1.000 26.6s eta=2.8h
+[370/648] unforced4096 761127787484 seed=11 tokens=1205 q=0.993 26.4s eta=2.8h
+[371/648] unforced4096 761127787484 seed=23 tokens=1308 q=0.993 28.4s eta=2.8h
+[372/648] unforced4096 761127787484 seed=37 tokens=1496 q=0.993 31.8s eta=2.8h
+[373/648] unforced4096 006106038333 seed=11 tokens=1093 q=1.000 23.0s eta=2.8h
+[374/648] unforced4096 006106038333 seed=23 tokens=1188 q=1.000 24.8s eta=2.8h
+[375/648] unforced4096 006106038333 seed=37 tokens=1142 q=1.000 24.1s eta=2.8h
+[376/648] unforced4096 246460721287 seed=11 tokens=4096 CAP q=0.964 87.1s eta=2.8h
+[377/648] unforced4096 246460721287 seed=23 tokens=946 q=1.000 20.1s eta=2.7h
+[378/648] unforced4096 246460721287 seed=37 tokens=1345 q=1.000 28.8s eta=2.7h
+[379/648] unforced4096 806662115293 seed=11 tokens=1636 q=1.000 35.1s eta=2.7h
+[380/648] unforced4096 806662115293 seed=23 tokens=1485 q=1.000 33.1s eta=2.7h
+[381/648] unforced4096 806662115293 seed=37 tokens=1355 q=1.000 29.9s eta=2.7h
+[382/648] unforced4096 291826353027 seed=11 tokens=1658 q=1.000 36.1s eta=2.7h
+[383/648] unforced4096 291826353027 seed=23 tokens=1333 q=1.000 28.7s eta=2.7h
+[384/648] unforced4096 291826353027 seed=37 tokens=1614 q=1.000 34.6s eta=2.7h
+[385/648] unforced4096 717665155263 seed=11 tokens=1130 q=1.000 23.9s eta=2.7h
+[386/648] unforced4096 717665155263 seed=23 tokens=1205 q=1.000 25.6s eta=2.6h
+[387/648] unforced4096 717665155263 seed=37 tokens=1039 q=1.000 22.2s eta=2.6h
+[388/648] unforced4096 909406057359 seed=11 tokens=4096 CAP q=0.890 86.2s eta=2.6h
+[389/648] unforced4096 909406057359 seed=23 tokens=4096 CAP q=0.971 86.0s eta=2.6h
+[390/648] unforced4096 909406057359 seed=37 tokens=4096 CAP q=1.000 86.8s eta=2.6h
+[391/648] unforced4096 714654793929 seed=11 tokens=1612 q=1.000 34.3s eta=2.6h
+[392/648] unforced4096 714654793929 seed=23 tokens=4096 CAP q=0.939 86.7s eta=2.6h
+[393/648] unforced4096 714654793929 seed=37 tokens=1347 q=1.000 28.2s eta=2.6h
+[394/648] unforced4096 952312848321 seed=11 tokens=1951 q=1.000 41.6s eta=2.6h
+[395/648] unforced4096 952312848321 seed=23 tokens=1593 q=1.000 34.6s eta=2.6h
+[396/648] unforced4096 952312848321 seed=37 tokens=1402 q=1.000 29.5s eta=2.6h
+[397/648] unforced4096 508318942948 seed=11 tokens=961 q=1.000 20.2s eta=2.6h
+[398/648] unforced4096 508318942948 seed=23 tokens=958 q=1.000 20.0s eta=2.5h
+[399/648] unforced4096 508318942948 seed=37 tokens=1311 q=1.000 27.9s eta=2.5h
+[400/648] unforced4096 865372790950 seed=11 tokens=4096 CAP q=0.209 86.7s eta=2.5h
+[401/648] unforced4096 865372790950 seed=23 tokens=1273 q=0.905 26.9s eta=2.5h
+[402/648] unforced4096 865372790950 seed=37 tokens=1362 q=0.905 28.8s eta=2.5h
+[403/648] unforced4096 303577745663 seed=11 tokens=1257 q=1.000 26.2s eta=2.5h
+[404/648] unforced4096 303577745663 seed=23 tokens=1306 q=1.000 27.7s eta=2.5h
+[405/648] unforced4096 303577745663 seed=37 tokens=1536 q=1.000 32.3s eta=2.5h
+[406/648] unforced4096 261762459142 seed=11 tokens=1517 q=1.000 31.9s eta=2.5h
+[407/648] unforced4096 261762459142 seed=23 tokens=1728 q=1.000 36.4s eta=2.5h
+[408/648] unforced4096 261762459142 seed=37 tokens=1680 q=1.000 35.3s eta=2.4h
+[409/648] unforced4096 905736856062 seed=11 tokens=1258 q=1.000 26.8s eta=2.4h
+[410/648] unforced4096 905736856062 seed=23 tokens=1009 q=1.000 21.9s eta=2.4h
+[411/648] unforced4096 905736856062 seed=37 tokens=1104 q=1.000 23.5s eta=2.4h
+[412/648] unforced4096 820787486367 seed=11 tokens=1051 q=1.000 22.2s eta=2.4h
+[413/648] unforced4096 820787486367 seed=23 tokens=4096 CAP q=1.000 86.7s eta=2.4h
+[414/648] unforced4096 820787486367 seed=37 tokens=1269 q=1.000 26.8s eta=2.4h
+[415/648] unforced4096 082914808328 seed=11 tokens=1987 q=0.932 41.8s eta=2.4h
+[416/648] unforced4096 082914808328 seed=23 tokens=1601 q=0.932 33.6s eta=2.4h
+[417/648] unforced4096 082914808328 seed=37 tokens=2260 q=0.932 47.6s eta=2.4h
+[418/648] unforced4096 432548358283 seed=11 tokens=1721 q=1.000 36.2s eta=2.3h
+[419/648] unforced4096 432548358283 seed=23 tokens=1385 q=1.000 29.4s eta=2.3h
+[420/648] unforced4096 432548358283 seed=37 tokens=1561 q=1.000 33.0s eta=2.3h
+[421/648] unforced4096 076856104011 seed=11 tokens=1089 q=1.000 22.7s eta=2.3h
+[422/648] unforced4096 076856104011 seed=23 tokens=1079 q=1.000 22.8s eta=2.3h
+[423/648] unforced4096 076856104011 seed=37 tokens=1251 q=1.000 26.6s eta=2.3h
+[424/648] unforced4096 133701238639 seed=11 tokens=1132 q=1.000 23.9s eta=2.3h
+[425/648] unforced4096 133701238639 seed=23 tokens=1256 q=1.000 26.6s eta=2.3h
+[426/648] unforced4096 133701238639 seed=37 tokens=1275 q=1.000 27.0s eta=2.2h
+[427/648] unforced4096 162013257311 seed=11 tokens=1308 q=0.985 28.1s eta=2.2h
+[428/648] unforced4096 162013257311 seed=23 tokens=1399 q=0.985 29.6s eta=2.2h
+[429/648] unforced4096 162013257311 seed=37 tokens=1546 q=0.985 33.0s eta=2.2h
+[430/648] unforced4096 303839451627 seed=11 tokens=1542 q=0.985 32.8s eta=2.2h
+[431/648] unforced4096 303839451627 seed=23 tokens=1443 q=0.985 31.1s eta=2.2h
+[432/648] unforced4096 303839451627 seed=37 tokens=3270 q=0.985 69.9s eta=2.2h
+[433/648] unforced4096 138206619810 seed=11 tokens=902 q=1.000 19.0s eta=2.2h
+[434/648] unforced4096 138206619810 seed=23 tokens=957 q=1.000 20.0s eta=2.2h
+[435/648] unforced4096 138206619810 seed=37 tokens=1404 q=1.000 30.1s eta=2.2h
+[436/648] unforced4096 062980279154 seed=11 tokens=1143 q=0.800 24.2s eta=2.1h
+[437/648] unforced4096 062980279154 seed=23 tokens=1084 q=0.800 23.1s eta=2.1h
+[438/648] unforced4096 062980279154 seed=37 tokens=1068 q=0.800 22.7s eta=2.1h
+[439/648] unforced4096 845686494589 seed=11 tokens=1623 q=0.900 34.6s eta=2.1h
+[440/648] unforced4096 845686494589 seed=23 tokens=1394 q=0.900 29.2s eta=2.1h
+[441/648] unforced4096 845686494589 seed=37 tokens=1330 q=0.900 28.1s eta=2.1h
+[442/648] unforced4096 216881545641 seed=11 tokens=3351 q=0.900 71.2s eta=2.1h
+[443/648] unforced4096 216881545641 seed=23 tokens=2131 q=0.900 45.0s eta=2.1h
+[444/648] unforced4096 216881545641 seed=37 tokens=1681 q=0.900 35.9s eta=2.1h
+[445/648] unforced4096 553563321709 seed=11 tokens=1460 q=0.952 30.9s eta=2.0h
+[446/648] unforced4096 553563321709 seed=23 tokens=4096 CAP q=0.714 86.9s eta=2.0h
+[447/648] unforced4096 553563321709 seed=37 tokens=1089 q=0.952 23.0s eta=2.0h
+[448/648] unforced4096 442497104541 seed=11 tokens=996 q=1.000 21.1s eta=2.0h
+[449/648] unforced4096 442497104541 seed=23 tokens=1089 q=1.000 22.7s eta=2.0h
+[450/648] unforced4096 442497104541 seed=37 tokens=1032 q=1.000 21.7s eta=2.0h
+[451/648] unforced4096 170898788633 seed=11 tokens=1683 q=0.700 35.3s eta=2.0h
+[452/648] unforced4096 170898788633 seed=23 tokens=2753 q=0.700 57.5s eta=2.0h
+[453/648] unforced4096 170898788633 seed=37 tokens=1310 q=0.700 27.3s eta=2.0h
+[454/648] unforced4096 882618513404 seed=11 tokens=1300 q=1.000 27.1s eta=2.0h
+[455/648] unforced4096 882618513404 seed=23 tokens=1686 q=1.000 35.4s eta=1.9h
+[456/648] unforced4096 882618513404 seed=37 tokens=1441 q=1.000 30.1s eta=1.9h
+[457/648] unforced4096 088050766817 seed=11 tokens=1085 q=1.000 22.9s eta=1.9h
+[458/648] unforced4096 088050766817 seed=23 tokens=1337 q=1.000 28.0s eta=1.9h
+[459/648] unforced4096 088050766817 seed=37 tokens=1273 q=1.000 26.6s eta=1.9h
+[460/648] unforced4096 637030819307 seed=11 tokens=1814 q=0.686 38.1s eta=1.9h
+[461/648] unforced4096 637030819307 seed=23 tokens=4096 CAP q=1.000 86.4s eta=1.9h
+[462/648] unforced4096 637030819307 seed=37 tokens=3663 q=0.686 76.8s eta=1.9h
+[463/648] unforced4096 773077764236 seed=11 tokens=1487 q=1.000 31.3s eta=1.9h
+[464/648] unforced4096 773077764236 seed=23 tokens=1363 q=1.000 28.5s eta=1.9h
+[465/648] unforced4096 773077764236 seed=37 tokens=1437 q=1.000 30.2s eta=1.8h
+[466/648] unforced4096 901138089137 seed=11 tokens=1480 q=1.000 30.8s eta=1.8h
+[467/648] unforced4096 901138089137 seed=23 tokens=2202 q=1.000 46.1s eta=1.8h
+[468/648] unforced4096 901138089137 seed=37 tokens=1612 q=1.000 33.9s eta=1.8h
+[469/648] unforced4096 579297474045 seed=11 tokens=901 q=1.000 18.7s eta=1.8h
+[470/648] unforced4096 579297474045 seed=23 tokens=1103 q=1.000 23.1s eta=1.8h
+[471/648] unforced4096 579297474045 seed=37 tokens=956 q=1.000 20.0s eta=1.8h
+[472/648] unforced4096 420055936346 seed=11 tokens=833 q=1.000 17.3s eta=1.8h
+[473/648] unforced4096 420055936346 seed=23 tokens=1072 q=1.000 22.4s eta=1.8h
+[474/648] unforced4096 420055936346 seed=37 tokens=1166 q=1.000 25.0s eta=1.7h
+[475/648] unforced4096 728842466888 seed=11 tokens=1882 q=1.000 40.1s eta=1.7h
+[476/648] unforced4096 728842466888 seed=23 tokens=2370 q=1.000 51.0s eta=1.7h
+[477/648] unforced4096 728842466888 seed=37 tokens=1354 q=1.000 28.8s eta=1.7h
+[478/648] unforced4096 729774821030 seed=11 tokens=1662 q=1.000 34.8s eta=1.7h
+[479/648] unforced4096 729774821030 seed=23 tokens=1592 q=1.000 33.2s eta=1.7h
+[480/648] unforced4096 729774821030 seed=37 tokens=1515 q=1.000 31.8s eta=1.7h
+[481/648] unforced4096 616351666008 seed=11 tokens=1123 q=0.913 23.5s eta=1.7h
+[482/648] unforced4096 616351666008 seed=23 tokens=1158 q=0.913 24.3s eta=1.7h
+[483/648] unforced4096 616351666008 seed=37 tokens=1111 q=0.913 23.2s eta=1.7h
+[484/648] unforced4096 575377397327 seed=11 tokens=1431 q=1.000 30.0s eta=1.6h
+[485/648] unforced4096 575377397327 seed=23 tokens=1007 q=1.000 21.0s eta=1.6h
+[486/648] unforced4096 575377397327 seed=37 tokens=1075 q=1.000 22.5s eta=1.6h
+[487/648] unforced4096 161520888628 seed=11 tokens=1766 q=1.000 37.0s eta=1.6h
+[488/648] unforced4096 161520888628 seed=23 tokens=1425 q=1.000 30.2s eta=1.6h
+[489/648] unforced4096 161520888628 seed=37 tokens=1280 q=1.000 27.4s eta=1.6h
+[490/648] unforced4096 019505782456 seed=11 tokens=1522 q=1.000 32.3s eta=1.6h
+[491/648] unforced4096 019505782456 seed=23 tokens=1350 q=1.000 28.5s eta=1.6h
+[492/648] unforced4096 019505782456 seed=37 tokens=1318 q=1.000 27.9s eta=1.6h
+[493/648] unforced4096 074315969504 seed=11 tokens=1194 q=1.000 25.3s eta=1.5h
+[494/648] unforced4096 074315969504 seed=23 tokens=1040 q=1.000 21.9s eta=1.5h
+[495/648] unforced4096 074315969504 seed=37 tokens=1030 q=1.000 21.7s eta=1.5h
+[496/648] unforced4096 528854319663 seed=11 tokens=1148 q=1.000 24.1s eta=1.5h
+[497/648] unforced4096 528854319663 seed=23 tokens=1226 q=1.000 25.8s eta=1.5h
+[498/648] unforced4096 528854319663 seed=37 tokens=1057 q=1.000 22.5s eta=1.5h
+[499/648] unforced4096 360824150628 seed=11 tokens=1280 q=1.000 26.9s eta=1.5h
+[500/648] unforced4096 360824150628 seed=23 tokens=1467 q=1.000 30.7s eta=1.5h
+[501/648] unforced4096 360824150628 seed=37 tokens=1335 q=1.000 27.9s eta=1.5h
+[502/648] unforced4096 818077998701 seed=11 tokens=1292 q=1.000 26.9s eta=1.5h
+[503/648] unforced4096 818077998701 seed=23 tokens=1452 q=1.000 30.4s eta=1.4h
+[504/648] unforced4096 818077998701 seed=37 tokens=1365 q=1.000 28.6s eta=1.4h
+[505/648] unforced4096 201159470849 seed=11 tokens=1012 q=1.000 21.5s eta=1.4h
+[506/648] unforced4096 201159470849 seed=23 tokens=1090 q=1.000 22.9s eta=1.4h
+[507/648] unforced4096 201159470849 seed=37 tokens=3065 q=1.000 64.4s eta=1.4h
+[508/648] unforced4096 908721663650 seed=11 tokens=2065 q=0.653 43.4s eta=1.4h
+[509/648] unforced4096 908721663650 seed=23 tokens=1273 q=1.000 26.7s eta=1.4h
+[510/648] unforced4096 908721663650 seed=37 tokens=1374 q=1.000 28.8s eta=1.4h
+[511/648] unforced4096 533491871937 seed=11 tokens=1417 q=1.000 29.7s eta=1.4h
+[512/648] unforced4096 533491871937 seed=23 tokens=1422 q=1.000 29.7s eta=1.3h
+[513/648] unforced4096 533491871937 seed=37 tokens=1419 q=1.000 29.5s eta=1.3h
+[514/648] unforced4096 925352280107 seed=11 tokens=1379 q=1.000 29.1s eta=1.3h
+[515/648] unforced4096 925352280107 seed=23 tokens=4096 CAP q=0.235 86.7s eta=1.3h
+[516/648] unforced4096 925352280107 seed=37 tokens=1254 q=1.000 26.3s eta=1.3h
+[517/648] unforced4096 519459001890 seed=11 tokens=983 q=1.000 20.5s eta=1.3h
+[518/648] unforced4096 519459001890 seed=23 tokens=1323 q=1.000 27.4s eta=1.3h
+[519/648] unforced4096 519459001890 seed=37 tokens=1132 q=1.000 24.1s eta=1.3h
+[520/648] unforced4096 662776488222 seed=11 tokens=1712 q=0.934 35.9s eta=1.3h
+[521/648] unforced4096 662776488222 seed=23 tokens=1470 q=0.934 30.8s eta=1.3h
+[522/648] unforced4096 662776488222 seed=37 tokens=4096 CAP q=1.000 85.9s eta=1.3h
+[523/648] unforced4096 249014260991 seed=11 tokens=2457 q=1.000 51.9s eta=1.2h
+[524/648] unforced4096 249014260991 seed=23 tokens=4096 CAP q=0.791 87.4s eta=1.2h
+[525/648] unforced4096 249014260991 seed=37 tokens=1371 q=1.000 28.7s eta=1.2h
+[526/648] unforced4096 359156509673 seed=11 tokens=1392 q=0.940 29.2s eta=1.2h
+[527/648] unforced4096 359156509673 seed=23 tokens=1191 q=0.940 25.0s eta=1.2h
+[528/648] unforced4096 359156509673 seed=37 tokens=1651 q=0.940 34.6s eta=1.2h
+[529/648] unforced4096 488925781946 seed=11 tokens=1156 q=1.000 24.1s eta=1.2h
+[530/648] unforced4096 488925781946 seed=23 tokens=1266 q=1.000 26.4s eta=1.2h
+[531/648] unforced4096 488925781946 seed=37 tokens=1392 q=1.000 29.0s eta=1.2h
+[532/648] unforced4096 987181513130 seed=11 tokens=1050 q=1.000 21.9s eta=1.2h
+[533/648] unforced4096 987181513130 seed=23 tokens=1072 q=1.000 22.4s eta=1.1h
+[534/648] unforced4096 987181513130 seed=37 tokens=1006 q=1.000 21.0s eta=1.1h
+[535/648] unforced4096 072954104751 seed=11 tokens=1219 q=0.929 25.5s eta=1.1h
+[536/648] unforced4096 072954104751 seed=23 tokens=1330 q=0.929 28.0s eta=1.1h
+[537/648] unforced4096 072954104751 seed=37 tokens=1282 q=0.929 26.8s eta=1.1h
+[538/648] unforced4096 490380843497 seed=11 tokens=1361 q=1.000 28.4s eta=1.1h
+[539/648] unforced4096 490380843497 seed=23 tokens=1727 q=1.000 36.1s eta=1.1h
+[540/648] unforced4096 490380843497 seed=37 tokens=2204 q=1.000 46.1s eta=1.1h
+[541/648] unforced4096 256882133413 seed=11 tokens=1435 q=1.000 29.9s eta=1.1h
+[542/648] unforced4096 256882133413 seed=23 tokens=1439 q=1.000 30.0s eta=1.1h
+[543/648] unforced4096 256882133413 seed=37 tokens=1103 q=1.000 22.9s eta=1.0h
+[544/648] unforced4096 335475700757 seed=11 tokens=1190 q=1.000 25.0s eta=1.0h
+[545/648] unforced4096 335475700757 seed=23 tokens=1478 q=1.000 31.4s eta=1.0h
+[546/648] unforced4096 335475700757 seed=37 tokens=1042 q=1.000 22.3s eta=1.0h
+[547/648] unforced4096 802861865938 seed=11 tokens=1600 q=1.000 33.9s eta=1.0h
+[548/648] unforced4096 802861865938 seed=23 tokens=1456 q=1.000 30.7s eta=1.0h
+[549/648] unforced4096 802861865938 seed=37 tokens=1655 q=1.000 35.3s eta=1.0h
+[550/648] unforced4096 451703592636 seed=11 tokens=1894 q=1.000 40.3s eta=1.0h
+[551/648] unforced4096 451703592636 seed=23 tokens=2292 q=1.000 48.5s eta=1.0h
+[552/648] unforced4096 451703592636 seed=37 tokens=1272 q=1.000 27.2s eta=0.9h
+[553/648] unforced4096 854443572900 seed=11 tokens=1238 q=1.000 26.1s eta=0.9h
+[554/648] unforced4096 854443572900 seed=23 tokens=1356 q=1.000 28.9s eta=0.9h
+[555/648] unforced4096 854443572900 seed=37 tokens=1184 q=1.000 25.0s eta=0.9h
+[556/648] unforced4096 203458762878 seed=11 tokens=1133 q=1.000 24.0s eta=0.9h
+[557/648] unforced4096 203458762878 seed=23 tokens=1216 q=1.000 25.8s eta=0.9h
+[558/648] unforced4096 203458762878 seed=37 tokens=1201 q=1.000 25.6s eta=0.9h
+[559/648] unforced4096 064777939023 seed=11 tokens=1362 q=1.000 28.8s eta=0.9h
+[560/648] unforced4096 064777939023 seed=23 tokens=1465 q=1.000 30.7s eta=0.9h
+[561/648] unforced4096 064777939023 seed=37 tokens=1360 q=1.000 28.5s eta=0.9h
+[562/648] unforced4096 562288817950 seed=11 tokens=1408 q=1.000 29.4s eta=0.8h
+[563/648] unforced4096 562288817950 seed=23 tokens=1483 q=1.000 31.3s eta=0.8h
+[564/648] unforced4096 562288817950 seed=37 tokens=1327 q=1.000 27.6s eta=0.8h
+[565/648] unforced4096 140137405215 seed=11 tokens=1021 q=1.000 21.5s eta=0.8h
+[566/648] unforced4096 140137405215 seed=23 tokens=4096 CAP q=0.314 86.4s eta=0.8h
+[567/648] unforced4096 140137405215 seed=37 tokens=1124 q=1.000 23.5s eta=0.8h
+[568/648] unforced4096 276519577667 seed=11 tokens=1046 q=1.000 21.8s eta=0.8h
+[569/648] unforced4096 276519577667 seed=23 tokens=1146 q=1.000 23.9s eta=0.8h
+[570/648] unforced4096 276519577667 seed=37 tokens=1104 q=1.000 23.3s eta=0.8h
+[571/648] unforced4096 138787576738 seed=11 tokens=1271 q=0.943 26.6s eta=0.8h
+[572/648] unforced4096 138787576738 seed=23 tokens=1306 q=0.943 27.4s eta=0.7h
+[573/648] unforced4096 138787576738 seed=37 tokens=1805 q=0.943 37.5s eta=0.7h
+[574/648] unforced4096 779770454309 seed=11 tokens=1534 q=0.780 32.1s eta=0.7h
+[575/648] unforced4096 779770454309 seed=23 tokens=1567 q=0.780 32.9s eta=0.7h
+[576/648] unforced4096 779770454309 seed=37 tokens=1613 q=0.780 33.6s eta=0.7h
+[577/648] unforced4096 039344804445 seed=11 tokens=1564 q=1.000 32.7s eta=0.7h
+[578/648] unforced4096 039344804445 seed=23 tokens=1112 q=1.000 23.6s eta=0.7h
+[579/648] unforced4096 039344804445 seed=37 tokens=1314 q=1.000 28.0s eta=0.7h
+[580/648] unforced4096 231019942129 seed=11 tokens=1246 q=1.000 26.2s eta=0.7h
+[581/648] unforced4096 231019942129 seed=23 tokens=1278 q=1.000 27.0s eta=0.7h
+[582/648] unforced4096 231019942129 seed=37 tokens=1067 q=1.000 22.6s eta=0.6h
+[583/648] unforced4096 553718439078 seed=11 tokens=1349 q=1.000 28.6s eta=0.6h
+[584/648] unforced4096 553718439078 seed=23 tokens=1432 q=1.000 30.4s eta=0.6h
+[585/648] unforced4096 553718439078 seed=37 tokens=4096 CAP q=1.000 86.7s eta=0.6h
+[586/648] unforced4096 018132076351 seed=11 tokens=1643 q=0.907 34.2s eta=0.6h
+[587/648] unforced4096 018132076351 seed=23 tokens=1474 q=0.907 30.8s eta=0.6h
+[588/648] unforced4096 018132076351 seed=37 tokens=1309 q=0.907 27.3s eta=0.6h
+[589/648] unforced4096 483104112214 seed=11 tokens=1108 q=1.000 23.1s eta=0.6h
+[590/648] unforced4096 483104112214 seed=23 tokens=1166 q=1.000 24.9s eta=0.6h
+[591/648] unforced4096 483104112214 seed=37 tokens=1105 q=1.000 23.2s eta=0.6h
+[592/648] unforced4096 232484348556 seed=11 tokens=891 q=0.955 18.7s eta=0.5h
+[593/648] unforced4096 232484348556 seed=23 tokens=1630 q=0.955 34.9s eta=0.5h
+[594/648] unforced4096 232484348556 seed=37 tokens=1343 q=0.955 28.6s eta=0.5h
+[595/648] unforced4096 833176001726 seed=11 tokens=2793 q=1.000 59.5s eta=0.5h
+[596/648] unforced4096 833176001726 seed=23 tokens=1249 q=1.000 26.1s eta=0.5h
+[597/648] unforced4096 833176001726 seed=37 tokens=1130 q=1.000 23.8s eta=0.5h
+[598/648] unforced4096 571850134374 seed=11 tokens=1884 q=1.000 39.7s eta=0.5h
+[599/648] unforced4096 571850134374 seed=23 tokens=1637 q=1.000 34.5s eta=0.5h
+[600/648] unforced4096 571850134374 seed=37 tokens=1394 q=1.000 29.1s eta=0.5h
+[601/648] unforced4096 297810693650 seed=11 tokens=2233 q=1.000 46.4s eta=0.5h
+[602/648] unforced4096 297810693650 seed=23 tokens=2964 q=1.000 62.3s eta=0.5h
+[603/648] unforced4096 297810693650 seed=37 tokens=4096 CAP q=0.381 86.7s eta=0.4h
+[604/648] unforced4096 329139302747 seed=11 tokens=1249 q=1.000 26.2s eta=0.4h
+[605/648] unforced4096 329139302747 seed=23 tokens=1115 q=1.000 23.4s eta=0.4h
+[606/648] unforced4096 329139302747 seed=37 tokens=1353 q=1.000 28.2s eta=0.4h
+[607/648] unforced4096 307408058641 seed=11 tokens=1217 q=1.000 25.5s eta=0.4h
+[608/648] unforced4096 307408058641 seed=23 tokens=1282 q=1.000 26.8s eta=0.4h
+[609/648] unforced4096 307408058641 seed=37 tokens=1394 q=1.000 29.2s eta=0.4h
+[610/648] unforced4096 348901757838 seed=11 tokens=1350 q=1.000 28.4s eta=0.4h
+[611/648] unforced4096 348901757838 seed=23 tokens=3078 q=1.000 64.4s eta=0.4h
+[612/648] unforced4096 348901757838 seed=37 tokens=2006 q=1.000 42.2s eta=0.4h
+[613/648] unforced4096 800170163154 seed=11 tokens=1075 q=1.000 22.7s eta=0.3h
+[614/648] unforced4096 800170163154 seed=23 tokens=1223 q=1.000 25.9s eta=0.3h
+[615/648] unforced4096 800170163154 seed=37 tokens=1205 q=1.000 25.5s eta=0.3h
+[616/648] unforced4096 346214727862 seed=11 tokens=1494 q=1.000 31.5s eta=0.3h
+[617/648] unforced4096 346214727862 seed=23 tokens=1313 q=1.000 27.5s eta=0.3h
+[618/648] unforced4096 346214727862 seed=37 tokens=1789 q=1.000 37.6s eta=0.3h
+[619/648] unforced4096 950368598059 seed=11 tokens=1865 q=0.880 39.4s eta=0.3h
+[620/648] unforced4096 950368598059 seed=23 tokens=1676 q=0.880 35.3s eta=0.3h
+[621/648] unforced4096 950368598059 seed=37 tokens=1476 q=0.880 31.0s eta=0.3h
+[622/648] unforced4096 101002276707 seed=11 tokens=1342 q=1.000 28.2s eta=0.3h
+[623/648] unforced4096 101002276707 seed=23 tokens=2023 q=1.000 42.6s eta=0.2h
+[624/648] unforced4096 101002276707 seed=37 tokens=1782 q=1.000 38.1s eta=0.2h
+[625/648] unforced4096 042257455404 seed=11 tokens=1403 q=1.000 30.1s eta=0.2h
+[626/648] unforced4096 042257455404 seed=23 tokens=1170 q=1.000 24.5s eta=0.2h
+[627/648] unforced4096 042257455404 seed=37 tokens=1588 q=1.000 33.5s eta=0.2h
+[628/648] unforced4096 702116547514 seed=11 tokens=1443 q=0.899 30.7s eta=0.2h
+[629/648] unforced4096 702116547514 seed=23 tokens=1136 q=0.899 23.9s eta=0.2h
+[630/648] unforced4096 702116547514 seed=37 tokens=1413 q=0.899 29.8s eta=0.2h
+[631/648] unforced4096 260498217640 seed=11 tokens=1468 q=0.923 31.0s eta=0.2h
+[632/648] unforced4096 260498217640 seed=23 tokens=2195 q=0.923 46.4s eta=0.2h
+[633/648] unforced4096 260498217640 seed=37 tokens=4096 CAP q=0.923 87.8s eta=0.1h
+[634/648] unforced4096 294785484808 seed=11 tokens=4096 CAP q=0.373 87.8s eta=0.1h
+[635/648] unforced4096 294785484808 seed=23 tokens=1739 q=1.000 36.9s eta=0.1h
+[636/648] unforced4096 294785484808 seed=37 tokens=1529 q=1.000 32.2s eta=0.1h
+[637/648] unforced4096 435276324586 seed=11 tokens=1106 q=0.850 23.3s eta=0.1h
+[638/648] unforced4096 435276324586 seed=23 tokens=1160 q=0.850 24.4s eta=0.1h
+[639/648] unforced4096 435276324586 seed=37 tokens=1233 q=0.850 26.0s eta=0.1h
+[640/648] unforced4096 941632722902 seed=11 tokens=1132 q=0.967 23.6s eta=0.1h
+[641/648] unforced4096 941632722902 seed=23 tokens=1193 q=0.967 25.2s eta=0.1h
+[642/648] unforced4096 941632722902 seed=37 tokens=1203 q=0.967 25.1s eta=0.1h
+[643/648] unforced4096 744979851487 seed=11 tokens=2076 q=1.000 43.7s eta=0.0h
+[644/648] unforced4096 744979851487 seed=23 tokens=4096 CAP q=0.917 86.6s eta=0.0h
+[645/648] unforced4096 744979851487 seed=37 tokens=1738 q=1.000 36.4s eta=0.0h
+[646/648] unforced4096 407164590367 seed=11 tokens=1285 q=1.000 27.0s eta=0.0h
+[647/648] unforced4096 407164590367 seed=23 tokens=1648 q=1.000 34.9s eta=0.0h
+[648/648] unforced4096 407164590367 seed=37 tokens=1156 q=1.000 24.6s eta=0.0h

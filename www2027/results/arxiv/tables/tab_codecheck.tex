@@ -1,0 +1,19 @@
+\begin{table}[h!]
+\caption{Agreement between the two pieces of trace-reading code at 768 forced tokens on eBay. Options written: options for which the trace states a value. Found by both: the matcher and the reader both find it. Reader = truth: the reader's number equals the true expected profit (\%). Last column: traces in which at least one written value is miscomputed (\%).}
+\label{tab:codecheck}
+\footnotesize
+\centering
+
+\begin{tabular}{lcccc}
+\toprule
+Model & Options written & Found by both & Reader = truth & Traces with a miscomputed value \\
+\midrule
+DeepSeek-8B & 3,752 & 3,734 & 95 & 3 \\
+Phi-mini & 3,529 & 3,470 & 92 & 8 \\
+Qwen3-4B & 3,221 & 3,152 & 93 & 10 \\
+Qwen3-8B & 3,028 & 2,943 & 93 & 13 \\
+Qwen3-14B & 3,228 & 3,137 & 92 & 13 \\
+Granite-8B & 3,511 & 2,996 & 86 & 25 \\
+\bottomrule
+\end{tabular}
+\end{table}

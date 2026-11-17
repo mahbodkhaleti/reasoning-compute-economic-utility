@@ -1,0 +1,8 @@
+high-intent impressions: step 2, 18 values, 499978 construction / 183975 held-out impressions
+low-intent impressions: step 2, 18 values, 499978 construction / 183525 held-out impressions
+mid-intent impressions: step 2, 18 values, 499977 construction / 132479 held-out impressions
+scenarios.csv: {'q_calc': 0.9758739509766635, 'q_random': 0.7761077078184336, 'n': 216}
+high-intent impressions: step 5, 18 values, 499978 construction / 183975 held-out impressions
+low-intent impressions: step 5, 18 values, 499978 construction / 183525 held-out impressions
+mid-intent impressions: step 5, 18 values, 499977 construction / 132479 held-out impressions
+scenarios_m_top.csv: {'q_calc': 0.9822023570201952, 'q_random': 0.7556122866196385, 'n': 216}

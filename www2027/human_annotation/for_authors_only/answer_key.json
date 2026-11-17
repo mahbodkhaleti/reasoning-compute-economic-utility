@@ -1,0 +1,3852 @@
+[
+ {
+  "trace_id": "T01",
+  "model": "phi4_mini_reasoning",
+  "scenario_id": 348901757838,
+  "repeat_seed": 11,
+  "budget": 512,
+  "validation_item": 79,
+  "private_value": 270.0,
+  "calculator_bid": 210.0,
+  "model_answer_bid": 225.0,
+  "hybrid_best_letter": "A",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 225.0,
+    "p": 0.9423,
+    "true_eu": 42.4035,
+    "parser_evaluated": true,
+    "reader_value": 42.4,
+    "llm_written": true,
+    "llm_value": 42.4
+   },
+   {
+    "letter": "B",
+    "bid": 240.0,
+    "p": 0.9423,
+    "true_eu": 28.269000000000002,
+    "parser_evaluated": true,
+    "reader_value": 28.27,
+    "llm_written": true,
+    "llm_value": 28.27
+   },
+   {
+    "letter": "C",
+    "bid": 215.0,
+    "p": 0.9327,
+    "true_eu": 51.2985,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "D",
+    "bid": 210.0,
+    "p": 0.9231,
+    "true_eu": 55.386,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "E",
+    "bid": 235.0,
+    "p": 0.9423,
+    "true_eu": 32.9805,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "F",
+    "bid": 230.0,
+    "p": 0.9423,
+    "true_eu": 37.692,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "G",
+    "bid": 220.0,
+    "p": 0.9327,
+    "true_eu": 46.635,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T02",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 400879547499,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 20,
+  "private_value": 1860.0,
+  "calculator_bid": 730.0,
+  "model_answer_bid": 885.0,
+  "hybrid_best_letter": "A",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 730.0,
+    "p": 0.5789,
+    "true_eu": 654.1569999999999,
+    "parser_evaluated": true,
+    "reader_value": 654.64,
+    "llm_written": true,
+    "llm_value": 654.64
+   },
+   {
+    "letter": "B",
+    "bid": 340.0,
+    "p": 0.2526,
+    "true_eu": 383.952,
+    "parser_evaluated": true,
+    "reader_value": 384.03,
+    "llm_written": true,
+    "llm_value": 384.03
+   },
+   {
+    "letter": "C",
+    "bid": 1610.0,
+    "p": 0.7789,
+    "true_eu": 194.72500000000002,
+    "parser_evaluated": true,
+    "reader_value": 194.73,
+    "llm_written": true,
+    "llm_value": 194.73
+   },
+   {
+    "letter": "D",
+    "bid": 1855.0,
+    "p": 0.8842,
+    "true_eu": 4.421,
+    "parser_evaluated": true,
+    "reader_value": 4.42,
+    "llm_written": true,
+    "llm_value": 4.42
+   },
+   {
+    "letter": "E",
+    "bid": 885.0,
+    "p": 0.6526,
+    "true_eu": 636.285,
+    "parser_evaluated": true,
+    "reader_value": 635.49,
+    "llm_written": true,
+    "llm_value": 635.49
+   }
+  ]
+ },
+ {
+  "trace_id": "T03",
+  "model": "qwen3_14b",
+  "scenario_id": 952312848321,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 34,
+  "private_value": 310.0,
+  "calculator_bid": 245.0,
+  "model_answer_bid": 245.0,
+  "hybrid_best_letter": "C",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 265.0,
+    "p": 0.9665,
+    "true_eu": 43.4925,
+    "parser_evaluated": true,
+    "reader_value": 43.4925,
+    "llm_written": true,
+    "llm_value": 43.49
+   },
+   {
+    "letter": "B",
+    "bid": 260.0,
+    "p": 0.9456,
+    "true_eu": 47.28,
+    "parser_evaluated": true,
+    "reader_value": 47.28,
+    "llm_written": true,
+    "llm_value": 47.28
+   },
+   {
+    "letter": "C",
+    "bid": 245.0,
+    "p": 0.8033,
+    "true_eu": 52.2145,
+    "parser_evaluated": true,
+    "reader_value": 52.21,
+    "llm_written": true,
+    "llm_value": 52.21
+   },
+   {
+    "letter": "D",
+    "bid": 255.0,
+    "p": 0.9038,
+    "true_eu": 49.709,
+    "parser_evaluated": true,
+    "reader_value": 49.71,
+    "llm_written": true,
+    "llm_value": 49.71
+   },
+   {
+    "letter": "E",
+    "bid": 235.0,
+    "p": 0.6151,
+    "true_eu": 46.1325,
+    "parser_evaluated": true,
+    "reader_value": 46.13,
+    "llm_written": true,
+    "llm_value": 46.13
+   },
+   {
+    "letter": "F",
+    "bid": 240.0,
+    "p": 0.7238,
+    "true_eu": 50.666,
+    "parser_evaluated": true,
+    "reader_value": 50.67,
+    "llm_written": true,
+    "llm_value": 50.67
+   },
+   {
+    "letter": "G",
+    "bid": 250.0,
+    "p": 0.8536,
+    "true_eu": 51.216,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T04",
+  "model": "qwen3_14b",
+  "scenario_id": 729774821030,
+  "repeat_seed": 11,
+  "budget": 768,
+  "validation_item": 38,
+  "private_value": 150.0,
+  "calculator_bid": 110.0,
+  "model_answer_bid": 110.0,
+  "hybrid_best_letter": "G",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 6.151999999999999,
+    "parser_evaluated": true,
+    "reader_value": 6.152,
+    "llm_written": true,
+    "llm_value": 6.15
+   },
+   {
+    "letter": "B",
+    "bid": 145.0,
+    "p": 0.7308,
+    "true_eu": 3.654,
+    "parser_evaluated": true,
+    "reader_value": 3.654,
+    "llm_written": true,
+    "llm_value": 3.65
+   },
+   {
+    "letter": "C",
+    "bid": 75.0,
+    "p": 0.0865,
+    "true_eu": 6.4875,
+    "parser_evaluated": true,
+    "reader_value": 6.4875,
+    "llm_written": true,
+    "llm_value": 6.49
+   },
+   {
+    "letter": "D",
+    "bid": 95.0,
+    "p": 0.1827,
+    "true_eu": 10.0485,
+    "parser_evaluated": true,
+    "reader_value": 10.0485,
+    "llm_written": true,
+    "llm_value": 10.05
+   },
+   {
+    "letter": "E",
+    "bid": 135.0,
+    "p": 0.6346,
+    "true_eu": 9.519,
+    "parser_evaluated": true,
+    "reader_value": 9.519,
+    "llm_written": true,
+    "llm_value": 9.52
+   },
+   {
+    "letter": "F",
+    "bid": 85.0,
+    "p": 0.1154,
+    "true_eu": 7.501,
+    "parser_evaluated": true,
+    "reader_value": 7.491,
+    "llm_written": true,
+    "llm_value": 7.49
+   },
+   {
+    "letter": "G",
+    "bid": 110.0,
+    "p": 0.3173,
+    "true_eu": 12.692,
+    "parser_evaluated": true,
+    "reader_value": 12.69,
+    "llm_written": true,
+    "llm_value": 12.69
+   }
+  ]
+ },
+ {
+  "trace_id": "T05",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 278077936666,
+  "repeat_seed": 11,
+  "budget": 512,
+  "validation_item": 65,
+  "private_value": 880.0,
+  "calculator_bid": 320.0,
+  "model_answer_bid": 690.0,
+  "hybrid_best_letter": "C",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 150.0,
+    "p": 0.0421,
+    "true_eu": 30.733,
+    "parser_evaluated": true,
+    "reader_value": 30.87,
+    "llm_written": true,
+    "llm_value": 30.87
+   },
+   {
+    "letter": "B",
+    "bid": 690.0,
+    "p": 0.5789,
+    "true_eu": 109.991,
+    "parser_evaluated": true,
+    "reader_value": 110.0,
+    "llm_written": true,
+    "llm_value": 110
+   },
+   {
+    "letter": "C",
+    "bid": 320.0,
+    "p": 0.2316,
+    "true_eu": 129.696,
+    "parser_evaluated": true,
+    "reader_value": 130.0,
+    "llm_written": true,
+    "llm_value": 130
+   },
+   {
+    "letter": "D",
+    "bid": 225.0,
+    "p": 0.1474,
+    "true_eu": 96.547,
+    "parser_evaluated": true,
+    "reader_value": 96.3,
+    "llm_written": true,
+    "llm_value": 96.3
+   },
+   {
+    "letter": "E",
+    "bid": 265.0,
+    "p": 0.1579,
+    "true_eu": 97.1085,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T06",
+  "model": "qwen3_14b",
+  "scenario_id": 39344804445,
+  "repeat_seed": 11,
+  "budget": 768,
+  "validation_item": 47,
+  "private_value": 250.0,
+  "calculator_bid": 190.0,
+  "model_answer_bid": 190.0,
+  "hybrid_best_letter": "E",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 195.0,
+    "p": 0.8942,
+    "true_eu": 49.181,
+    "parser_evaluated": true,
+    "reader_value": 49.18,
+    "llm_written": true,
+    "llm_value": 49.18
+   },
+   {
+    "letter": "B",
+    "bid": 210.0,
+    "p": 0.9231,
+    "true_eu": 36.924,
+    "parser_evaluated": true,
+    "reader_value": 36.92,
+    "llm_written": true,
+    "llm_value": 36.92
+   },
+   {
+    "letter": "C",
+    "bid": 200.0,
+    "p": 0.9038,
+    "true_eu": 45.190000000000005,
+    "parser_evaluated": true,
+    "reader_value": 45.19,
+    "llm_written": true,
+    "llm_value": 45.19
+   },
+   {
+    "letter": "D",
+    "bid": 205.0,
+    "p": 0.9231,
+    "true_eu": 41.539500000000004,
+    "parser_evaluated": true,
+    "reader_value": 41.54,
+    "llm_written": true,
+    "llm_value": 41.54
+   },
+   {
+    "letter": "E",
+    "bid": 190.0,
+    "p": 0.8942,
+    "true_eu": 53.652,
+    "parser_evaluated": true,
+    "reader_value": 53.65,
+    "llm_written": true,
+    "llm_value": 53.65
+   }
+  ]
+ },
+ {
+  "trace_id": "T07",
+  "model": "phi4_mini_reasoning",
+  "scenario_id": 386150312651,
+  "repeat_seed": 37,
+  "budget": 512,
+  "validation_item": 87,
+  "private_value": 265.0,
+  "calculator_bid": 235.0,
+  "model_answer_bid": 235.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 6.7989999999999995,
+    "parser_evaluated": true,
+    "reader_value": 6.8,
+    "llm_written": true,
+    "llm_value": 6.8
+   },
+   {
+    "letter": "B",
+    "bid": 235.0,
+    "p": 0.6151,
+    "true_eu": 18.453,
+    "parser_evaluated": true,
+    "reader_value": 18.45,
+    "llm_written": true,
+    "llm_value": 18.45
+   },
+   {
+    "letter": "C",
+    "bid": 225.0,
+    "p": 0.4477,
+    "true_eu": 17.908,
+    "parser_evaluated": true,
+    "reader_value": 17.908,
+    "llm_written": true,
+    "llm_value": 17.91
+   },
+   {
+    "letter": "D",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 3.765,
+    "parser_evaluated": true,
+    "reader_value": 3.75,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "E",
+    "bid": 220.0,
+    "p": 0.3766,
+    "true_eu": 16.947,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "F",
+    "bid": 250.0,
+    "p": 0.8536,
+    "true_eu": 12.804,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "G",
+    "bid": 240.0,
+    "p": 0.7238,
+    "true_eu": 18.095,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T08",
+  "model": "qwen3_4b",
+  "scenario_id": 136530104738,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 108,
+  "private_value": 245.0,
+  "calculator_bid": 215.0,
+  "model_answer_bid": 215.0,
+  "hybrid_best_letter": "E",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 4.707,
+    "parser_evaluated": true,
+    "reader_value": 4.71,
+    "llm_written": true,
+    "llm_value": 4.71
+   },
+   {
+    "letter": "B",
+    "bid": 220.0,
+    "p": 0.3766,
+    "true_eu": 9.415,
+    "parser_evaluated": true,
+    "reader_value": 9.42,
+    "llm_written": true,
+    "llm_value": 9.42
+   },
+   {
+    "letter": "C",
+    "bid": 205.0,
+    "p": 0.1715,
+    "true_eu": 6.86,
+    "parser_evaluated": true,
+    "reader_value": 6.86,
+    "llm_written": true,
+    "llm_value": 6.86
+   },
+   {
+    "letter": "D",
+    "bid": 225.0,
+    "p": 0.4477,
+    "true_eu": 8.954,
+    "parser_evaluated": true,
+    "reader_value": 8.954,
+    "llm_written": true,
+    "llm_value": 8.954
+   },
+   {
+    "letter": "E",
+    "bid": 215.0,
+    "p": 0.3264,
+    "true_eu": 9.792000000000002,
+    "parser_evaluated": true,
+    "reader_value": 9.792,
+    "llm_written": true,
+    "llm_value": 9.792
+   },
+   {
+    "letter": "F",
+    "bid": 230.0,
+    "p": 0.5146,
+    "true_eu": 7.718999999999999,
+    "parser_evaluated": true,
+    "reader_value": 7.72,
+    "llm_written": true,
+    "llm_value": 7.72
+   },
+   {
+    "letter": "G",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 8.2005,
+    "parser_evaluated": true,
+    "reader_value": 8.2,
+    "llm_written": true,
+    "llm_value": 8.2
+   }
+  ]
+ },
+ {
+  "trace_id": "T09",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 104006074461,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 13,
+  "private_value": 1205.0,
+  "calculator_bid": 410.0,
+  "model_answer_bid": 415.0,
+  "hybrid_best_letter": "A",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 410.0,
+    "p": 0.4105,
+    "true_eu": 326.34749999999997,
+    "parser_evaluated": true,
+    "reader_value": 240.195,
+    "llm_written": true,
+    "llm_value": 240.195
+   },
+   {
+    "letter": "B",
+    "bid": 420.0,
+    "p": 0.4105,
+    "true_eu": 322.2425,
+    "parser_evaluated": true,
+    "reader_value": 322.445,
+    "llm_written": true,
+    "llm_value": 322.445
+   },
+   {
+    "letter": "C",
+    "bid": 425.0,
+    "p": 0.4105,
+    "true_eu": 320.19,
+    "parser_evaluated": true,
+    "reader_value": 319.94,
+    "llm_written": true,
+    "llm_value": 319.94
+   },
+   {
+    "letter": "D",
+    "bid": 415.0,
+    "p": 0.4105,
+    "true_eu": 324.29499999999996,
+    "parser_evaluated": true,
+    "reader_value": 324.445,
+    "llm_written": true,
+    "llm_value": 324.445
+   },
+   {
+    "letter": "E",
+    "bid": 405.0,
+    "p": 0.4,
+    "true_eu": 320.0,
+    "parser_evaluated": true,
+    "reader_value": 320.0,
+    "llm_written": true,
+    "llm_value": 320.0
+   }
+  ]
+ },
+ {
+  "trace_id": "T10",
+  "model": "qwen3_14b",
+  "scenario_id": 18132076351,
+  "repeat_seed": 23,
+  "budget": -1,
+  "validation_item": 37,
+  "private_value": 250.0,
+  "calculator_bid": 150.0,
+  "model_answer_bid": 150.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 180.0,
+    "p": 0.875,
+    "true_eu": 61.25,
+    "parser_evaluated": true,
+    "reader_value": 61.25,
+    "llm_written": true,
+    "llm_value": 61.25
+   },
+   {
+    "letter": "B",
+    "bid": 150.0,
+    "p": 0.7596,
+    "true_eu": 75.96000000000001,
+    "parser_evaluated": true,
+    "reader_value": 18.85,
+    "llm_written": true,
+    "llm_value": 75.96
+   },
+   {
+    "letter": "C",
+    "bid": 130.0,
+    "p": 0.5769,
+    "true_eu": 69.228,
+    "parser_evaluated": true,
+    "reader_value": 69.23,
+    "llm_written": true,
+    "llm_value": 69.23
+   },
+   {
+    "letter": "D",
+    "bid": 185.0,
+    "p": 0.8942,
+    "true_eu": 58.123,
+    "parser_evaluated": true,
+    "reader_value": 58.12,
+    "llm_written": true,
+    "llm_value": 58.12
+   },
+   {
+    "letter": "E",
+    "bid": 75.0,
+    "p": 0.0865,
+    "true_eu": 15.1375,
+    "parser_evaluated": true,
+    "reader_value": 15.14,
+    "llm_written": true,
+    "llm_value": 15.14
+   },
+   {
+    "letter": "F",
+    "bid": 100.0,
+    "p": 0.2404,
+    "true_eu": 36.06,
+    "parser_evaluated": true,
+    "reader_value": 36.06,
+    "llm_written": true,
+    "llm_value": 36.06
+   },
+   {
+    "letter": "G",
+    "bid": 230.0,
+    "p": 0.9423,
+    "true_eu": 18.846,
+    "parser_evaluated": true,
+    "reader_value": 18.846,
+    "llm_written": true,
+    "llm_value": 18.846
+   }
+  ]
+ },
+ {
+  "trace_id": "T11",
+  "model": "qwen3_14b",
+  "scenario_id": 76856104011,
+  "repeat_seed": 23,
+  "budget": 768,
+  "validation_item": 35,
+  "private_value": 330.0,
+  "calculator_bid": 205.0,
+  "model_answer_bid": 205.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 7.0280000000000005,
+    "parser_evaluated": true,
+    "reader_value": 7.03,
+    "llm_written": true,
+    "llm_value": 7.03
+   },
+   {
+    "letter": "B",
+    "bid": 205.0,
+    "p": 0.1715,
+    "true_eu": 21.4375,
+    "parser_evaluated": true,
+    "reader_value": 21.44,
+    "llm_written": true,
+    "llm_value": 21.44
+   },
+   {
+    "letter": "C",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 13.597999999999999,
+    "parser_evaluated": true,
+    "reader_value": 13.6,
+    "llm_written": true,
+    "llm_value": 13.6
+   },
+   {
+    "letter": "D",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 9.0315,
+    "parser_evaluated": true,
+    "reader_value": 9.0,
+    "llm_written": true,
+    "llm_value": 9.0
+   },
+   {
+    "letter": "E",
+    "bid": 185.0,
+    "p": 0.0377,
+    "true_eu": 5.4665,
+    "parser_evaluated": true,
+    "reader_value": 5.46,
+    "llm_written": true,
+    "llm_value": 5.46
+   }
+  ]
+ },
+ {
+  "trace_id": "T12",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 424814787601,
+  "repeat_seed": 23,
+  "budget": -1,
+  "validation_item": 61,
+  "private_value": 2020.0,
+  "calculator_bid": 560.0,
+  "model_answer_bid": 560.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 1955.0,
+    "p": 0.9158,
+    "true_eu": 59.526999999999994,
+    "parser_evaluated": true,
+    "reader_value": 59.7,
+    "llm_written": true,
+    "llm_value": 59.7
+   },
+   {
+    "letter": "B",
+    "bid": 240.0,
+    "p": 0.1474,
+    "true_eu": 262.372,
+    "parser_evaluated": true,
+    "reader_value": 262.12,
+    "llm_written": true,
+    "llm_value": 262.12
+   },
+   {
+    "letter": "C",
+    "bid": 480.0,
+    "p": 0.4737,
+    "true_eu": 729.498,
+    "parser_evaluated": true,
+    "reader_value": 723.0,
+    "llm_written": true,
+    "llm_value": 731.0
+   },
+   {
+    "letter": "D",
+    "bid": 560.0,
+    "p": 0.5263,
+    "true_eu": 768.398,
+    "parser_evaluated": true,
+    "reader_value": 768.4,
+    "llm_written": true,
+    "llm_value": 768.4
+   },
+   {
+    "letter": "E",
+    "bid": 875.0,
+    "p": 0.6421,
+    "true_eu": 735.2045,
+    "parser_evaluated": true,
+    "reader_value": 735.0,
+    "llm_written": true,
+    "llm_value": 735.0
+   },
+   {
+    "letter": "F",
+    "bid": 1400.0,
+    "p": 0.7263,
+    "true_eu": 450.306,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "G",
+    "bid": 1725.0,
+    "p": 0.8316,
+    "true_eu": 245.322,
+    "parser_evaluated": true,
+    "reader_value": 245.0,
+    "llm_written": true,
+    "llm_value": 245.0
+   }
+  ]
+ },
+ {
+  "trace_id": "T13",
+  "model": "qwen3_4b",
+  "scenario_id": 420243339467,
+  "repeat_seed": 37,
+  "budget": 512,
+  "validation_item": 114,
+  "private_value": 2185.0,
+  "calculator_bid": 455.0,
+  "model_answer_bid": 440.0,
+  "hybrid_best_letter": "C",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 440.0,
+    "p": 0.4421,
+    "true_eu": 771.4645,
+    "parser_evaluated": true,
+    "reader_value": 771.46,
+    "llm_written": true,
+    "llm_value": 771.46
+   },
+   {
+    "letter": "B",
+    "bid": 450.0,
+    "p": 0.4421,
+    "true_eu": 767.0435,
+    "parser_evaluated": true,
+    "reader_value": 69.4,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "C",
+    "bid": 435.0,
+    "p": 0.4421,
+    "true_eu": 773.675,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "D",
+    "bid": 455.0,
+    "p": 0.4632,
+    "true_eu": 801.336,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "E",
+    "bid": 445.0,
+    "p": 0.4421,
+    "true_eu": 769.254,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T14",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 779770454309,
+  "repeat_seed": 37,
+  "budget": 768,
+  "validation_item": 24,
+  "private_value": 240.0,
+  "calculator_bid": 175.0,
+  "model_answer_bid": 175.0,
+  "hybrid_best_letter": "F",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 55.0,
+    "p": 0.0673,
+    "true_eu": 12.4505,
+    "parser_evaluated": true,
+    "reader_value": 12.52,
+    "llm_written": true,
+    "llm_value": 12.52
+   },
+   {
+    "letter": "B",
+    "bid": 210.0,
+    "p": 0.9231,
+    "true_eu": 27.693,
+    "parser_evaluated": true,
+    "reader_value": 27.69,
+    "llm_written": true,
+    "llm_value": 27.69
+   },
+   {
+    "letter": "C",
+    "bid": 35.0,
+    "p": 0.0192,
+    "true_eu": 3.9359999999999995,
+    "parser_evaluated": true,
+    "reader_value": 3.93,
+    "llm_written": true,
+    "llm_value": 3.93
+   },
+   {
+    "letter": "D",
+    "bid": 80.0,
+    "p": 0.0865,
+    "true_eu": 13.84,
+    "parser_evaluated": true,
+    "reader_value": 13.84,
+    "llm_written": true,
+    "llm_value": 13.84
+   },
+   {
+    "letter": "E",
+    "bid": 105.0,
+    "p": 0.2885,
+    "true_eu": 38.9475,
+    "parser_evaluated": true,
+    "reader_value": 38.97,
+    "llm_written": true,
+    "llm_value": 38.97
+   },
+   {
+    "letter": "F",
+    "bid": 175.0,
+    "p": 0.8558,
+    "true_eu": 55.627,
+    "parser_evaluated": true,
+    "reader_value": 55.62,
+    "llm_written": true,
+    "llm_value": 55.62
+   },
+   {
+    "letter": "G",
+    "bid": 125.0,
+    "p": 0.4712,
+    "true_eu": 54.188,
+    "parser_evaluated": true,
+    "reader_value": 54.33,
+    "llm_written": true,
+    "llm_value": 54.33
+   }
+  ]
+ },
+ {
+  "trace_id": "T15",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 153660455236,
+  "repeat_seed": 23,
+  "budget": 512,
+  "validation_item": 52,
+  "private_value": 235.0,
+  "calculator_bid": 210.0,
+  "model_answer_bid": 205.0,
+  "hybrid_best_letter": "E",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 2.259,
+    "parser_evaluated": true,
+    "reader_value": 2.26,
+    "llm_written": true,
+    "llm_value": 2.26
+   },
+   {
+    "letter": "B",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 3.661,
+    "parser_evaluated": true,
+    "reader_value": 3.66,
+    "llm_written": true,
+    "llm_value": 3.66
+   },
+   {
+    "letter": "C",
+    "bid": 205.0,
+    "p": 0.1715,
+    "true_eu": 5.1450000000000005,
+    "parser_evaluated": true,
+    "reader_value": 5.15,
+    "llm_written": true,
+    "llm_value": 5.15
+   },
+   {
+    "letter": "D",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 2.676,
+    "parser_evaluated": true,
+    "reader_value": 2.68,
+    "llm_written": true,
+    "llm_value": 2.68
+   },
+   {
+    "letter": "E",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 5.8575,
+    "parser_evaluated": true,
+    "reader_value": 5.86,
+    "llm_written": true,
+    "llm_value": 5.86
+   }
+  ]
+ },
+ {
+  "trace_id": "T16",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 248355632782,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 74,
+  "private_value": 2510.0,
+  "calculator_bid": 845.0,
+  "model_answer_bid": 845.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 2475.0,
+    "p": 0.9368,
+    "true_eu": 32.788,
+    "parser_evaluated": true,
+    "reader_value": 32.79,
+    "llm_written": true,
+    "llm_value": 32.79
+   },
+   {
+    "letter": "B",
+    "bid": 845.0,
+    "p": 0.6316,
+    "true_eu": 1051.614,
+    "parser_evaluated": true,
+    "reader_value": 1051.61,
+    "llm_written": true,
+    "llm_value": 1051.61
+   },
+   {
+    "letter": "C",
+    "bid": 1870.0,
+    "p": 0.8842,
+    "true_eu": 565.888,
+    "parser_evaluated": true,
+    "reader_value": 565.87,
+    "llm_written": true,
+    "llm_value": 565.87
+   },
+   {
+    "letter": "D",
+    "bid": 905.0,
+    "p": 0.6526,
+    "true_eu": 1047.423,
+    "parser_evaluated": true,
+    "reader_value": 1045.02,
+    "llm_written": true,
+    "llm_value": 1045.02
+   },
+   {
+    "letter": "E",
+    "bid": 2410.0,
+    "p": 0.9368,
+    "true_eu": 93.67999999999999,
+    "parser_evaluated": true,
+    "reader_value": 93.68,
+    "llm_written": true,
+    "llm_value": 93.68
+   },
+   {
+    "letter": "F",
+    "bid": 280.0,
+    "p": 0.1789,
+    "true_eu": 398.947,
+    "parser_evaluated": true,
+    "reader_value": 398.96,
+    "llm_written": true,
+    "llm_value": 398.96
+   },
+   {
+    "letter": "G",
+    "bid": 2505.0,
+    "p": 0.9474,
+    "true_eu": 4.737,
+    "parser_evaluated": true,
+    "reader_value": 4.74,
+    "llm_written": true,
+    "llm_value": 4.74
+   }
+  ]
+ },
+ {
+  "trace_id": "T17",
+  "model": "qwen3_8b",
+  "scenario_id": 76856104011,
+  "repeat_seed": 11,
+  "budget": 768,
+  "validation_item": 131,
+  "private_value": 330.0,
+  "calculator_bid": 205.0,
+  "model_answer_bid": 205.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 13.597999999999999,
+    "parser_evaluated": true,
+    "reader_value": 13.6,
+    "llm_written": true,
+    "llm_value": 13.6
+   },
+   {
+    "letter": "B",
+    "bid": 205.0,
+    "p": 0.1715,
+    "true_eu": 21.4375,
+    "parser_evaluated": true,
+    "reader_value": 21.44,
+    "llm_written": true,
+    "llm_value": 21.44
+   },
+   {
+    "letter": "C",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 9.0315,
+    "parser_evaluated": true,
+    "reader_value": 9.03,
+    "llm_written": true,
+    "llm_value": 9.03
+   },
+   {
+    "letter": "D",
+    "bid": 185.0,
+    "p": 0.0377,
+    "true_eu": 5.4665,
+    "parser_evaluated": true,
+    "reader_value": 5.47,
+    "llm_written": true,
+    "llm_value": 5.47
+   },
+   {
+    "letter": "E",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 7.0280000000000005,
+    "parser_evaluated": true,
+    "reader_value": 7.03,
+    "llm_written": true,
+    "llm_value": 7.03
+   }
+  ]
+ },
+ {
+  "trace_id": "T18",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 581494003377,
+  "repeat_seed": 37,
+  "budget": 768,
+  "validation_item": 56,
+  "private_value": 2020.0,
+  "calculator_bid": 660.0,
+  "model_answer_bid": 660.0,
+  "hybrid_best_letter": "E",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 680.0,
+    "p": 0.5789,
+    "true_eu": 775.726,
+    "parser_evaluated": true,
+    "reader_value": 772.06,
+    "llm_written": true,
+    "llm_value": 772.06
+   },
+   {
+    "letter": "B",
+    "bid": 675.0,
+    "p": 0.5789,
+    "true_eu": 778.6205,
+    "parser_evaluated": true,
+    "reader_value": 780.06,
+    "llm_written": true,
+    "llm_value": 780.06
+   },
+   {
+    "letter": "C",
+    "bid": 670.0,
+    "p": 0.5789,
+    "true_eu": 781.515,
+    "parser_evaluated": true,
+    "reader_value": 787.06,
+    "llm_written": true,
+    "llm_value": 787.06
+   },
+   {
+    "letter": "D",
+    "bid": 665.0,
+    "p": 0.5789,
+    "true_eu": 784.4095,
+    "parser_evaluated": true,
+    "reader_value": 784.06,
+    "llm_written": true,
+    "llm_value": 784.06
+   },
+   {
+    "letter": "E",
+    "bid": 660.0,
+    "p": 0.5789,
+    "true_eu": 787.304,
+    "parser_evaluated": true,
+    "reader_value": 788.06,
+    "llm_written": true,
+    "llm_value": 788.06
+   }
+  ]
+ },
+ {
+  "trace_id": "T19",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 429463378625,
+  "repeat_seed": 23,
+  "budget": 512,
+  "validation_item": 64,
+  "private_value": 1045.0,
+  "calculator_bid": 550.0,
+  "model_answer_bid": 560.0,
+  "hybrid_best_letter": "E",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 545.0,
+    "p": 0.5053,
+    "true_eu": 252.64999999999998,
+    "parser_evaluated": true,
+    "reader_value": 253.65,
+    "llm_written": true,
+    "llm_value": 253.65
+   },
+   {
+    "letter": "B",
+    "bid": 560.0,
+    "p": 0.5263,
+    "true_eu": 255.25549999999998,
+    "parser_evaluated": true,
+    "reader_value": 255.08,
+    "llm_written": true,
+    "llm_value": 255.08
+   },
+   {
+    "letter": "C",
+    "bid": 570.0,
+    "p": 0.5263,
+    "true_eu": 249.9925,
+    "parser_evaluated": true,
+    "reader_value": 250.02,
+    "llm_written": true,
+    "llm_value": 250.02
+   },
+   {
+    "letter": "D",
+    "bid": 555.0,
+    "p": 0.5158,
+    "true_eu": 252.74200000000002,
+    "parser_evaluated": true,
+    "reader_value": 252.02,
+    "llm_written": true,
+    "llm_value": 252.02
+   },
+   {
+    "letter": "E",
+    "bid": 550.0,
+    "p": 0.5158,
+    "true_eu": 255.32100000000003,
+    "parser_evaluated": true,
+    "reader_value": 255.02,
+    "llm_written": true,
+    "llm_value": 255.02
+   },
+   {
+    "letter": "F",
+    "bid": 565.0,
+    "p": 0.5263,
+    "true_eu": 252.624,
+    "parser_evaluated": true,
+    "reader_value": 253.02,
+    "llm_written": true,
+    "llm_value": 253.02
+   },
+   {
+    "letter": "G",
+    "bid": 540.0,
+    "p": 0.5053,
+    "true_eu": 255.17649999999998,
+    "parser_evaluated": true,
+    "reader_value": 255.02,
+    "llm_written": true,
+    "llm_value": 255.02
+   }
+  ]
+ },
+ {
+  "trace_id": "T20",
+  "model": "qwen3_14b",
+  "scenario_id": 424814787601,
+  "repeat_seed": 11,
+  "budget": 512,
+  "validation_item": 42,
+  "private_value": 2020.0,
+  "calculator_bid": 560.0,
+  "model_answer_bid": 1725.0,
+  "hybrid_best_letter": "C",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 480.0,
+    "p": 0.4737,
+    "true_eu": 729.498,
+    "parser_evaluated": true,
+    "reader_value": 729.5,
+    "llm_written": true,
+    "llm_value": 729.5
+   },
+   {
+    "letter": "B",
+    "bid": 1725.0,
+    "p": 0.8316,
+    "true_eu": 245.322,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "C",
+    "bid": 875.0,
+    "p": 0.6421,
+    "true_eu": 735.2045,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "D",
+    "bid": 1400.0,
+    "p": 0.7263,
+    "true_eu": 450.306,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "E",
+    "bid": 1955.0,
+    "p": 0.9158,
+    "true_eu": 59.526999999999994,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "F",
+    "bid": 240.0,
+    "p": 0.1474,
+    "true_eu": 262.372,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "G",
+    "bid": 560.0,
+    "p": 0.5263,
+    "true_eu": 768.398,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T21",
+  "model": "qwen3_4b",
+  "scenario_id": 74855897818,
+  "repeat_seed": 11,
+  "budget": 512,
+  "validation_item": 112,
+  "private_value": 1370.0,
+  "calculator_bid": 815.0,
+  "model_answer_bid": 830.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 830.0,
+    "p": 0.6105,
+    "true_eu": 329.67,
+    "parser_evaluated": true,
+    "reader_value": 329.67,
+    "llm_written": true,
+    "llm_value": 329.67
+   },
+   {
+    "letter": "B",
+    "bid": 820.0,
+    "p": 0.6105,
+    "true_eu": 335.77500000000003,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "C",
+    "bid": 825.0,
+    "p": 0.6105,
+    "true_eu": 332.7225,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "D",
+    "bid": 835.0,
+    "p": 0.6211,
+    "true_eu": 332.2885,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "E",
+    "bid": 815.0,
+    "p": 0.6105,
+    "true_eu": 338.82750000000004,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T22",
+  "model": "qwen3_4b",
+  "scenario_id": 72954104751,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 118,
+  "private_value": 205.0,
+  "calculator_bid": 75.0,
+  "model_answer_bid": 75.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 60.0,
+    "p": 0.0673,
+    "true_eu": 9.7585,
+    "parser_evaluated": true,
+    "reader_value": 9.76,
+    "llm_written": true,
+    "llm_value": 9.76
+   },
+   {
+    "letter": "B",
+    "bid": 55.0,
+    "p": 0.0673,
+    "true_eu": 10.095,
+    "parser_evaluated": true,
+    "reader_value": 10.1,
+    "llm_written": true,
+    "llm_value": 10.1
+   },
+   {
+    "letter": "C",
+    "bid": 65.0,
+    "p": 0.0769,
+    "true_eu": 10.766,
+    "parser_evaluated": true,
+    "reader_value": 10.77,
+    "llm_written": true,
+    "llm_value": 10.77
+   },
+   {
+    "letter": "D",
+    "bid": 75.0,
+    "p": 0.0865,
+    "true_eu": 11.245,
+    "parser_evaluated": true,
+    "reader_value": 11.25,
+    "llm_written": true,
+    "llm_value": 11.25
+   },
+   {
+    "letter": "E",
+    "bid": 50.0,
+    "p": 0.0577,
+    "true_eu": 8.9435,
+    "parser_evaluated": true,
+    "reader_value": 8.94,
+    "llm_written": true,
+    "llm_value": 8.94
+   },
+   {
+    "letter": "F",
+    "bid": 80.0,
+    "p": 0.0865,
+    "true_eu": 10.8125,
+    "parser_evaluated": true,
+    "reader_value": 10.81,
+    "llm_written": true,
+    "llm_value": 10.81
+   },
+   {
+    "letter": "G",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 10.381499999999999,
+    "parser_evaluated": true,
+    "reader_value": 10.38,
+    "llm_written": true,
+    "llm_value": 10.38
+   }
+  ]
+ },
+ {
+  "trace_id": "T23",
+  "model": "qwen3_8b",
+  "scenario_id": 102353684876,
+  "repeat_seed": 23,
+  "budget": 512,
+  "validation_item": 135,
+  "private_value": 285.0,
+  "calculator_bid": 255.0,
+  "model_answer_bid": 270.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 17.5725,
+    "parser_evaluated": true,
+    "reader_value": 17.57,
+    "llm_written": true,
+    "llm_value": 17.57
+   },
+   {
+    "letter": "B",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 6.021,
+    "parser_evaluated": true,
+    "reader_value": 6.02,
+    "llm_written": true,
+    "llm_value": 6.02
+   },
+   {
+    "letter": "C",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 4.769,
+    "parser_evaluated": true,
+    "reader_value": 4.769,
+    "llm_written": true,
+    "llm_value": 4.77
+   },
+   {
+    "letter": "D",
+    "bid": 255.0,
+    "p": 0.9038,
+    "true_eu": 27.114,
+    "parser_evaluated": true,
+    "reader_value": 27.11,
+    "llm_written": true,
+    "llm_value": 27.11
+   },
+   {
+    "letter": "E",
+    "bid": 270.0,
+    "p": 0.9874,
+    "true_eu": 14.811,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "F",
+    "bid": 180.0,
+    "p": 0.0293,
+    "true_eu": 3.0765,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "G",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 8.891,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T24",
+  "model": "qwen3_8b",
+  "scenario_id": 571850134374,
+  "repeat_seed": 37,
+  "budget": -1,
+  "validation_item": 133,
+  "private_value": 260.0,
+  "calculator_bid": 90.0,
+  "model_answer_bid": 90.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 65.0,
+    "p": 0.0769,
+    "true_eu": 14.9955,
+    "parser_evaluated": true,
+    "reader_value": 15.0,
+    "llm_written": true,
+    "llm_value": 15.0
+   },
+   {
+    "letter": "B",
+    "bid": 85.0,
+    "p": 0.1154,
+    "true_eu": 20.195,
+    "parser_evaluated": true,
+    "reader_value": 20.2,
+    "llm_written": true,
+    "llm_value": 20.2
+   },
+   {
+    "letter": "C",
+    "bid": 80.0,
+    "p": 0.0865,
+    "true_eu": 15.569999999999999,
+    "parser_evaluated": true,
+    "reader_value": 15.57,
+    "llm_written": true,
+    "llm_value": 15.57
+   },
+   {
+    "letter": "D",
+    "bid": 90.0,
+    "p": 0.1635,
+    "true_eu": 27.795,
+    "parser_evaluated": true,
+    "reader_value": 27.8,
+    "llm_written": true,
+    "llm_value": 27.8
+   },
+   {
+    "letter": "E",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 14.610999999999999,
+    "parser_evaluated": true,
+    "reader_value": 14.61,
+    "llm_written": true,
+    "llm_value": 14.61
+   },
+   {
+    "letter": "F",
+    "bid": 60.0,
+    "p": 0.0673,
+    "true_eu": 13.459999999999999,
+    "parser_evaluated": true,
+    "reader_value": 13.46,
+    "llm_written": true,
+    "llm_value": 13.46
+   },
+   {
+    "letter": "G",
+    "bid": 75.0,
+    "p": 0.0865,
+    "true_eu": 16.002499999999998,
+    "parser_evaluated": true,
+    "reader_value": 16.0,
+    "llm_written": true,
+    "llm_value": 16.0
+   }
+  ]
+ },
+ {
+  "trace_id": "T25",
+  "model": "phi4_mini_reasoning",
+  "scenario_id": 76856104011,
+  "repeat_seed": 11,
+  "budget": 512,
+  "validation_item": 80,
+  "private_value": 330.0,
+  "calculator_bid": 205.0,
+  "model_answer_bid": 200.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 13.597999999999999,
+    "parser_evaluated": true,
+    "reader_value": 13.6,
+    "llm_written": true,
+    "llm_value": 13.6
+   },
+   {
+    "letter": "B",
+    "bid": 205.0,
+    "p": 0.1715,
+    "true_eu": 21.4375,
+    "parser_evaluated": true,
+    "reader_value": 21.44,
+    "llm_written": true,
+    "llm_value": 21.44
+   },
+   {
+    "letter": "C",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 9.0315,
+    "parser_evaluated": true,
+    "reader_value": 9.0315,
+    "llm_written": true,
+    "llm_value": 9.03
+   },
+   {
+    "letter": "D",
+    "bid": 185.0,
+    "p": 0.0377,
+    "true_eu": 5.4665,
+    "parser_evaluated": false,
+    "reader_value": 1.0,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "E",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 7.0280000000000005,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T26",
+  "model": "qwen3_8b",
+  "scenario_id": 808794410392,
+  "repeat_seed": 37,
+  "budget": 512,
+  "validation_item": 132,
+  "private_value": 2675.0,
+  "calculator_bid": 665.0,
+  "model_answer_bid": 1730.0,
+  "hybrid_best_letter": "A",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 1160.0,
+    "p": 0.7158,
+    "true_eu": 1084.437,
+    "parser_evaluated": true,
+    "reader_value": 1084.74,
+    "llm_written": true,
+    "llm_value": 1084.74
+   },
+   {
+    "letter": "B",
+    "bid": 1280.0,
+    "p": 0.7263,
+    "true_eu": 1013.1885,
+    "parser_evaluated": true,
+    "reader_value": 1013.2,
+    "llm_written": true,
+    "llm_value": 1013.2
+   },
+   {
+    "letter": "C",
+    "bid": 1730.0,
+    "p": 0.8316,
+    "true_eu": 785.862,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "D",
+    "bid": 685.0,
+    "p": 0.5789,
+    "true_eu": 1152.011,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "E",
+    "bid": 665.0,
+    "p": 0.5789,
+    "true_eu": 1163.589,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T27",
+  "model": "qwen3_8b",
+  "scenario_id": 746822044044,
+  "repeat_seed": 23,
+  "budget": -1,
+  "validation_item": 144,
+  "private_value": 220.0,
+  "calculator_bid": 205.0,
+  "model_answer_bid": 205.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 2.092,
+    "parser_evaluated": true,
+    "reader_value": 2.09,
+    "llm_written": true,
+    "llm_value": 2.09
+   },
+   {
+    "letter": "B",
+    "bid": 205.0,
+    "p": 0.1715,
+    "true_eu": 2.5725000000000002,
+    "parser_evaluated": true,
+    "reader_value": 2.57,
+    "llm_written": true,
+    "llm_value": 2.57
+   },
+   {
+    "letter": "C",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 1.506,
+    "parser_evaluated": true,
+    "reader_value": 1.51,
+    "llm_written": true,
+    "llm_value": 1.51
+   },
+   {
+    "letter": "D",
+    "bid": 180.0,
+    "p": 0.0293,
+    "true_eu": 1.172,
+    "parser_evaluated": true,
+    "reader_value": 1.17,
+    "llm_written": true,
+    "llm_value": 1.17
+   },
+   {
+    "letter": "E",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 2.343,
+    "parser_evaluated": true,
+    "reader_value": 2.09,
+    "llm_written": true,
+    "llm_value": 2.34
+   },
+   {
+    "letter": "F",
+    "bid": 185.0,
+    "p": 0.0377,
+    "true_eu": 1.3195,
+    "parser_evaluated": true,
+    "reader_value": 1.32,
+    "llm_written": true,
+    "llm_value": 1.32
+   },
+   {
+    "letter": "G",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 1.6725,
+    "parser_evaluated": true,
+    "reader_value": 1.67,
+    "llm_written": true,
+    "llm_value": 1.67
+   }
+  ]
+ },
+ {
+  "trace_id": "T28",
+  "model": "qwen3_14b",
+  "scenario_id": 294785484808,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 25,
+  "private_value": 295.0,
+  "calculator_bid": 150.0,
+  "model_answer_bid": 150.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 95.0,
+    "p": 0.1827,
+    "true_eu": 36.54,
+    "parser_evaluated": true,
+    "reader_value": 36.54,
+    "llm_written": true,
+    "llm_value": 36.54
+   },
+   {
+    "letter": "B",
+    "bid": 260.0,
+    "p": 0.9519,
+    "true_eu": 33.3165,
+    "parser_evaluated": true,
+    "reader_value": 33.32,
+    "llm_written": true,
+    "llm_value": 33.32
+   },
+   {
+    "letter": "C",
+    "bid": 115.0,
+    "p": 0.3558,
+    "true_eu": 64.044,
+    "parser_evaluated": true,
+    "reader_value": 102.7,
+    "llm_written": true,
+    "llm_value": 64.04
+   },
+   {
+    "letter": "D",
+    "bid": 150.0,
+    "p": 0.7596,
+    "true_eu": 110.14200000000001,
+    "parser_evaluated": true,
+    "reader_value": 110.142,
+    "llm_written": true,
+    "llm_value": 110.14
+   },
+   {
+    "letter": "E",
+    "bid": 280.0,
+    "p": 0.9519,
+    "true_eu": 14.2785,
+    "parser_evaluated": true,
+    "reader_value": 14.28,
+    "llm_written": true,
+    "llm_value": 14.28
+   },
+   {
+    "letter": "F",
+    "bid": 275.0,
+    "p": 0.9519,
+    "true_eu": 19.038,
+    "parser_evaluated": true,
+    "reader_value": 19.04,
+    "llm_written": true,
+    "llm_value": 19.04
+   },
+   {
+    "letter": "G",
+    "bid": 175.0,
+    "p": 0.8558,
+    "true_eu": 102.696,
+    "parser_evaluated": true,
+    "reader_value": 102.696,
+    "llm_written": true,
+    "llm_value": 102.7
+   }
+  ]
+ },
+ {
+  "trace_id": "T29",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 138787576738,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 19,
+  "private_value": 240.0,
+  "calculator_bid": 75.0,
+  "model_answer_bid": 65.0,
+  "hybrid_best_letter": "C",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 55.0,
+    "p": 0.0673,
+    "true_eu": 12.4505,
+    "parser_evaluated": true,
+    "reader_value": 12.52,
+    "llm_written": true,
+    "llm_value": 12.52
+   },
+   {
+    "letter": "B",
+    "bid": 80.0,
+    "p": 0.0865,
+    "true_eu": 13.84,
+    "parser_evaluated": true,
+    "reader_value": 13.84,
+    "llm_written": true,
+    "llm_value": 13.84
+   },
+   {
+    "letter": "C",
+    "bid": 75.0,
+    "p": 0.0865,
+    "true_eu": 14.272499999999999,
+    "parser_evaluated": true,
+    "reader_value": 14.19,
+    "llm_written": true,
+    "llm_value": 14.19
+   },
+   {
+    "letter": "D",
+    "bid": 50.0,
+    "p": 0.0577,
+    "true_eu": 10.963000000000001,
+    "parser_evaluated": true,
+    "reader_value": 10.96,
+    "llm_written": true,
+    "llm_value": 10.96
+   },
+   {
+    "letter": "E",
+    "bid": 60.0,
+    "p": 0.0673,
+    "true_eu": 12.113999999999999,
+    "parser_evaluated": true,
+    "reader_value": 12.11,
+    "llm_written": true,
+    "llm_value": 12.11
+   },
+   {
+    "letter": "F",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 13.072999999999999,
+    "parser_evaluated": true,
+    "reader_value": 12.97,
+    "llm_written": true,
+    "llm_value": 12.97
+   },
+   {
+    "letter": "G",
+    "bid": 65.0,
+    "p": 0.0769,
+    "true_eu": 13.4575,
+    "parser_evaluated": true,
+    "reader_value": 13.38,
+    "llm_written": true,
+    "llm_value": 13.38
+   }
+  ]
+ },
+ {
+  "trace_id": "T30",
+  "model": "qwen3_8b",
+  "scenario_id": 339456741556,
+  "repeat_seed": 37,
+  "budget": 768,
+  "validation_item": 138,
+  "private_value": 3000.0,
+  "calculator_bid": 770.0,
+  "model_answer_bid": 770.0,
+  "hybrid_best_letter": "A",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 770.0,
+    "p": 0.6105,
+    "true_eu": 1361.4150000000002,
+    "parser_evaluated": true,
+    "reader_value": 1361.415,
+    "llm_written": true,
+    "llm_value": 1361.415
+   },
+   {
+    "letter": "B",
+    "bid": 775.0,
+    "p": 0.6105,
+    "true_eu": 1358.3625000000002,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "C",
+    "bid": 795.0,
+    "p": 0.6105,
+    "true_eu": 1346.1525000000001,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "D",
+    "bid": 790.0,
+    "p": 0.6105,
+    "true_eu": 1349.2050000000002,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "E",
+    "bid": 800.0,
+    "p": 0.6105,
+    "true_eu": 1343.1000000000001,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "F",
+    "bid": 785.0,
+    "p": 0.6105,
+    "true_eu": 1352.2575000000002,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "G",
+    "bid": 780.0,
+    "p": 0.6105,
+    "true_eu": 1355.3100000000002,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T31",
+  "model": "qwen3_4b",
+  "scenario_id": 420243339467,
+  "repeat_seed": 37,
+  "budget": -1,
+  "validation_item": 104,
+  "private_value": 2185.0,
+  "calculator_bid": 455.0,
+  "model_answer_bid": 455.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 440.0,
+    "p": 0.4421,
+    "true_eu": 771.4645,
+    "parser_evaluated": true,
+    "reader_value": 771.46,
+    "llm_written": true,
+    "llm_value": 771.46
+   },
+   {
+    "letter": "B",
+    "bid": 450.0,
+    "p": 0.4421,
+    "true_eu": 767.0435,
+    "parser_evaluated": true,
+    "reader_value": 767.04,
+    "llm_written": true,
+    "llm_value": 767.04
+   },
+   {
+    "letter": "C",
+    "bid": 435.0,
+    "p": 0.4421,
+    "true_eu": 773.675,
+    "parser_evaluated": true,
+    "reader_value": 773.68,
+    "llm_written": true,
+    "llm_value": 773.68
+   },
+   {
+    "letter": "D",
+    "bid": 455.0,
+    "p": 0.4632,
+    "true_eu": 801.336,
+    "parser_evaluated": true,
+    "reader_value": 801.34,
+    "llm_written": true,
+    "llm_value": 801.34
+   },
+   {
+    "letter": "E",
+    "bid": 445.0,
+    "p": 0.4421,
+    "true_eu": 769.254,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T32",
+  "model": "phi4_mini_reasoning",
+  "scenario_id": 64777939023,
+  "repeat_seed": 23,
+  "budget": -1,
+  "validation_item": 75,
+  "private_value": 225.0,
+  "calculator_bid": 130.0,
+  "model_answer_bid": 130.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 40.0,
+    "p": 0.0385,
+    "true_eu": 7.1225,
+    "parser_evaluated": true,
+    "reader_value": 7.12,
+    "llm_written": true,
+    "llm_value": 7.12
+   },
+   {
+    "letter": "B",
+    "bid": 130.0,
+    "p": 0.5769,
+    "true_eu": 54.805499999999995,
+    "parser_evaluated": true,
+    "reader_value": 47.5,
+    "llm_written": true,
+    "llm_value": 54.81
+   },
+   {
+    "letter": "C",
+    "bid": 55.0,
+    "p": 0.0673,
+    "true_eu": 11.440999999999999,
+    "parser_evaluated": true,
+    "reader_value": 11.44,
+    "llm_written": true,
+    "llm_value": 11.44
+   },
+   {
+    "letter": "D",
+    "bid": 170.0,
+    "p": 0.8558,
+    "true_eu": 47.069,
+    "parser_evaluated": true,
+    "reader_value": 47.07,
+    "llm_written": true,
+    "llm_value": 47.07
+   },
+   {
+    "letter": "E",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 11.9195,
+    "parser_evaluated": true,
+    "reader_value": 11.92,
+    "llm_written": true,
+    "llm_value": 11.92
+   },
+   {
+    "letter": "F",
+    "bid": 195.0,
+    "p": 0.8942,
+    "true_eu": 26.826,
+    "parser_evaluated": true,
+    "reader_value": 26.83,
+    "llm_written": true,
+    "llm_value": 26.83
+   },
+   {
+    "letter": "G",
+    "bid": 50.0,
+    "p": 0.0577,
+    "true_eu": 10.0975,
+    "parser_evaluated": true,
+    "reader_value": 10.1,
+    "llm_written": true,
+    "llm_value": 10.1
+   }
+  ]
+ },
+ {
+  "trace_id": "T33",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 623708696368,
+  "repeat_seed": 11,
+  "budget": 768,
+  "validation_item": 5,
+  "private_value": 1535.0,
+  "calculator_bid": 850.0,
+  "model_answer_bid": 825.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 1120.0,
+    "p": 0.7158,
+    "true_eu": 297.057,
+    "parser_evaluated": true,
+    "reader_value": 294.14,
+    "llm_written": true,
+    "llm_value": 294.14
+   },
+   {
+    "letter": "B",
+    "bid": 825.0,
+    "p": 0.6105,
+    "true_eu": 433.45500000000004,
+    "parser_evaluated": true,
+    "reader_value": 433.6,
+    "llm_written": true,
+    "llm_value": 433.6
+   },
+   {
+    "letter": "C",
+    "bid": 1190.0,
+    "p": 0.7158,
+    "true_eu": 246.951,
+    "parser_evaluated": true,
+    "reader_value": 246.27,
+    "llm_written": true,
+    "llm_value": 246.27
+   },
+   {
+    "letter": "D",
+    "bid": 850.0,
+    "p": 0.6421,
+    "true_eu": 439.8385,
+    "parser_evaluated": true,
+    "reader_value": 439.14,
+    "llm_written": true,
+    "llm_value": 439.14
+   },
+   {
+    "letter": "E",
+    "bid": 900.0,
+    "p": 0.6526,
+    "true_eu": 414.40099999999995,
+    "parser_evaluated": true,
+    "reader_value": 414.77,
+    "llm_written": true,
+    "llm_value": 414.77
+   },
+   {
+    "letter": "F",
+    "bid": 910.0,
+    "p": 0.6526,
+    "true_eu": 407.875,
+    "parser_evaluated": true,
+    "reader_value": 407.01,
+    "llm_written": true,
+    "llm_value": 407.01
+   },
+   {
+    "letter": "G",
+    "bid": 1490.0,
+    "p": 0.7368,
+    "true_eu": 33.156,
+    "parser_evaluated": true,
+    "reader_value": 33.12,
+    "llm_written": true,
+    "llm_value": 33.12
+   }
+  ]
+ },
+ {
+  "trace_id": "T34",
+  "model": "qwen3_14b",
+  "scenario_id": 416370773144,
+  "repeat_seed": 37,
+  "budget": 512,
+  "validation_item": 30,
+  "private_value": 240.0,
+  "calculator_bid": 215.0,
+  "model_answer_bid": 215.0,
+  "hybrid_best_letter": "E",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 7.029,
+    "parser_evaluated": true,
+    "reader_value": 7.029,
+    "llm_written": true,
+    "llm_value": 7.029
+   },
+   {
+    "letter": "B",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 4.184,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 4.184
+   },
+   {
+    "letter": "C",
+    "bid": 205.0,
+    "p": 0.1715,
+    "true_eu": 6.0025,
+    "parser_evaluated": true,
+    "reader_value": 6.0025,
+    "llm_written": true,
+    "llm_value": 6.0025
+   },
+   {
+    "letter": "D",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 3.0105,
+    "parser_evaluated": true,
+    "reader_value": 3.0105,
+    "llm_written": true,
+    "llm_value": 3.0105
+   },
+   {
+    "letter": "E",
+    "bid": 215.0,
+    "p": 0.3264,
+    "true_eu": 8.16,
+    "parser_evaluated": false,
+    "reader_value": 7.5,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T35",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 553563321709,
+  "repeat_seed": 37,
+  "budget": 512,
+  "validation_item": 22,
+  "private_value": 125.0,
+  "calculator_bid": 100.0,
+  "model_answer_bid": 95.0,
+  "hybrid_best_letter": "C",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 110.0,
+    "p": 0.3173,
+    "true_eu": 4.7595,
+    "parser_evaluated": true,
+    "reader_value": 4.76,
+    "llm_written": true,
+    "llm_value": 4.76
+   },
+   {
+    "letter": "B",
+    "bid": 95.0,
+    "p": 0.1827,
+    "true_eu": 5.481,
+    "parser_evaluated": true,
+    "reader_value": 5.48,
+    "llm_written": true,
+    "llm_value": 5.48
+   },
+   {
+    "letter": "C",
+    "bid": 100.0,
+    "p": 0.2404,
+    "true_eu": 6.01,
+    "parser_evaluated": true,
+    "reader_value": 6.01,
+    "llm_written": true,
+    "llm_value": 6.01
+   },
+   {
+    "letter": "D",
+    "bid": 90.0,
+    "p": 0.1635,
+    "true_eu": 5.7225,
+    "parser_evaluated": true,
+    "reader_value": 5.72,
+    "llm_written": true,
+    "llm_value": 5.72
+   },
+   {
+    "letter": "E",
+    "bid": 105.0,
+    "p": 0.2885,
+    "true_eu": 5.77,
+    "parser_evaluated": true,
+    "reader_value": 5.77,
+    "llm_written": true,
+    "llm_value": 5.77
+   }
+  ]
+ },
+ {
+  "trace_id": "T36",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 333749980096,
+  "repeat_seed": 23,
+  "budget": 512,
+  "validation_item": 16,
+  "private_value": 285.0,
+  "calculator_bid": 245.0,
+  "model_answer_bid": 235.0,
+  "hybrid_best_letter": "A",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 245.0,
+    "p": 0.8033,
+    "true_eu": 32.132,
+    "parser_evaluated": true,
+    "reader_value": 32.13,
+    "llm_written": true,
+    "llm_value": 32.13
+   },
+   {
+    "letter": "B",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 8.891,
+    "parser_evaluated": true,
+    "reader_value": 8.82,
+    "llm_written": true,
+    "llm_value": 8.82
+   },
+   {
+    "letter": "C",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 17.5725,
+    "parser_evaluated": true,
+    "reader_value": 17.57,
+    "llm_written": true,
+    "llm_value": 17.57
+   },
+   {
+    "letter": "D",
+    "bid": 235.0,
+    "p": 0.6151,
+    "true_eu": 30.755,
+    "parser_evaluated": true,
+    "reader_value": 2352.0,
+    "llm_written": true,
+    "llm_value": 30.75
+   },
+   {
+    "letter": "E",
+    "bid": 230.0,
+    "p": 0.5146,
+    "true_eu": 28.302999999999997,
+    "parser_evaluated": true,
+    "reader_value": 28.25,
+    "llm_written": true,
+    "llm_value": 28.25
+   }
+  ]
+ },
+ {
+  "trace_id": "T37",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 94658446432,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 15,
+  "private_value": 2185.0,
+  "calculator_bid": 860.0,
+  "model_answer_bid": 500.0,
+  "hybrid_best_letter": "A",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 860.0,
+    "p": 0.6421,
+    "true_eu": 850.7825,
+    "parser_evaluated": true,
+    "reader_value": 1325.47,
+    "llm_written": true,
+    "llm_value": 851.14
+   },
+   {
+    "letter": "B",
+    "bid": 110.0,
+    "p": 0.0316,
+    "true_eu": 65.57000000000001,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 65.59
+   },
+   {
+    "letter": "C",
+    "bid": 440.0,
+    "p": 0.4421,
+    "true_eu": 771.4645,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 770.1
+   },
+   {
+    "letter": "D",
+    "bid": 500.0,
+    "p": 0.4842,
+    "true_eu": 815.8770000000001,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 813.99
+   },
+   {
+    "letter": "E",
+    "bid": 1395.0,
+    "p": 0.7263,
+    "true_eu": 573.7769999999999,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 572.97
+   },
+   {
+    "letter": "F",
+    "bid": 1565.0,
+    "p": 0.7684,
+    "true_eu": 476.40799999999996,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 476.56
+   },
+   {
+    "letter": "G",
+    "bid": 2050.0,
+    "p": 0.9263,
+    "true_eu": 125.0505,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 124.99
+   }
+  ]
+ },
+ {
+  "trace_id": "T38",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 246460721287,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 59,
+  "private_value": 305.0,
+  "calculator_bid": 245.0,
+  "model_answer_bid": 245.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 250.0,
+    "p": 0.8536,
+    "true_eu": 46.948,
+    "parser_evaluated": true,
+    "reader_value": 46.0,
+    "llm_written": true,
+    "llm_value": 46.95
+   },
+   {
+    "letter": "B",
+    "bid": 255.0,
+    "p": 0.9038,
+    "true_eu": 45.190000000000005,
+    "parser_evaluated": true,
+    "reader_value": 45.19,
+    "llm_written": true,
+    "llm_value": 45.19
+   },
+   {
+    "letter": "C",
+    "bid": 235.0,
+    "p": 0.6151,
+    "true_eu": 43.057,
+    "parser_evaluated": true,
+    "reader_value": 43.06,
+    "llm_written": true,
+    "llm_value": 43.06
+   },
+   {
+    "letter": "D",
+    "bid": 245.0,
+    "p": 0.8033,
+    "true_eu": 48.198,
+    "parser_evaluated": true,
+    "reader_value": 48.2,
+    "llm_written": true,
+    "llm_value": 48.2
+   },
+   {
+    "letter": "E",
+    "bid": 240.0,
+    "p": 0.7238,
+    "true_eu": 47.047,
+    "parser_evaluated": true,
+    "reader_value": 47.05,
+    "llm_written": true,
+    "llm_value": 47.05
+   }
+  ]
+ },
+ {
+  "trace_id": "T39",
+  "model": "phi4_mini_reasoning",
+  "scenario_id": 563352396823,
+  "repeat_seed": 23,
+  "budget": -1,
+  "validation_item": 92,
+  "private_value": 280.0,
+  "calculator_bid": 240.0,
+  "model_answer_bid": 270.0,
+  "hybrid_best_letter": "E",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 265.0,
+    "p": 0.9665,
+    "true_eu": 14.4975,
+    "parser_evaluated": true,
+    "reader_value": 14.5,
+    "llm_written": true,
+    "llm_value": 14.5
+   },
+   {
+    "letter": "B",
+    "bid": 270.0,
+    "p": 0.9874,
+    "true_eu": 9.874,
+    "parser_evaluated": true,
+    "reader_value": 9.87,
+    "llm_written": true,
+    "llm_value": 9.87
+   },
+   {
+    "letter": "C",
+    "bid": 180.0,
+    "p": 0.0293,
+    "true_eu": 2.93,
+    "parser_evaluated": false,
+    "reader_value": 2.64,
+    "llm_written": true,
+    "llm_value": 2.64
+   },
+   {
+    "letter": "D",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 16.401,
+    "parser_evaluated": true,
+    "reader_value": 16.4,
+    "llm_written": true,
+    "llm_value": 16.4
+   },
+   {
+    "letter": "E",
+    "bid": 240.0,
+    "p": 0.7238,
+    "true_eu": 28.951999999999998,
+    "parser_evaluated": true,
+    "reader_value": 28.95,
+    "llm_written": true,
+    "llm_value": 28.95
+   },
+   {
+    "letter": "F",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 4.518,
+    "parser_evaluated": true,
+    "reader_value": 4.52,
+    "llm_written": true,
+    "llm_value": 4.52
+   },
+   {
+    "letter": "G",
+    "bid": 230.0,
+    "p": 0.5146,
+    "true_eu": 25.729999999999997,
+    "parser_evaluated": true,
+    "reader_value": 40.0,
+    "llm_written": true,
+    "llm_value": 25.73
+   }
+  ]
+ },
+ {
+  "trace_id": "T40",
+  "model": "qwen3_4b",
+  "scenario_id": 619054667495,
+  "repeat_seed": 11,
+  "budget": 768,
+  "validation_item": 121,
+  "private_value": 250.0,
+  "calculator_bid": 220.0,
+  "model_answer_bid": 220.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 240.0,
+    "p": 0.7238,
+    "true_eu": 7.2379999999999995,
+    "parser_evaluated": true,
+    "reader_value": 7.238,
+    "llm_written": true,
+    "llm_value": 7.238
+   },
+   {
+    "letter": "B",
+    "bid": 205.0,
+    "p": 0.1715,
+    "true_eu": 7.7175,
+    "parser_evaluated": true,
+    "reader_value": 7.72,
+    "llm_written": true,
+    "llm_value": 7.72
+   },
+   {
+    "letter": "C",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 3.012,
+    "parser_evaluated": true,
+    "reader_value": 3.012,
+    "llm_written": true,
+    "llm_value": 3.012
+   },
+   {
+    "letter": "D",
+    "bid": 220.0,
+    "p": 0.3766,
+    "true_eu": 11.298,
+    "parser_evaluated": true,
+    "reader_value": 11.3,
+    "llm_written": true,
+    "llm_value": 11.3
+   },
+   {
+    "letter": "E",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 3.6795,
+    "parser_evaluated": false,
+    "reader_value": 3.3,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "F",
+    "bid": 225.0,
+    "p": 0.4477,
+    "true_eu": 11.192499999999999,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   },
+   {
+    "letter": "G",
+    "bid": 175.0,
+    "p": 0.0126,
+    "true_eu": 0.9450000000000001,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T41",
+  "model": "phi4_mini_reasoning",
+  "scenario_id": 637030819307,
+  "repeat_seed": 23,
+  "budget": -1,
+  "validation_item": 91,
+  "private_value": 135.0,
+  "calculator_bid": 55.0,
+  "model_answer_bid": 70.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 65.0,
+    "p": 0.0769,
+    "true_eu": 5.383,
+    "parser_evaluated": true,
+    "reader_value": 0.483,
+    "llm_written": true,
+    "llm_value": 5.383
+   },
+   {
+    "letter": "B",
+    "bid": 55.0,
+    "p": 0.0673,
+    "true_eu": 5.384,
+    "parser_evaluated": true,
+    "reader_value": 0.584,
+    "llm_written": true,
+    "llm_value": 5.38
+   },
+   {
+    "letter": "C",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 4.9985,
+    "parser_evaluated": true,
+    "reader_value": 4.9985,
+    "llm_written": true,
+    "llm_value": 5.0
+   },
+   {
+    "letter": "D",
+    "bid": 60.0,
+    "p": 0.0673,
+    "true_eu": 5.0475,
+    "parser_evaluated": true,
+    "reader_value": 5.05,
+    "llm_written": true,
+    "llm_value": 5.05
+   },
+   {
+    "letter": "E",
+    "bid": 50.0,
+    "p": 0.0577,
+    "true_eu": 4.9045000000000005,
+    "parser_evaluated": true,
+    "reader_value": 4.9,
+    "llm_written": true,
+    "llm_value": 4.9
+   }
+  ]
+ },
+ {
+  "trace_id": "T42",
+  "model": "qwen3_8b",
+  "scenario_id": 64777939023,
+  "repeat_seed": 23,
+  "budget": -1,
+  "validation_item": 129,
+  "private_value": 225.0,
+  "calculator_bid": 130.0,
+  "model_answer_bid": 130.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 40.0,
+    "p": 0.0385,
+    "true_eu": 7.1225,
+    "parser_evaluated": true,
+    "reader_value": 7.12,
+    "llm_written": true,
+    "llm_value": 7.12
+   },
+   {
+    "letter": "B",
+    "bid": 130.0,
+    "p": 0.5769,
+    "true_eu": 54.805499999999995,
+    "parser_evaluated": true,
+    "reader_value": 54.81,
+    "llm_written": true,
+    "llm_value": 54.81
+   },
+   {
+    "letter": "C",
+    "bid": 55.0,
+    "p": 0.0673,
+    "true_eu": 11.440999999999999,
+    "parser_evaluated": true,
+    "reader_value": 11.44,
+    "llm_written": true,
+    "llm_value": 11.44
+   },
+   {
+    "letter": "D",
+    "bid": 170.0,
+    "p": 0.8558,
+    "true_eu": 47.069,
+    "parser_evaluated": true,
+    "reader_value": 47.07,
+    "llm_written": true,
+    "llm_value": 47.07
+   },
+   {
+    "letter": "E",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 11.9195,
+    "parser_evaluated": true,
+    "reader_value": 11.92,
+    "llm_written": true,
+    "llm_value": 11.92
+   },
+   {
+    "letter": "F",
+    "bid": 195.0,
+    "p": 0.8942,
+    "true_eu": 26.826,
+    "parser_evaluated": true,
+    "reader_value": 26.83,
+    "llm_written": true,
+    "llm_value": 26.83
+   },
+   {
+    "letter": "G",
+    "bid": 50.0,
+    "p": 0.0577,
+    "true_eu": 10.0975,
+    "parser_evaluated": true,
+    "reader_value": null,
+    "llm_written": false,
+    "llm_value": null
+   }
+  ]
+ },
+ {
+  "trace_id": "T43",
+  "model": "qwen3_8b",
+  "scenario_id": 820787486367,
+  "repeat_seed": 37,
+  "budget": -1,
+  "validation_item": 137,
+  "private_value": 325.0,
+  "calculator_bid": 245.0,
+  "model_answer_bid": 245.0,
+  "hybrid_best_letter": "C",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 220.0,
+    "p": 0.3766,
+    "true_eu": 39.543,
+    "parser_evaluated": true,
+    "reader_value": 39.54,
+    "llm_written": true,
+    "llm_value": 39.54
+   },
+   {
+    "letter": "B",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 6.777,
+    "parser_evaluated": true,
+    "reader_value": 6.78,
+    "llm_written": true,
+    "llm_value": 6.78
+   },
+   {
+    "letter": "C",
+    "bid": 245.0,
+    "p": 0.8033,
+    "true_eu": 64.264,
+    "parser_evaluated": true,
+    "reader_value": 64.26,
+    "llm_written": true,
+    "llm_value": 64.26
+   },
+   {
+    "letter": "D",
+    "bid": 250.0,
+    "p": 0.8536,
+    "true_eu": 64.02,
+    "parser_evaluated": true,
+    "reader_value": 64.02,
+    "llm_written": true,
+    "llm_value": 64.02
+   },
+   {
+    "letter": "E",
+    "bid": 260.0,
+    "p": 0.9456,
+    "true_eu": 61.464,
+    "parser_evaluated": true,
+    "reader_value": 61.46,
+    "llm_written": true,
+    "llm_value": 61.46
+   }
+  ]
+ },
+ {
+  "trace_id": "T44",
+  "model": "phi4_mini_reasoning",
+  "scenario_id": 102353684876,
+  "repeat_seed": 37,
+  "budget": 768,
+  "validation_item": 96,
+  "private_value": 285.0,
+  "calculator_bid": 255.0,
+  "model_answer_bid": 210.0,
+  "hybrid_best_letter": "F",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 270.0,
+    "p": 0.9874,
+    "true_eu": 14.811,
+    "parser_evaluated": true,
+    "reader_value": 14.81,
+    "llm_written": true,
+    "llm_value": 14.81
+   },
+   {
+    "letter": "B",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 4.769,
+    "parser_evaluated": true,
+    "reader_value": 4.77,
+    "llm_written": true,
+    "llm_value": 4.77
+   },
+   {
+    "letter": "C",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 17.5725,
+    "parser_evaluated": true,
+    "reader_value": 17.57,
+    "llm_written": true,
+    "llm_value": 17.57
+   },
+   {
+    "letter": "D",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 8.891,
+    "parser_evaluated": true,
+    "reader_value": 8.9,
+    "llm_written": true,
+    "llm_value": 8.9
+   },
+   {
+    "letter": "E",
+    "bid": 195.0,
+    "p": 0.0669,
+    "true_eu": 6.021,
+    "parser_evaluated": true,
+    "reader_value": 6.021,
+    "llm_written": true,
+    "llm_value": 6.021
+   },
+   {
+    "letter": "F",
+    "bid": 255.0,
+    "p": 0.9038,
+    "true_eu": 27.114,
+    "parser_evaluated": true,
+    "reader_value": 0.114,
+    "llm_written": true,
+    "llm_value": 27.114
+   },
+   {
+    "letter": "G",
+    "bid": 180.0,
+    "p": 0.0293,
+    "true_eu": 3.0765,
+    "parser_evaluated": true,
+    "reader_value": 3.0765,
+    "llm_written": true,
+    "llm_value": 3.0765
+   }
+  ]
+ },
+ {
+  "trace_id": "T45",
+  "model": "qwen3_4b",
+  "scenario_id": 773077764236,
+  "repeat_seed": 37,
+  "budget": 768,
+  "validation_item": 119,
+  "private_value": 135.0,
+  "calculator_bid": 100.0,
+  "model_answer_bid": 100.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 4.9985,
+    "parser_evaluated": true,
+    "reader_value": 5.0,
+    "llm_written": true,
+    "llm_value": 5.0
+   },
+   {
+    "letter": "B",
+    "bid": 55.0,
+    "p": 0.0673,
+    "true_eu": 5.384,
+    "parser_evaluated": true,
+    "reader_value": 5.38,
+    "llm_written": true,
+    "llm_value": 5.38
+   },
+   {
+    "letter": "C",
+    "bid": 50.0,
+    "p": 0.0577,
+    "true_eu": 4.9045000000000005,
+    "parser_evaluated": true,
+    "reader_value": 4.9,
+    "llm_written": true,
+    "llm_value": 4.9
+   },
+   {
+    "letter": "D",
+    "bid": 100.0,
+    "p": 0.2404,
+    "true_eu": 8.414,
+    "parser_evaluated": true,
+    "reader_value": 8.41,
+    "llm_written": true,
+    "llm_value": 8.41
+   },
+   {
+    "letter": "E",
+    "bid": 130.0,
+    "p": 0.5769,
+    "true_eu": 2.8845,
+    "parser_evaluated": true,
+    "reader_value": 2.88,
+    "llm_written": true,
+    "llm_value": 2.88
+   },
+   {
+    "letter": "F",
+    "bid": 85.0,
+    "p": 0.1154,
+    "true_eu": 5.7700000000000005,
+    "parser_evaluated": true,
+    "reader_value": 5.77,
+    "llm_written": true,
+    "llm_value": 5.77
+   },
+   {
+    "letter": "G",
+    "bid": 75.0,
+    "p": 0.0865,
+    "true_eu": 5.1899999999999995,
+    "parser_evaluated": true,
+    "reader_value": 5.19,
+    "llm_written": true,
+    "llm_value": 5.19
+   }
+  ]
+ },
+ {
+  "trace_id": "T46",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 260498217640,
+  "repeat_seed": 11,
+  "budget": -1,
+  "validation_item": 68,
+  "private_value": 295.0,
+  "calculator_bid": 155.0,
+  "model_answer_bid": 155.0,
+  "hybrid_best_letter": "G",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 250.0,
+    "p": 0.9519,
+    "true_eu": 42.835499999999996,
+    "parser_evaluated": true,
+    "reader_value": 42.86,
+    "llm_written": true,
+    "llm_value": 42.86
+   },
+   {
+    "letter": "B",
+    "bid": 130.0,
+    "p": 0.5769,
+    "true_eu": 95.18849999999999,
+    "parser_evaluated": true,
+    "reader_value": 95.16,
+    "llm_written": true,
+    "llm_value": 95.16
+   },
+   {
+    "letter": "C",
+    "bid": 145.0,
+    "p": 0.7308,
+    "true_eu": 109.62,
+    "parser_evaluated": true,
+    "reader_value": 109.62,
+    "llm_written": true,
+    "llm_value": 109.62
+   },
+   {
+    "letter": "D",
+    "bid": 220.0,
+    "p": 0.9327,
+    "true_eu": 69.9525,
+    "parser_evaluated": true,
+    "reader_value": 70.0,
+    "llm_written": true,
+    "llm_value": 70
+   },
+   {
+    "letter": "E",
+    "bid": 35.0,
+    "p": 0.0192,
+    "true_eu": 4.992,
+    "parser_evaluated": true,
+    "reader_value": 5.0,
+    "llm_written": true,
+    "llm_value": 5
+   },
+   {
+    "letter": "F",
+    "bid": 230.0,
+    "p": 0.9423,
+    "true_eu": 61.249500000000005,
+    "parser_evaluated": true,
+    "reader_value": 61.25,
+    "llm_written": true,
+    "llm_value": 61.25
+   },
+   {
+    "letter": "G",
+    "bid": 155.0,
+    "p": 0.8269,
+    "true_eu": 115.76599999999999,
+    "parser_evaluated": true,
+    "reader_value": 115.76,
+    "llm_written": true,
+    "llm_value": 115.76
+   }
+  ]
+ },
+ {
+  "trace_id": "T47",
+  "model": "qwen3_4b",
+  "scenario_id": 797360296602,
+  "repeat_seed": 37,
+  "budget": 768,
+  "validation_item": 106,
+  "private_value": 1370.0,
+  "calculator_bid": 1225.0,
+  "model_answer_bid": 1225.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 1235.0,
+    "p": 0.7263,
+    "true_eu": 98.0505,
+    "parser_evaluated": true,
+    "reader_value": 97.93,
+    "llm_written": true,
+    "llm_value": 97.93
+   },
+   {
+    "letter": "B",
+    "bid": 1225.0,
+    "p": 0.7263,
+    "true_eu": 105.31349999999999,
+    "parser_evaluated": true,
+    "reader_value": 105.31,
+    "llm_written": true,
+    "llm_value": 105.31
+   },
+   {
+    "letter": "C",
+    "bid": 1255.0,
+    "p": 0.7263,
+    "true_eu": 83.52449999999999,
+    "parser_evaluated": true,
+    "reader_value": 83.52,
+    "llm_written": true,
+    "llm_value": 83.52
+   },
+   {
+    "letter": "D",
+    "bid": 1240.0,
+    "p": 0.7263,
+    "true_eu": 94.419,
+    "parser_evaluated": true,
+    "reader_value": 94.42,
+    "llm_written": true,
+    "llm_value": 94.42
+   },
+   {
+    "letter": "E",
+    "bid": 1245.0,
+    "p": 0.7263,
+    "true_eu": 90.7875,
+    "parser_evaluated": true,
+    "reader_value": 90.79,
+    "llm_written": true,
+    "llm_value": 90.79
+   },
+   {
+    "letter": "F",
+    "bid": 1230.0,
+    "p": 0.7263,
+    "true_eu": 101.68199999999999,
+    "parser_evaluated": true,
+    "reader_value": 101.68,
+    "llm_written": true,
+    "llm_value": 101.68
+   },
+   {
+    "letter": "G",
+    "bid": 1250.0,
+    "p": 0.7263,
+    "true_eu": 87.15599999999999,
+    "parser_evaluated": true,
+    "reader_value": 87.16,
+    "llm_written": true,
+    "llm_value": 87.16
+   }
+  ]
+ },
+ {
+  "trace_id": "T48",
+  "model": "phi4_mini_reasoning",
+  "scenario_id": 420055936346,
+  "repeat_seed": 11,
+  "budget": 768,
+  "validation_item": 86,
+  "private_value": 150.0,
+  "calculator_bid": 90.0,
+  "model_answer_bid": 80.0,
+  "hybrid_best_letter": "C",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 85.0,
+    "p": 0.1154,
+    "true_eu": 7.501,
+    "parser_evaluated": true,
+    "reader_value": 7.5,
+    "llm_written": true,
+    "llm_value": 7.5
+   },
+   {
+    "letter": "B",
+    "bid": 80.0,
+    "p": 0.0865,
+    "true_eu": 6.055,
+    "parser_evaluated": true,
+    "reader_value": 6.06,
+    "llm_written": true,
+    "llm_value": 6.06
+   },
+   {
+    "letter": "C",
+    "bid": 90.0,
+    "p": 0.1635,
+    "true_eu": 9.81,
+    "parser_evaluated": true,
+    "reader_value": 9.81,
+    "llm_written": true,
+    "llm_value": 9.81
+   },
+   {
+    "letter": "D",
+    "bid": 70.0,
+    "p": 0.0769,
+    "true_eu": 6.151999999999999,
+    "parser_evaluated": true,
+    "reader_value": 6.15,
+    "llm_written": true,
+    "llm_value": 6.15
+   },
+   {
+    "letter": "E",
+    "bid": 75.0,
+    "p": 0.0865,
+    "true_eu": 6.4875,
+    "parser_evaluated": true,
+    "reader_value": 6.49,
+    "llm_written": true,
+    "llm_value": 6.49
+   }
+  ]
+ },
+ {
+  "trace_id": "T49",
+  "model": "deepseek_r1_llama_8b",
+  "scenario_id": 432548358283,
+  "repeat_seed": 11,
+  "budget": 768,
+  "validation_item": 67,
+  "private_value": 325.0,
+  "calculator_bid": 250.0,
+  "model_answer_bid": 250.0,
+  "hybrid_best_letter": "B",
+  "parser_complete": true,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 26.9445,
+    "parser_evaluated": true,
+    "reader_value": 27.04,
+    "llm_written": true,
+    "llm_value": 27.04
+   },
+   {
+    "letter": "B",
+    "bid": 250.0,
+    "p": 0.8536,
+    "true_eu": 64.02,
+    "parser_evaluated": true,
+    "reader_value": 64.02,
+    "llm_written": true,
+    "llm_value": 64.02
+   },
+   {
+    "letter": "C",
+    "bid": 265.0,
+    "p": 0.9665,
+    "true_eu": 57.99,
+    "parser_evaluated": true,
+    "reader_value": 57.99,
+    "llm_written": true,
+    "llm_value": 57.99
+   },
+   {
+    "letter": "D",
+    "bid": 175.0,
+    "p": 0.0126,
+    "true_eu": 1.8900000000000001,
+    "parser_evaluated": true,
+    "reader_value": 1.89,
+    "llm_written": true,
+    "llm_value": 1.89
+   },
+   {
+    "letter": "E",
+    "bid": 270.0,
+    "p": 0.9874,
+    "true_eu": 54.307,
+    "parser_evaluated": true,
+    "reader_value": 54.31,
+    "llm_written": true,
+    "llm_value": 54.31
+   },
+   {
+    "letter": "F",
+    "bid": 240.0,
+    "p": 0.7238,
+    "true_eu": 61.523,
+    "parser_evaluated": true,
+    "reader_value": 61.6,
+    "llm_written": true,
+    "llm_value": 61.6
+   },
+   {
+    "letter": "G",
+    "bid": 200.0,
+    "p": 0.1046,
+    "true_eu": 13.075,
+    "parser_evaluated": true,
+    "reader_value": 13.07,
+    "llm_written": true,
+    "llm_value": 13.07
+   }
+  ]
+ },
+ {
+  "trace_id": "T50",
+  "model": "granite_3_2_8b_instruct",
+  "scenario_id": 563352396823,
+  "repeat_seed": 23,
+  "budget": 768,
+  "validation_item": 2,
+  "private_value": 280.0,
+  "calculator_bid": 240.0,
+  "model_answer_bid": 270.0,
+  "hybrid_best_letter": "D",
+  "parser_complete": false,
+  "options": [
+   {
+    "letter": "A",
+    "bid": 265.0,
+    "p": 0.9665,
+    "true_eu": 14.4975,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 14.95
+   },
+   {
+    "letter": "B",
+    "bid": 270.0,
+    "p": 0.9874,
+    "true_eu": 9.874,
+    "parser_evaluated": true,
+    "reader_value": 270.002023,
+    "llm_written": true,
+    "llm_value": 9.87
+   },
+   {
+    "letter": "C",
+    "bid": 180.0,
+    "p": 0.0293,
+    "true_eu": 2.93,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 22.52
+   },
+   {
+    "letter": "D",
+    "bid": 210.0,
+    "p": 0.2343,
+    "true_eu": 16.401,
+    "parser_evaluated": false,
+    "reader_value": 270.0,
+    "llm_written": true,
+    "llm_value": 30.29
+   },
+   {
+    "letter": "E",
+    "bid": 240.0,
+    "p": 0.7238,
+    "true_eu": 28.951999999999998,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 21.26
+   },
+   {
+    "letter": "F",
+    "bid": 190.0,
+    "p": 0.0502,
+    "true_eu": 4.518,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 13.04
+   },
+   {
+    "letter": "G",
+    "bid": 230.0,
+    "p": 0.5146,
+    "true_eu": 25.729999999999997,
+    "parser_evaluated": false,
+    "reader_value": null,
+    "llm_written": true,
+    "llm_value": 21.53
+   }
+  ]
+ }
+]

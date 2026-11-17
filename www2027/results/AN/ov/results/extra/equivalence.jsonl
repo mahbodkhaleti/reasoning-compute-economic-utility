@@ -1,0 +1,6 @@
+{"model": "phi4_mini_reasoning", "n": 40, "same_letter": 18, "same_trace": 1}
+{"model": "qwen3_4b", "n": 40, "same_letter": 36, "same_trace": 2}
+{"model": "qwen3_8b", "n": 40, "same_letter": 36, "same_trace": 5}
+{"model": "deepseek_r1_llama_8b", "n": 40, "same_letter": 38, "same_trace": 3}
+{"model": "granite_3_2_8b_instruct", "n": 40, "same_letter": 31, "same_trace": 1}
+{"model": "qwen3_14b", "n": 40, "same_letter": 38, "same_trace": 4}

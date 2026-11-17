@@ -1,0 +1,37 @@
+DeepSeek-8B {'arithmetic': (0.259, [0.11, 0.38]), 'unfinished': (0.47, [0.35, 0.63]), 'ignored': (0.271, [0.13, 0.43]), 'residual': (0.0, [0.0, 0.0])} arith traces 0.082
+   natural {'q': 0.972, 'mean_tokens': 1008.406, 'at_cap': 0.861, 'gap_readout': 0.959, 'gap_readout_ci': [0.93, 0.98], 'gap_verifier': 1.0, 'gap_verifier_ci': [1.0, 1.0]}
+   F2 {'n_complete': 1192, 'n_informative': 205, 'n_groups': 72, 'or_best_first_to_last': 0.668, 'or_runner_first_to_last': 2.165, 'p_best': 0.374, 'p_runner': 0.134, 'or_best_ci': [0.14806797686885742, 1.9424759914144922], 'or_runner_ci': [0.5652918970494204, 11.862854593851742]}
+   picks {'n': 95, 'highest_prob': 0.389, 'lowest_bid': 0.021, 'highest_bid': 0.358, 'first_listed': 0.253, 'last_listed': 0.116, 'runner_up': 0.684, 'last_evaluated': 0.221, 'first_evaluated': 0.253}
+   F3 [(0, 0.775, 0.775), (64, 0.754, 0.754), (128, 0.763, 0.762), (256, 0.758, 0.756), (512, 0.836, 0.956), (768, 0.95, 0.98), (-1, 0.972, 0.98)]
+   F4 {'Cartier': (0.53, 0.66, 141.8), 'Palm': (1.0, 0.98, 2.8), 'Xbox': (0.94, 0.94, 11.9), 'all': (0.57, 0.85, 52.2)}
+Phi-mini {'arithmetic': (0.012, [0.0, 0.03]), 'unfinished': (0.239, [0.15, 0.33]), 'ignored': (0.749, [0.65, 0.84]), 'residual': (0.0, [0.0, 0.0])} arith traces 0.017
+   natural {'q': 0.846, 'mean_tokens': 1001.745, 'at_cap': 0.872, 'gap_readout': 0.488, 'gap_readout_ci': [0.4, 0.57], 'gap_verifier': 0.998, 'gap_verifier_ci': [0.99, 1.0]}
+   F2 {'n_complete': 1143, 'n_informative': 745, 'n_groups': 259, 'or_best_first_to_last': 12.109, 'or_runner_first_to_last': 0.857, 'p_best': 0.0, 'p_runner': 0.585, 'or_best_ci': [10.9745152909814, 36.25597243114956], 'or_runner_ci': [0.4394215219314902, 1.5154854388373045]}
+   picks {'n': 593, 'highest_prob': 0.241, 'lowest_bid': 0.081, 'highest_bid': 0.236, 'first_listed': 0.378, 'last_listed': 0.007, 'runner_up': 0.292, 'last_evaluated': 0.037, 'first_evaluated': 0.349}
+   F3 [(0, 0.718, 0.718), (64, 0.722, 0.722), (128, 0.727, 0.727), (256, 0.758, 0.736), (512, 0.762, 0.925), (768, 0.829, 0.976), (-1, 0.846, 0.979)]
+   F4 {'Cartier': (0.21, 0.06, 113.0), 'Palm': (0.62, 0.59, 6.4), 'Xbox': (0.38, 0.42, 14.9), 'all': (0.25, 0.42, 44.8)}
+Qwen3-4B {'arithmetic': (0.11, [0.05, 0.17]), 'unfinished': (0.738, [0.64, 0.84]), 'ignored': (0.152, [0.06, 0.25]), 'residual': (0.0, [0.0, 0.0])} arith traces 0.049
+   natural {'q': 0.96, 'mean_tokens': 950.273, 'at_cap': 0.702, 'gap_readout': 0.913, 'gap_readout_ci': [0.87, 0.96], 'gap_verifier': 0.989, 'gap_verifier_ci': [0.98, 1.0]}
+   F2 {'n_complete': 982, 'n_informative': 195, 'n_groups': 72, 'or_best_first_to_last': 3.446, 'or_runner_first_to_last': 4.031, 'p_best': 0.01, 'p_runner': 0.016, 'or_best_ci': [1.6393740006916333, 16.243416659444073], 'or_runner_ci': [1.5642264795796086, 23.532384486936138]}
+   picks {'n': 118, 'highest_prob': 0.305, 'lowest_bid': 0.042, 'highest_bid': 0.297, 'first_listed': 0.127, 'last_listed': 0.144, 'runner_up': 0.508, 'last_evaluated': 0.11, 'first_evaluated': 0.144}
+   F3 [(0, 0.752, 0.752), (64, 0.753, 0.753), (128, 0.72, 0.717), (256, 0.771, 0.748), (512, 0.867, 0.923), (768, 0.916, 0.972), (-1, 0.96, 0.977)]
+   F4 {'Cartier': (0.47, 0.54, 166.2), 'Palm': (0.78, 0.86, 2.7), 'Xbox': (0.8, 0.81, 14.1), 'all': (0.5, 0.72, 61.0)}
+Qwen3-8B {'arithmetic': (0.05, [0.01, 0.1]), 'unfinished': (0.8, [0.7, 0.88]), 'ignored': (0.15, [0.08, 0.23]), 'residual': (0.0, [0.0, 0.0])} arith traces 0.06
+   natural {'q': 0.951, 'mean_tokens': 969.035, 'at_cap': 0.725, 'gap_readout': 0.869, 'gap_readout_ci': [0.82, 0.92], 'gap_verifier': 0.987, 'gap_verifier_ci': [0.97, 1.0]}
+   F2 {'n_complete': 863, 'n_informative': 121, 'n_groups': 46, 'or_best_first_to_last': 34.882, 'or_runner_first_to_last': 0.831, 'p_best': 0.0, 'p_runner': 0.811, 'or_best_ci': [19.8147367014917, 1105.940299357609], 'or_runner_ci': [0.14073448628143573, 8.538615752006509]}
+   picks {'n': 94, 'highest_prob': 0.564, 'lowest_bid': 0.011, 'highest_bid': 0.521, 'first_listed': 0.255, 'last_listed': 0.053, 'runner_up': 0.574, 'last_evaluated': 0.16, 'first_evaluated': 0.17}
+   F3 [(0, 0.763, 0.763), (64, 0.766, 0.766), (128, 0.784, 0.783), (256, 0.775, 0.729), (512, 0.823, 0.909), (768, 0.907, 0.962), (-1, 0.951, 0.977)]
+   F4 {'Cartier': (0.49, 0.53, 167.9), 'Palm': (0.74, 0.82, 2.3), 'Xbox': (0.7, 0.73, 14.4), 'all': (0.51, 0.66, 61.5)}
+Qwen3-14B {'arithmetic': (0.021, [-0.0, 0.06]), 'unfinished': (0.896, [0.8, 0.99]), 'ignored': (0.083, [-0.01, 0.18]), 'residual': (0.0, [0.0, 0.0])} arith traces 0.029
+   natural {'q': 0.954, 'mean_tokens': 869.921, 'at_cap': 0.465, 'gap_readout': 0.887, 'gap_readout_ci': [0.83, 0.94], 'gap_verifier': 0.994, 'gap_verifier_ci': [0.99, 1.0]}
+   F2 {'n_complete': 980, 'n_informative': 141, 'n_groups': 50, 'or_best_first_to_last': 13.54, 'or_runner_first_to_last': 0.898, 'p_best': 0.0, 'p_runner': 0.866, 'or_best_ci': [5.073325216923739, 172.55161585451918], 'or_runner_ci': [0.18726179232738638, 5.307938670493448]}
+   picks {'n': 84, 'highest_prob': 0.44, 'lowest_bid': 0.024, 'highest_bid': 0.369, 'first_listed': 0.262, 'last_listed': 0.071, 'runner_up': 0.595, 'last_evaluated': 0.143, 'first_evaluated': 0.167}
+   F3 [(0, 0.749, 0.749), (64, 0.751, 0.751), (128, 0.761, 0.761), (256, 0.769, 0.732), (512, 0.833, 0.932), (768, 0.916, 0.975), (-1, 0.954, 0.978)]
+   F4 {'Cartier': (0.43, 0.5, 186.2), 'Palm': (0.9, 0.94, 2.2), 'Xbox': (0.83, 0.88, 14.4), 'all': (0.47, 0.72, 67.6)}
+Granite-8B {'arithmetic': (0.001, [-0.0, 0.01]), 'unfinished': (0.478, [0.37, 0.59]), 'ignored': (0.52, [0.41, 0.63]), 'residual': (0.0, [0.0, 0.0])} arith traces 0.011
+   natural {'q': 0.912, 'mean_tokens': 560.199, 'at_cap': 0.0, 'gap_readout': 0.716, 'gap_readout_ci': [0.66, 0.77], 'gap_verifier': 0.806, 'gap_verifier_ci': [0.74, 0.86]}
+   F2 {'n_complete': 917, 'n_informative': 483, 'n_groups': 179, 'or_best_first_to_last': 0.061, 'or_runner_first_to_last': 3.151, 'p_best': 0.0, 'p_runner': 0.003, 'or_best_ci': [0.007533601355047878, 0.08828413755890739], 'or_runner_ci': [1.108083179844709, 13.27259197612673]}
+   picks {'n': 379, 'highest_prob': 0.193, 'lowest_bid': 0.098, 'highest_bid': 0.216, 'first_listed': 0.011, 'last_listed': 0.277, 'runner_up': 0.549, 'last_evaluated': 0.24, 'first_evaluated': 0.026}
+   F3 [(0, 0.74, 0.74), (64, 0.741, 0.734), (128, 0.754, 0.708), (256, 0.749, 0.711), (512, 0.875, 0.924), (768, 0.897, 0.935), (-1, 0.912, 0.933)]
+   F4 {'Cartier': (0.76, 0.73, 166.6), 'Palm': (0.28, 0.33, 2.6), 'Xbox': (0.79, 0.77, 15.2), 'all': (0.75, 0.65, 61.4)}
+{'share': 0.04195804195804196, 'n': 143}

@@ -1,0 +1,27 @@
+Subject: Help needed: 3–4 hours of annotation for a research paper (due 14 Nov)
+
+Hi,
+
+I'm asking for help with one small annotation job for a research paper. It takes about 3–4 hours, and you can split it over several sittings. No background in AI or economics is needed.
+
+What you'll do
+A language model was asked to choose the best bid in an auction. For each option, it had to compute an expected profit, (private value − bid) × win probability, and pick the option with the highest value. Before answering, it wrote out its reasoning. I'm sending you 50 of these reasoning texts.
+
+For each one, you record what the model wrote. You are not judging whether it was right:
+1. For each option: did the text write a result for that option's expected profit (Y/N)? If yes, what number did it write?
+2. For each text: did it give a result for every option? Which option has the largest number it wrote? Did it state which option it would choose?
+
+How
+- Unzip the attached package.
+- Read INSTRUCTIONS.md first. It has the full rules and a worked example.
+- Read the texts in traces.html. It opens in any browser.
+- Fill in only the yellow cells of annotation_workbook.xlsx. If you can't open Excel files, fill in the two CSV files instead.
+
+Important
+- Please don't use a calculator to check the model's math, and don't use ChatGPT, Claude or any other AI tool. The point is an independent human check.
+- Work on your own, and don't compare answers with anyone else doing this until you've both finished.
+- If something is unclear, make your best call and write a note in the notes column.
+
+Please send back annotation_workbook_<your initials>.xlsx by Saturday 14 November.
+
+Thank you very much. This makes a real difference to the paper.

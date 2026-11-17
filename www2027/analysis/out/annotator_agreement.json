@@ -1,0 +1,9 @@
+{
+ "n_items": 60.0,
+ "option_kappa_annotators": 1.0,
+ "option_agree_annotators": 1.0,
+ "trace_kappa_annotators": 1.0,
+ "trace_agree": 1.0,
+ "option_kappa_parser_vs_A": 0.698466780238501,
+ "option_kappa_parser_vs_B": 0.698466780238501
+}

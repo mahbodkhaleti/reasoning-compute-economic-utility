@@ -1,0 +1,28 @@
+seed: 20260819                     # same master seed as the eBay config
+paths:
+  raw_dir: /workspace/auctionnet_raw
+  out_dir: results/auctionnet
+  extra_dir: results/extra
+data:
+  base_url: https://alimama-bidding-competition.oss-cn-beijing.aliyuncs.com/share/final/
+  zips: [autoBidding_general_track_final_data_period_7-8.zip, autoBidding_general_track_final_data_period_9-10.zip]
+  construction_periods: [7, 8, 9]  # earlier periods
+  heldout_periods: [10]            # later period (3:1, about 75/25)
+  price: m_any                     # m_any = 3rd-highest bid among the 48 advertisers (lowest bid that wins a slot); m_top = highest
+  cpm_scale: 1000                  # prices, values and bids are shown per 1,000 impressions (N); dollars per decision = N x p(b)(v - b) / N
+  products: pvalue_tercile         # see README: competing price does not depend on the bidder's category
+  target_grid_points: 71           # median eBay grid length within the 2nd-98th percentile with $5 steps (Palm 20, Xbox 71, Cartier 620)
+  step_choices: [1, 2, 5, 10, 20, 25, 50, 100]
+  values_per_category: 18
+  candidate_sets_per_value: 2
+  option_sizes: [5, 7]
+  value_variant_pvalue_cpa: false
+eval:
+  budgets: [0, 64, 128, 256, 512, 768]
+  repeat_seeds: [11, 23, 37]
+  answer_tokens: 20
+  prefix_reuse: false             # set by the prefix test: vLLM batching breaks prefix consistency
+  vllm:
+    max_num_seqs: 128
+    gpu_memory_utilization: 0.88
+    max_model_len: 6144

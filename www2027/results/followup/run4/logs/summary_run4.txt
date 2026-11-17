@@ -1,0 +1,9 @@
+model                    setting          n      q  at cap median tok mean tok s/decision J/decision est. full h
+deepseek_r1_llama_8b     forced768      648  0.944    0.0%        768      768       31.5       9383         5.7
+deepseek_r1_llama_8b     unforced1024   648  0.967   61.4%       1024      978       41.2      12271         7.4   <- over 10% at cap
+granite_3_2_8b_instruct  forced768      648  0.904    0.0%        768      768       42.3      12436         7.6
+granite_3_2_8b_instruct  unforced1024   648  0.924    0.0%        602      608       32.8       9578         5.9
+phi4_mini_reasoning      forced768      648  0.817    0.0%        768      768       24.6       7291         4.4
+phi4_mini_reasoning      unforced1024   648  0.859   90.1%       1024     1012       31.7       9419         5.7   <- over 10% at cap
+qwen3_8b                 forced768      648  0.858    0.0%        768      768       42.6      12424         7.7
+qwen3_8b                 unforced1024   648  0.921   86.9%       1024     1009       38.5      10303         6.9   <- over 10% at cap

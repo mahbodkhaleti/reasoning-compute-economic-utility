@@ -1,0 +1,974 @@
+{
+ "deepseek_r1_llama_8b": {
+  "zero_cost_family6": {
+   "area": 0.6065896440965849,
+   "area_ci": [
+    0.5624892433933874,
+    0.6464429312967017
+   ],
+   "q_at_512_spend": 0.9205459187923956,
+   "q_random_mix_at_512_spend": 0.8907554394994461,
+   "q_fixed_512": 0.8361043875620136,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "zero_cost_lopo": {
+   "area": 0.557784587010691,
+   "area_ci": [
+    0.5168193439728536,
+    0.5994102394932511
+   ],
+   "q_at_512_spend": 0.9133998524055547,
+   "q_random_mix_at_512_spend": 0.8915402826699358,
+   "q_fixed_512": 0.8361043875620136,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_family6": {
+   "area": 0.6056850778897679,
+   "area_ci": [
+    0.5575163836255141,
+    0.6468243205866632
+   ],
+   "q_at_512_spend": 0.8834980315627035,
+   "q_random_mix_at_512_spend": 0.8560224766783513,
+   "q_fixed_512": 0.8361043875620136,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_lopo": {
+   "area": 0.5242206247669006,
+   "area_ci": [
+    0.48271304041840113,
+    0.5687935034109273
+   ],
+   "q_at_512_spend": 0.8694034408557839,
+   "q_random_mix_at_512_spend": 0.8563051551958205,
+   "q_fixed_512": 0.8361043875620136,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  }
+ },
+ "phi4_mini_reasoning": {
+  "zero_cost_family6": {
+   "area": 0.7120396129587813,
+   "area_ci": [
+    0.6430507485653856,
+    0.8087916207164356
+   ],
+   "q_at_512_spend": 0.8203746176035236,
+   "q_random_mix_at_512_spend": 0.7921453297810931,
+   "q_fixed_512": 0.7615006749297617,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "zero_cost_lopo": {
+   "area": 0.5214678640233499,
+   "area_ci": [
+    0.45514659314372263,
+    0.5803956117880859
+   ],
+   "q_at_512_spend": 0.7921498310693583,
+   "q_random_mix_at_512_spend": 0.7921569853398773,
+   "q_fixed_512": 0.7615006749297617,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_family6": {
+   "area": 0.6620995819714017,
+   "area_ci": [
+    0.6037542369391451,
+    0.7226518486204251
+   ],
+   "q_at_512_spend": 0.7953100537426234,
+   "q_random_mix_at_512_spend": 0.7777013856727722,
+   "q_fixed_512": 0.7615006749297617,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_lopo": {
+   "area": 0.47591165731554835,
+   "area_ci": [
+    0.38696577497949186,
+    0.5426645103731699
+   ],
+   "q_at_512_spend": 0.7759523457032473,
+   "q_random_mix_at_512_spend": 0.7776864335378832,
+   "q_fixed_512": 0.7615006749297617,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  }
+ },
+ "qwen3_4b": {
+  "zero_cost_family6": {
+   "area": 0.6167281328835277,
+   "area_ci": [
+    0.5705107842999884,
+    0.6651822098292912
+   ],
+   "q_at_512_spend": 0.8834468083725875,
+   "q_random_mix_at_512_spend": 0.8606735431624883,
+   "q_fixed_512": 0.8665064429933714,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 300,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "zero_cost_lopo": {
+   "area": 0.5791149531612737,
+   "area_ci": [
+    0.5378612065453737,
+    0.6276254928102266
+   ],
+   "q_at_512_spend": 0.884720407305119,
+   "q_random_mix_at_512_spend": 0.8610720302640169,
+   "q_fixed_512": 0.8665064429933714,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_family6": {
+   "area": 0.743163589095586,
+   "area_ci": [
+    0.7068943512763859,
+    0.7833564343866
+   ],
+   "q_at_512_spend": 0.8907752217892231,
+   "q_random_mix_at_512_spend": 0.81750374873645,
+   "q_fixed_512": 0.8665064429933714,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_lopo": {
+   "area": 0.5212211091993045,
+   "area_ci": [
+    0.4809543719861319,
+    0.561175001985593
+   ],
+   "q_at_512_spend": 0.8180908290252231,
+   "q_random_mix_at_512_spend": 0.8170489856133867,
+   "q_fixed_512": 0.8665064429933714,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  }
+ },
+ "qwen3_8b": {
+  "zero_cost_family6": {
+   "area": 0.540427438067087,
+   "area_ci": [
+    0.4898344187433763,
+    0.589607038669486
+   ],
+   "q_at_512_spend": 0.8706883141666857,
+   "q_random_mix_at_512_spend": 0.8589642577598445,
+   "q_fixed_512": 0.8227553461931445,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 300,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "zero_cost_lopo": {
+   "area": 0.4483643081623334,
+   "area_ci": [
+    0.40145863627464895,
+    0.5029961242270397
+   ],
+   "q_at_512_spend": 0.8466391735961567,
+   "q_random_mix_at_512_spend": 0.8584488731785442,
+   "q_fixed_512": 0.8227553461931445,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_family6": {
+   "area": 0.6421441647475685,
+   "area_ci": [
+    0.5766038455027388,
+    0.7188202317707906
+   ],
+   "q_at_512_spend": 0.869968948227587,
+   "q_random_mix_at_512_spend": 0.845262476137076,
+   "q_fixed_512": 0.8227553461931445,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_lopo": {
+   "area": 0.5647231954838019,
+   "area_ci": [
+    0.5061129448255987,
+    0.6348311482246349
+   ],
+   "q_at_512_spend": 0.8605701515869832,
+   "q_random_mix_at_512_spend": 0.8451452485924359,
+   "q_fixed_512": 0.8227553461931445,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  }
+ },
+ "qwen3_14b": {
+  "zero_cost_family6": {
+   "area": 0.6313394576900545,
+   "area_ci": [
+    0.5895070476062874,
+    0.6764848592742126
+   ],
+   "q_at_512_spend": 0.8842666718322164,
+   "q_random_mix_at_512_spend": 0.8608588776212462,
+   "q_fixed_512": 0.832555577294404,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "zero_cost_lopo": {
+   "area": 0.5016463622385309,
+   "area_ci": [
+    0.4597405473144938,
+    0.5491138714282426
+   ],
+   "q_at_512_spend": 0.8570724143704287,
+   "q_random_mix_at_512_spend": 0.8598687984246388,
+   "q_fixed_512": 0.832555577294404,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_family6": {
+   "area": 0.6065911784383535,
+   "area_ci": [
+    0.5576142782173038,
+    0.6540074323904959
+   ],
+   "q_at_512_spend": 0.8617976472318912,
+   "q_random_mix_at_512_spend": 0.8383897938728748,
+   "q_fixed_512": 0.832555577294404,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_lopo": {
+   "area": 0.5264016495269187,
+   "area_ci": [
+    0.47582126672092007,
+    0.583846647044458
+   ],
+   "q_at_512_spend": 0.8499660819456553,
+   "q_random_mix_at_512_spend": 0.8378135258392139,
+   "q_fixed_512": 0.832555577294404,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 300,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  }
+ },
+ "granite_3_2_8b_instruct": {
+  "zero_cost_family6": {
+   "area": 0.6716231811367687,
+   "area_ci": [
+    0.6200839028047114,
+    0.726082379046879
+   ],
+   "q_at_512_spend": 0.8750160149133316,
+   "q_random_mix_at_512_spend": 0.8443768239170444,
+   "q_fixed_512": 0.8749401989878413,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "zero_cost_lopo": {
+   "area": 0.31007755159769923,
+   "area_ci": [
+    0.2522619266904214,
+    0.3571703316822268
+   ],
+   "q_at_512_spend": 0.800047306767694,
+   "q_random_mix_at_512_spend": 0.8455129199346098,
+   "q_fixed_512": 0.8749401989878413,
+   "probe_tokens": 0,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_family6": {
+   "area": 0.7327329976058757,
+   "area_ci": [
+    0.6621192843393336,
+    0.8191702309092825
+   ],
+   "q_at_512_spend": 0.8636631924653144,
+   "q_random_mix_at_512_spend": 0.8258741962446524,
+   "q_fixed_512": 0.8749401989878413,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 300,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  },
+  "probe128_lopo": {
+   "area": 0.36265337565010414,
+   "area_ci": [
+    0.3035164909745159,
+    0.4150017928237876
+   ],
+   "q_at_512_spend": 0.8018732972501149,
+   "q_random_mix_at_512_spend": 0.8250877621553946,
+   "q_fixed_512": 0.8749401989878413,
+   "probe_tokens": 128,
+   "hyperparams": [
+    {
+     "n_estimators": 100,
+     "max_depth": 2,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 1,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    },
+    {
+     "n_estimators": 100,
+     "max_depth": 3,
+     "learning_rate": 0.05,
+     "subsample": 0.8
+    }
+   ]
+  }
+ }
+}
