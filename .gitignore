@@ -12,17 +12,6 @@ robustness_extensions/server_outputs/data/metadata.json
 *.pt
 *.pth
 *.ckpt
-paper/*.aux
-paper/*.bbl
-paper/*.blg
-paper/*.fdb_latexmk
-paper/*.fls
-paper/*.log
-paper/*.out
-paper/*.synctex.gz
-paper/main.pdf
-paper/output/
-paper/tmp/
 robustness_extensions/scripts/*.zip
 qwen3_14b_addition/results/
 qwen3_14b_addition/smoke_results/
@@ -43,14 +32,11 @@ offline_replay/outputs/
 cpu_revision/legacy_results/
 decision_audit/human_study/responses/
 
-# Local AI4F LaTeX build products; checked release PDF is tracked.
-ai4f_workshop/*.aux
-ai4f_workshop/*.bbl
-ai4f_workshop/*.blg
-ai4f_workshop/*.fdb_latexmk
-ai4f_workshop/*.fls
-ai4f_workshop/*.log
-ai4f_workshop/*.out
-ai4f_workshop/*.synctex.gz
-ai4f_workshop/build/
+# LaTeX build products for the paper
+www2027/paper/*.aux
+www2027/paper/*.bbl
+www2027/paper/*.blg
+www2027/paper/*.log
+www2027/paper/*.out
+# Links created by www2027/setup_paths.sh
 www2027/raw_traces/

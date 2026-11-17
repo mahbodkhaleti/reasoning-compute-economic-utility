@@ -1,6 +1,6 @@
 from pathlib import Path
 import csv,json
-root=Path(__file__).resolve().parents[1];out=root/'cpu_revision/results';paper=root/'paper'
+root=Path(__file__).resolve().parents[1];out=root/'cpu_revision/results';paper=root/'cpu_revision/results';(paper/'tables').mkdir(parents=True,exist_ok=True)
 r=list(csv.DictReader((out/'comparison_uncertainty.csv').open()));maps=list(csv.DictReader((out/'mapping_sensitivity.csv').open()));j=json.loads((out/'analysis_manifest.json').read_text())
 table=r'''\begin{table}[htbp]
 \centering\small

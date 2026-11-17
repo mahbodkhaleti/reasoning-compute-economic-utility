@@ -1,7 +1,3 @@
 *.diff -whitespace
 *.csv whitespace=cr-at-eol
 cpu_revision/replay_reference_tables/** -whitespace
-submitted_paper/** -whitespace
-
-# Unified-diff context lines intentionally retain their leading space.
-ai4f_workshop/changes_from_v3.patch -whitespace
